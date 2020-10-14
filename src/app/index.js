@@ -1,3 +1,5 @@
+import '../utils/typography';
+
 const root = document.getElementById('root');
 
 const hello = document.createElement('h1');
