@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 
 module.exports = {
   mode: 'none',
@@ -15,6 +16,27 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    // new GoogleFontsPlugin({
+    //   fonts: [
+    //     {
+    //       family: 'Poppins',
+    //       variants: [
+    //         '100',
+    //         '200',
+    //         '300',
+    //         'regular',
+    //         '500',
+    //         '600',
+    //         '700',
+    //         '800',
+    //         '900',
+    //       ],
+    //     },
+    //   ],
+    //   local: true,
+    //   path: './assets/fonts/google-fonts',
+    //   outputDir: 'docs/assets/fonts',
+    // }),
     new HtmlWebpackPlugin({
       title: 'Japanese JavaScript',
       filename: 'index.html',
