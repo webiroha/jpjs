@@ -16,27 +16,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    // new GoogleFontsPlugin({
-    //   fonts: [
-    //     {
-    //       family: 'Poppins',
-    //       variants: [
-    //         '100',
-    //         '200',
-    //         '300',
-    //         'regular',
-    //         '500',
-    //         '600',
-    //         '700',
-    //         '800',
-    //         '900',
-    //       ],
-    //     },
-    //   ],
-    //   local: true,
-    //   path: './assets/fonts/google-fonts',
-    //   outputDir: 'docs/assets/fonts',
-    // }),
     new HtmlWebpackPlugin({
       title: 'Japanese JavaScript',
       filename: 'index.html',
