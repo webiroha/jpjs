@@ -18,6 +18,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Japanese JavaScript',
+      description:
+        'Play with Japanese & JavaScript. This place will be not only a personal JavaScript playground but also a combined place for someone to be able to learn Japanese a little.',
       filename: 'index.html',
       template: './src/template/index.html',
       inject: true,

@@ -1,8 +1,10 @@
-const root = document.getElementById('root');
 import 'sanitize.css';
 import '../styles/main.scss';
 
-const hello = document.createElement('h1');
-hello.textContent = 'Hello world!';
+import Element from './components/atom/Element';
 
-root.appendChild(hello);
+const root = document.getElementById('root');
+
+const hello = Element({ elem: 'h1', class: 'title', text: 'Hello world!' });
+
+root.appendChild(hello());
