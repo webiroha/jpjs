@@ -1,4 +1,8 @@
+html,
 body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
 a {
@@ -15,4 +19,8 @@ ul {
 button {
   appearance: none;
   border: none;
+}
+
+#root {
+  margin: auto;
 }
