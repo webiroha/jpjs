@@ -1,0 +1,6 @@
+// for responsive font
+@function get_vw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1vw;
+}

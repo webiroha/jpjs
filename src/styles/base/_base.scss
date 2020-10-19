@@ -1,7 +1,6 @@
 html,
 body {
-  display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -22,5 +21,7 @@ button {
 }
 
 #root {
-  margin: auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }

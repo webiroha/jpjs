@@ -27,3 +27,14 @@
   }
 }
 
+@mixin hRespond-to() {
+  @media (max-height: 550px) {
+    @content;
+  }
+}
+
+// for responsive font
+@mixin fz_vw($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}

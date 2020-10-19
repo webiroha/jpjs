@@ -3,6 +3,7 @@ import '../styles/main.scss';
 
 import Frag from './components/atom/Frag';
 import Element from './components/atom/Element';
+import ElementWith from './components/atom/ElementWith';
 
 const root = document.getElementById('root');
 const WholeFrag = Frag();
@@ -25,10 +26,11 @@ const Deco = Element({
   text: '遊',
 });
 
-const Title = Element({
+const Title = ElementWith({
   elem: 'h1',
   class: 'title',
-  text: 'Japanese JavaScript',
+  text: 'Japanese',
+  text2: 'JavaScript',
 });
 
 const BottomWrapper = Element({
@@ -40,7 +42,7 @@ const BottomFrag = Frag();
 
 const Copy = Element({
   elem: 'p',
-  class: 'title',
+  class: 'copy',
   text: 'Play with Japanese & JavaScript',
 });
 

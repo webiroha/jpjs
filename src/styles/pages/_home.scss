@@ -1,4 +1,14 @@
 .wrapper {
+  margin: auto;
+  width: 80%;
+
+  @include respond-to('medium') {
+    width: 40%;
+  }
+
+  @include respond-to('large') {
+    width: auto;
+  }
 }
 
 .center-wrapper {
@@ -7,13 +17,50 @@
 }
 
 .deco {
+  @include fz_vw(120);
+
   font-family: $font-family-jpselif;
-  font-size: 40vw;
   line-height: 1;
+  margin-left: -0.02em;
+
+  @include respond-to('medium') {
+    font-size: 25vw;
+  }
+
+  @include respond-to('large') {
+    font-size: 12em;
+  }
+
+  @include hRespond-to() {
+    display: none;
+  }
 }
 
 .title {
+  @include fz_vw(20);
+
   font-weight: normal;
+  margin-bottom: 1em;
+
+  @include hRespond-to() {
+    @include fz_vw(35);
+  }
+
+  @include respond-to('medium') {
+    font-size: 4vw;
+
+    @include hRespond-to() {
+      font-size: 4.5vw;
+    }
+  }
+
+  @include respond-to('large') {
+    font-size: 2em;
+
+    @include hRespond-to() {
+      font-size: 2.5em;
+    }
+  }
 }
 
 .bottom-wrapper {
@@ -21,8 +68,18 @@
 }
 
 .copy {
-  font-size: 1em;
+  @include fz_vw(15);
+
   font-weight: bold;
+  letter-spacing: 0.1em;
+
+  @include respond-to('medium') {
+    font-size: 2vw;
+  }
+
+  @include respond-to('large') {
+    font-size: 1em;
+  }
 }
 
 .start-button {
@@ -30,5 +87,9 @@
   color: $font-color-white;
   display: block;
   padding: 1em;
+
+  @include respond-to('large') {
+    font-size: 1em;
+  }
 }
 
