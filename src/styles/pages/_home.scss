@@ -19,6 +19,7 @@
 .deco {
   @include fz_vw(120);
 
+  display: block;
   font-family: $font-family-jpselif;
   line-height: 1;
   margin-left: -0.02em;
@@ -41,6 +42,7 @@
 
   font-weight: normal;
   margin-bottom: 1em;
+  opacity: 0;
 
   @include hRespond-to() {
     @include fz_vw(35);

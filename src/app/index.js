@@ -22,20 +22,20 @@ const CenterFrag = Frag();
 
 const Deco = Element({
   elem: 'span',
-  class: 'deco',
+  class: 'deco slide-in-upper__0',
   text: '遊',
 });
 
 const Title = ElementWith({
   elem: 'h1',
-  class: 'title',
+  class: 'title slide-in-upper__1',
   text: 'Japanese',
   text2: 'JavaScript',
 });
 
 const BottomWrapper = Element({
   elem: 'div',
-  class: 'bottom-wrapper',
+  class: 'bottom-wrapper fade-in',
 });
 
 const BottomFrag = Frag();
