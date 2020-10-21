@@ -49,7 +49,7 @@ const Copy = Element({
 const StartButton = Element({
   elem: 'a',
   class: 'start-button',
-  text: 'coming soon!',
+  text: 'currently in progress',
 });
 
 CenterFrag().appendChild(Deco());
