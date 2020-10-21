@@ -6,9 +6,26 @@ Have you ever wanted to learn Japanese?
 
 This place will be not only a personal JavaScript playground but also a combined place for someone to be able to learn Japanese a little.
 
-### environment references
+Currently proceeding
+⏩[Japanese JavaScript [Demo]](https://webiroha.github.io/jpjs/)
 
-#### current candidate fonts
+--- frequently update, little by litte🙂
+
+### environment / tech stack
+
+- vanilla JavaScript
+
+- Sass(SCSS)
+
+- webpack
+
+- eslint
+
+- prettier
+
+- sanitize.css(css reset)
+
+#### Fonts(maybe tentative)
 
 **Google 🅵🅾🅽🆃**
 
@@ -16,16 +33,22 @@ This place will be not only a personal JavaScript playground but also a combined
 
 - [Poppins](https://fonts.google.com/specimen/Poppins) ⭐️
 
+The other candidate
+
 - [Overpass](https://fonts.google.com/specimen/Overpass)
 
 - [Jura](https://fonts.google.com/specimen/Jura)
 
 ##### Japanese
 
-- [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)⭐️
+- [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP)
 
-- [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP)⭐️
+- [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)
 
-- [Sawarabi Mincho](https://fonts.google.com/specimen/Sawarabi+Mincho)
+### environment references
 
-frequently update
+- [Let’s Get Started with Webpack 4](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
+
+- [How I set up Webpack and Babel with vanilla JS](https://dev.to/robotspacefish/how-i-set-up-webpack-and-babel-with-vanilla-js-2k5e)
+
+- [ReactBeginnersBook-2.0](https://github.com/oukayuka/ReactBeginnersBook-2.0)
