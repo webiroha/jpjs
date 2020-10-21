@@ -86,8 +86,10 @@
 
 .start-button {
   background: $font-color-main;
+  border-radius: 4px;
   color: $font-color-white;
   display: block;
+  letter-spacing: 0.05em;
   padding: 1em;
 
   @include respond-to('large') {
