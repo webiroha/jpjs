@@ -26,5 +26,19 @@
 }
 
 .slide-in-upper__1 {
-  animation: slideInUpper 1s ease-in 1s 1 forwards;
+  animation: slideInUpper 1s ease-in 0.5s 1 forwards;
 }
+
+// slide-in to-right
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

@@ -28,7 +28,7 @@
 }
 
 @mixin hRespond-to() {
-  @media (max-height: 550px) {
+  @media (max-height: 580px) {
     @content;
   }
 }

@@ -17,15 +17,16 @@
 }
 
 .deco {
-  @include fz_vw(120);
+  @include fz_vw(140);
 
   display: block;
   font-family: $font-family-jpselif;
   line-height: 1;
   margin-left: -0.02em;
+  position: relative;
 
   @include respond-to('medium') {
-    font-size: 25vw;
+    font-size: 20vw;
   }
 
   @include respond-to('large') {
@@ -35,21 +36,38 @@
   @include hRespond-to() {
     display: none;
   }
+
+  &::before {
+    animation: slideInRight 1s ease-in 1.5s 1 forwards;
+    background: $font-color-red;
+    border-radius: 50%;
+    bottom: -0.06em;
+    content: '';
+    height: 1.15em;
+    left: -0.4em;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.15em;
+    z-index: -1;
+  }
 }
 
 .title {
-  @include fz_vw(20);
+  @include fz_vw(24);
 
-  font-weight: normal;
+  font-weight: 600;
   margin-bottom: 1em;
   opacity: 0;
 
   @include hRespond-to() {
-    @include fz_vw(35);
+    @include fz_vw(38);
   }
 
   @include respond-to('medium') {
-    font-size: 4vw;
+    font-size: 3.2vw;
 
     @include hRespond-to() {
       font-size: 4.5vw;
@@ -72,7 +90,7 @@
 .copy {
   @include fz_vw(15);
 
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.1em;
 
   @include respond-to('medium') {
