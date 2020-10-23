@@ -592,6 +592,7 @@ button {
 
 .wrapper {
   margin: auto;
+  position: relative;
   width: 80%; }
   @media (min-width: 768px) {
     .wrapper {
@@ -682,4 +683,14 @@ button {
   @media (min-width: 1024px) {
     .start-button {
       font-size: 1em; } }
+
+.nihongo-motion {
+  color: #eee;
+  font-family: "Noto Serif JP", "Helvetica Neue", "Helvetica", "Arial", serif;
+  font-size: 6em;
+  left: 0;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  z-index: -1; }
 

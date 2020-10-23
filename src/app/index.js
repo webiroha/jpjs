@@ -4,6 +4,7 @@ import '../styles/main.scss';
 import Frag from './components/atom/Frag';
 import Element from './components/atom/Element';
 import ElementWith from './components/atom/ElementWith';
+import NihongoMotion from './components/NihongoMotion';
 
 const root = document.getElementById('root');
 const WholeFrag = Frag();
@@ -52,16 +53,37 @@ const StartButton = Element({
   text: 'currently in progress',
 });
 
-CenterFrag().appendChild(Deco());
+CenterFrag().appendChild(Deco.tag);
 CenterFrag().appendChild(Title());
-CenterWrapper().appendChild(CenterFrag());
+CenterWrapper.tag.appendChild(CenterFrag());
 
-BottomFrag().appendChild(Copy());
-BottomFrag().appendChild(StartButton());
-BottomWrapper().appendChild(BottomFrag());
+BottomFrag().appendChild(Copy.tag);
+BottomFrag().appendChild(StartButton.tag);
+BottomWrapper.tag.appendChild(BottomFrag());
 
-WholeFrag().appendChild(CenterWrapper());
-WholeFrag().appendChild(BottomWrapper());
-Wrapper().appendChild(WholeFrag());
+WholeFrag().appendChild(CenterWrapper.tag);
+WholeFrag().appendChild(BottomWrapper.tag);
+Wrapper.tag.appendChild(WholeFrag());
 
-root.appendChild(Wrapper());
+const Letters = [
+  { letter: 'に', x: -100, y: -80 },
+  { letter: 'ほ', x: 350, y: 0 },
+  { letter: 'ん', x: -130, y: 160 },
+  { letter: 'ご', x: 300, y: 220 },
+];
+const [Hi, Ra, Ga, Na] = Letters.map((i) =>
+  NihongoMotion({
+    elem: 'span',
+    class: 'nihongo-motion',
+    text: i.letter,
+    x: i.x,
+    y: i.y,
+  })
+);
+
+// Wrapper.tag.appendChild(Hi());
+// Wrapper.tag.appendChild(Ra());
+// Wrapper.tag.appendChild(Ga());
+// Wrapper.tag.appendChild(Na());
+
+root.appendChild(Wrapper.tag);

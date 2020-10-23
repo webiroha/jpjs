@@ -3,7 +3,7 @@ const Element = (props) => {
   tag.className = props.class;
   tag.textContent = props.text;
 
-  return () => tag;
+  return { tag };
 };
 
 export default Element;
