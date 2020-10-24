@@ -66,10 +66,10 @@ WholeFrag().appendChild(BottomWrapper.tag);
 Wrapper.tag.appendChild(WholeFrag());
 
 const Letters = [
-  { letter: 'に', x: -100, y: -80 },
-  { letter: 'ほ', x: 350, y: 0 },
-  { letter: 'ん', x: -130, y: 160 },
-  { letter: 'ご', x: 300, y: 220 },
+  { letter: 'に', x: -80, y: -90 },
+  { letter: 'ほ', x: 250, y: -70 },
+  { letter: 'ん', x: -130, y: 140 },
+  { letter: 'ご', x: 240, y: 240 },
 ];
 const [Hi, Ra, Ga, Na] = Letters.map((i) =>
   NihongoMotion({
@@ -81,9 +81,9 @@ const [Hi, Ra, Ga, Na] = Letters.map((i) =>
   })
 );
 
-// Wrapper.tag.appendChild(Hi());
-// Wrapper.tag.appendChild(Ra());
-// Wrapper.tag.appendChild(Ga());
-// Wrapper.tag.appendChild(Na());
+Wrapper.tag.appendChild(Hi());
+Wrapper.tag.appendChild(Ra());
+Wrapper.tag.appendChild(Ga());
+Wrapper.tag.appendChild(Na());
 
 root.appendChild(Wrapper.tag);
