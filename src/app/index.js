@@ -5,7 +5,7 @@ import Frag from './components/atom/Frag';
 import Element from './components/atom/Element';
 import ElementWith from './components/atom/ElementWith';
 import NihongoMotion from './components/NihongoMotion';
-import Center from './components/layout/center';
+import Center from './components/layout/Center';
 
 const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 

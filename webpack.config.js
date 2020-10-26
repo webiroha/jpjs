@@ -9,7 +9,7 @@ module.exports = {
   mode: 'none',
   entry: {
     top: './src/app/index.js',
-    characters: './src/app/pages/characters/index.js',
+    characters: './src/app/characters/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -33,7 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Japanese JavaScript | characters',
       description: 'There are three kind of characters in Japanese.',
-      filename: 'index.html',
+      filename: 'characters/index.html',
       template: './src/template/index.html',
       inject: true,
       minify: {
