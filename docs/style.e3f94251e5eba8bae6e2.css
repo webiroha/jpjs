@@ -504,7 +504,9 @@ textarea,
 body {
   color: #212121;
   font: normal 16px/1.6 "Poppins", "Noto Sans JP", "Helvetica", "Helvetica Neue", "Arial", "Segoe UI", "-apple-system", "BlinkMacSystemFont", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  text-align: center; }
+  font-feature-settings: 'palt';
+  text-align: center;
+  -webkit-text-size-adjust: 100%; }
   @media (min-width: 768px) {
     body {
       font-size: 112.5%; } }

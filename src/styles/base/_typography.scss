@@ -1,7 +1,9 @@
 body {
   color: $font-color-main;
   font: normal 16px / 1.6 $font-family-main;
+  font-feature-settings: 'palt';
   text-align: center;
+  -webkit-text-size-adjust: 100%;
 
   @include respond-to('medium') {
     font-size: 112.5%;

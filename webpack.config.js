@@ -9,6 +9,7 @@ module.exports = {
   mode: 'none',
   entry: {
     top: './src/app/index.js',
+    characters: './src/app/pages/characters/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -39,7 +40,7 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: false,
       },
-      chunks: ['top'],
+      chunks: ['characters'],
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash].css',

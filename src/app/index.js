@@ -5,21 +5,14 @@ import Frag from './components/atom/Frag';
 import Element from './components/atom/Element';
 import ElementWith from './components/atom/ElementWith';
 import NihongoMotion from './components/NihongoMotion';
+import Center from './components/layout/center';
 
-const root = document.getElementById('root');
-const WholeFrag = Frag();
-
-const Wrapper = Element({
-  elem: 'div',
-  class: 'wrapper',
-});
+const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 
 const CenterWrapper = Element({
   elem: 'div',
   class: 'center-wrapper',
 });
-
-const CenterFrag = Frag();
 
 const Deco = Element({
   elem: 'span',
