@@ -5,7 +5,7 @@
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-in 0s 1 normal;
+  animation: fadeIn 1s ease-in 0s 1 forwards;
 }
 
 // slide-in to-upper
@@ -22,7 +22,7 @@
 }
 
 .slide-in-upper__0 {
-  animation: slideInUpper 1s ease-in 0s 1 normal;
+  animation: slideInUpper 1s ease-in 0s 1 forwards;
 }
 
 .slide-in-upper__1 {
