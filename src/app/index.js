@@ -27,6 +27,34 @@ const Title = ElementWith({
   text2: 'JavaScript',
 });
 
+const MotionFrag = Frag();
+
+const Letters = [
+  { letter: 'に', x: -0.4, y: -0.6 },
+  { letter: 'ほ', x: 1.65, y: -0.2 },
+  { letter: 'ん', x: -0.4, y: 1.4 },
+  { letter: 'ご', x: 2.8, y: 2.4 },
+];
+const [Hi, Ra, Ga, Na] = Letters.map((i) =>
+  NihongoMotion({
+    elem: 'span',
+    class: 'nihongo-motion',
+    text: i.letter,
+    x: i.x,
+    y: i.y,
+  })
+);
+
+MotionFrag().appendChild(Hi());
+MotionFrag().appendChild(Ra());
+MotionFrag().appendChild(Ga());
+MotionFrag().appendChild(Na());
+Deco.tag.appendChild(MotionFrag());
+
+CenterFrag().appendChild(Deco.tag);
+CenterFrag().appendChild(Title());
+CenterWrapper.tag.appendChild(CenterFrag());
+
 const BottomWrapper = Element({
   elem: 'div',
   class: 'bottom-wrapper fade-in',
@@ -46,10 +74,6 @@ const StartButton = Element({
   text: 'currently in progress',
 });
 
-CenterFrag().appendChild(Deco.tag);
-CenterFrag().appendChild(Title());
-CenterWrapper.tag.appendChild(CenterFrag());
-
 BottomFrag().appendChild(Copy.tag);
 BottomFrag().appendChild(StartButton.tag);
 BottomWrapper.tag.appendChild(BottomFrag());
@@ -57,26 +81,5 @@ BottomWrapper.tag.appendChild(BottomFrag());
 WholeFrag().appendChild(CenterWrapper.tag);
 WholeFrag().appendChild(BottomWrapper.tag);
 Wrapper.tag.appendChild(WholeFrag());
-
-const Letters = [
-  { letter: 'に', x: -80, y: -90 },
-  { letter: 'ほ', x: 250, y: -70 },
-  { letter: 'ん', x: -130, y: 140 },
-  { letter: 'ご', x: 240, y: 240 },
-];
-const [Hi, Ra, Ga, Na] = Letters.map((i) =>
-  NihongoMotion({
-    elem: 'span',
-    class: 'nihongo-motion',
-    text: i.letter,
-    x: i.x,
-    y: i.y,
-  })
-);
-
-Wrapper.tag.appendChild(Hi());
-Wrapper.tag.appendChild(Ra());
-Wrapper.tag.appendChild(Ga());
-Wrapper.tag.appendChild(Na());
 
 root.appendChild(Wrapper.tag);

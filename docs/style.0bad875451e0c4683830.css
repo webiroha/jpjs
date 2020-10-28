@@ -534,7 +534,6 @@ button {
 #root {
   display: flex;
   height: 100%;
-  position: relative;
   width: 100%; }
 
 @-webkit-keyframes fadeIn {
@@ -617,7 +616,6 @@ button {
 
 .wrapper {
   margin: auto;
-  position: relative;
   width: 80%; }
   @media (min-width: 768px) {
     .wrapper {
@@ -732,11 +730,11 @@ button {
     -webkit-animation: circle 10s ease-in-out 2.8s infinite;
             animation: circle 10s ease-in-out 2.8s infinite; }
   .nihongo-motion:nth-of-type(1) {
-    font-size: 6em; }
+    font-size: 0.5em; }
   .nihongo-motion:nth-of-type(2) {
-    font-size: 9em; }
+    font-size: 0.8em; }
   .nihongo-motion:nth-of-type(3) {
-    font-size: 7em; }
+    font-size: 0.6em; }
   .nihongo-motion:nth-of-type(4) {
-    font-size: 6em; }
+    font-size: 0.5em; }
 
