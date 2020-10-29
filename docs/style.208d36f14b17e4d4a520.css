@@ -628,6 +628,10 @@ button {
   margin: auto; }
 
 .deco {
+  display: inline-block;
+  margin: auto; }
+
+.deco__item {
   font-size: 140px;
   font-size: 37.33333vw;
   display: block;
@@ -636,15 +640,15 @@ button {
   margin-left: -0.02em;
   position: relative; }
   @media (min-width: 768px) {
-    .deco {
+    .deco__item {
       font-size: 20vw; } }
   @media (min-width: 1024px) {
-    .deco {
+    .deco__item {
       font-size: 12em; } }
   @media (max-height: 580px) {
-    .deco {
+    .deco__item {
       display: none; } }
-  .deco::before {
+  .deco__item::before {
     -webkit-animation: slideInRight 1s ease-in 1.5s 1 forwards;
             animation: slideInRight 1s ease-in 1.5s 1 forwards;
     background: #c9171e;

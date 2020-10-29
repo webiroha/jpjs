@@ -14,9 +14,14 @@ const CenterWrapper = Element({
   class: 'center-wrapper',
 });
 
+const DecoWrapper = Element({
+  elem: 'div',
+  class: 'deco slide-in-upper__0',
+});
+
 const Deco = Element({
   elem: 'span',
-  class: 'deco slide-in-upper__0',
+  class: 'deco__item',
   text: '遊',
 });
 
@@ -30,10 +35,10 @@ const Title = ElementWith({
 const MotionFrag = Frag();
 
 const Letters = [
-  { letter: 'に', x: -0.4, y: -0.6 },
-  { letter: 'ほ', x: 1.65, y: -0.2 },
-  { letter: 'ん', x: -0.4, y: 1.4 },
-  { letter: 'ご', x: 2.8, y: 2.4 },
+  { letter: 'に', x: -1.4, y: -0.5 },
+  { letter: 'ほ', x: 1.0, y: -0.1 },
+  { letter: 'ん', x: -1.4, y: 1.4 },
+  { letter: 'ご', x: 1.7, y: 2.6 },
 ];
 const [Hi, Ra, Ga, Na] = Letters.map((i) =>
   NihongoMotion({
@@ -51,7 +56,8 @@ MotionFrag().appendChild(Ga());
 MotionFrag().appendChild(Na());
 Deco.tag.appendChild(MotionFrag());
 
-CenterFrag().appendChild(Deco.tag);
+DecoWrapper.tag.appendChild(Deco.tag);
+CenterFrag().appendChild(DecoWrapper.tag);
 CenterFrag().appendChild(Title());
 CenterWrapper.tag.appendChild(CenterFrag());
 

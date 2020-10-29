@@ -16,6 +16,11 @@
 }
 
 .deco {
+  display: inline-block;
+  margin: auto;
+}
+
+.deco__item {
   @include fz_vw(140);
 
   display: block;
@@ -52,6 +57,7 @@
     width: 1.15em;
     z-index: -1;
   }
+
 }
 
 .title {
