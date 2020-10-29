@@ -4,6 +4,7 @@ import '../../styles/main.scss';
 import Frag from '../components/atom/Frag';
 import Element from '../components/atom/Element';
 import Center from '../components/layout/Center';
+import CodeBlock from '../components/CodeBlock';
 
 const { root, WholeFrag, Wrapper } = Center();
 
@@ -37,6 +38,14 @@ ExplainFrag().appendChild(Explain.tag);
 ExplainFrag().appendChild(Characters.tag);
 ExplainBlock.tag.appendChild(ExplainFrag());
 Wrapper.tag.appendChild(ExplainBlock.tag);
+
+const text = `const characters = [
+  { Hiragana: 'ひらがな' },
+  { Katakana: 'カタカナ' },
+  { Kanji: '漢字' };`;
+
+const { Code } = CodeBlock(text);
+Wrapper.tag.appendChild(Code.tag);
 
 root.appendChild(Wrapper.tag);
 

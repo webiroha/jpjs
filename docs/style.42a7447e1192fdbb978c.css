@@ -614,6 +614,13 @@ button {
     opacity: 0;
     transform: rotate(720deg) translate(30px) rotate(-720deg); } }
 
+.code {
+  background: #212121; }
+
+.pre {
+  display: inline-block;
+  text-align: left; }
+
 .wrapper {
   margin: auto;
   width: 80%; }

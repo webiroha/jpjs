@@ -43,7 +43,7 @@
 
   &::before {
     animation: slideInRight 1s ease-in 1.5s 1 forwards;
-    background: $font-color-red;
+    background: $color-red;
     border-radius: 50%;
     bottom: -0.06em;
     content: '';
@@ -108,9 +108,9 @@
 }
 
 .start-button {
-  background: $font-color-main;
+  background: $color-main;
   border-radius: 4px;
-  color: $font-color-white;
+  color: $color-white;
   display: block;
   letter-spacing: 0.05em;
   padding: 1em;
@@ -121,7 +121,7 @@
 }
 
 .nihongo-motion {
-  color: $font-color-lightGray;
+  color: $color-lightGray;
   font-family: $font-family-jpselif;
   mix-blend-mode: multiply;
   opacity: 0;
