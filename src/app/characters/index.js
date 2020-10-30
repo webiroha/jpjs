@@ -42,15 +42,16 @@ Wrapper.tag.appendChild(ExplainBlock.tag);
 const text = `const characters = [
   { Hiragana: 'ひらがな' },
   { Katakana: 'カタカナ' },
-  { Kanji: '漢字' };`;
+  { Kanji: '漢字' },
+];`;
 
 const { Code } = CodeBlock(text);
 Wrapper.tag.appendChild(Code.tag);
 
 root.appendChild(Wrapper.tag);
 
-// const characters = [
-//   { Hiragana: 'ひらがな' },
-//   { Katakana: 'カタカナ' },
-//   { Kanji: '漢字' },
-// ];
+const characters = [
+  { Hiragana: 'ひらがな' },
+  { Katakana: 'カタカナ' },
+  { Kanji: '漢字' },
+];
