@@ -9,6 +9,8 @@ import Center from './components/layout/Center';
 
 const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 
+Wrapper.tag.className = 'wrapper wrapper_layout_top';
+
 const CenterWrapper = Element({
   elem: 'div',
   class: 'center-wrapper',
