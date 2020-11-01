@@ -10,7 +10,7 @@
 // 2. Vendors
 
 // 3. Base stuff
-@import 'base/typography', 'base/base', 'base/animations';
+@import 'base/typography', 'base/base', 'base/sub/base', 'base/animations';
 
 // 4. Layout-related sections
 
@@ -20,4 +20,4 @@
 
 
 // 6. Page-specific styles
-@import 'pages/home', 'pages/characters';
+@import 'pages/home', 'pages/sub/characters';

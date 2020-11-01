@@ -59,12 +59,11 @@
 
 }
 
-.title {
+.jpjs {
   @include fz_vw(24);
 
   font-weight: 600;
   margin-bottom: 1em;
-  opacity: 0;
 
   @include hRespond-to() {
     @include fz_vw(38);
@@ -123,7 +122,6 @@
   color: $color-lightGray;
   font-family: $font-family-jpselif;
   mix-blend-mode: multiply;
-  opacity: 0;
   position: absolute;
   z-index: -1;
 

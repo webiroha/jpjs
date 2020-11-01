@@ -1,0 +1,15 @@
+.wrapper_layout_sub {
+  width: 90%;
+
+  @include respond-to('medium') {
+    width: 600px;
+  }
+}
+
+.explain__title {
+  margin: 0 0 0.5em;
+}
+
+.explain__text {
+  margin: 0;
+}

@@ -27,9 +27,9 @@ const Deco = Element({
   text: '遊',
 });
 
-const Title = ElementWith({
+const JPJS = ElementWith({
   elem: 'h1',
-  class: 'title slide-in-upper__1',
+  class: 'jpjs opacity_0 slide-in-upper__1',
   text: 'Japanese',
   text2: 'JavaScript',
 });
@@ -45,7 +45,7 @@ const Letters = [
 const [Hi, Ra, Ga, Na] = Letters.map((i) =>
   NihongoMotion({
     elem: 'span',
-    class: 'nihongo-motion',
+    class: 'nihongo-motion opacity_0',
     text: i.letter,
     x: i.x,
     y: i.y,
@@ -60,7 +60,7 @@ Deco.tag.appendChild(MotionFrag());
 
 DecoWrapper.tag.appendChild(Deco.tag);
 CenterFrag().appendChild(DecoWrapper.tag);
-CenterFrag().appendChild(Title());
+CenterFrag().appendChild(JPJS());
 CenterWrapper.tag.appendChild(CenterFrag());
 
 const BottomWrapper = Element({
