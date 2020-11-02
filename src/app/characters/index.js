@@ -5,6 +5,7 @@ import Frag from '../components/atom/Frag';
 import Element from '../components/atom/Element';
 import Center from '../components/layout/Center';
 import CodeBlock from '../components/CodeBlock';
+import NextLink from '../components/NextLink';
 
 const { root, Wrapper } = Center();
 Wrapper.tag.className = 'wrapper wrapper_layout_sub';
@@ -41,6 +42,8 @@ const text = `const characters = [
 
 const { Code } = CodeBlock(text);
 Wrapper.tag.appendChild(Code.tag);
+
+Wrapper.tag.appendChild(NextLink());
 
 root.appendChild(Wrapper.tag);
 
