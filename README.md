@@ -33,6 +33,8 @@ Currently proceeding
 
 - [Poppins](https://fonts.google.com/specimen/Poppins) ⭐️
 
+- [Ubuntu](https://fonts.google.com/specimen/Ubuntu) ⭐️
+
 The other candidate
 
 - [Overpass](https://fonts.google.com/specimen/Overpass)
