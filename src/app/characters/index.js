@@ -26,7 +26,7 @@ const Title = Element({
 const ExplainText = Element({
   elem: 'p',
   class: 'text opacity_0 slide-in-upper__1',
-  text: 'Japanese has three kind of characters.',
+  text: 'Japanese has three kinds of characters.',
 });
 
 ExplainFrag().appendChild(Title.tag);
