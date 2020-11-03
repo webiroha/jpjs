@@ -7,7 +7,7 @@ import Center from '../components/layout/Center';
 import CodeBlock from '../components/CodeBlock';
 import NextLink from '../components/NextLink';
 
-const { root, Wrapper } = Center();
+const { root, WholeFrag, Wrapper } = Center();
 Wrapper.tag.className = 'wrapper wrapper_layout_sub';
 
 const ExplainFrag = Frag();
@@ -25,36 +25,47 @@ const Title = Element({
 
 const ExplainText = Element({
   elem: 'p',
-  class: 'explain__text opacity_0 slide-in-upper__1',
+  class: 'text opacity_0 slide-in-upper__1',
   text: 'Japanese has three kind of characters.',
 });
 
 ExplainFrag().appendChild(Title.tag);
 ExplainFrag().appendChild(ExplainText.tag);
 Explain.tag.appendChild(ExplainFrag());
-Wrapper.tag.appendChild(Explain.tag);
+WholeFrag().appendChild(Explain.tag);
 
-const text = `const characters = [
+const jpCharacters = `const JapaneseCharacters = [
   { Hiragana: 'ひらがな' },
   { Katakana: 'カタカナ' },
   { Kanji: '漢字' },
 ];`;
 
-const { Code } = CodeBlock(text);
-Wrapper.tag.appendChild(Code.tag);
+const { Code: JpCode } = CodeBlock(jpCharacters);
+WholeFrag().appendChild(JpCode.tag);
 
-Wrapper.tag.appendChild(NextLink());
+const SoundText = Element({
+  elem: 'p',
+  class: 'text opacity_0 slide-in-upper__1',
+  text: 'Below is used for displaying the pronunciation.',
+});
+WholeFrag().appendChild(SoundText.tag);
+
+const soundCharacters = `const SoundCharacter = [
+  { Rōmaji: 'ローマ字' }
+];`;
+
+const { Code: SoundCode } = CodeBlock(soundCharacters);
+WholeFrag().appendChild(SoundCode.tag);
+
+WholeFrag().appendChild(NextLink());
+Wrapper.tag.appendChild(WholeFrag());
 
 root.appendChild(Wrapper.tag);
 
-// const characters = [
+// const JapaneseCharacters = [
 //   { Hiragana: 'ひらがな' },
 //   { Katakana: 'カタカナ' },
 //   { Kanji: '漢字' },
 // ];
 
-// const Characters = Element({
-//   elem: 'p',
-//   class: 'characters',
-//   text: 'Hiragana(ひらがな), Katakana(カタカナ) and Kanji(漢字).',
-// });
+// const SoundCharacter = [{ Rōmaji: 'ローマ字' }];
