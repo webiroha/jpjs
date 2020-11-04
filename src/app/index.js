@@ -3,7 +3,6 @@ import '../styles/main.scss';
 
 import Frag from './components/atom/Frag';
 import Element from './components/atom/Element';
-import ElementWith from './components/atom/ElementWith';
 import NihongoMotion from './components/NihongoMotion';
 import Center from './components/layout/Center';
 
@@ -28,11 +27,10 @@ const Deco = Element({
   text: '遊',
 });
 
-const JPJS = ElementWith({
+const JPJS = Element({
   elem: 'h1',
   class: 'jpjs opacity_0 slide-in-upper__1',
-  text: 'Japanese',
-  text2: 'JavaScript',
+  text: ['Japanese', 'JavaScript'],
 });
 
 const MotionFrag = Frag();
@@ -61,7 +59,7 @@ Deco.tag.appendChild(MotionFrag());
 
 DecoWrapper.tag.appendChild(Deco.tag);
 CenterFrag().appendChild(DecoWrapper.tag);
-CenterFrag().appendChild(JPJS());
+CenterFrag().appendChild(JPJS.tag);
 CenterWrapper.tag.appendChild(CenterFrag());
 
 const BottomWrapper = Element({
