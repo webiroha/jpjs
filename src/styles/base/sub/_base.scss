@@ -1,9 +1,39 @@
 .wrapper_layout_sub {
-  margin: 5em auto;
+  margin: 0 auto;
   width: 90%;
 
   @include respond-to('medium') {
     width: 600px;
+  }
+}
+
+.header {
+  padding: 2em 0 4em;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 0.2em;
+  position: relative;
+  vertical-align: middle;
+
+
+  &::before {
+    background: $color-red;
+    border-radius: 50%;
+    bottom: 0.05em;
+    content: '';
+    height: 2.8em;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.8em;
+    z-index: -1;
   }
 }
 
@@ -51,3 +81,8 @@
     width: 8px;
   }
 }
+
+.footer {
+  padding: 4em 0 2em;
+}
+

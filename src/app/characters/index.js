@@ -4,11 +4,16 @@ import '../../styles/main.scss';
 import Frag from '../components/atom/Frag';
 import Element from '../components/atom/Element';
 import Center from '../components/layout/Center';
+import Header from '../components/Header';
 import CodeBlock from '../components/CodeBlock';
 import NextLink from '../components/NextLink';
+import Footer from '../components/Footer';
 
 const { root, WholeFrag, Wrapper } = Center();
 Wrapper.tag.className = 'wrapper wrapper_layout_sub';
+
+const PageHeader = Header();
+WholeFrag().appendChild(PageHeader());
 
 const ExplainFrag = Frag();
 
@@ -58,8 +63,11 @@ const { Code: SoundCode } = CodeBlock(soundCharacters);
 WholeFrag().appendChild(SoundCode.tag);
 
 WholeFrag().appendChild(NextLink());
-Wrapper.tag.appendChild(WholeFrag());
 
+const PageFooter = Footer();
+WholeFrag().appendChild(PageFooter());
+
+Wrapper.tag.appendChild(WholeFrag());
 root.appendChild(Wrapper.tag);
 
 // const JapaneseCharacters = [
