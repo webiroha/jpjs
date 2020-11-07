@@ -9,6 +9,7 @@ module.exports = {
   mode: 'none',
   entry: {
     top: './src/app/index.js',
+    preparation: './src/app/intro/preparation/index.js',
     characters: './src/app/intro/characters/index.js',
   },
   output: {
@@ -31,7 +32,20 @@ module.exports = {
       chunks: ['top'],
     }),
     new HtmlWebpackPlugin({
-      title: 'Japanese JavaScript | characters',
+      title: 'Japanese JavaScript | Preparation',
+      description:
+        'This page introduces how to change keyboard settings for typing Japanese.',
+      filename: 'intro/preparation/index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+      chunks: ['preparation'],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Japanese JavaScript | Characters',
       description: 'There are three kind of characters in Japanese.',
       filename: 'intro/characters/index.html',
       template: './src/template/index.html',
