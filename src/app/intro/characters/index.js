@@ -1,8 +1,8 @@
-import HeaderFooter from '../components/pages/HeaderFooter';
-import Frag from '../components/atom/Frag';
-import Element from '../components/atom/Element';
-import CodeBlock from '../components/CodeBlock';
-import NextLink from '../components/NextLink';
+import HeaderFooter from '../../components/pages/HeaderFooter';
+import Frag from '../../components/atom/Frag';
+import Element from '../../components/atom/Element';
+import CodeBlock from '../../components/CodeBlock';
+import NextLink from '../../components/NextLink';
 
 const Characters = () => {
   const ContentsFrag = Frag();
