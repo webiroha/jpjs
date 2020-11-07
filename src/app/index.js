@@ -78,8 +78,9 @@ const Copy = Element({
 const StartButton = Element({
   elem: 'a',
   class: 'start-button',
-  text: 'currently in progress',
+  text: "Let's start!",
 });
+StartButton.tag.href = './intro/preparation';
 
 BottomFrag().appendChild(Copy.tag);
 BottomFrag().appendChild(StartButton.tag);

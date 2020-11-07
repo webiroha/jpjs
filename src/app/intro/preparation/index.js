@@ -22,7 +22,7 @@ const Preparation = () => {
   const ExplainText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'You can type Japanese by changing keyboard mode if you want🙂',
+    text: ['You will type Japanese by changing keyboard mode', 'if you want🙂'],
   });
 
   ExplainFrag().appendChild(Title.tag);

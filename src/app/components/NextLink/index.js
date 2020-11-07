@@ -10,7 +10,8 @@ const NextLink = () => {
   const Link = Element({
     elem: 'a',
     class: 'next-link__item',
-    text: 'Next',
+    text: 'coming soon!',
+    // text: 'Next',
   });
 
   Block.tag.appendChild(Link.tag);
