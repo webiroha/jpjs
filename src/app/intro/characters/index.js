@@ -42,7 +42,7 @@ const Characters = () => {
   const SoundText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'Japanese sounds are expressed by roman alphabet.',
+    text: 'Japanese sounds are expressed by the Roman alphabet.',
   });
   ContentsFrag().appendChild(SoundText.tag);
 
