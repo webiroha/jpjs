@@ -18,7 +18,7 @@ const Header = () => {
     class: 'logo__link',
     text: ['Japanese', 'JavaScript'],
   });
-  ToHome.tag.href = '/jpjs/';
+  ToHome.tag.href = '../../';
 
   Logo.tag.appendChild(ToHome.tag);
   PageHeader.tag.appendChild(Logo.tag);
