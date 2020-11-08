@@ -51,7 +51,7 @@ const Preparation = () => {
   const { Code } = CodeBlock(order);
   ContentsFrag().appendChild(Code.tag);
 
-  ContentsFrag().appendChild(NextLink());
+  ContentsFrag().appendChild(NextLink('./characters/'));
 
   return ContentsFrag();
 };
