@@ -42,7 +42,7 @@ const Characters = () => {
   const SoundText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'Below is used for displaying the pronunciation.',
+    text: 'Japanese sounds are expressed by roman alphabet.',
   });
   ContentsFrag().appendChild(SoundText.tag);
 
@@ -53,7 +53,7 @@ const Characters = () => {
   const { Code: SoundCode } = CodeBlock(soundCharacters);
   ContentsFrag().appendChild(SoundCode.tag);
 
-  ContentsFrag().appendChild(NextLink());
+  ContentsFrag().appendChild(NextLink(''));
 
   return ContentsFrag();
 };
