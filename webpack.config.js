@@ -11,6 +11,7 @@ module.exports = {
     top: './src/app/index.js',
     preparation: './src/app/intro/preparation/index.js',
     characters: './src/app/intro/characters/index.js',
+    vowels: './src/app/intro/vowels/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -55,6 +56,18 @@ module.exports = {
         collapseWhitespace: false,
       },
       chunks: ['characters'],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Japanese JavaScript | Vowels',
+      description: 'Japanese has 5 vowels.',
+      filename: 'intro/vowels/index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+      chunks: ['vowels'],
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash].css',
