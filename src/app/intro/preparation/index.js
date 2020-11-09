@@ -1,34 +1,18 @@
 import HeaderFooter from '../../components/pages/HeaderFooter';
 import Frag from '../../components/atom/Frag';
-import Element from '../../components/atom/Element';
+import Explain from '../../components/Explain';
 import CodeBlock from '../../components/CodeBlock';
 import NextLink from '../../components/NextLink';
 
 const Preparation = () => {
   const ContentsFrag = Frag();
-  const ExplainFrag = Frag();
 
-  const Explain = Element({
-    elem: 'div',
-    class: 'explain',
-  });
-
-  const Title = Element({
-    elem: 'h1',
-    class: 'explain__title slide-in-upper__0',
-    text: 'Preparation',
-  });
-
-  const ExplainText = Element({
-    elem: 'p',
-    class: 'text opacity_0 slide-in-upper__1',
+  const ExplainInfo = {
+    title: 'Preparation',
     text: ['You will type Japanese by changing keyboard mode', 'if you want🙂'],
-  });
-
-  ExplainFrag().appendChild(Title.tag);
-  ExplainFrag().appendChild(ExplainText.tag);
-  Explain.tag.appendChild(ExplainFrag());
-  ContentsFrag().appendChild(Explain.tag);
+  };
+  const PreparationExplain = Explain(ExplainInfo);
+  ContentsFrag().appendChild(PreparationExplain());
 
   const order = `const Windows = [
     { click: 'Windows menu' },
