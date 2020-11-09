@@ -47,6 +47,10 @@ The other candidate
 
 - [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)
 
+### Sounds
+
+- [あみたろの声素材工房(小春音アミ(Ami Koharune))](https://www14.big.or.jp/~amiami/happy/)
+
 ### environment references
 
 - [Let’s Get Started with Webpack 4](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
