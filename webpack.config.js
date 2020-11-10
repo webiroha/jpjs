@@ -113,6 +113,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(wav)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/sounds/single',
+            },
+          },
+        ],
+      },
     ],
   },
 };
