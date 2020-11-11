@@ -4,8 +4,11 @@ import Element from '../../components/atom/Element';
 import Explain from '../../components/Explain';
 import CodeBlock from '../../components/CodeBlock';
 import NextLink from '../../components/NextLink';
-import a from '../../../assets/sounds/single/a.wav';
-// console.log(a);
+import '../../../assets/sounds/single/a.wav';
+import '../../../assets/sounds/single/i.wav';
+import '../../../assets/sounds/single/u.wav';
+import '../../../assets/sounds/single/e.wav';
+import '../../../assets/sounds/single/o.wav';
 
 const Vowels = () => {
   const ContentsFrag = Frag();
@@ -40,46 +43,34 @@ const Vowels = () => {
   const { Code: VowelSoundCode } = CodeBlock(vowelsSounds);
   ContentsFrag().appendChild(VowelSoundCode.tag);
 
+  const vowels = ['a', 'i', 'u', 'e', 'o'];
+
   const SoundsBlock = Element({
     elem: 'div',
     class: 'sound-block fade-in',
   });
+  const SoundsFrag = Frag();
 
-  // const soundA = new Audio(a);
+  const createSoundButtons = (item) => {
+    const sound = new Audio(`../../../assets/sounds/single/${item}.wav`);
 
-  // const AudioA = Element({
-  //   elem: 'audio',
-  //   class: 'audio',
-  // });
-  // AudioA.tag.id = 'audio';
-  // AudioA.tag.controls;
+    const SoundButton = Element({
+      elem: 'button',
+      class: 'sound-button',
+      text: item,
+    });
+    SoundButton.tag.type = 'button';
+    SoundButton.tag.addEventListener('click', () => {
+      sound.currentTime = 0;
+      sound.play();
+    });
 
-  // const AudioAItem = Element({
-  //   elem: 'source',
-  //   class: 'source',
-  // });
-  // AudioAItem.tag.src = '../../../assets/sounds/single/a.wav';
-  // AudioAItem.tag.type = 'wav';
-  // AudioA.tag.appendChild(AudioAItem.tag);
+    SoundsFrag().appendChild(SoundButton.tag);
+  };
 
-  const SoundA = Element({
-    elem: 'button',
-    class: 'sound-button',
-    text: 'sound a',
-  });
+  vowels.map((i) => createSoundButtons(i));
 
-  // SoundA.tag.type = 'button';
-  // SoundA.tag.addEventListener('click', () => {
-  //   document.getElementById('audio').currentTime = 0;
-  //   document.getElementById('audio').play();
-  // });
-  SoundA.tag.type = 'button';
-  SoundA.tag.addEventListener('click', () => {
-    soundA.play();
-  });
-
-  // SoundsBlock.tag.appendChild(AudioA.tag);
-  SoundsBlock.tag.appendChild(SoundA.tag);
+  SoundsBlock.tag.appendChild(SoundsFrag());
   ContentsFrag().appendChild(SoundsBlock.tag);
 
   ContentsFrag().appendChild(NextLink(''));
