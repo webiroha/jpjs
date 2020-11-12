@@ -52,7 +52,7 @@ const Vowels = () => {
   const SoundsFrag = Frag();
 
   const createSoundButtons = (item) => {
-    const sound = new Audio(`../../../assets/sounds/single/${item}.wav`);
+    const sound = new Audio(`../../assets/sounds/single/${item}.wav`);
 
     const SoundButton = Element({
       elem: 'button',
