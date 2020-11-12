@@ -35,7 +35,7 @@ const Preparation = () => {
   const { Code } = CodeBlock(order);
   ContentsFrag().appendChild(Code.tag);
 
-  ContentsFrag().appendChild(NextLink('../characters/'));
+  ContentsFrag().appendChild(NextLink('../intro/characters/'));
 
   return ContentsFrag();
 };

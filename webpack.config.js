@@ -15,6 +15,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
+    publicPath: '/jpjs/',
     filename: '[name].[chunkhash].js',
   },
   plugins: [

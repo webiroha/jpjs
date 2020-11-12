@@ -79,3 +79,24 @@ const Vowels = () => {
 };
 
 HeaderFooter(Vowels);
+
+// const vowelsLetters = [
+//   { a: { hiragana: 'あ', katakana: 'ア' } },
+//   { i: { hiragana: 'い', katakana: 'イ' } },
+//   { u: { hiragana: 'う', katakana: 'ウ' } },
+//   { e: { hiragana: 'え', katakana: 'エ' } },
+//   { o: { hiragana: 'お', katakana: 'オ' } },
+// ];
+
+// const vowels = [
+//   { a: 'ah' },
+//   { i: 'ee' },
+//   { u: 'oo' },
+//   { e: 'eh' },
+//   { o: 'oh' },
+// ];
+
+// const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
+// const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
+// const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
+// const blue = [{ romaji: 'ao', hiragana: 'あお', kanji: '青' }];
