@@ -22,6 +22,7 @@
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^1.0.0",
     "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^4.0.4",
     "prettier": "^2.1.1",
     "prettier-stylelint": "^0.4.2",
@@ -31,13 +32,16 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
+    "terser-webpack-plugin": "^5.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
   },
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
     "eslint": "^7.8.1",
