@@ -1,8 +1,8 @@
-import HeaderFooter from '../../components/pages/HeaderFooter';
-import Frag from '../../components/atom/Frag';
-import Explain from '../../components/Explain';
-import CodeBlock from '../../components/CodeBlock';
-import NextLink from '../../components/NextLink';
+import HeaderFooter from '@root/components/pages/HeaderFooter';
+import Frag from '@root/components/atom/Frag';
+import Explain from '@root/components/Explain';
+import CodeBlock from '@root/components/CodeBlock';
+import NextLink from '@root/components/NextLink';
 
 const Preparation = () => {
   const ContentsFrag = Frag();
@@ -35,7 +35,7 @@ const Preparation = () => {
   const { Code } = CodeBlock(order);
   ContentsFrag().appendChild(Code.tag);
 
-  ContentsFrag().appendChild(NextLink('../characters/'));
+  ContentsFrag().appendChild(NextLink('../intro/characters'));
 
   return ContentsFrag();
 };

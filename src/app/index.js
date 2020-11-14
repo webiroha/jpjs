@@ -1,10 +1,10 @@
 import 'sanitize.css';
 import '../styles/main.scss';
 
-import Frag from './components/atom/Frag';
-import Element from './components/atom/Element';
-import NihongoMotion from './components/NihongoMotion';
-import Center from './components/layout/Center';
+import Frag from '@root/components/atom/Frag';
+import Element from '@root/components/atom/Element';
+import NihongoMotion from '@root/components/NihongoMotion';
+import Center from '@root/components/layout/Center';
 
 const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 

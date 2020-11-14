@@ -12,11 +12,6 @@ module.exports = {
     characters: './src/app/intro/characters/index.js',
     vowels: './src/app/intro/vowels/index.js',
   },
-  output: {
-    path: path.resolve(__dirname, '../docs'),
-    publicPath: '/jpjs/',
-    filename: '[name].[chunkhash].js',
-  },
 
   module: {
     rules: [
@@ -39,18 +34,18 @@ module.exports = {
           'sass-loader',
         ],
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'assets/images/',
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.(wav)$/,
         use: [
@@ -65,23 +60,12 @@ module.exports = {
       },
     ],
   },
-  // mode: 'development',
-  // devtool: 'cheap-module-eval-source-map',
-  // devServer: {
-  //   open: true,
-  //   contentBase: path.join(__dirname),
-  //   compress: true,
-  //   watchContentBase: true,
-  //   port: 9000,
-  // },
   resolve: {
-    // alias: {
-    //   '@scss': path.resolve(__dirname, '../src/styles/scss'),
-    //   '@img': path.resolve(__dirname, '../src/assets/images'),
-    //   '@img': path.resolve(__dirname, '../src/assets/sounds/single'),
-    //   '@': path.resolve(__dirname, '../src'),
-    // },
-    modules: ['node_modules', path.resolve(__dirname, 'src')],
+    alias: {
+      '@root': path.resolve(__dirname, '../src/app/'),
+      '@wav': path.resolve(__dirname, '../src/assets/sounds/single'),
+    },
+    modules: ['node_modules', path.resolve(__dirname, '../src')],
     extensions: ['.js', '.ts'],
   },
 

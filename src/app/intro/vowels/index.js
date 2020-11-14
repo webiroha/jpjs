@@ -1,14 +1,14 @@
-import HeaderFooter from '../../components/pages/HeaderFooter';
-import Frag from '../../components/atom/Frag';
-import Element from '../../components/atom/Element';
-import Explain from '../../components/Explain';
-import CodeBlock from '../../components/CodeBlock';
-import NextLink from '../../components/NextLink';
-import '../../../assets/sounds/single/a.wav';
-import '../../../assets/sounds/single/i.wav';
-import '../../../assets/sounds/single/u.wav';
-import '../../../assets/sounds/single/e.wav';
-import '../../../assets/sounds/single/o.wav';
+import HeaderFooter from '@root/components/pages/HeaderFooter';
+import Frag from '@root/components/atom/Frag';
+import Element from '@root/components/atom/Element';
+import Explain from '@root/components/Explain';
+import CodeBlock from '@root/components/CodeBlock';
+import NextLink from '@root/components/NextLink';
+import '@wav/a.wav';
+import '@wav/i.wav';
+import '@wav/u.wav';
+import '@wav/e.wav';
+import '@wav/o.wav';
 
 const Vowels = () => {
   const ContentsFrag = Frag();

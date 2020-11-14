@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   env: {
     browser: true,
@@ -46,6 +48,9 @@ module.exports = {
       node: {
         extensions: ['.js', 'jsx'],
         paths: ['src'],
+      },
+      webpack: {
+        config: path.resolve(__dirname, './config/webpack.common.config.js'),
       },
     },
   },
