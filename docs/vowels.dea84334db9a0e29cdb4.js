@@ -1,181 +1,8 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/jpjs/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-"use strict";
-var Element = function Element(props) {
-  var tag = document.createElement(props.elem);
-  tag.className = props["class"];
-
-  if (Array.isArray(props.text)) {
-    props.text.forEach(function (t, i) {
-      var line = document.createTextNode(t);
-      var br = document.createElement('br');
-      tag.appendChild(line);
-      if (props.text.length - 1 > i) tag.appendChild(br);
-    });
-  } else {
-    tag.textContent = props.text;
-  }
-
-  return {
-    tag: tag
-  };
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Element);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var Frag = function Frag() {
-  var frag = document.createDocumentFragment();
-  return function () {
-    return frag;
-  };
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Frag);
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var sanitize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _atom_Frag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-/* harmony import */ var _atom_Element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
-
-
-
-
-
-var Center = function Center() {
-  var root = document.getElementById('root');
-  var WholeFrag = Object(_atom_Frag__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();
-  var Wrapper = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])({
-    elem: 'div',
-    "class": 'wrapper'
-  });
-  var CenterFrag = Object(_atom_Frag__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();
-  return {
-    root: root,
-    WholeFrag: WholeFrag,
-    Wrapper: Wrapper,
-    CenterFrag: CenterFrag
-  };
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Center);
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
+/***/ 802:
+/***/ ((module) => {
 
 // https://github.com/substack/deep-freeze/blob/master/index.js
 /** @param {any} obj */
@@ -2387,94 +2214,9 @@ module.exports = highlight;
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-
-// EXTERNAL MODULE: ./src/styles/main.scss
-var main = __webpack_require__(2);
-
-// EXTERNAL MODULE: ./node_modules/highlight.js/lib/core.js
-var core = __webpack_require__(5);
-var core_default = /*#__PURE__*/__webpack_require__.n(core);
-
-// EXTERNAL MODULE: ./node_modules/highlight.js/lib/languages/javascript.js
-var javascript = __webpack_require__(8);
-var javascript_default = /*#__PURE__*/__webpack_require__.n(javascript);
-
-// CONCATENATED MODULE: ./node_modules/highlight.js/styles/gruvbox-dark.css
-// extracted by mini-css-extract-plugin
-
-// EXTERNAL MODULE: ./src/app/components/atom/Element.js
-var Element = __webpack_require__(0);
-
-// CONCATENATED MODULE: ./src/app/components/CodeBlock/index.js
-
-
-
-
-core_default.a.registerLanguage('javascript', javascript_default.a);
-
-
-var CodeBlock_CodeBlock = function CodeBlock(text) {
-  var Code = Object(Element["a" /* default */])({
-    elem: 'code',
-    "class": 'code fade-in gruvbox-dark hljs'
-  });
-  var Pre = Object(Element["a" /* default */])({
-    elem: 'pre',
-    "class": 'pre'
-  });
-  var highlight = core_default.a.highlight('javascript', text).value;
-  Pre.tag.innerHTML = highlight;
-  Code.tag.appendChild(Pre.tag);
-  return {
-    Code: Code
-  };
-};
-
-/* harmony default export */ var components_CodeBlock = __webpack_exports__["a"] = (CodeBlock_CodeBlock);
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _atom_Frag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _atom_Element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
-
-
-
-var Explain = function Explain(props) {
-  var ExplainFrag = Object(_atom_Frag__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();
-  var Wrapper = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    elem: 'div',
-    "class": 'explain'
-  });
-  var Title = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    elem: 'h1',
-    "class": 'explain__title slide-in-upper__0',
-    text: props.title
-  });
-  var Text = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    elem: 'p',
-    "class": 'text opacity_0 slide-in-upper__1',
-    text: props.text
-  });
-  ExplainFrag().appendChild(Title.tag);
-  ExplainFrag().appendChild(Text.tag);
-  Wrapper.tag.appendChild(ExplainFrag());
-  return function () {
-    return Wrapper.tag;
-  };
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Explain);
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
+/***/ 344:
+/***/ ((module) => {
 
 const IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
 const KEYWORDS = [
@@ -3071,66 +2813,140 @@ function javascript(hljs) {
 module.exports = javascript;
 
 
-/***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ })
 
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => module['default'] :
+/******/ 				() => module;
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/jpjs/";
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+(() => {
 "use strict";
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _atom_Element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 
-
-
-var NextLink = function NextLink(link) {
-  var Block = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    elem: 'div',
-    "class": 'next-link fade-in'
-  });
-  var status = link ? 'Next' : 'coming soon!';
-  var Link = Object(_atom_Element__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
-    elem: 'a',
-    "class": 'next-link__item',
-    text: status
-  });
-  Link.tag.href = link;
-  Block.tag.appendChild(Link.tag);
-  return Block.tag;
+// CONCATENATED MODULE: ./src/app/components/atom/Frag.js
+var Frag = function Frag() {
+  var frag = document.createDocumentFragment();
+  return function () {
+    return frag;
+  };
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (NextLink);
+/* harmony default export */ const atom_Frag = (Frag);
+// CONCATENATED MODULE: ./src/app/components/atom/Element.js
+var Element = function Element(props) {
+  var tag = document.createElement(props.elem);
+  tag.className = props["class"];
 
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  if (Array.isArray(props.text)) {
+    props.text.forEach(function (t, i) {
+      var line = document.createTextNode(t);
+      var br = document.createElement('br');
+      tag.appendChild(line);
+      if (props.text.length - 1 > i) tag.appendChild(br);
+    });
+  } else {
+    tag.textContent = props.text;
+  }
 
-"use strict";
+  return {
+    tag: tag
+  };
+};
 
-// EXTERNAL MODULE: ./node_modules/sanitize.css/sanitize.css
-var sanitize = __webpack_require__(3);
+/* harmony default export */ const atom_Element = (Element);
+// CONCATENATED MODULE: ./src/app/components/layout/Center/index.js
 
-// EXTERNAL MODULE: ./src/styles/main.scss
-var main = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./src/app/components/layout/Center/index.js
-var Center = __webpack_require__(4);
 
-// EXTERNAL MODULE: ./src/app/components/atom/Element.js
-var Element = __webpack_require__(0);
 
+
+var Center = function Center() {
+  var root = document.getElementById('root');
+  var WholeFrag = atom_Frag();
+  var Wrapper = atom_Element({
+    elem: 'div',
+    "class": 'wrapper'
+  });
+  var CenterFrag = atom_Frag();
+  return {
+    root: root,
+    WholeFrag: WholeFrag,
+    Wrapper: Wrapper,
+    CenterFrag: CenterFrag
+  };
+};
+
+/* harmony default export */ const layout_Center = (Center);
 // CONCATENATED MODULE: ./src/app/components/Header/index.js
 
 
 
-var Header_Header = function Header() {
-  var PageHeader = Object(Element["a" /* default */])({
+var Header = function Header() {
+  var PageHeader = atom_Element({
     elem: 'header',
     "class": 'header fade-in'
   });
-  var Logo = Object(Element["a" /* default */])({
+  var Logo = atom_Element({
     elem: 'h1',
     "class": 'logo'
   });
-  var ToHome = Object(Element["a" /* default */])({
+  var ToHome = atom_Element({
     elem: 'a',
     "class": 'logo__link',
     text: ['Japanese', 'JavaScript']
@@ -3143,17 +2959,17 @@ var Header_Header = function Header() {
   };
 };
 
-/* harmony default export */ var components_Header = (Header_Header);
+/* harmony default export */ const components_Header = (Header);
 // CONCATENATED MODULE: ./src/app/components/Footer/index.js
 
 
 
-var Footer_Footer = function Footer() {
-  var PageFooter = Object(Element["a" /* default */])({
+var Footer = function Footer() {
+  var PageFooter = atom_Element({
     elem: 'footer',
     "class": 'footer fade-in'
   });
-  var CopyRight = Object(Element["a" /* default */])({
+  var CopyRight = atom_Element({
     elem: 'small',
     "class": 'copyright',
     text: '© 2020 Keiko(webiroha) All Rights Reserved.'
@@ -3164,7 +2980,7 @@ var Footer_Footer = function Footer() {
   };
 };
 
-/* harmony default export */ var components_Footer = (Footer_Footer);
+/* harmony default export */ const components_Footer = (Footer);
 // CONCATENATED MODULE: ./src/app/components/pages/HeaderFooter/index.js
 
 
@@ -3172,8 +2988,8 @@ var Footer_Footer = function Footer() {
 
 
 
-var HeaderFooter_HeaderFooter = function HeaderFooter(inside) {
-  var _Center = Object(Center["a" /* default */])(),
+var HeaderFooter = function HeaderFooter(inside) {
+  var _Center = layout_Center(),
       root = _Center.root,
       WholeFrag = _Center.WholeFrag,
       Wrapper = _Center.Wrapper;
@@ -3191,44 +3007,190 @@ var HeaderFooter_HeaderFooter = function HeaderFooter(inside) {
   };
 };
 
-/* harmony default export */ var pages_HeaderFooter = __webpack_exports__["a"] = (HeaderFooter_HeaderFooter);
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _root_components_pages_HeaderFooter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _root_components_atom_Frag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
-/* harmony import */ var _root_components_Explain__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
-/* harmony import */ var _root_components_CodeBlock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-/* harmony import */ var _root_components_NextLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+/* harmony default export */ const pages_HeaderFooter = (HeaderFooter);
+// CONCATENATED MODULE: ./src/app/components/Explain/index.js
 
 
 
-
-
-
-var Preparation = function Preparation() {
-  var ContentsFrag = Object(_root_components_atom_Frag__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])();
-  var ExplainInfo = {
-    title: 'Preparation',
-    text: ['You will type Japanese by changing keyboard mode', 'if you want🙂']
+var Explain = function Explain(props) {
+  var ExplainFrag = atom_Frag();
+  var Wrapper = atom_Element({
+    elem: 'div',
+    "class": 'explain'
+  });
+  var Title = atom_Element({
+    elem: 'h1',
+    "class": 'explain__title slide-in-upper__0',
+    text: props.title
+  });
+  var Text = atom_Element({
+    elem: 'p',
+    "class": 'text opacity_0 slide-in-upper__1',
+    text: props.text
+  });
+  ExplainFrag().appendChild(Title.tag);
+  ExplainFrag().appendChild(Text.tag);
+  Wrapper.tag.appendChild(ExplainFrag());
+  return function () {
+    return Wrapper.tag;
   };
-  var PreparationExplain = Object(_root_components_Explain__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(ExplainInfo);
-  ContentsFrag().appendChild(PreparationExplain());
-  var order = "const Windows = [\n    { click: 'Windows menu' },\n    { open: 'Settings' },\n    { select: 'Time & language' },\n    { open: 'Region & language' },\n    { click: 'Add a language' },\n    { select: '\u65E5\u672C\u8A9E \u2013 Japanese' }\n  ];\n\n  const Mac = [\n    { click: 'Apple menu' },\n    { select: 'System Preferences' },\n    { open: 'Keyboard' },\n    { click: 'Input Sources' },\n    { click: 'Add button' },\n    { select: 'Japanese' }\n  ];";
+};
 
-  var _CodeBlock = Object(_root_components_CodeBlock__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(order),
-      Code = _CodeBlock.Code;
+/* harmony default export */ const components_Explain = (Explain);
+// EXTERNAL MODULE: ./node_modules/highlight.js/lib/core.js
+var core = __webpack_require__(802);
+var core_default = /*#__PURE__*/__webpack_require__.n(core);
 
-  ContentsFrag().appendChild(Code.tag);
-  ContentsFrag().appendChild(Object(_root_components_NextLink__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('../intro/characters'));
+// EXTERNAL MODULE: ./node_modules/highlight.js/lib/languages/javascript.js
+var javascript = __webpack_require__(344);
+var javascript_default = /*#__PURE__*/__webpack_require__.n(javascript);
+
+// CONCATENATED MODULE: ./src/app/components/CodeBlock/index.js
+
+
+
+
+core_default().registerLanguage('javascript', (javascript_default()));
+
+
+var CodeBlock = function CodeBlock(text) {
+  var Code = atom_Element({
+    elem: 'code',
+    "class": 'code fade-in gruvbox-dark hljs'
+  });
+  var Pre = atom_Element({
+    elem: 'pre',
+    "class": 'pre'
+  });
+  var highlight = core_default().highlight('javascript', text).value;
+  Pre.tag.innerHTML = highlight;
+  Code.tag.appendChild(Pre.tag);
+  return {
+    Code: Code
+  };
+};
+
+/* harmony default export */ const components_CodeBlock = (CodeBlock);
+// CONCATENATED MODULE: ./src/app/components/NextLink/index.js
+
+
+
+var NextLink = function NextLink(link) {
+  var Block = atom_Element({
+    elem: 'div',
+    "class": 'next-link fade-in'
+  });
+  var status = link ? 'Next' : 'coming soon!';
+  var Link = atom_Element({
+    elem: 'a',
+    "class": 'next-link__item',
+    text: status
+  });
+  Link.tag.href = link;
+  Block.tag.appendChild(Link.tag);
+  return Block.tag;
+};
+
+/* harmony default export */ const components_NextLink = (NextLink);
+// CONCATENATED MODULE: ./src/assets/sounds/single/a.wav
+/* harmony default export */ const a = (__webpack_require__.p + "assets/sounds/single/a.wav");
+// CONCATENATED MODULE: ./src/assets/sounds/single/i.wav
+/* harmony default export */ const i = (__webpack_require__.p + "assets/sounds/single/i.wav");
+// CONCATENATED MODULE: ./src/assets/sounds/single/u.wav
+/* harmony default export */ const u = (__webpack_require__.p + "assets/sounds/single/u.wav");
+// CONCATENATED MODULE: ./src/assets/sounds/single/e.wav
+/* harmony default export */ const e = (__webpack_require__.p + "assets/sounds/single/e.wav");
+// CONCATENATED MODULE: ./src/assets/sounds/single/o.wav
+/* harmony default export */ const o = (__webpack_require__.p + "assets/sounds/single/o.wav");
+// CONCATENATED MODULE: ./src/app/intro/vowels/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+var Vowels = function Vowels() {
+  var ContentsFrag = atom_Frag();
+  var ExplainInfo = {
+    title: 'Vowels',
+    text: 'Japanese has 5 vowels.'
+  };
+  var VowelsExplain = components_Explain(ExplainInfo);
+  ContentsFrag().appendChild(VowelsExplain());
+  var vowelsByRomaji = "const vowelsByRomaji = ['a', 'i', 'u', 'e', 'o'];";
+
+  var _CodeBlock = components_CodeBlock(vowelsByRomaji),
+      VowelsCode = _CodeBlock.Code;
+
+  ContentsFrag().appendChild(VowelsCode.tag);
+  var NoteText = atom_Element({
+    elem: 'p',
+    "class": 'text opacity_0 slide-in-upper__1',
+    text: 'The sounds are different from English.'
+  });
+  ContentsFrag().appendChild(NoteText.tag);
+  var vowelsSounds = "const vowelsSounds = [\n    { a: 'ah' },\n    { i: 'ee' },\n    { u: 'oo' },\n    { e: 'eh' },\n    { o: 'oh' },\n  ];";
+
+  var _CodeBlock2 = components_CodeBlock(vowelsSounds),
+      VowelSoundCode = _CodeBlock2.Code;
+
+  ContentsFrag().appendChild(VowelSoundCode.tag);
+  var vowels = ['a', 'i', 'u', 'e', 'o'];
+  var SoundsBlock = atom_Element({
+    elem: 'div',
+    "class": 'sound-block fade-in'
+  });
+  var SoundsFrag = atom_Frag();
+
+  var createSoundButtons = function createSoundButtons(item) {
+    var sound = new Audio("../../assets/sounds/single/".concat(item, ".wav"));
+    var SoundButton = atom_Element({
+      elem: 'button',
+      "class": 'sound-button',
+      text: item
+    });
+    SoundButton.tag.type = 'button';
+    SoundButton.tag.addEventListener('click', function () {
+      sound.currentTime = 0;
+      sound.play();
+    });
+    SoundsFrag().appendChild(SoundButton.tag);
+  };
+
+  vowels.map(function (i) {
+    return createSoundButtons(i);
+  });
+  SoundsBlock.tag.appendChild(SoundsFrag());
+  ContentsFrag().appendChild(SoundsBlock.tag);
+  ContentsFrag().appendChild(components_NextLink(''));
   return ContentsFrag();
 };
 
-Object(_root_components_pages_HeaderFooter__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Preparation);
+pages_HeaderFooter(Vowels); // const vowelsLetters = [
+//   { a: { hiragana: 'あ', katakana: 'ア' } },
+//   { i: { hiragana: 'い', katakana: 'イ' } },
+//   { u: { hiragana: 'う', katakana: 'ウ' } },
+//   { e: { hiragana: 'え', katakana: 'エ' } },
+//   { o: { hiragana: 'お', katakana: 'オ' } },
+// ];
+// const vowels = [
+//   { a: 'ah' },
+//   { i: 'ee' },
+//   { u: 'oo' },
+//   { e: 'eh' },
+//   { o: 'oh' },
+// ];
+// const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
+// const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
+// const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
+// const blue = [{ romaji: 'ao', hiragana: 'あお', kanji: '青' }];
+})();
 
-/***/ })
-/******/ ]);
+/******/ })()
+;
