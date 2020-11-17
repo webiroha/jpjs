@@ -38,7 +38,7 @@ const Characters = () => {
   const { Code: SoundCode } = CodeBlock(soundCharacters);
   ContentsFrag().appendChild(SoundCode.tag);
 
-  ContentsFrag().appendChild(NextLink(''));
+  ContentsFrag().appendChild(NextLink('../vowels/'));
 
   return ContentsFrag();
 };
