@@ -25,12 +25,12 @@ const Vowels = () => {
   const { Code: VowelsCode } = CodeBlock(vowelsByRomaji);
   ContentsFrag().appendChild(VowelsCode.tag);
 
-  const NoteText = Element({
+  const SoundText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
     text: 'The sound is different from English.',
   });
-  ContentsFrag().appendChild(NoteText.tag);
+  ContentsFrag().appendChild(SoundText.tag);
 
   const vowelSounds = `const vowelSounds = [
     { a: { sound: 'ah' } },
@@ -42,6 +42,13 @@ const Vowels = () => {
 
   const { Code: VowelSoundCode } = CodeBlock(vowelSounds);
   ContentsFrag().appendChild(VowelSoundCode.tag);
+
+  const SoundButtonText = Element({
+    elem: 'p',
+    class: 'text opacity_0 slide-in-upper__1',
+    text: "Let's hear the sound!",
+  });
+  ContentsFrag().appendChild(SoundButtonText.tag);
 
   const vowels = ['a', 'i', 'u', 'e', 'o'];
 
@@ -73,28 +80,30 @@ const Vowels = () => {
   SoundsBlock.tag.appendChild(SoundsFrag());
   ContentsFrag().appendChild(SoundsBlock.tag);
 
+  const VowelHiraganaKatakana = Element({
+    elem: 'p',
+    class: 'text opacity_0 slide-in-upper__1',
+    text: 'The vowels spelt by hiragana and katakana.',
+  });
+  ContentsFrag().appendChild(VowelHiraganaKatakana.tag);
+
+  const vowelLetters = `const vowelLetters = [
+    { a: { hiragana: 'あ', katakana: 'ア' } },
+    { i: { hiragana: 'い', katakana: 'イ' } },
+    { u: { hiragana: 'う', katakana: 'ウ' } },
+    { e: { hiragana: 'え', katakana: 'エ' } },
+    { o: { hiragana: 'お', katakana: 'オ' } },
+  ];`;
+
+  const { Code: VowelLettersCode } = CodeBlock(vowelLetters);
+  ContentsFrag().appendChild(VowelLettersCode.tag);
+
   ContentsFrag().appendChild(NextLink(''));
 
   return ContentsFrag();
 };
 
 HeaderFooter(Vowels);
-
-// const vowelLetters = [
-//   { a: { hiragana: 'あ', katakana: 'ア' } },
-//   { i: { hiragana: 'い', katakana: 'イ' } },
-//   { u: { hiragana: 'う', katakana: 'ウ' } },
-//   { e: { hiragana: 'え', katakana: 'エ' } },
-//   { o: { hiragana: 'お', katakana: 'オ' } },
-// ];
-
-// const vowels = [
-//   { a: 'ah' },
-//   { i: 'ee' },
-//   { u: 'oo' },
-//   { e: 'eh' },
-//   { o: 'oh' },
-// ];
 
 // const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
 // const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
