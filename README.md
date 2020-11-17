@@ -33,7 +33,7 @@ Currently proceeding
 
 - [Poppins](https://fonts.google.com/specimen/Poppins) ⭐️
 
-- [Ubuntu](https://fonts.google.com/specimen/Ubuntu) ⭐️
+- [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono) ⭐️
 
 The other candidate
 
