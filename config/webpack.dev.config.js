@@ -6,7 +6,7 @@ module.exports = merge(webpackBaseConfig, {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, '../docs'),
-    publicPath: '/jpjs/',
+    publicPath: '/',
     filename: '[name].[chunkhash].js',
   },
   devtool: 'eval-cheap-module-source-map',

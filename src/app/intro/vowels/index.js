@@ -28,19 +28,19 @@ const Vowels = () => {
   const NoteText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'The sounds are different from English.',
+    text: 'The sound is different from English.',
   });
   ContentsFrag().appendChild(NoteText.tag);
 
-  const vowelsSounds = `const vowelsSounds = [
-    { a: 'ah' },
-    { i: 'ee' },
-    { u: 'oo' },
-    { e: 'eh' },
-    { o: 'oh' },
+  const vowelSounds = `const vowelSounds = [
+    { a: { sound: 'ah' } },
+    { i: { sound: 'ee' } },
+    { u: { sound: 'oo' } },
+    { e: { sound: 'eh' } },
+    { o: { sound: 'oh' } },
   ];`;
 
-  const { Code: VowelSoundCode } = CodeBlock(vowelsSounds);
+  const { Code: VowelSoundCode } = CodeBlock(vowelSounds);
   ContentsFrag().appendChild(VowelSoundCode.tag);
 
   const vowels = ['a', 'i', 'u', 'e', 'o'];
@@ -80,7 +80,7 @@ const Vowels = () => {
 
 HeaderFooter(Vowels);
 
-// const vowelsLetters = [
+// const vowelLetters = [
 //   { a: { hiragana: 'あ', katakana: 'ア' } },
 //   { i: { hiragana: 'い', katakana: 'イ' } },
 //   { u: { hiragana: 'う', katakana: 'ウ' } },
