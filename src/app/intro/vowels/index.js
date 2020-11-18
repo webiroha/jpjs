@@ -98,12 +98,37 @@ const Vowels = () => {
   const { Code: VowelLettersCode } = CodeBlock(vowelLetters);
   ContentsFrag().appendChild(VowelLettersCode.tag);
 
+  // const ExampleText = Element({
+  //   elem: 'p',
+  //   class: 'text opacity_0 slide-in-upper__1',
+  //   text: "Let's use vowels in practise!",
+  // });
+  // ContentsFrag().appendChild(ExampleText.tag);
+
+  // const examples = ``;
+
+  // const { Code: ExamplesCode } = CodeBlock(examples);
+  // ContentsFrag().appendChild(ExamplesCode.tag);
+
   ContentsFrag().appendChild(NextLink(''));
 
   return ContentsFrag();
 };
 
 HeaderFooter(Vowels);
+
+const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const englishHiragana = (english, hiragana) =>
+  `${english} is ${hiragana} in Hiragana.`;
+const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
+
+const love = vowels.a + vowels.i;
+
+console.log(englishHiragana('love', love));
+// love is あい in Hiragana.
+console.log(hiraganaKanji(love, '愛'));
+// あい is 愛 in Kanji.
 
 // const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
 // const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
