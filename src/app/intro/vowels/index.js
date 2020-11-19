@@ -98,17 +98,38 @@ const Vowels = () => {
   const { Code: VowelLettersCode } = CodeBlock(vowelLetters);
   ContentsFrag().appendChild(VowelLettersCode.tag);
 
-  // const ExampleText = Element({
-  //   elem: 'p',
-  //   class: 'text opacity_0 slide-in-upper__1',
-  //   text: "Let's use vowels in practise!",
-  // });
-  // ContentsFrag().appendChild(ExampleText.tag);
+  const ExampleText = Element({
+    elem: 'p',
+    class: 'text opacity_0 slide-in-upper__1',
+    text: "Let's use vowels in practise!",
+  });
+  ContentsFrag().appendChild(ExampleText.tag);
 
-  // const examples = ``;
+  const examples = `const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 
-  // const { Code: ExamplesCode } = CodeBlock(examples);
-  // ContentsFrag().appendChild(ExamplesCode.tag);
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+const love = vowels.a + vowels.i;
+const loveHiragana = englishHiragana('love', love);
+const loveKanji = hiraganaKanji(love, '愛');
+
+console.log(loveHiragana);
+// love is あい in Hiragana.
+console.log(loveKanji);
+// あい is 愛 in Kanji.`;
+
+  const { Code: ExamplesCode } = CodeBlock(examples);
+  ContentsFrag().appendChild(ExamplesCode.tag);
 
   ContentsFrag().appendChild(NextLink(''));
 
@@ -124,10 +145,12 @@ const englishHiragana = (english, hiragana) =>
 const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
 
 const love = vowels.a + vowels.i;
+const loveHiragana = englishHiragana('love', love);
+const loveKanji = hiraganaKanji(love, '愛');
 
-console.log(englishHiragana('love', love));
+console.log(loveHiragana);
 // love is あい in Hiragana.
-console.log(hiraganaKanji(love, '愛'));
+console.log(loveKanji);
 // あい is 愛 in Kanji.
 
 // const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
