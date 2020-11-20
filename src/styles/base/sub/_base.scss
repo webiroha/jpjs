@@ -48,6 +48,7 @@
 .sound-block {
   display: flex;
   flex-wrap: wrap;
+  gap: 1em;
   justify-content: center;
   margin: 1em auto 4em;
 }
@@ -75,9 +76,6 @@
   }
 }
 
-.sound-button + .sound-button {
-  margin-left: 1em;
-}
 
 .next-link__item {
   border: 1px solid $color-main;
