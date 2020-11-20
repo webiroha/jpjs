@@ -113,6 +113,7 @@ const englishHiragana = (
   hiragana
 ) =>
   \`\${english} is \${hiragana} in Hiragana.\`;
+
 const hiraganaKanji = (
   hiragana,
   kanji
@@ -153,7 +154,6 @@ console.log(loveHiragana);
 console.log(loveKanji);
 // あい is 愛 in Kanji.
 
-// const love = [{ romaji: 'ai', hiragana: 'あい', kanji: '愛' }];
 // const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
 // const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
 // const blue = [{ romaji: 'ao', hiragana: 'あお', kanji: '青' }];
