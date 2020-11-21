@@ -5,10 +5,11 @@ import Frag from '@root/components/atom/Frag';
 import Element from '@root/components/atom/Element';
 import NihongoMotion from '@root/components/NihongoMotion';
 import Center from '@root/components/layout/Center';
+import Link from '@root/components/links/Link';
 
 const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 
-root.className = 'root_layout_top';
+// root.className = 'root_layout_top';
 Wrapper.tag.className = 'wrapper wrapper_layout_top';
 
 const CenterWrapper = Element({
@@ -67,6 +68,7 @@ const BottomWrapper = Element({
   class: 'bottom-wrapper fade-in',
 });
 
+const PagelinkFrag = Frag();
 const BottomFrag = Frag();
 
 const Copy = Element({
@@ -75,15 +77,23 @@ const Copy = Element({
   text: 'Play with Japanese & JavaScript',
 });
 
-const StartButton = Element({
-  elem: 'a',
-  class: 'start-button',
-  text: "Let's start!",
+const PagelinksWrapper = Element({
+  elem: 'div',
+  class: 'pagelinks-wrapper fade-in',
 });
-StartButton.tag.href = './intro/preparation';
+const PagelinksWrapperInner = Element({
+  elem: 'div',
+  class: 'pagelinks-wrapper__inner',
+});
+
+const pagelinks = ['preparation', 'characters', 'vowels'];
+
+pagelinks.map((link, i) => PagelinkFrag().appendChild(Link(link, i)));
 
 BottomFrag().appendChild(Copy.tag);
-BottomFrag().appendChild(StartButton.tag);
+PagelinksWrapperInner.tag.appendChild(PagelinkFrag());
+PagelinksWrapper.tag.appendChild(PagelinksWrapperInner.tag);
+BottomFrag().appendChild(PagelinksWrapper.tag);
 BottomWrapper.tag.appendChild(BottomFrag());
 
 WholeFrag().appendChild(CenterWrapper.tag);

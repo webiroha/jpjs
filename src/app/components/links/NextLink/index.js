@@ -1,6 +1,6 @@
-import '../../../styles/main.scss';
+import '../../../../styles/main.scss';
 
-import Element from '../atom/Element';
+import Element from '../../atom/Element';
 
 const NextLink = (link) => {
   const Block = Element({

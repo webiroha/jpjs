@@ -16,7 +16,7 @@
 }
 
 .center-wrapper {
-  margin: auto;
+  margin: 5em auto 0;
 }
 
 .deco {
@@ -110,17 +110,33 @@
   }
 }
 
-.start-button {
-  background: $color-main;
-  border-radius: 4px;
-  color: $color-white;
-  display: block;
-  letter-spacing: 0.05em;
-  padding: 1em;
+.pagelinks-wrapper {
+  display: inline-block;
+  margin: 4em auto;
 
-  @include respond-to('large') {
-    font-size: 1em;
+}
+
+.pagelinks-wrapper__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagelink {
+  border-bottom: 1px solid $color-main;
+  margin: auto auto auto 0;
+  padding-bottom: 0;
+  transition: padding-bottom 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    padding-bottom: 0.2em;
   }
+
+}
+
+.pagelink + .pagelink {
+  margin-top: 2em;
 }
 
 .nihongo-motion {
