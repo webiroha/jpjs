@@ -121,11 +121,11 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 const love = vowels.a + vowels.i;
-const loveHiragana = englishHiragana('love', love);
+const loveHiragana = englishHiragana('Love', love);
 const loveKanji = hiraganaKanji(love, '愛');
 
 console.log(loveHiragana);
-// love is あい in Hiragana.
+// Love is あい in Hiragana.
 console.log(loveKanji);
 // あい is 愛 in Kanji.`;
 
@@ -146,11 +146,11 @@ const englishHiragana = (english, hiragana) =>
 const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
 
 const love = vowels.a + vowels.i;
-const loveHiragana = englishHiragana('love', love);
+const loveHiragana = englishHiragana('Love', love);
 const loveKanji = hiraganaKanji(love, '愛');
 
 console.log(loveHiragana);
-// love is あい in Hiragana.
+// Love is あい in Hiragana.
 console.log(loveKanji);
 // あい is 愛 in Kanji.
 
