@@ -1,9 +1,13 @@
-.root_layout_top {
+
+
+.wrapper_layout_top {
+  background: $color-main;
   height: 100%;
   width: 100%;
 }
 
-.wrapper_layout_top {
+.wrapper_layout_top__inner {
+  margin: auto;
   width: 80%;
 
   @include respond-to('medium') {
@@ -15,8 +19,27 @@
   }
 }
 
-.center-wrapper {
-  margin: 5em auto 0;
+.upper-wrapper {
+  background: $color-white;
+  overflow: hidden;
+  padding: 8em 0 6em;
+  position: relative;
+
+  &::before {
+    background: $color-main;
+    bottom: 0;
+    content: '';
+    height: 3em;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 1px;
+  }
+
+  &__inner {
+
+  }
 }
 
 .deco {
@@ -41,9 +64,7 @@
     font-size: 12em;
   }
 
-  @include hRespond-to() {
-    display: none;
-  }
+
 
   &::before {
     animation: slideInRight 1s ease-in 1.5s 1 forwards;
@@ -68,41 +89,30 @@
   @include fz_vw(24);
 
   font-weight: 600;
-  margin-bottom: 1em;
+  line-height: 1.2;
+  margin: 1em 0;
 
-  @include hRespond-to() {
-    @include fz_vw(38);
-  }
 
   @include respond-to('medium') {
-    font-size: 3.2vw;
+    font-size: 3.4vw;
 
-    @include hRespond-to() {
-      font-size: 4.5vw;
-    }
   }
 
   @include respond-to('large') {
-    font-size: 2em;
+    font-size: 2.2em;
 
-    @include hRespond-to() {
-      font-size: 2.5em;
-    }
   }
 }
 
-.bottom-wrapper {
-    // width: 100%;
-}
-
 .copy {
-  @include fz_vw(15);
+  @include fz_vw(14);
 
   font-weight: 600;
   letter-spacing: 0.1em;
+  position: relative;
 
   @include respond-to('medium') {
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
 
   @include respond-to('large') {
@@ -110,9 +120,13 @@
   }
 }
 
+.bottom-wrapper {
+  background: $color-main;
+}
+
 .pagelinks-wrapper {
   display: inline-block;
-  margin: 4em auto;
+  margin: 6em auto;
 
 }
 
@@ -122,7 +136,8 @@
 }
 
 .pagelink {
-  border-bottom: 1px solid $color-main;
+  border-bottom: 1px solid $color-white;
+  color: $color-white;
   font-size: 1.2em;
   margin: auto auto auto 0;
   padding-bottom: 0;
@@ -131,7 +146,6 @@
   &:hover,
   &:active,
   &:focus {
-    padding-bottom: 0.2em;
   }
 
 }

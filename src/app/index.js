@@ -12,9 +12,14 @@ const { root, WholeFrag, Wrapper, CenterFrag } = Center();
 // root.className = 'root_layout_top';
 Wrapper.tag.className = 'wrapper wrapper_layout_top';
 
-const CenterWrapper = Element({
+const UpperWrapper = Element({
   elem: 'div',
-  class: 'center-wrapper',
+  class: 'upper-wrapper',
+});
+
+const UpperWrapperInner = Element({
+  elem: 'div',
+  class: 'upper-wrapper__inner wrapper_layout_top__inner',
 });
 
 const DecoWrapper = Element({
@@ -39,8 +44,8 @@ const MotionFrag = Frag();
 const Letters = [
   { letter: 'に', x: -1.4, y: -0.5 },
   { letter: 'ほ', x: 1.0, y: -0.1 },
-  { letter: 'ん', x: -1.4, y: 1.4 },
-  { letter: 'ご', x: 1.7, y: 2.6 },
+  { letter: 'ん', x: -1.4, y: 1.2 },
+  { letter: 'ご', x: 1.7, y: 2.2 },
 ];
 const [Hi, Ra, Ga, Na] = Letters.map((i) =>
   NihongoMotion({
@@ -61,7 +66,17 @@ Deco.tag.appendChild(MotionFrag());
 DecoWrapper.tag.appendChild(Deco.tag);
 CenterFrag().appendChild(DecoWrapper.tag);
 CenterFrag().appendChild(JPJS.tag);
-CenterWrapper.tag.appendChild(CenterFrag());
+
+const Copy = Element({
+  elem: 'p',
+  class: 'copy',
+  text: 'Play with Japanese & JavaScript',
+});
+
+CenterFrag().appendChild(Copy.tag);
+
+UpperWrapperInner.tag.appendChild(CenterFrag());
+UpperWrapper.tag.appendChild(UpperWrapperInner.tag);
 
 const BottomWrapper = Element({
   elem: 'div',
@@ -71,15 +86,9 @@ const BottomWrapper = Element({
 const PagelinkFrag = Frag();
 const BottomFrag = Frag();
 
-const Copy = Element({
-  elem: 'p',
-  class: 'copy',
-  text: 'Play with Japanese & JavaScript',
-});
-
 const PagelinksWrapper = Element({
   elem: 'div',
-  class: 'pagelinks-wrapper fade-in',
+  class: 'pagelinks-wrapper',
 });
 const PagelinksWrapperInner = Element({
   elem: 'div',
@@ -90,13 +99,12 @@ const pagelinks = ['preparation', 'characters', 'vowels'];
 
 pagelinks.map((link, i) => PagelinkFrag().appendChild(Link(link, i)));
 
-BottomFrag().appendChild(Copy.tag);
 PagelinksWrapperInner.tag.appendChild(PagelinkFrag());
 PagelinksWrapper.tag.appendChild(PagelinksWrapperInner.tag);
 BottomFrag().appendChild(PagelinksWrapper.tag);
 BottomWrapper.tag.appendChild(BottomFrag());
 
-WholeFrag().appendChild(CenterWrapper.tag);
+WholeFrag().appendChild(UpperWrapper.tag);
 WholeFrag().appendChild(BottomWrapper.tag);
 Wrapper.tag.appendChild(WholeFrag());
 
