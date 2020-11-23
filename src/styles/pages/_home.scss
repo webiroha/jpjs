@@ -21,15 +21,17 @@
 
 .upper-wrapper {
   background: $color-white;
+  display: flex;
+  height: 87vh;
+  min-height: 540px;
   overflow: hidden;
-  padding: 8em 0 6em;
   position: relative;
 
   &::before {
+    animation: scrollDeco 2s ease-in-out 2.5s infinite;
     background: $color-main;
     bottom: 0;
     content: '';
-    height: 3em;
     left: 0;
     margin: auto;
     position: absolute;
@@ -38,6 +40,8 @@
   }
 
   &__inner {
+    margin: auto;
+    padding: 4em 0;
 
   }
 }
@@ -48,13 +52,17 @@
 }
 
 .deco__item {
-  @include fz_vw(140);
+  @include fz_vw(110);
 
   display: block;
   font-family: $font-family-jpselif;
   line-height: 1;
   margin-left: -0.02em;
   position: relative;
+
+  @include hRespond-to() {
+    @include fz_vw(80);
+  }
 
   @include respond-to('medium') {
     font-size: 20vw;
@@ -63,8 +71,6 @@
   @include respond-to('large') {
     font-size: 12em;
   }
-
-
 
   &::before {
     animation: slideInRight 1s ease-in 1.5s 1 forwards;
@@ -133,25 +139,27 @@
 .pagelinks-wrapper__inner {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .pagelink {
   border-bottom: 1px solid $color-white;
   color: $color-white;
-  font-size: 1.2em;
-  margin: auto auto auto 0;
+  font-size: 1em;
+  // margin: auto auto auto 0;
   padding-bottom: 0;
   transition: padding-bottom 0.2s;
 
   &:hover,
   &:active,
   &:focus {
+    border-bottom: 2px solid $color-white;
   }
 
 }
 
 .pagelink + .pagelink {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .nihongo-motion {

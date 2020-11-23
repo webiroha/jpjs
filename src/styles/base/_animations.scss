@@ -59,3 +59,17 @@
     transform: rotate(720deg) translate(30px) rotate(-720deg);
   }
 }
+
+// arrow scroll
+@keyframes scrollDeco {
+  0% {
+    height: 3em;
+    opacity: 0;
+  }
+
+  100% {
+    height: 0;
+    opacity: 1;
+  }
+}
+
