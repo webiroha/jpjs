@@ -120,6 +120,7 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
+
 const love = vowels.a + vowels.i;
 const loveHiragana = englishHiragana('Love', love);
 const loveKanji = hiraganaKanji(love, '愛');
@@ -127,7 +128,14 @@ const loveKanji = hiraganaKanji(love, '愛');
 console.log(loveHiragana);
 // Love is あい in Hiragana.
 console.log(loveKanji);
-// あい is 愛 in Kanji.`;
+// あい is 愛 in Kanji.
+
+
+const no = vowels.i.repeat(2) + vowels.e;
+const noHiragana = englishHiragana('No', no);
+
+console.log(noHiragana);
+// No is いいえ in Hiragana.`;
 
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
@@ -153,6 +161,12 @@ console.log(loveHiragana);
 // Love is あい in Hiragana.
 console.log(loveKanji);
 // あい is 愛 in Kanji.
+
+const no = vowels.i.repeat(2) + vowels.e;
+const noHiragana = englishHiragana('No', no);
+
+console.log(noHiragana);
+// No is いいえ in Hiragana.
 
 // const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
 // const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
