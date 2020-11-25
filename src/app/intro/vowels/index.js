@@ -135,7 +135,17 @@ const no = vowels.i.repeat(2) + vowels.e;
 const noHiragana = englishHiragana('No', no);
 
 console.log(noHiragana);
-// No is いいえ in Hiragana.`;
+// No is いいえ in Hiragana.
+
+
+const up = vowels.u + vowels.e;
+const upHiragana = englishHiragana('Up', up);
+const upKanji = hiraganaKanji(up, '上');
+
+console.log(upHiragana);
+// Up is うえ in Hiragana.
+console.log(upKanji);
+// うえ is 上 in Kanji.`;
 
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
@@ -147,6 +157,7 @@ console.log(noHiragana);
 
 HeaderFooter(Vowels);
 
+// for displaying console.log
 const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 
 const englishHiragana = (english, hiragana) =>
@@ -168,6 +179,15 @@ const noHiragana = englishHiragana('No', no);
 console.log(noHiragana);
 // No is いいえ in Hiragana.
 
-// const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
+const up = vowels.u + vowels.e;
+const upHiragana = englishHiragana('Up', up);
+const upKanji = hiraganaKanji(up, '上');
+
+console.log(upHiragana);
+// Up is うえ in Hiragana.
+console.log(upKanji);
+// うえ is 上 in Kanji.
+
 // const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
+// const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
 // const blue = [{ romaji: 'ao', hiragana: 'あお', kanji: '青' }];
