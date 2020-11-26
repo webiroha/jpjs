@@ -27,6 +27,11 @@ const pageMetas = {
     title: 'Japanese JavaScript | Vowels',
     description: 'Japanese has 5 vowels.',
   },
+
+  consonants: {
+    title: 'Japanese JavaScript | Consonants',
+    description: 'Japanese has around 14 - 16 consonants.',
+  },
 };
 
 const webpackConfig = {
@@ -35,6 +40,7 @@ const webpackConfig = {
     preparation: './src/app/intro/preparation/index.js',
     characters: './src/app/intro/characters/index.js',
     vowels: './src/app/intro/vowels/index.js',
+    consonants: './src/app/intro/consonants/index.js',
   },
 
   module: {
