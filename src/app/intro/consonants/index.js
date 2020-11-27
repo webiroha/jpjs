@@ -4,60 +4,64 @@ import Element from '@root/components/atom/Element';
 import Explain from '@root/components/Explain';
 import CodeBlock from '@root/components/CodeBlock';
 import NextLink from '@root/components/links/NextLink';
-// import '@wav/a.wav';
-// import '@wav/i.wav';
-// import '@wav/u.wav';
-// import '@wav/e.wav';
-// import '@wav/o.wav';
 
 const Consonants = () => {
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
     title: 'Consonants',
-    text: [
-      'Japanese has around 14 - 16 consonants.',
-      '*The way to write Romaji depends on the person.',
-    ],
+    text: 'Japanese has around 14 - 16 consonants.',
   };
+  const ConsonantsExplainSmall = Element({
+    elem: 'small',
+    class: 'small',
+    text: '*The way to write Romaji depends on the person.',
+  });
+
   const ConsonantsExplain = Explain(ExplainInfo);
   ContentsFrag().appendChild(ConsonantsExplain());
+  ContentsFrag().appendChild(ConsonantsExplainSmall.tag);
 
-  const consonantsByRomaji = `const consonants = [
-    'k',
-    's',
-    't',
-    'n',
-    'h',
-    'f',
-    'm',
-    'y',
-    'r',
-    'w',
-    'g',
-    'z',
-    'd',
-    'b',
-    'p',
-    '(v)',
-  ];`;
+  const consonantsByRomaji = `const consonants = [...'kstnhfmyrwgzdbpv'];`;
 
   const { Code: ConsonantsCode } = CodeBlock(consonantsByRomaji);
   ContentsFrag().appendChild(ConsonantsCode.tag);
 
-  const SoundText = Element({
+  const SystemExplainText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'The basic sound system is roughly consonant + vowel.',
+    text: [
+      'The BASIC sound system is "consonant + vowel" roughly besides some exceptions.',
+      'Let me show you the exact ones later.',
+    ],
   });
-  ContentsFrag().appendChild(SoundText.tag);
+  ContentsFrag().appendChild(SystemExplainText.tag);
 
-  const combinedSounds = `const combinedSounds = [
+  const combineSystem = `  const consonants = [...'kstnhfmyrwgzdbpv'];
+  const vowels = [...'aiueo'];
+  const roughlyCombinedSounds = consonants.map((consonant) =>
+    vowels.map((vowel) => consonant + vowel)
+  );
+  console.log(...roughlyCombinedSounds);
+  //  (5) ["ka", "ki", "ku", "ke", "ko"]
+  //  (5) ["sa", "si", "su", "se", "so"]
+  //  (5) ["ta", "ti", "tu", "te", "to"]
+  //  (5) ["na", "ni", "nu", "ne", "no"]
+  //  (5) ["ha", "hi", "hu", "he", "ho"]
+  //  (5) ["fa", "fi", "fu", "fe", "fo"]
+  //  (5) ["ma", "mi", "mu", "me", "mo"]
+  //  (5) ["ya", "yi", "yu", "ye", "yo"]
+  //  (5) ["ra", "ri", "ru", "re", "ro"]
+  //  (5) ["wa", "wi", "wu", "we", "wo"]
+  //  (5) ["ga", "gi", "gu", "ge", "go"]
+  //  (5) ["za", "zi", "zu", "ze", "zo"]
+  //  (5) ["da", "di", "du", "de", "do"]
+  //  (5) ["ba", "bi", "bu", "be", "bo"]
+  //  (5) ["pa", "pi", "pu", "pe", "po"]
+  //  (5) ["va", "vi", "vu", "ve", "vo"]`;
 
-  ];`;
-
-  const { Code: ConsonantSoundCode } = CodeBlock(combinedSounds);
-  ContentsFrag().appendChild(ConsonantSoundCode.tag);
+  const { Code: CombinedCode } = CodeBlock(combineSystem);
+  ContentsFrag().appendChild(CombinedCode.tag);
 
   //   const SoundButtonText = Element({
   //     elem: 'p',
