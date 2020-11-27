@@ -32,6 +32,11 @@ const pageMetas = {
     title: 'Japanese JavaScript | Consonants',
     description: 'Japanese has around 14 - 16 consonants.',
   },
+
+  consonantvowelk: {
+    title: 'Japanese JavaScript | Consonant K',
+    description: "Let's try to learn k + vowel sound!",
+  },
 };
 
 const webpackConfig = {
@@ -41,6 +46,7 @@ const webpackConfig = {
     characters: './src/app/intro/characters/index.js',
     vowels: './src/app/intro/vowels/index.js',
     consonants: './src/app/intro/consonants/index.js',
+    consonantvowelk: './src/app/intro/consonants/consonantk/index.js',
   },
 
   module: {
@@ -114,12 +120,20 @@ const webpackConfig = {
   ],
 };
 
+const filepath = (key) => {
+  if (key === 'top') return 'index.html';
+  if (key !== 'consonants' && key.startsWith('consonantvowel'))
+    return `intro/consonants/${key}/index.html`;
+
+  return `intro/${key}/index.html`;
+};
+
 Object.keys(webpackConfig.entry).forEach((key) => {
   webpackConfig.plugins.push(
     new HtmlWebpackPlugin({
       title: pageMetas[key].title,
       description: pageMetas[key].description,
-      filename: key === 'top' ? 'index.html' : `intro/${key}/index.html`,
+      filename: filepath(key),
       template: './src/template/index.html',
       inject: true,
       minify: {
