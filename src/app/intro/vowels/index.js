@@ -105,7 +105,8 @@ const Vowels = () => {
   });
   ContentsFrag().appendChild(ExampleText.tag);
 
-  const examples = `const vowels =
+  const examples = `// Base code
+const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 
 const englishHiragana = (
@@ -121,6 +122,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// love・あい・愛
 const love = vowels.a + vowels.i;
 const loveHiragana = englishHiragana('Love', love);
 const loveKanji = hiraganaKanji(love, '愛');
@@ -131,6 +133,7 @@ console.log(loveKanji);
 // あい is 愛 in Kanji.
 
 
+// no・いいえ
 const no = vowels.i.repeat(2) + vowels.e;
 const noHiragana = englishHiragana('No', no);
 
@@ -138,6 +141,7 @@ console.log(noHiragana);
 // No is いいえ in Hiragana.
 
 
+// up・うえ・上
 const up = vowels.u + vowels.e;
 const upHiragana = englishHiragana('Up', up);
 const upKanji = hiraganaKanji(up, '上');
@@ -145,7 +149,18 @@ const upKanji = hiraganaKanji(up, '上');
 console.log(upHiragana);
 // Up is うえ in Hiragana.
 console.log(upKanji);
-// うえ is 上 in Kanji.`;
+// うえ is 上 in Kanji.
+
+
+// blue・あお・青
+const blue = vowels.a + vowels.o;
+const blueHiragana = englishHiragana('Blue', blue);
+const blueKanji = hiraganaKanji(blue, '青');
+
+console.log(blueHiragana);
+// Blue is あお in Hiragana.
+console.log(blueKanji);
+// あお is 青 in Kanji.`;
 
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
@@ -188,6 +203,18 @@ console.log(upHiragana);
 console.log(upKanji);
 // うえ is 上 in Kanji.
 
-// const top = [{ romaji: 'ue', hiragana: 'うえ', kanji: '上' }];
+const blue = vowels.a + vowels.o;
+const blueHiragana = englishHiragana('Blue', blue);
+const blueKanji = hiraganaKanji(blue, '青');
+
+console.log(blueHiragana);
+// Blue is あお in Hiragana.
+console.log(blueKanji);
+// あお is 青 in Kanji.
+
 // const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
-// const blue = [{ romaji: 'ao', hiragana: 'あお', kanji: '青' }];
+
+console.log(englishHiragana('Blue', blue));
+// Blue is あお in Hiragana.
+console.log(hiraganaKanji(blue, '青'));
+// あお is 青 in Kanji.
