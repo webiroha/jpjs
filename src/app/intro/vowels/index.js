@@ -160,7 +160,18 @@ const blueKanji = hiraganaKanji(blue, '青');
 console.log(blueHiragana);
 // Blue is あお in Hiragana.
 console.log(blueKanji);
-// あお is 青 in Kanji.`;
+// あお is 青 in Kanji.
+
+
+// house・いえ・家
+const house = vowels.i + vowels.e;
+const houseHiragana = englishHiragana('House', house);
+const houseKanji = hiraganaKanji(house, '家');
+
+console.log(houseHiragana);
+// House is いえ in Hiragana.
+console.log(houseKanji);
+// いえ is 家 in Kanji.`;
 
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
@@ -212,9 +223,11 @@ console.log(blueHiragana);
 console.log(blueKanji);
 // あお is 青 in Kanji.
 
-// const house = [{ romaji: 'ie', hiragana: 'いえ', kanji: '家' }];
+const house = vowels.i + vowels.e;
+const houseHiragana = englishHiragana('House', house);
+const houseKanji = hiraganaKanji(house, '家');
 
-console.log(englishHiragana('Blue', blue));
-// Blue is あお in Hiragana.
-console.log(hiraganaKanji(blue, '青'));
-// あお is 青 in Kanji.
+console.log(houseHiragana);
+// House is いえ in Hiragana.
+console.log(houseKanji);
+// いえ is 家 in Kanji.
