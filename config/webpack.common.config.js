@@ -34,8 +34,8 @@ const pageMetas = {
   },
 
   consonantvowelk: {
-    title: 'Japanese JavaScript | Consonant K',
-    description: "Let's try to learn k + vowel sound!",
+    title: 'Japanese JavaScript | Consonant vowel K',
+    description: "Let's try to learn consonant k + vowel sound!",
   },
 };
 
@@ -46,7 +46,7 @@ const webpackConfig = {
     characters: './src/app/intro/characters/index.js',
     vowels: './src/app/intro/vowels/index.js',
     consonants: './src/app/intro/consonants/index.js',
-    consonantvowelk: './src/app/intro/consonants/consonantk/index.js',
+    consonantvowelk: './src/app/intro/consonants/consonantvowelk/index.js',
   },
 
   module: {
