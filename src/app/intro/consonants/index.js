@@ -14,7 +14,7 @@ const Consonants = () => {
   };
   const ConsonantsExplainSmall = Element({
     elem: 'small',
-    class: 'small',
+    class: 'small slide-in-upper__1',
     text: '*The way to write Romaji depends on the person.',
   });
 
@@ -43,25 +43,18 @@ const Consonants = () => {
     vowels.map((vowel) => consonant + vowel)
   );
   console.log(...roughlyCombinedSounds);
-  //  (5) ["ka", "ki", "ku", "ke", "ko"]
-  //  (5) ["sa", "si", "su", "se", "so"]
-  //  (5) ["ta", "ti", "tu", "te", "to"]
-  //  (5) ["na", "ni", "nu", "ne", "no"]
-  //  (5) ["ha", "hi", "hu", "he", "ho"]
-  //  (5) ["fa", "fi", "fu", "fe", "fo"]
-  //  (5) ["ma", "mi", "mu", "me", "mo"]
-  //  (5) ["ya", "yi", "yu", "ye", "yo"]
-  //  (5) ["ra", "ri", "ru", "re", "ro"]
-  //  (5) ["wa", "wi", "wu", "we", "wo"]
-  //  (5) ["ga", "gi", "gu", "ge", "go"]
-  //  (5) ["za", "zi", "zu", "ze", "zo"]
-  //  (5) ["da", "di", "du", "de", "do"]
-  //  (5) ["ba", "bi", "bu", "be", "bo"]
-  //  (5) ["pa", "pi", "pu", "pe", "po"]
-  //  (5) ["va", "vi", "vu", "ve", "vo"]`;
+  // ...roughlyCombinedSounds !== Romaji`;
 
   const { Code: CombinedCode } = CodeBlock(combineSystem);
   ContentsFrag().appendChild(CombinedCode.tag);
+
+  const consonants = [...'kstnhfmyrwgzdbpv'];
+  const vowels = [...'aiueo'];
+  const roughlyCombinedSounds = consonants.map((consonant) =>
+    vowels.map((vowel) => consonant + vowel)
+  );
+  console.log(...roughlyCombinedSounds);
+  // ...roughlyCombinedSounds !== Romaji
 
   //   const SoundButtonText = Element({
   //     elem: 'p',
