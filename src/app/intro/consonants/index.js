@@ -4,6 +4,7 @@ import Element from '@root/components/atom/Element';
 import Explain from '@root/components/Explain';
 import SubTitleBlock from '@root/components/SubTitleBlock';
 import CodeBlock from '@root/components/CodeBlock';
+import ConsonantLinks from './components/ConsonantLinks';
 import NextLink from '@root/components/links/NextLink';
 
 const Consonants = () => {
@@ -65,6 +66,7 @@ const Consonants = () => {
   const SubTitleInfoBlock = SubTitleBlock(SubTitleInfo);
 
   ContentsFrag().appendChild(SubTitleInfoBlock());
+  ContentsFrag().appendChild(ConsonantLinks());
   ContentsFrag().appendChild(NextLink(''));
 
   return ContentsFrag();
