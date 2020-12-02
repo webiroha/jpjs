@@ -30,7 +30,7 @@ const pageMetas = {
 
   consonants: {
     title: 'Japanese JavaScript | Consonants',
-    description: 'Japanese has around 14 - 16 consonants.',
+    description: 'Around 14 - 17 consonant elements are used by Romaji.',
   },
 
   consonantvowelk: {

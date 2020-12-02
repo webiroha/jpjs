@@ -12,7 +12,7 @@ const Consonants = () => {
 
   const ExplainInfo = {
     title: 'Consonants',
-    text: 'Japanese has around 14 - 16 consonants.',
+    text: 'Around 14 - 17 consonant elements are used by Romaji.',
   };
 
   const ConsonantsExplainSmall = Element({
@@ -25,9 +25,9 @@ const Consonants = () => {
   ContentsFrag().appendChild(ConsonantsExplain());
   ContentsFrag().appendChild(ConsonantsExplainSmall.tag);
 
-  const consonantsByRomaji = `const consonants = [...'kstnhfmyrwgzdbpv'];`;
+  const consonantElements = `const consonantElements = [...'kstcnhfmyrwgzjdbp'];`;
 
-  const { Code: ConsonantsCode } = CodeBlock(consonantsByRomaji);
+  const { Code: ConsonantsCode } = CodeBlock(consonantElements);
   ContentsFrag().appendChild(ConsonantsCode.tag);
 
   const SystemExplainText = Element({
@@ -40,7 +40,7 @@ const Consonants = () => {
   });
   ContentsFrag().appendChild(SystemExplainText.tag);
 
-  const combineSystem = `  const consonants = [...'kstnhfmyrwgzdbpv'];
+  const combineSystem = `  const consonants = [...'kstcnhfmyrwgzjdbp'];
   const vowels = [...'aiueo'];
   const roughlyCombinedSounds = consonants.map((consonant) =>
     vowels.map((vowel) => consonant + vowel)
@@ -51,7 +51,7 @@ const Consonants = () => {
   const { Code: CombinedCode } = CodeBlock(combineSystem);
   ContentsFrag().appendChild(CombinedCode.tag);
 
-  const consonants = [...'kstnhfmyrwgzdbpv'];
+  const consonants = [...'kstcnhfmyrwgzjdbp'];
   const vowels = [...'aiueo'];
   const roughlyCombinedSounds = consonants.map((consonant) =>
     vowels.map((vowel) => consonant + vowel)
