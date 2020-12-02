@@ -58,15 +58,22 @@ const Consonants = () => {
   );
   console.log(...roughlyCombinedSounds);
 
+  const DetailsBlock = Element({
+    elem: 'div',
+    class: 'consonants-details slide-in-upper__1',
+  });
+
   const SubTitleInfo = {
-    title: 'Each Consonant',
-    text: "Let's learn each consonant deeply!",
+    title: 'Each element',
+    text: "Let's learn each element deeply!",
   };
 
   const SubTitleInfoBlock = SubTitleBlock(SubTitleInfo);
 
-  ContentsFrag().appendChild(SubTitleInfoBlock());
-  ContentsFrag().appendChild(ConsonantLinks());
+  DetailsBlock.tag.appendChild(SubTitleInfoBlock());
+  DetailsBlock.tag.appendChild(ConsonantLinks());
+  ContentsFrag().appendChild(DetailsBlock.tag);
+
   ContentsFrag().appendChild(NextLink(''));
 
   return ContentsFrag();

@@ -38,3 +38,34 @@
   font-size: $font_size * 1px;
   font-size: get_vw($font_size);
 }
+
+// an arrow for a button
+@mixin arrow($bg-arrow: $color-main, $bg-bg: $color-white, $arrowPosition:3em) {
+  position: relative;
+
+  &::before {
+    background: $bg-arrow;
+    bottom: 0;
+    content: '';
+    height: 8px;
+    margin: auto 0;
+    position: absolute;
+    right: $arrowPosition;
+    top: 0;
+    transform: rotate(45deg);
+    width: 8px;
+  }
+
+  &::after {
+    background: $bg-bg;
+    bottom: 0;
+    content: '';
+    height: 8px;
+    margin: auto 0;
+    position: absolute;
+    right: calc(#{$arrowPosition} + 4px);
+    top: 0;
+    transform: rotate(45deg);
+    width: 8px;
+  }
+}

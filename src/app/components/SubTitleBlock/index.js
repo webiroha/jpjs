@@ -6,12 +6,12 @@ const SubTitleBlock = (props) => {
 
   const Wrapper = Element({
     elem: 'div',
-    class: 'subtitle-block',
+    class: 'sub',
   });
 
   const Title = Element({
     elem: 'h2',
-    class: 'subtitle-block__title slide-in-upper__0',
+    class: 'sub__title slide-in-upper__0',
     text: props.title,
   });
 

@@ -1,17 +1,18 @@
 import '../../../../../styles/main.scss';
 
 import Element from '@root/components/atom/Element';
+import Frag from '@root/components/atom/Frag';
 
 const ConsonantLink = (consonant) => {
   const Block = Element({
     elem: 'li',
-    class: 'consonant-link',
+    class: 'consonant-link__item',
   });
   const shape =
     consonant.length > 1 ? `${consonant[0]}/${consonant[1]}` : consonant;
   const Link = Element({
     elem: 'a',
-    class: 'consonant-link__item',
+    class: 'consonant-link__link',
     text: `consonant ${shape}`,
   });
   // Link.tag.href = `consonalt${consonant}`;
@@ -23,30 +24,32 @@ const ConsonantLink = (consonant) => {
 const ConsonantLinks = () => {
   const Wrapper = Element({
     elem: 'ul',
-    class: 'consonant-wrapper fade-in',
+    class: 'consonant-link fade-in',
   });
 
+  const Fragment = Frag();
+
   const consonants = [
-    'ks',
-    's',
-    't',
-    'n',
-    'hf',
-    'm',
-    'y',
-    'r',
-    'wn',
-    'g',
-    'z',
-    'd',
-    'b',
-    'p',
-    'v',
+    'k',
+    // 's',
+    // 't',
+    // 'n',
+    // 'hf',
+    // 'm',
+    // 'y',
+    // 'r',
+    // 'wn',
+    // 'g',
+    // 'z',
+    // 'd',
+    // 'b',
+    // 'p',
   ];
 
   consonants.map((consonant) =>
-    Wrapper.tag.appendChild(ConsonantLink(consonant))
+    Fragment().appendChild(ConsonantLink(consonant))
   );
+  Wrapper.tag.appendChild(Fragment());
 
   return Wrapper.tag;
 };
