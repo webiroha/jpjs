@@ -1,8 +1,7 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
 import Frag from '@root/components/atom/Frag';
 import Element from '@root/components/atom/Element';
-import Explain from '@root/components/Explain';
-import SubTitleBlock from '@root/components/SubTitleBlock';
+import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import ConsonantLinks from './components/ConsonantLinks';
 import NextLink from '@root/components/links/NextLink';
@@ -11,6 +10,7 @@ const Consonants = () => {
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
+    role: 'explain',
     title: 'Consonants',
     text: 'Around 14 - 17 consonant elements are used by Romaji.',
   };
@@ -21,7 +21,7 @@ const Consonants = () => {
     text: '*The way to write Romaji depends on the person.',
   });
 
-  const ConsonantsExplain = Explain(ExplainInfo);
+  const ConsonantsExplain = TitleWithText(ExplainInfo);
   ContentsFrag().appendChild(ConsonantsExplain());
   ContentsFrag().appendChild(ConsonantsExplainSmall.tag);
 
@@ -34,8 +34,8 @@ const Consonants = () => {
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
     text: [
-      'The BASIC sound system is "consonant + vowel" roughly besides some exceptions.',
-      'Let me show you the exact ones later.',
+      'Roughly, the BASIC sound system with consonant is "consonant + vowel".',
+      '*Let me show you the exact ones later.',
     ],
   });
   ContentsFrag().appendChild(SystemExplainText.tag);
@@ -51,24 +51,18 @@ const Consonants = () => {
   const { Code: CombinedCode } = CodeBlock(combineSystem);
   ContentsFrag().appendChild(CombinedCode.tag);
 
-  const consonants = [...'kstcnhfmyrwgzjdbp'];
-  const vowels = [...'aiueo'];
-  const roughlyCombinedSounds = consonants.map((consonant) =>
-    vowels.map((vowel) => consonant + vowel)
-  );
-  console.log(...roughlyCombinedSounds);
-
   const DetailsBlock = Element({
     elem: 'div',
     class: 'consonants-details slide-in-upper__1',
   });
 
   const SubTitleInfo = {
+    role: 'sub',
     title: 'Each element',
     text: "Let's learn each element deeply!",
   };
 
-  const SubTitleInfoBlock = SubTitleBlock(SubTitleInfo);
+  const SubTitleInfoBlock = TitleWithText(SubTitleInfo);
 
   DetailsBlock.tag.appendChild(SubTitleInfoBlock());
   DetailsBlock.tag.appendChild(ConsonantLinks());
@@ -80,3 +74,11 @@ const Consonants = () => {
 };
 
 HeaderFooter(Consonants);
+
+// for displaying on console.log
+const consonants = [...'kstcnhfmyrwgzjdbp'];
+const vowels = [...'aiueo'];
+const roughlyCombinedSounds = consonants.map((consonant) =>
+  vowels.map((vowel) => consonant + vowel)
+);
+console.log(...roughlyCombinedSounds);

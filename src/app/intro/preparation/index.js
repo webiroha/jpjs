@@ -1,6 +1,6 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
 import Frag from '@root/components/atom/Frag';
-import Explain from '@root/components/Explain';
+import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import NextLink from '@root/components/links/NextLink';
 
@@ -8,10 +8,11 @@ const Preparation = () => {
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
+    role: 'explain',
     title: 'Preparation',
     text: ['You will type Japanese by changing keyboard mode', 'if you want🙂'],
   };
-  const PreparationExplain = Explain(ExplainInfo);
+  const PreparationExplain = TitleWithText(ExplainInfo);
   ContentsFrag().appendChild(PreparationExplain());
 
   const order = `const Windows = [

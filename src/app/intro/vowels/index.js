@@ -1,7 +1,7 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
 import Frag from '@root/components/atom/Frag';
 import Element from '@root/components/atom/Element';
-import Explain from '@root/components/Explain';
+import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import NextLink from '@root/components/links/NextLink';
 import '@wav/a.wav';
@@ -14,10 +14,11 @@ const Vowels = () => {
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
+    role: 'explain',
     title: 'Vowels',
     text: 'Japanese has 5 vowels.',
   };
-  const VowelsExplain = Explain(ExplainInfo);
+  const VowelsExplain = TitleWithText(ExplainInfo);
   ContentsFrag().appendChild(VowelsExplain());
 
   const vowelsByRomaji = `const vowelsByRomaji = ['a', 'i', 'u', 'e', 'o'];`;

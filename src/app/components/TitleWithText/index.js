@@ -1,17 +1,17 @@
 import Frag from '../atom/Frag';
 import Element from '../atom/Element';
 
-const Explain = (props) => {
-  const ExplainFrag = Frag();
+const TitleWithText = (props) => {
+  const TitleWithTextFrag = Frag();
 
   const Wrapper = Element({
     elem: 'div',
-    class: 'explain',
+    class: props.role,
   });
 
   const Title = Element({
     elem: 'h1',
-    class: 'explain__title slide-in-upper__0',
+    class: `${props.role}__title slide-in-upper__0`,
     text: props.title,
   });
 
@@ -21,11 +21,11 @@ const Explain = (props) => {
     text: props.text,
   });
 
-  ExplainFrag().appendChild(Title.tag);
-  ExplainFrag().appendChild(Text.tag);
-  Wrapper.tag.appendChild(ExplainFrag());
+  TitleWithTextFrag().appendChild(Title.tag);
+  TitleWithTextFrag().appendChild(Text.tag);
+  Wrapper.tag.appendChild(TitleWithTextFrag());
 
   return () => Wrapper.tag;
 };
 
-export default Explain;
+export default TitleWithText;
