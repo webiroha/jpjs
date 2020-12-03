@@ -11,6 +11,7 @@ const Consonants = () => {
 
   const ExplainInfo = {
     role: 'explain',
+    element: 'h1',
     title: 'Consonants',
     text: 'Around 14 - 17 consonant elements are used by Romaji.',
   };
@@ -34,7 +35,8 @@ const Consonants = () => {
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
     text: [
-      'Roughly, the BASIC sound system with consonant is "consonant + vowel".',
+      'Roughly, the BASIC sound system',
+      'with consonant is "consonant + vowel".',
       '*Let me show you the exact ones later.',
     ],
   });
@@ -58,13 +60,24 @@ const Consonants = () => {
 
   const SubTitleInfo = {
     role: 'sub',
+    element: 'h2',
     title: 'Each element',
     text: "Let's learn each element deeply!",
   };
 
   const SubTitleInfoBlock = TitleWithText(SubTitleInfo);
-
   DetailsBlock.tag.appendChild(SubTitleInfoBlock());
+
+  const BasicTitleInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'Basic',
+    text: 'The part of "Fifty Sounds Table".',
+  };
+
+  const BasicTitleInfoBlock = TitleWithText(BasicTitleInfo);
+  DetailsBlock.tag.appendChild(BasicTitleInfoBlock());
+
   DetailsBlock.tag.appendChild(ConsonantLinks());
   ContentsFrag().appendChild(DetailsBlock.tag);
 

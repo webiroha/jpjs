@@ -9,6 +9,7 @@ const Preparation = () => {
 
   const ExplainInfo = {
     role: 'explain',
+    element: 'h1',
     title: 'Preparation',
     text: ['You will type Japanese by changing keyboard mode', 'if you want🙂'],
   };

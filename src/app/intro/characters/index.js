@@ -10,6 +10,7 @@ const Characters = () => {
 
   const ExplainInfo = {
     role: 'explain',
+    element: 'h1',
     title: 'Japanese characters',
     text: 'Japanese has three kinds of characters.',
   };

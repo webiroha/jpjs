@@ -15,6 +15,7 @@ const ConsonantK = () => {
 
   const ExplainInfo = {
     role: 'explain',
+    element: 'h1',
     title: 'Consonant K',
     text: "Let's try to learn consonant k + vowel sound!",
   };

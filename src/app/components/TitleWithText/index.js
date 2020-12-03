@@ -10,7 +10,7 @@ const TitleWithText = (props) => {
   });
 
   const Title = Element({
-    elem: 'h1',
+    elem: props.element,
     class: `${props.role}__title slide-in-upper__0`,
     text: props.title,
   });

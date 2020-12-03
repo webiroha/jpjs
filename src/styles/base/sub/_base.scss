@@ -53,6 +53,14 @@
   }
 }
 
+.sub-s {
+  margin-bottom: 2em;
+
+  &__title {
+    margin: 0 0 0.5em;
+  }
+}
+
 .sound-block {
   display: flex;
   flex-wrap: wrap;

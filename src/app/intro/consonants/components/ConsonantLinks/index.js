@@ -13,7 +13,7 @@ const ConsonantLink = (consonant) => {
   const Link = Element({
     elem: 'a',
     class: 'consonant-link__link',
-    text: `consonant ${shape}`,
+    text: `${shape} + vowels`,
   });
   // Link.tag.href = `consonalt${consonant}`;
   Block.tag.appendChild(Link.tag);

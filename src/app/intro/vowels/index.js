@@ -15,6 +15,7 @@ const Vowels = () => {
 
   const ExplainInfo = {
     role: 'explain',
+    element: 'h1',
     title: 'Vowels',
     text: 'Japanese has 5 vowels.',
   };
