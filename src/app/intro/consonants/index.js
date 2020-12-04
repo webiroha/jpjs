@@ -35,8 +35,8 @@ const Consonants = () => {
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
     text: [
-      'Roughly, the BASIC sound system',
-      'with consonant is "consonant + vowel".',
+      'Roughly, the main sound system rule is',
+      '"consonant + vowel".',
       '*Let me show you the exact ones later.',
     ],
   });
@@ -44,11 +44,11 @@ const Consonants = () => {
 
   const combineSystem = `  const consonants = [...'kstcnhfmyrwgzjdbp'];
   const vowels = [...'aiueo'];
-  const roughlyCombinedSounds = consonants.map((consonant) =>
+  const roughBasicSoundRule = consonants.map((consonant) =>
     vowels.map((vowel) => consonant + vowel)
   );
-  console.log(...roughlyCombinedSounds);
-  // ...roughlyCombinedSounds !== Romaji`;
+  console.log(...roughBasicSoundRule);
+  // ...roughBasicSoundRule !== Romaji`;
 
   const { Code: CombinedCode } = CodeBlock(combineSystem);
   ContentsFrag().appendChild(CombinedCode.tag);
@@ -91,7 +91,7 @@ HeaderFooter(Consonants);
 // for displaying on console.log
 const consonants = [...'kstcnhfmyrwgzjdbp'];
 const vowels = [...'aiueo'];
-const roughlyCombinedSounds = consonants.map((consonant) =>
+const roughBasicSoundRule = consonants.map((consonant) =>
   vowels.map((vowel) => consonant + vowel)
 );
-console.log(...roughlyCombinedSounds);
+console.log(...roughBasicSoundRule);
