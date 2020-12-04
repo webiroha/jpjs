@@ -10,18 +10,33 @@
   grid-template-columns: 1fr 1fr;
 
   &__item {
-    background: $color-main;
-    border-radius: 3em;
     display: inline-block;
 
   }
 
   &__link {
     align-items: center;
+    background: $color-middleGray;
+    border-radius: 3em;
     color: $color-white;
     display: grid;
     padding: 0.5em 1em;
 
-    @include arrow($color-white, $color-main, 1em);
+    @include arrow($color-white, $color-middleGray, 1em);
+
+    &[href] {
+      @include arrow($color-white, $color-main, 1em);
+
+      background: $color-main;
+      transform: translateY(0);
+      transition: translatey 0.2s;
+
+      @include on-event() {
+        transform: translateY(2px);
+      }
+
+    }
+
+
   }
 }

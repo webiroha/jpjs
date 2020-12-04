@@ -8,13 +8,14 @@ const ConsonantLink = (consonant) => {
     elem: 'li',
     class: 'consonant-link__item',
   });
-  const shape =
-    consonant.length > 1 ? `${consonant[0]}/${consonant[1]}` : consonant;
+  const separate = (w) => w.split('').join('/');
+  const shape = consonant.length > 1 ? separate(consonant) : consonant;
   const Link = Element({
     elem: 'a',
     class: 'consonant-link__link',
     text: `${shape} + vowels`,
   });
+  // if (consonant === 'k') Link.tag.href = `./consonantvowel${consonant}/`;
   // Link.tag.href = `consonalt${consonant}`;
   Block.tag.appendChild(Link.tag);
 
@@ -31,14 +32,14 @@ const ConsonantLinks = () => {
 
   const consonants = [
     'k',
-    // 's',
-    // 't',
-    // 'n',
-    // 'hf',
-    // 'm',
-    // 'y',
-    // 'r',
-    // 'wn',
+    'sh',
+    'tchs',
+    'n',
+    'hf',
+    'm',
+    'y',
+    'r',
+    'wn',
     // 'g',
     // 'z',
     // 'd',
