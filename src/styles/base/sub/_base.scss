@@ -92,15 +92,27 @@
   }
 }
 
-.next-link__item {
-  border: 1px solid $color-main;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  line-height: 1;
-  padding: 1em 4em;
+.page-nav {
+  display: flex;
+  justify-content: space-between;
 
+  &__link {
+    border: 1px solid $color-main;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1em 4em;
+
+  }
+}
+
+.pre-link {
+  @include arrow($color-main,$color-white, 3em, left);
+}
+
+.next-link {
   @include arrow();
 }
 

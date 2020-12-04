@@ -3,7 +3,7 @@ import Frag from '@root/components/atom/Frag';
 import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
-import NextLink from '@root/components/links/NextLink';
+import PageNavLink from '@root/components/links/PageNavLink';
 import '@wav/a.wav';
 import '@wav/i.wav';
 import '@wav/u.wav';
@@ -178,7 +178,7 @@ console.log(houseKanji);
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
 
-  ContentsFrag().appendChild(NextLink(''));
+  ContentsFrag().appendChild(PageNavLink('characters', ''));
 
   return ContentsFrag();
 };

@@ -4,7 +4,7 @@ import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import ConsonantLinks from './components/ConsonantLinks';
-import NextLink from '@root/components/links/NextLink';
+import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
   const ContentsFrag = Frag();
@@ -81,7 +81,7 @@ const Consonants = () => {
   DetailsBlock.tag.appendChild(ConsonantLinks());
   ContentsFrag().appendChild(DetailsBlock.tag);
 
-  ContentsFrag().appendChild(NextLink(''));
+  ContentsFrag().appendChild(PageNavLink(''));
 
   return ContentsFrag();
 };

@@ -2,7 +2,7 @@ import HeaderFooter from '@root/components/pages/HeaderFooter';
 import Frag from '@root/components/atom/Frag';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
-import NextLink from '@root/components/links/NextLink';
+import PageNavLink from '@root/components/links/PageNavLink';
 
 const Preparation = () => {
   const ContentsFrag = Frag();
@@ -37,7 +37,7 @@ const Preparation = () => {
   const { Code } = CodeBlock(order);
   ContentsFrag().appendChild(Code.tag);
 
-  ContentsFrag().appendChild(NextLink('../characters/'));
+  ContentsFrag().appendChild(PageNavLink('top', 'characters'));
 
   return ContentsFrag();
 };
