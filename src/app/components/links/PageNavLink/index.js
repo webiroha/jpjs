@@ -7,7 +7,7 @@ const Link = (direct, link) => {
     elem: 'div',
     class: `page-nav__item fade-in`,
   });
-  const status = link ? link : 'coming soon!';
+  const status = link ? link : 'sometime later!';
   const Link = Element({
     elem: 'a',
     class: `${direct}-link page-nav__link`,
