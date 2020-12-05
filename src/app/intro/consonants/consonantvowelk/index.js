@@ -32,7 +32,7 @@ const ConsonantK = () => {
   const { Code: consonantKVowelsCode } = CodeBlock(consonantKVowelsByRomaji);
   ContentsFrag().appendChild(consonantKVowelsCode.tag);
 
-  ContentsFrag().appendChild(PageNavLink(''));
+  ContentsFrag().appendChild(PageNavLink('consonants', ''));
 
   return ContentsFrag();
 };

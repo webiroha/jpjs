@@ -14,6 +14,7 @@ const Link = (direct, link) => {
     text: status,
   });
   if (link === 'top') Link.tag.href = `../../`;
+  if (link === 'consonants') Link.tag.href = `./`;
   else if (link) Link.tag.href = `../${link}/`;
 
   Block.tag.appendChild(Link.tag);
