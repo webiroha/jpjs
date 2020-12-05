@@ -17,7 +17,7 @@ const ConsonantK = () => {
     role: 'explain',
     element: 'h1',
     title: 'Consonant K',
-    text: "Let's try to learn consonant k + vowel sound!",
+    text: "Let's try to learn consonant k + vowels!",
   };
   const ConsonantsExplain = TitleWithText(ExplainInfo);
   ContentsFrag().appendChild(ConsonantsExplain());
