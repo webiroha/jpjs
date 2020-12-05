@@ -95,7 +95,7 @@ const PagelinksWrapperInner = Element({
   class: 'pagelinks-wrapper__inner',
 });
 
-const pagelinks = ['preparation', 'characters', 'vowels'];
+const pagelinks = ['preparation', 'characters', 'vowels', 'consonants'];
 
 pagelinks.map((link, i) => PagelinkFrag().appendChild(Link(link, i)));
 

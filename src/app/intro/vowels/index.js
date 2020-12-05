@@ -178,7 +178,7 @@ console.log(houseKanji);
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
 
-  ContentsFrag().appendChild(PageNavLink('characters', ''));
+  ContentsFrag().appendChild(PageNavLink('characters', 'consonants'));
 
   return ContentsFrag();
 };
