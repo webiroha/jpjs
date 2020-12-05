@@ -97,23 +97,41 @@
   justify-content: space-between;
 
   &__link {
-    border: 1px solid $color-main;
-    border-radius: 3em;
+    // border: 1px solid $color-main;
+    // border-radius: 3em;
     cursor: pointer;
     display: inline-block;
     font-weight: 600;
     line-height: 1;
-    padding: 1em 4em;
-
+    padding: 0.8em;
+    transition: translatex 0.2s;
   }
 }
 
 .pre-link {
-  @include arrow($color-main,$color-white, 3em, left);
+  transform: translateX(0);
+
+  @include arrow($color-main, $color-white, left);
+
+  @include on-event() {
+    transform: translateX(-2px);
+  }
 }
 
 .next-link {
+  transform: translateX(0);
+
   @include arrow();
+
+  &:not([href]) {
+    color: $color-middleGray;
+
+    @include arrow($color-middleGray, $color-white);
+
+    @include on-event() {
+      transform: translateX(2px);
+    }
+  }
 }
 
 .footer {
