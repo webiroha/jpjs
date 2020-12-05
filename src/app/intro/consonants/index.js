@@ -36,7 +36,7 @@ const Consonants = () => {
     class: 'text opacity_0 slide-in-upper__1',
     text: [
       'Roughly, the main system is "consonant + vowel".',
-      '*Let me show you the exact ones later.',
+      '*Let me show you the exact one later.',
     ],
   });
   ContentsFrag().appendChild(SystemExplainText.tag);
@@ -81,7 +81,7 @@ const Consonants = () => {
   DetailsBlock.tag.appendChild(ConsonantLinks());
   ContentsFrag().appendChild(DetailsBlock.tag);
 
-  ContentsFrag().appendChild(PageNavLink(''));
+  ContentsFrag().appendChild(PageNavLink('vowels', ''));
 
   return ContentsFrag();
 };
