@@ -27,7 +27,8 @@ const ConsonantK = () => {
   const consonantKvowelsByRomaji = vowels.map(
     (vowel) => consonantK + vowel
   );
-  console.log(consonantKvowelsByRomaji);`;
+  console.log(consonantKvowelsByRomaji.toString());
+  // ka,ki,ku,ke,ko`;
 
   const { Code: consonantKVowelsCode } = CodeBlock(consonantKVowelsByRomaji);
   ContentsFrag().appendChild(consonantKVowelsCode.tag);
@@ -42,4 +43,4 @@ HeaderFooter(ConsonantK);
 const consonantK = 'k';
 const vowels = [...'aiueo'];
 const consonantKvowelsByRomaji = vowels.map((vowel) => consonantK + vowel);
-console.log(consonantKvowelsByRomaji);
+console.log(consonantKvowelsByRomaji.toString());
