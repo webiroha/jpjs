@@ -3,7 +3,9 @@ import Frag from '@root/components/atom/Frag';
 import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
+import SoundBlock from '@root/components/SoundBlock';
 import PageNavLink from '@root/components/links/PageNavLink';
+
 import '@wav/a.wav';
 import '@wav/i.wav';
 import '@wav/u.wav';
@@ -45,42 +47,9 @@ const Vowels = () => {
   const { Code: VowelSoundCode } = CodeBlock(vowelSounds);
   ContentsFrag().appendChild(VowelSoundCode.tag);
 
-  const SoundButtonText = Element({
-    elem: 'p',
-    class: 'text opacity_0 slide-in-upper__1',
-    text: "Let's hear the sound!",
-  });
-  ContentsFrag().appendChild(SoundButtonText.tag);
-
   const vowels = ['a', 'i', 'u', 'e', 'o'];
 
-  const SoundsBlock = Element({
-    elem: 'div',
-    class: 'sound-block fade-in',
-  });
-  const SoundsFrag = Frag();
-
-  const createSoundButtons = (item) => {
-    const sound = new Audio(`../../assets/sounds/single/${item}.wav`);
-
-    const SoundButton = Element({
-      elem: 'button',
-      class: 'sound-button',
-      text: item,
-    });
-    SoundButton.tag.type = 'button';
-    SoundButton.tag.addEventListener('click', () => {
-      sound.currentTime = 0;
-      sound.play();
-    });
-
-    SoundsFrag().appendChild(SoundButton.tag);
-  };
-
-  vowels.map((i) => createSoundButtons(i));
-
-  SoundsBlock.tag.appendChild(SoundsFrag());
-  ContentsFrag().appendChild(SoundsBlock.tag);
+  ContentsFrag().appendChild(SoundBlock(vowels));
 
   const VowelHiraganaKatakana = Element({
     elem: 'p',
