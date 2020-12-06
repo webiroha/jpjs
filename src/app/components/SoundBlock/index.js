@@ -20,7 +20,10 @@ const SoundBlock = (sounds) => {
   const SoundsFrag = Frag();
 
   const createSoundButtons = (item) => {
-    const sound = new Audio(`../../assets/sounds/single/${item}.wav`);
+    const sound =
+      item.length === 1
+        ? new Audio(`../../assets/sounds/single/${item}.wav`)
+        : new Audio(`../../../assets/sounds/single/${item}.wav`);
 
     const SoundButton = Element({
       elem: 'button',
