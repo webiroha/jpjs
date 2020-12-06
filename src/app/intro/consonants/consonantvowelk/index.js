@@ -39,7 +39,7 @@ const ConsonantK = () => {
 
   ContentsFrag().appendChild(SoundBlock(consonantKvowels));
 
-  ContentsFrag().appendChild(PageNavLink('consonants', ''));
+  ContentsFrag().appendChild(PageNavLink('consonants', '', _, 'one'));
 
   return ContentsFrag();
 };
