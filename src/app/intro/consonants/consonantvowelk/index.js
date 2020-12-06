@@ -44,7 +44,7 @@ const ConsonantK = () => {
   return ContentsFrag();
 };
 
-HeaderFooter(ConsonantK);
+HeaderFooter(ConsonantK, 'consonant');
 
 const consonantK = 'k';
 const vowels = [...'aiueo'];

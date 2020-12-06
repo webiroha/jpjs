@@ -5,10 +5,10 @@ import Center from '../../layout/Center';
 import Header from '../../Header';
 import Footer from '../../Footer';
 
-const HeaderFooter = (inside) => {
+const HeaderFooter = (inside, hierarchy) => {
   const { root, WholeFrag, Wrapper } = Center();
   Wrapper.tag.className = 'wrapper wrapper_layout_sub';
-  const PageHeader = Header();
+  const PageHeader = Header(hierarchy);
   WholeFrag().appendChild(PageHeader());
 
   WholeFrag().appendChild(inside());
