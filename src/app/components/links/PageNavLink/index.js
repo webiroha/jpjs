@@ -14,7 +14,7 @@ const Link = (direct, link, exceptPre, exceptNext) => {
     text: status,
   });
   if (link === 'top') Link.tag.href = `../../`;
-  if (exceptPre === 'one' || exceptNext === 'one') Link.tag.href = `./`;
+  if (exceptPre === 'one' || exceptNext === 'one') Link.tag.href = `../`;
   else if (link) Link.tag.href = `../${link}/`;
 
   Block.tag.appendChild(Link.tag);
