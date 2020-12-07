@@ -87,7 +87,7 @@ const hiraganaKanji = (
   const { Code: ExamplesCode } = CodeBlock(examples);
   ContentsFrag().appendChild(ExamplesCode.tag);
 
-  ContentsFrag().appendChild(PageNavLink('consonants', '', '', 'one'));
+  ContentsFrag().appendChild(PageNavLink('consonants', '', 'one', ''));
 
   return ContentsFrag();
 };
