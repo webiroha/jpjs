@@ -22,10 +22,10 @@
     display: grid;
     padding: 0.5em 1em;
 
-    @include arrow($color-white, $color-middleGray, 1em);
+    @include arrow($color-white, $color-middleGray, right, 1em);
 
     &[href] {
-      @include arrow($color-white, $color-main, 1em);
+      @include arrow($color-white, $color-main,right, 1em);
 
       background: $color-main;
       transform: translateY(0);
