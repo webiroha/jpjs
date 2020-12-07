@@ -39,28 +39,28 @@ const ConsonantK = () => {
 
   ContentsFrag().appendChild(SoundBlock(consonantKvowels));
 
-  const VowelHiraganaKatakana = Element({
+  const HiraganaKatakana = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: 'The vowels spelt by hiragana and katakana.',
+    text: 'The consonant k + vowels spelt by hiragana and katakana.',
   });
-  ContentsFrag().appendChild(VowelHiraganaKatakana.tag);
+  ContentsFrag().appendChild(HiraganaKatakana.tag);
 
-  const vowelLetters = `const vowelLetters = [
-    { a: { hiragana: 'あ', katakana: 'ア' } },
-    { i: { hiragana: 'い', katakana: 'イ' } },
-    { u: { hiragana: 'う', katakana: 'ウ' } },
-    { e: { hiragana: 'え', katakana: 'エ' } },
-    { o: { hiragana: 'お', katakana: 'オ' } },
+  const kvowelLetters = `const kvowelLetters = [
+    { ka: { hiragana: 'か', katakana: 'カ' } },
+    { ki: { hiragana: 'き', katakana: 'キ' } },
+    { ku: { hiragana: 'く', katakana: 'ク' } },
+    { ke: { hiragana: 'け', katakana: 'ケ' } },
+    { ko: { hiragana: 'こ', katakana: 'コ' } },
   ];`;
 
-  const { Code: VowelLettersCode } = CodeBlock(vowelLetters);
-  ContentsFrag().appendChild(VowelLettersCode.tag);
+  const { Code: LettersCode } = CodeBlock(kvowelLetters);
+  ContentsFrag().appendChild(LettersCode.tag);
 
   const ExampleText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: "Let's use vowels in practise!",
+    text: "Let's use consonant k + vowels in practice!",
   });
   ContentsFrag().appendChild(ExampleText.tag);
 
