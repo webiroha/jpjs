@@ -72,7 +72,7 @@ const Vowels = () => {
   const ExampleText = Element({
     elem: 'p',
     class: 'text opacity_0 slide-in-upper__1',
-    text: "Let's use vowels in practise!",
+    text: "Let's use vowels in practice!",
   });
   ContentsFrag().appendChild(ExampleText.tag);
 
