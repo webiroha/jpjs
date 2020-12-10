@@ -8,6 +8,16 @@ const Footer = () => {
     class: 'footer fade-in',
   });
 
+  const Nav = Element({
+    elem: 'nav',
+    class: 'footer-nav',
+  });
+
+  const FooterLinks = Element({
+    elem: 'ul',
+    class: 'footer-link',
+  });
+
   const CopyRight = Element({
     elem: 'small',
     class: 'copyright',
