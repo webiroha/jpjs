@@ -65,5 +65,14 @@ console.log(redKanji);
 // あか is 赤 in Kanji.
 
 // きおく
+const memory = kvowels.ki + vowels.o + kvowels.ku;
+const memoryHiragana = englishHiragana('Memory', memory);
+const memoryKanji = hiraganaKanji(memory, '記憶');
+
+console.log(memoryHiragana);
+// Memory is きおく in Hiragana.
+console.log(memoryKanji);
+// きおく is 記憶 in Kanji.
+
 // いけ
 // こえ
