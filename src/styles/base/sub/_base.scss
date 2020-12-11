@@ -1,10 +1,5 @@
 .wrapper_layout_sub {
-  margin: 0 auto;
-  width: 90%;
-
-  @include respond-to('medium') {
-    width: 600px;
-  }
+  width: 100%;
 }
 
 .header {
@@ -34,6 +29,15 @@
     top: 0;
     width: 2.8em;
     z-index: -1;
+  }
+}
+
+.main {
+  margin: 0 auto 4em;
+  width: 90%;
+
+  @include respond-to('medium') {
+    width: 600px;
   }
 }
 
@@ -135,6 +139,29 @@
 }
 
 .footer {
+  background: $color-main;
+  color: $color-white;
   padding: 4em 0 2em;
+
+  &-nav {
+    margin: 0 0 4em;
+  }
+
+  &-link {
+    &__item {
+      margin-bottom: 2em;
+    }
+
+    &__link {
+      color: $color-white;
+
+    }
+  }
 }
 
+.sound-thanks {
+  color: $color-middleGray;
+  display: block;
+  font-size: 0.7em;
+  margin-bottom: 2em;
+}

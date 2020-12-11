@@ -3,15 +3,23 @@ import '../../../../styles/main.scss';
 
 import Center from '../../layout/Center';
 import Header from '../../Header';
+import Element from '../../atom/Element';
 import Footer from '../../Footer';
 
 const HeaderFooter = (inside, each, hierarchy) => {
   const { root, WholeFrag, Wrapper } = Center();
   Wrapper.tag.className = 'wrapper wrapper_layout_sub';
+
   const PageHeader = Header(hierarchy);
   WholeFrag().appendChild(PageHeader());
 
-  WholeFrag().appendChild(inside(each));
+  const Main = Element({
+    elem: 'main',
+    class: 'main',
+  });
+
+  Main.tag.appendChild(inside(each));
+  WholeFrag().appendChild(Main.tag);
 
   const PageFooter = Footer();
   WholeFrag().appendChild(PageFooter());
