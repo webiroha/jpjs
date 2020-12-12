@@ -150,10 +150,9 @@
   padding-bottom: 0;
   transition: padding-bottom 0.2s;
 
-  &:hover,
-  &:active,
-  &:focus {
+  @include on-event() {
     border-bottom: 2px solid $color-white;
+    margin-bottom: -1px;
   }
 
 }
