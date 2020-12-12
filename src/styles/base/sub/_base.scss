@@ -153,7 +153,13 @@
     }
 
     &__link {
+      border-bottom: 1px solid $color-white;
       color: $color-white;
+
+      @include on-event() {
+        border-bottom: 2px solid $color-white;
+        margin-bottom: -1px;
+      }
 
     }
   }
