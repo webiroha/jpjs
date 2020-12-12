@@ -4,7 +4,7 @@ import Element from '../atom/Element';
 import Frag from '@root/components/atom/Frag';
 import { pagelist } from '@root/info/pagelist';
 
-const PageLink = (page) => {
+const PageLink = (page, hierarchy) => {
   const Block = Element({
     elem: 'li',
     class: 'footer-link__item',
@@ -16,7 +16,7 @@ const PageLink = (page) => {
     text: page,
   });
 
-  Link.tag.href = `../${page}`;
+  Link.tag.href = hierarchy === 'consonant' ? `../../${page}` : `../${page}`;
   Block.tag.appendChild(Link.tag);
 
   return Block.tag;
