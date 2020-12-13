@@ -75,4 +75,13 @@ console.log(memoryKanji);
 // きおく is 記憶 in Kanji.
 
 // いけ
+const pond = vowels.i + kvowels.ke;
+const pondHiragana = englishHiragana('Pond', pond);
+const pondKanji = hiraganaKanji(pond, '池');
+
+console.log(pondHiragana);
+// Pond is いけ in Hiragana.
+console.log(pondKanji);
+// いけ is 池 in Kanji.
+
 // こえ
