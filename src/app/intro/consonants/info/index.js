@@ -85,3 +85,11 @@ console.log(pondKanji);
 // いけ is 池 in Kanji.
 
 // こえ
+const voice = kvowels.ko + vowels.e;
+const voiceHiragana = englishHiragana('Voice', voice);
+const voiceKanji = hiraganaKanji(voice, '声');
+
+console.log(voiceHiragana);
+// Voice is こえ in Hiragana.
+console.log(voiceKanji);
+// こえ is 声 in Kanji.
