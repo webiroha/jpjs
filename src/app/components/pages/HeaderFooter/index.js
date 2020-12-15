@@ -21,7 +21,7 @@ const HeaderFooter = (inside, each, hierarchy) => {
   Main.tag.appendChild(inside(each));
   WholeFrag().appendChild(Main.tag);
 
-  const PageFooter = Footer();
+  const PageFooter = Footer(hierarchy);
   WholeFrag().appendChild(PageFooter());
 
   Wrapper.tag.appendChild(WholeFrag());

@@ -16,13 +16,24 @@ const PageLink = (page, hierarchy) => {
     text: page,
   });
 
-  Link.tag.href = hierarchy === 'consonant' ? `../../${page}` : `../${page}`;
+  if (hierarchy === 'consonant') {
+    if (page !== 'vowels' && page.endsWith('vowels')) {
+      Link.tag.href = `../../consonants/${page}`;
+    } else {
+      Link.tag.href = `../../${page}`;
+    }
+  } else {
+    if (page !== 'vowels' && page.endsWith('vowels')) {
+      Link.tag.href = `../consonants/${page}`;
+    }
+    Link.tag.href = `../${page}`;
+  }
   Block.tag.appendChild(Link.tag);
 
   return Block.tag;
 };
 
-const Footer = () => {
+const Footer = (hierarchy) => {
   const PageFooter = Element({
     elem: 'footer',
     class: 'footer fade-in',
@@ -41,9 +52,10 @@ const Footer = () => {
   const Fragment = Frag();
 
   pagelist.intro.map((page) => {
-    if (typeof page === 'object')
-      Fragment().appendChild(PageLink(Object.keys(page).toString()));
-    else Fragment().appendChild(PageLink(page));
+    if (typeof page === 'object') {
+      Fragment().appendChild(PageLink(Object.keys(page).toString(), hierarchy));
+      Fragment().appendChild(PageLink(page.consonants.toString(), hierarchy));
+    } else Fragment().appendChild(PageLink(page, hierarchy));
   });
 
   FooterLinks.tag.appendChild(Fragment());
