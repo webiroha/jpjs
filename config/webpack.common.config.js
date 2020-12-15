@@ -33,7 +33,7 @@ const pageMetas = {
     description: 'Around 14 - 17 consonant elements are used by Romaji.',
   },
 
-  consonantvowelk: {
+  kvowels: {
     title: 'Japanese JavaScript | Consonant vowel K',
     description: "Let's try to learn consonant k + vowel sound!",
   },
@@ -46,7 +46,7 @@ const webpackConfig = {
     characters: './src/app/intro/characters/index.js',
     vowels: './src/app/intro/vowels/index.js',
     consonants: './src/app/intro/consonants/index.js',
-    consonantvowelk: './src/app/intro/consonants/consonantvowelk/index.js',
+    kvowels: './src/app/intro/consonants/kvowels/index.js',
   },
 
   module: {
@@ -122,7 +122,7 @@ const webpackConfig = {
 
 const filepath = (key) => {
   if (key === 'top') return 'index.html';
-  if (key !== 'consonants' && key.startsWith('consonantvowel'))
+  if (key !== 'vowels' && key.endsWith('vowels'))
     return `intro/consonants/${key}/index.html`;
 
   return `intro/${key}/index.html`;
