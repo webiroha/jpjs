@@ -39,6 +39,28 @@ const hiraganaKanji = (
   kanji
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+// red・あか・赤
+const red = vowels.a + kvowels.ka;
+const redHiragana = englishHiragana('Red', red);
+const redKanji = hiraganaKanji(red, '赤');
+
+console.log(redHiragana);
+// Red is あか in Hiragana.
+console.log(redKanji);
+// あか is 赤 in Kanji.
+
+
+// memory・きおく・記憶
+const memory = kvowels.ki + vowels.o + kvowels.ku;
+const memoryHiragana = englishHiragana('Memory', memory);
+const memoryKanji = hiraganaKanji(memory, '記憶');
+
+console.log(memoryHiragana);
+// Memory is きおく in Hiragana.
+console.log(memoryKanji);
+// きおく is 記憶 in Kanji.
 `,
     navLink: ['consonants', '', 'one', ''],
   },
@@ -55,6 +77,7 @@ const englishHiragana = (english, hiragana) =>
 
 const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
 
+// あか
 const red = vowels.a + kvowels.ka;
 const redHiragana = englishHiragana('Red', red);
 const redKanji = hiraganaKanji(red, '赤');
