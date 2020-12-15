@@ -72,7 +72,7 @@ const Consonants = () => {
     role: 'sub-s',
     element: 'h3',
     title: 'Basic',
-    text: ['The part of "Fifty Sounds Table".', 'coming soon!'],
+    text: ['The part of "Fifty Sounds Table".', '- work in progress -'],
   };
 
   const BasicTitleInfoBlock = TitleWithText(BasicTitleInfo);

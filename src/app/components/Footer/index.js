@@ -10,10 +10,13 @@ const PageLink = (page, hierarchy) => {
     class: 'footer-link__item',
   });
 
+  const pageName =
+    page !== 'vowels' && page.endsWith('vowels') ? `ー ${page}` : page;
+
   const Link = Element({
     elem: 'a',
     class: 'footer-link__link',
-    text: page,
+    text: pageName,
   });
 
   if (hierarchy === 'consonant') {
@@ -25,8 +28,7 @@ const PageLink = (page, hierarchy) => {
   } else {
     if (page !== 'vowels' && page.endsWith('vowels')) {
       Link.tag.href = `../consonants/${page}`;
-    }
-    Link.tag.href = `../${page}`;
+    } else Link.tag.href = `../${page}`;
   }
   Block.tag.appendChild(Link.tag);
 
