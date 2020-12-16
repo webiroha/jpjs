@@ -91,7 +91,7 @@ console.log(consonantSvowelsByRomaji.toString());
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 
-const svowels =
+const sVowels =
   { sa: 'さ', si: 'し', su: 'す', se: 'せ', so: 'そ' };
 
 const englishHiragana = (
