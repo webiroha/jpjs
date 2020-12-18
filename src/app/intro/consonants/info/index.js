@@ -70,8 +70,8 @@ console.log(memoryKanji);
       title: 'Consonant S',
       text: [
         "Let's try to learn consonant s + vowels!",
+        '',
         'There are two ways to write in consonant S + vowels.',
-        'Hepburn romanization, Kunrei-shiki romanization, and Nihon-shiki romanization.',
         'We will use Hepburn romanization here.',
       ],
     },
@@ -82,8 +82,7 @@ const sVowelsByRomaji = vowels.map(
 console.log(sVowelsByRomaji.toString());
 // sa,si,su,se,so
 
-// Hepburn romanization
-// (We will use Hepburn romanization here.)
+// Hepburn romanization(We will use this here.)
 const sVowelsByRomajiHepburn = vowels.map(
   (vowel) => {
     if (vowel === 'i') {
@@ -95,11 +94,11 @@ const sVowelsByRomajiHepburn = vowels.map(
 console.log(sVowelsByRomajiHepburn.toString());
 // sa,shi,su,se,so
 `,
-    sound: ['sa', 'si', 'su', 'se', 'so'],
+    sound: ['sa', 'shi', 'su', 'se', 'so'],
     jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
     letters: `const consonantSvowelLetters = [
   { sa: { hiragana: 'さ', katakana: 'サ' } },
-  { si: { hiragana: 'し', katakana: 'シ' } },
+  { shi: { hiragana: 'し', katakana: 'シ' } },
   { su: { hiragana: 'す', katakana: 'ス' } },
   { se: { hiragana: 'せ', katakana: 'セ' } },
   { so: { hiragana: 'そ', katakana: 'ソ' } },
@@ -109,8 +108,11 @@ console.log(sVowelsByRomajiHepburn.toString());
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
 const sVowels =
-  { sa: 'さ', si: 'し', su: 'す', se: 'せ', so: 'そ' };
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 
 const englishHiragana = (
   english,
@@ -124,7 +126,7 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 `,
-    navLink: ['consonants', '', 'one', ''],
+    navLink: ['kvowels', '', '', ''],
   },
 };
 

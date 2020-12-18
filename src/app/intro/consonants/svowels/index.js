@@ -2,7 +2,7 @@ import CommonLayout from '@root/intro/consonants/components/CommonLayout';
 import info from '@root/intro/consonants/info';
 
 import '@wav/sa.wav';
-import '@wav/si.wav';
+import '@wav/shi.wav';
 import '@wav/su.wav';
 import '@wav/se.wav';
 import '@wav/so.wav';
