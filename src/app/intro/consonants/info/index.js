@@ -61,6 +61,28 @@ console.log(memoryHiragana);
 // Memory is きおく in Hiragana.
 console.log(memoryKanji);
 // きおく is 記憶 in Kanji.
+
+
+// pond・いけ・池
+const pond = vowels.i + kVowels.ke;
+const pondHiragana = englishHiragana('Pond', pond);
+const pondKanji = hiraganaKanji(pond, '池');
+
+console.log(pondHiragana);
+// Pond is いけ in Hiragana.
+console.log(pondKanji);
+// いけ is 池 in Kanji.
+
+
+// voice・こえ・声
+const voice = kVowels.ko + vowels.e;
+const voiceHiragana = englishHiragana('Voice', voice);
+const voiceKanji = hiraganaKanji(voice, '声');
+
+console.log(voiceHiragana);
+// Voice is こえ in Hiragana.
+console.log(voiceKanji);
+// こえ is 声 in Kanji.
 `,
     navLink: ['consonants', '', 'one', ''],
   },
@@ -133,7 +155,6 @@ const hiraganaKanji = (
 export default info;
 
 const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
-
 const kVowels = { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
 
 const englishHiragana = (english, hiragana) =>
@@ -141,6 +162,7 @@ const englishHiragana = (english, hiragana) =>
 
 const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
 
+// k vowels
 // あか
 const red = vowels.a + kVowels.ka;
 const redHiragana = englishHiragana('Red', red);
@@ -180,3 +202,5 @@ console.log(voiceHiragana);
 // Voice is こえ in Hiragana.
 console.log(voiceKanji);
 // こえ is 声 in Kanji.
+
+// s vowels
