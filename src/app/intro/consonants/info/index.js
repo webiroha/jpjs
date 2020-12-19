@@ -204,3 +204,7 @@ console.log(voiceKanji);
 // こえ is 声 in Kanji.
 
 // s vowels
+// さか
+// しあい
+// すそ
+// せかい
