@@ -156,6 +156,7 @@ export default info;
 
 const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 const kVowels = { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+const sVowels = { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -204,7 +205,16 @@ console.log(voiceKanji);
 // こえ is 声 in Kanji.
 
 // s vowels
-// さか
+// awesome・さいこう・最高
+const awesome = sVowels.sa + vowels.i + kVowels.ko + vowels.u;
+const awesomeHiragana = englishHiragana('Awesome', awesome);
+const awesomeKanji = hiraganaKanji(awesome, '最高');
+
+console.log(awesomeHiragana);
+// Awesome is さいこう in Hiragana.
+console.log(awesomeKanji);
+// さいこう is 最高 in Kanji.
+
 // しあい
-// すそ
+// すし🍣
 // せかい
