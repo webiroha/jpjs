@@ -94,21 +94,25 @@ console.log(voiceKanji);
         "Let's try to learn consonant s + vowels!",
         '',
         'There are two ways to write in consonant S + vowels.',
-        'We will use Hepburn romanization here.',
+        'We will use Hepburn-shiki Romaji here.',
       ],
     },
-    romaji: `// Kunrei-shiki and Nihon-shiki romanization
+    romaji: `const consonantS = 's';
+const hepburnElem = 'h';
+const vowels = [...'aiueo'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
 const sVowelsByRomaji = vowels.map(
   (vowel) => consonantS + vowel
 );
 console.log(sVowelsByRomaji.toString());
 // sa,si,su,se,so
 
-// Hepburn romanization(We will use this here.)
+// Hepburn-shiki Romaji(We will use this here.)
 const sVowelsByRomajiHepburn = vowels.map(
   (vowel) => {
     if (vowel === 'i') {
-      return consonantS + hepburnElement + vowel;
+      return consonantS + hepburnElem + vowel;
     } else {
       return consonantS + vowel;
     }

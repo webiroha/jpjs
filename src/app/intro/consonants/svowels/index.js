@@ -9,20 +9,22 @@ import '@wav/so.wav';
 
 CommonLayout(info.consonantSinfo);
 
-const consonantS = 's';
-const hepburnElement = 'h';
-const vowels = [...'aiueo'];
+const [consonantS, hepburnElem, vowels] = ['s', 'h', [...'aiueo']];
 
-// Kunrei-shiki and Nihon-shiki romanization
+// const consonantS = 's';
+// const hepburnElem = 'h';
+// const vowels = [...'aiueo'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
 const sVowelsByRomaji = vowels.map((vowel) => consonantS + vowel);
 console.log(sVowelsByRomaji.toString());
 // sa,si,su,se,so
 
-// Hepburn romanization
-// (We will use Hepburn romanization here.)
+// Hepburn-shiki Romaji
+// (We will use this here.)
 const sVowelsByRomajiHepburn = vowels.map((vowel) => {
   if (vowel === 'i') {
-    return consonantS + hepburnElement + vowel;
+    return consonantS + hepburnElem + vowel;
   } else {
     return consonantS + vowel;
   }
