@@ -93,13 +93,13 @@ console.log(voiceKanji);
       text: [
         "Let's try to learn consonant s + vowels!",
         '',
-        'There are two ways to write in consonant S + vowels.',
+        'There are two ways to write in consonant s + vowels.',
         'We will use Hepburn-shiki Romaji here.',
       ],
     },
     romaji: `const consonantS = 's';
-const hepburnElem = 'h';
 const vowels = [...'aiueo'];
+const hepburnElem = 'h';
 
 // Kunrei-shiki and Nihon-shiki Romaji
 const sVowelsByRomaji = vowels.map(

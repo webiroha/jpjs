@@ -9,7 +9,7 @@ import '@wav/so.wav';
 
 CommonLayout(info.consonantSinfo);
 
-const [consonantS, hepburnElem, vowels] = ['s', 'h', [...'aiueo']];
+const [consonantS, vowels, hepburnElem] = ['s', [...'aiueo'], 'h'];
 
 // const consonantS = 's';
 // const hepburnElem = 'h';
