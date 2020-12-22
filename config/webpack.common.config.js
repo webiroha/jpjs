@@ -34,12 +34,12 @@ const pageMetas = {
   },
 
   kvowels: {
-    title: 'Japanese JavaScript | Consonant vowel K',
+    title: 'Japanese JavaScript | Consonant K',
     description: "Let's try to learn consonant k + vowel sound!",
   },
 
   svowels: {
-    title: 'Japanese JavaScript | Consonant vowel S',
+    title: 'Japanese JavaScript | Consonant S',
     description: "Let's try to learn consonant s + vowel sound!",
   },
 };

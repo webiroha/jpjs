@@ -220,5 +220,14 @@ console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
 
 // しあい
+const match = sVowels.shi + vowels.a + vowels.i;
+const matchHiragana = englishHiragana('Match', match);
+const matchKanji = hiraganaKanji(match, '試合');
+
+console.log(matchHiragana);
+// Match is しあい in Hiragana.
+console.log(matchKanji);
+// しあい is 試合 in Kanji.
+
 // すし🍣
 // せかい
