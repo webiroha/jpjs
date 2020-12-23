@@ -229,5 +229,14 @@ console.log(matchHiragana);
 console.log(matchKanji);
 // しあい is 試合 in Kanji.
 
-// すし🍣
+// hem・すそ・裾
+const hem = sVowels.su + sVowels.so;
+const hemHiragana = englishHiragana('Hem', hem);
+const hemKanji = hiraganaKanji(hem, '裾');
+
+console.log(hemHiragana);
+// Hem is すそ in Hiragana.
+console.log(hemKanji);
+// すそ is 裾 in Kanji.
+
 // せかい
