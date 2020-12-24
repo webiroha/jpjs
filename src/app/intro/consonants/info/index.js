@@ -219,7 +219,7 @@ console.log(awesomeHiragana);
 console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
 
-// しあい
+// match・しあい・試合
 const match = sVowels.shi + vowels.a + vowels.i;
 const matchHiragana = englishHiragana('Match', match);
 const matchKanji = hiraganaKanji(match, '試合');
@@ -240,3 +240,11 @@ console.log(hemKanji);
 // すそ is 裾 in Kanji.
 
 // せかい
+const world = sVowels.se + kVowels.ka + vowels.i;
+const worldHiragana = englishHiragana('World', world);
+const worldKanji = hiraganaKanji(world, '世界');
+
+console.log(worldHiragana);
+// World is せかい in Hiragana.
+console.log(worldKanji);
+// せかい is 世界 in Kanji.
