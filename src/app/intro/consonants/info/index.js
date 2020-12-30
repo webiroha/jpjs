@@ -221,25 +221,27 @@ console.log(tVowelsByRomaji.toString());
 // ta,ti,tu,te,to
 
 // Hepburn-shiki Romaji(We will use this here.)
-const sVowelsByRomajiHepburn = vowels.map(
+const tVowelsByRomajiHepburn = vowels.map(
   (vowel) => {
     if (vowel === 'i') {
-      return consonantS + hepburnElem + vowel;
+      return hepburnElem[0] + vowel;
+    } else if (vowel === 'u') {
+      return consonantT + hepburnElem[1] + vowel;
     } else {
-      return consonantS + vowel;
+      return consonantT + vowel;
     }
 });
-console.log(sVowelsByRomajiHepburn.toString());
-// sa,shi,su,se,so
+console.log(tVowelsByRomajiHepburn.toString());
+// ta,chi,tsu,te,to
 `,
-    sound: ['sa', 'shi', 'su', 'se', 'so'],
-    jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
-    letters: `const consonantSvowelLetters = [
-  { sa: { hiragana: 'さ', katakana: 'サ' } },
-  { shi: { hiragana: 'し', katakana: 'シ' } },
-  { su: { hiragana: 'す', katakana: 'ス' } },
-  { se: { hiragana: 'せ', katakana: 'セ' } },
-  { so: { hiragana: 'そ', katakana: 'ソ' } },
+    sound: ['ta', 'chi', 'tsu', 'te', 'to'],
+    jpText: 'The consonant T + vowels spelt by hiragana and katakana.',
+    letters: `const consonantTvowelLetters = [
+  { ta: { hiragana: 'た', katakana: 'タ' } },
+  { chi: { hiragana: 'ち', katakana: 'チ' } },
+  { tsu: { hiragana: 'つ', katakana: 'ツ' } },
+  { te: { hiragana: 'て', katakana: 'テ' } },
+  { to: { hiragana: 'と', katakana: 'ト' } },
 ];`,
     exampleText: "Let's use consonant s + vowels in practice!",
     examples: `// Base code
@@ -251,6 +253,9 @@ const kVowels =
 
 const sVowels =
   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
 
 const englishHiragana = (
   english,
@@ -275,6 +280,7 @@ export default info;
 const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 const kVowels = { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
 const sVowels = { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+const tVowels = { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -362,3 +368,9 @@ console.log(worldHiragana);
 // World is せかい in Hiragana.
 console.log(worldKanji);
 // せかい is 世界 in Kanji.
+
+// t vowels
+// bored・たいくつ・退屈
+// blood・ち・血
+// height・たて・縦
+// outside・そと・外
