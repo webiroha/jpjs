@@ -370,7 +370,16 @@ console.log(worldKanji);
 // せかい is 世界 in Kanji.
 
 // t vowels
-// bored・たいくつ・退屈
+// boredom・たいくつ・退屈
+const boredom = tVowels.ta + vowels.i + kVowels.ku + tVowels.tsu;
+const boredomHiragana = englishHiragana('Boredom', boredom);
+const boredomKanji = hiraganaKanji(boredom, '退屈');
+
+console.log(boredomHiragana);
+// Boredom is たいくつ in Hiragana.
+console.log(boredomKanji);
+// たいくつ is 退屈 in Kanji.
+
 // blood・ち・血
 // height・たて・縦
 // outside・そと・外
