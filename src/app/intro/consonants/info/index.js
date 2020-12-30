@@ -151,6 +151,50 @@ const hiraganaKanji = (
   kanji
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+// awesome・さいこう・最高
+const awesome = sVowels.sa + vowels.i + kVowels.ko + vowels.u;
+const awesomeHiragana = englishHiragana('Awesome', awesome);
+const awesomeKanji = hiraganaKanji(awesome, '最高');
+
+console.log(awesomeHiragana);
+// Awesome is さいこう in Hiragana.
+console.log(awesomeKanji);
+// さいこう is 最高 in Kanji.
+
+
+// match・しあい・試合
+const match = sVowels.shi + vowels.a + vowels.i;
+const matchHiragana = englishHiragana('Match', match);
+const matchKanji = hiraganaKanji(match, '試合');
+
+console.log(matchHiragana);
+// Match is しあい in Hiragana.
+console.log(matchKanji);
+// しあい is 試合 in Kanji.
+
+
+// hem・すそ・裾
+const hem = sVowels.su + sVowels.so;
+const hemHiragana = englishHiragana('Hem', hem);
+const hemKanji = hiraganaKanji(hem, '裾');
+
+console.log(hemHiragana);
+// Hem is すそ in Hiragana.
+console.log(hemKanji);
+// すそ is 裾 in Kanji.
+
+
+// world・せかい・世界
+const world = sVowels.se + kVowels.ka + vowels.i;
+const worldHiragana = englishHiragana('World', world);
+const worldKanji = hiraganaKanji(world, '世界');
+
+console.log(worldHiragana);
+// World is せかい in Hiragana.
+console.log(worldKanji);
+// せかい is 世界 in Kanji.
 `,
     navLink: ['kvowels', '', '', ''],
   },
@@ -239,7 +283,7 @@ console.log(hemHiragana);
 console.log(hemKanji);
 // すそ is 裾 in Kanji.
 
-// せかい
+// world・せかい・世界
 const world = sVowels.se + kVowels.ka + vowels.i;
 const worldHiragana = englishHiragana('World', world);
 const worldKanji = hiraganaKanji(world, '世界');
