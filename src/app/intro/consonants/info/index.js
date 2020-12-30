@@ -381,5 +381,14 @@ console.log(boredomKanji);
 // たいくつ is 退屈 in Kanji.
 
 // blood・ち・血
+const blood = tVowels.chi;
+const bloodHiragana = englishHiragana('Blood', blood);
+const bloodKanji = hiraganaKanji(blood, '血');
+
+console.log(bloodHiragana);
+// Blood is ち in Hiragana.
+console.log(bloodKanji);
+// ち is 血 in Kanji.
+
 // height・たて・縦
 // outside・そと・外
