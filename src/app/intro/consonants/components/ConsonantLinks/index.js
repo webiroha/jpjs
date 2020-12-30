@@ -32,10 +32,10 @@ const ConsonantLinks = () => {
 
   const consonants = [
     'k',
-    'sh',
-    'tchs',
+    's',
+    't',
     'n',
-    'hf',
+    'h',
     'm',
     'y',
     'r',
