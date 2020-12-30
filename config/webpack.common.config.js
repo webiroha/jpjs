@@ -47,6 +47,11 @@ const pageMetas = {
     title: 'Japanese JavaScript | Consonant T',
     description: "Let's try to learn consonant t + vowel sound!",
   },
+
+  nvowels: {
+    title: 'Japanese JavaScript | Consonant N',
+    description: "Let's try to learn consonant n + vowel sound!",
+  },
 };
 
 const webpackConfig = {
@@ -59,6 +64,7 @@ const webpackConfig = {
     kvowels: './src/app/intro/consonants/kvowels/index.js',
     svowels: './src/app/intro/consonants/svowels/index.js',
     tvowels: './src/app/intro/consonants/tvowels/index.js',
+    nvowels: './src/app/intro/consonants/nvowels/index.js',
   },
 
   module: {

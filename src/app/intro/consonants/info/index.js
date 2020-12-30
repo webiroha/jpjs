@@ -273,6 +273,61 @@ const hiraganaKanji = (
 `,
     navLink: ['svowels', '', '', ''],
   },
+
+  consonantNinfo: {
+    explain: {
+      title: 'Consonant N',
+      text: "Let's try to learn consonant n + vowels!",
+    },
+    romaji: `const consonantK = 'n';
+const vowels = [...'aiueo'];
+const consonantNvowelsByRomaji = vowels.map(
+  (vowel) => consonantN + vowel
+);
+console.log(consonantNvowelsByRomaji.toString());
+// na,ni,nu,ne,no`,
+    sound: ['na', 'ni', 'nu', 'ne', 'no'],
+    jpText: 'The consonant n + vowels spelt by hiragana and katakana.',
+    letters: `const consonantNvowelLetters = [
+  { na: { hiragana: 'な', katakana: 'ナ' } },
+  { ni: { hiragana: 'に', katakana: 'ニ' } },
+  { nu: { hiragana: 'ぬ', katakana: 'ヌ' } },
+  { ne: { hiragana: 'ね', katakana: 'ネ' } },
+  { no: { hiragana: 'の', katakana: 'ノ' } },
+];`,
+    exampleText: "Let's use consonant n + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['tvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -281,13 +336,14 @@ const vowels = { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
 const kVowels = { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
 const sVowels = { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 const tVowels = { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+const nVowels = { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
 
 const hiraganaKanji = (hiragana, kanji) => `${hiragana} is ${kanji} in Kanji.`;
 
-// k vowels
+// k vowels ----------
 // あか
 const red = vowels.a + kVowels.ka;
 const redHiragana = englishHiragana('Red', red);
@@ -328,7 +384,7 @@ console.log(voiceHiragana);
 console.log(voiceKanji);
 // こえ is 声 in Kanji.
 
-// s vowels
+// s vowels ----------
 // awesome・さいこう・最高
 const awesome = sVowels.sa + vowels.i + kVowels.ko + vowels.u;
 const awesomeHiragana = englishHiragana('Awesome', awesome);
@@ -369,7 +425,7 @@ console.log(worldHiragana);
 console.log(worldKanji);
 // せかい is 世界 in Kanji.
 
-// t vowels
+// t vowels ----------
 // boredom・たいくつ・退屈
 const boredom = tVowels.ta + vowels.i + kVowels.ku + tVowels.tsu;
 const boredomHiragana = englishHiragana('Boredom', boredom);
@@ -409,3 +465,14 @@ console.log(outsideHiragana);
 // Outside is そと in Hiragana.
 console.log(outsideKanji);
 // そと is 外 in Kanji.
+
+// n vowels ----------
+// summer・なつ・夏
+const summer = nVowels.na + tVowels.tsu;
+const summerHiragana = englishHiragana('Summer', summer);
+const summerKanji = hiraganaKanji(summer, '夏');
+
+console.log(summerHiragana);
+// Summer is なつ in Hiragana.
+console.log(summerKanji);
+// なつ is 夏 in Kanji.
