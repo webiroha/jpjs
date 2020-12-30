@@ -7,27 +7,29 @@ import '@wav/tsu.wav';
 import '@wav/te.wav';
 import '@wav/to.wav';
 
-// CommonLayout(info.consonantTinfo);
+CommonLayout(info.consonantTinfo);
 
-const [consonantT, vowels, hepburnElem] = ['t', [...'aiueo'], 'chs'];
+const [consonantT, vowels, hepburnElem] = ['t', [...'aiueo'], ['ch', 's']];
 
-// const consonant = 's';
-// const hepburnElem = 'h';
+// const consonantT = 't';
 // const vowels = [...'aiueo'];
+// const hepburnElem = ['ch', 's'];
 
 // Kunrei-shiki and Nihon-shiki Romaji
 const tVowelsByRomaji = vowels.map((vowel) => consonantT + vowel);
 console.log(tVowelsByRomaji.toString());
-// sa,si,su,se,so
+// ta,ti,tu,te,to
 
 // Hepburn-shiki Romaji
 // (We will use this here.)
 const tVowelsByRomajiHepburn = vowels.map((vowel) => {
   if (vowel === 'i') {
-    return consonantT + hepburnElem + vowel;
+    return hepburnElem[0] + vowel;
+  } else if (vowel === 'u') {
+    return consonantT + hepburnElem[1] + vowel;
   } else {
     return consonantT + vowel;
   }
 });
 console.log(tVowelsByRomajiHepburn.toString());
-// sa,shi,su,se,so
+// ta,chi,tsu,te,to

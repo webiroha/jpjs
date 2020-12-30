@@ -43,10 +43,10 @@ const pageMetas = {
     description: "Let's try to learn consonant s + vowel sound!",
   },
 
-  // tvowels: {
-  //   title: 'Japanese JavaScript | Consonant T',
-  //   description: "Let's try to learn consonant t + vowel sound!",
-  // },
+  tvowels: {
+    title: 'Japanese JavaScript | Consonant T',
+    description: "Let's try to learn consonant t + vowel sound!",
+  },
 };
 
 const webpackConfig = {
@@ -58,7 +58,7 @@ const webpackConfig = {
     consonants: './src/app/intro/consonants/index.js',
     kvowels: './src/app/intro/consonants/kvowels/index.js',
     svowels: './src/app/intro/consonants/svowels/index.js',
-    // tvowels: './src/app/intro/consonants/tvowels/index.js',
+    tvowels: './src/app/intro/consonants/tvowels/index.js',
   },
 
   module: {

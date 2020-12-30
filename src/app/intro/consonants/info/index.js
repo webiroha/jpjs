@@ -198,6 +198,76 @@ console.log(worldKanji);
 `,
     navLink: ['kvowels', '', '', ''],
   },
+
+  consonantTinfo: {
+    explain: {
+      title: 'Consonant T',
+      text: [
+        "Let's try to learn consonant t + vowels!",
+        '',
+        'There are two ways to write in consonant t + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantT = 't';
+const vowels = [...'aiueo'];
+const hepburnElem = ['ch', 's'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
+const tVowelsByRomaji = vowels.map(
+  (vowel) => consonantT + vowel
+);
+console.log(tVowelsByRomaji.toString());
+// ta,ti,tu,te,to
+
+// Hepburn-shiki Romaji(We will use this here.)
+const sVowelsByRomajiHepburn = vowels.map(
+  (vowel) => {
+    if (vowel === 'i') {
+      return consonantS + hepburnElem + vowel;
+    } else {
+      return consonantS + vowel;
+    }
+});
+console.log(sVowelsByRomajiHepburn.toString());
+// sa,shi,su,se,so
+`,
+    sound: ['sa', 'shi', 'su', 'se', 'so'],
+    jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
+    letters: `const consonantSvowelLetters = [
+  { sa: { hiragana: 'さ', katakana: 'サ' } },
+  { shi: { hiragana: 'し', katakana: 'シ' } },
+  { su: { hiragana: 'す', katakana: 'ス' } },
+  { se: { hiragana: 'せ', katakana: 'セ' } },
+  { so: { hiragana: 'そ', katakana: 'ソ' } },
+];`,
+    exampleText: "Let's use consonant s + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['svowels', '', '', ''],
+  },
 };
 
 export default info;
