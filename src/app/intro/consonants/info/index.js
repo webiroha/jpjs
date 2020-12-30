@@ -238,7 +238,7 @@ console.log(tVowelsByRomajiHepburn.toString());
     jpText: 'The consonant T + vowels spelt by hiragana and katakana.',
     letters: `const consonantTvowelLetters = [
   { ta: { hiragana: 'た', katakana: 'タ' } },
-  { chi: { hiragana: 'ち', katakana: 'チ' } },
+  { chi: { hiragana: 'たて', katakana: 'チ' } },
   { tsu: { hiragana: 'つ', katakana: 'ツ' } },
   { te: { hiragana: 'て', katakana: 'テ' } },
   { to: { hiragana: 'と', katakana: 'ト' } },
@@ -390,5 +390,14 @@ console.log(bloodHiragana);
 console.log(bloodKanji);
 // ち is 血 in Kanji.
 
-// height・たて・縦
+// vertical・たて・縦
+const vertical = tVowels.ta + tVowels.te;
+const verticalHiragana = englishHiragana('Vertical', vertical);
+const verticalKanji = hiraganaKanji(vertical, '縦');
+
+console.log(verticalHiragana);
+// Vertical is たて in Hiragana.
+console.log(verticalKanji);
+// たて is 縦 in Kanji.
+
 // outside・そと・外
