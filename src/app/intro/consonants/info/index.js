@@ -401,3 +401,11 @@ console.log(verticalKanji);
 // たて is 縦 in Kanji.
 
 // outside・そと・外
+const outside = sVowels.so + tVowels.to;
+const outsideHiragana = englishHiragana('Outside', outside);
+const outsideKanji = hiraganaKanji(outside, '外');
+
+console.log(outsideHiragana);
+// Outside is そと in Hiragana.
+console.log(outsideKanji);
+// そと is 外 in Kanji.
