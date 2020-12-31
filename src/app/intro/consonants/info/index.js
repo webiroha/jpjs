@@ -164,7 +164,7 @@ console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
 
 
-// match・しあい・試合
+// match(game)・しあい・試合
 const match = sVowels.shi + vowels.a + vowels.i;
 const matchHiragana = englishHiragana('Match', match);
 const matchKanji = hiraganaKanji(match, '試合');
