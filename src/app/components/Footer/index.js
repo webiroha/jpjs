@@ -56,7 +56,9 @@ const Footer = (hierarchy) => {
   pagelist.intro.map((page) => {
     if (typeof page === 'object') {
       Fragment().appendChild(PageLink(Object.keys(page).toString(), hierarchy));
-      Fragment().appendChild(PageLink(page.consonants.toString(), hierarchy));
+      page.consonants.map((child) =>
+        Fragment().appendChild(PageLink(child, hierarchy))
+      );
     } else Fragment().appendChild(PageLink(page, hierarchy));
   });
 

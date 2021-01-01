@@ -1,3 +1,8 @@
 export const pagelist = {
-  intro: ['preparation', 'characters', 'vowels', { consonants: ['kvowels'] }],
+  intro: [
+    'preparation',
+    'characters',
+    'vowels',
+    { consonants: ['kvowels', 'svowels'] },
+  ],
 };
