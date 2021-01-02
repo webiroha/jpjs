@@ -324,32 +324,32 @@ const vowels = [...'aiueo'];
 const hepburnElem = 'f';
 
 // Kunrei-shiki and Nihon-shiki Romaji
-const sVowelsByRomaji = vowels.map(
-  (vowel) => consonantS + vowel
+const hVowelsByRomaji = vowels.map(
+  (vowel) => consonantH + vowel
 );
-console.log(sVowelsByRomaji.toString());
-// sa,si,su,se,so
+console.log(hVowelsByRomaji.toString());
+// ha,hi,hu,he,ho
 
 // Hepburn-shiki Romaji(We will use this here.)
-const sVowelsByRomajiHepburn = vowels.map(
+const hVowelsByRomajiHepburn = vowels.map(
   (vowel) => {
-    if (vowel === 'i') {
-      return consonantS + hepburnElem + vowel;
+    if (vowel === 'u') {
+      return hepburnElem + vowel;
     } else {
-      return consonantS + vowel;
+      return consonantH + vowel;
     }
 });
-console.log(sVowelsByRomajiHepburn.toString());
-// sa,shi,su,se,so
+console.log(hVowelsByRomajiHepburn.toString());
+// ha,hi,fu,he,ho
 `,
-    sound: ['sa', 'shi', 'su', 'se', 'so'],
+    sound: ['ha', 'hi', 'fu', 'he', 'ho'],
     jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
     letters: `const consonantSvowelLetters = [
-  { sa: { hiragana: 'さ', katakana: 'サ' } },
-  { shi: { hiragana: 'し', katakana: 'シ' } },
-  { su: { hiragana: 'す', katakana: 'ス' } },
-  { se: { hiragana: 'せ', katakana: 'セ' } },
-  { so: { hiragana: 'そ', katakana: 'ソ' } },
+  { ha: { hiragana: 'は', katakana: 'ハ' } },
+  { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
+  { fu: { hiragana: 'ふ', katakana: 'フ' } },
+  { he: { hiragana: 'へ', katakana: 'ヘ' } },
+  { ho: { hiragana: 'ほ', katakana: 'ホ' } },
 ];`,
     exampleText: "Let's use consonant s + vowels in practice!",
     examples: `// Base code
@@ -361,6 +361,15 @@ const kVowels =
 
 const sVowels =
   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 
 const englishHiragana = (
   english,
@@ -375,28 +384,8 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-// awesome・さいこう・最高
-const awesome = sVowels.sa + vowels.i + kVowels.ko + vowels.u;
-const awesomeHiragana = englishHiragana('Awesome', awesome);
-const awesomeKanji = hiraganaKanji(awesome, '最高');
-
-console.log(awesomeHiragana);
-// Awesome is さいこう in Hiragana.
-console.log(awesomeKanji);
-// さいこう is 最高 in Kanji.
-
-
-// match(game)・しあい・試合
-const match = sVowels.shi + vowels.a + vowels.i;
-const matchHiragana = englishHiragana('Match', match);
-const matchKanji = hiraganaKanji(match, '試合');
-
-console.log(matchHiragana);
-// Match is しあい in Hiragana.
-console.log(matchKanji);
-// しあい is 試合 in Kanji.
 `,
-    navLink: ['kvowels', '', '', ''],
+    navLink: ['nvowels', '', '', ''],
   },
 };
 
@@ -407,6 +396,7 @@ const kVowels = { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
 const sVowels = { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 const tVowels = { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
 const nVowels = { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+const hVowels = { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -576,3 +566,14 @@ console.log(catHiragana);
 // Cat is ねこ in Hiragana.
 console.log(catKanji);
 // ねこ is 猫 in Kanji.
+
+// h vowels ----------
+// はな
+const flower = hVowels.ha + nVowels.na;
+const flowerHiragana = englishHiragana('Flower', flower);
+const flowerKanji = hiraganaKanji(flower, '花');
+
+console.log(flowerHiragana);
+// Flower is はな in Hiragana.
+console.log(flowerKanji);
+// はな is 花 in Kanji.

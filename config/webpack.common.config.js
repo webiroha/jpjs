@@ -5,6 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 
+const commonMetaConsonantVowels = {
+  title: (consonant) => `Japanese JavaScript | Consonant ${consonant}`,
+  description: (consonant) =>
+    `Let's try to learn consonant ${consonant} + vowel sound!`,
+};
+
 const pageMetas = {
   top: {
     title: 'Japanese JavaScript',
@@ -34,23 +40,28 @@ const pageMetas = {
   },
 
   kvowels: {
-    title: 'Japanese JavaScript | Consonant K',
-    description: "Let's try to learn consonant k + vowel sound!",
+    title: commonMetaConsonantVowels.title('K'),
+    description: commonMetaConsonantVowels.description('k'),
   },
 
   svowels: {
-    title: 'Japanese JavaScript | Consonant S',
-    description: "Let's try to learn consonant s + vowel sound!",
+    title: commonMetaConsonantVowels.title('S'),
+    description: commonMetaConsonantVowels.description('s'),
   },
 
   tvowels: {
-    title: 'Japanese JavaScript | Consonant T',
-    description: "Let's try to learn consonant t + vowel sound!",
+    title: commonMetaConsonantVowels.title('T'),
+    description: commonMetaConsonantVowels.description('t'),
   },
 
   nvowels: {
-    title: 'Japanese JavaScript | Consonant N',
-    description: "Let's try to learn consonant n + vowel sound!",
+    title: commonMetaConsonantVowels.title('N'),
+    description: commonMetaConsonantVowels.description('n'),
+  },
+
+  hvowels: {
+    title: commonMetaConsonantVowels.title('H'),
+    description: commonMetaConsonantVowels.description('h'),
   },
 };
 
@@ -65,6 +76,7 @@ const webpackConfig = {
     svowels: './src/app/intro/consonants/svowels/index.js',
     tvowels: './src/app/intro/consonants/tvowels/index.js',
     nvowels: './src/app/intro/consonants/nvowels/index.js',
+    hvowels: './src/app/intro/consonants/hvowels/index.js',
   },
 
   module: {
