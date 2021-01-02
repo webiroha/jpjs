@@ -6,6 +6,7 @@ const info = {
     },
     romaji: `const consonantK = 'k';
 const vowels = [...'aiueo'];
+
 const consonantKvowelsByRomaji = vowels.map(
   (vowel) => consonantK + vowel
 );
@@ -259,6 +260,7 @@ const hiraganaKanji = (
     },
     romaji: `const consonantK = 'n';
 const vowels = [...'aiueo'];
+
 const consonantNvowelsByRomaji = vowels.map(
   (vowel) => consonantN + vowel
 );
