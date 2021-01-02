@@ -12,8 +12,8 @@ CommonLayout(info.consonantSinfo);
 const [consonantS, vowels, hepburnElem] = ['s', [...'aiueo'], 'h'];
 
 // const consonantS = 's';
-// const hepburnElem = 'h';
 // const vowels = [...'aiueo'];
+// const hepburnElem = 'h';
 
 // Kunrei-shiki and Nihon-shiki Romaji
 const sVowelsByRomaji = vowels.map((vowel) => consonantS + vowel);
