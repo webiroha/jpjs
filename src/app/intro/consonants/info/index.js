@@ -306,6 +306,96 @@ const hiraganaKanji = (
 `,
     navLink: ['tvowels', '', '', ''],
   },
+
+  consonantHinfo: {
+    explain: {
+      title: 'Consonant H',
+      text: [
+        "Let's try to learn consonant h + vowels!",
+        '',
+        'There are two ways to write in consonant h + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantS = 'h';
+const vowels = [...'aiueo'];
+const hepburnElem = 'f';
+
+// Kunrei-shiki and Nihon-shiki Romaji
+const sVowelsByRomaji = vowels.map(
+  (vowel) => consonantS + vowel
+);
+console.log(sVowelsByRomaji.toString());
+// sa,si,su,se,so
+
+// Hepburn-shiki Romaji(We will use this here.)
+const sVowelsByRomajiHepburn = vowels.map(
+  (vowel) => {
+    if (vowel === 'i') {
+      return consonantS + hepburnElem + vowel;
+    } else {
+      return consonantS + vowel;
+    }
+});
+console.log(sVowelsByRomajiHepburn.toString());
+// sa,shi,su,se,so
+`,
+    sound: ['sa', 'shi', 'su', 'se', 'so'],
+    jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
+    letters: `const consonantSvowelLetters = [
+  { sa: { hiragana: 'さ', katakana: 'サ' } },
+  { shi: { hiragana: 'し', katakana: 'シ' } },
+  { su: { hiragana: 'す', katakana: 'ス' } },
+  { se: { hiragana: 'せ', katakana: 'セ' } },
+  { so: { hiragana: 'そ', katakana: 'ソ' } },
+];`,
+    exampleText: "Let's use consonant s + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+// awesome・さいこう・最高
+const awesome = sVowels.sa + vowels.i + kVowels.ko + vowels.u;
+const awesomeHiragana = englishHiragana('Awesome', awesome);
+const awesomeKanji = hiraganaKanji(awesome, '最高');
+
+console.log(awesomeHiragana);
+// Awesome is さいこう in Hiragana.
+console.log(awesomeKanji);
+// さいこう is 最高 in Kanji.
+
+
+// match(game)・しあい・試合
+const match = sVowels.shi + vowels.a + vowels.i;
+const matchHiragana = englishHiragana('Match', match);
+const matchKanji = hiraganaKanji(match, '試合');
+
+console.log(matchHiragana);
+// Match is しあい in Hiragana.
+console.log(matchKanji);
+// しあい is 試合 in Kanji.
+`,
+    navLink: ['kvowels', '', '', ''],
+  },
 };
 
 export default info;
