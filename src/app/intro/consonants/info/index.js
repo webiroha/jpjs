@@ -122,7 +122,7 @@ console.log(sVowelsByRomajiHepburn.toString());
 // sa,shi,su,se,so
 `,
     sound: ['sa', 'shi', 'su', 'se', 'so'],
-    jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
+    jpText: 'The consonant s + vowels spelt by hiragana and katakana.',
     letters: `const consonantSvowelLetters = [
   { sa: { hiragana: 'さ', katakana: 'サ' } },
   { shi: { hiragana: 'し', katakana: 'シ' } },
@@ -214,7 +214,7 @@ console.log(tVowelsByRomajiHepburn.toString());
 // ta,chi,tsu,te,to
 `,
     sound: ['ta', 'chi', 'tsu', 'te', 'to'],
-    jpText: 'The consonant T + vowels spelt by hiragana and katakana.',
+    jpText: 'The consonant t + vowels spelt by hiragana and katakana.',
     letters: `const consonantTvowelLetters = [
   { ta: { hiragana: 'た', katakana: 'タ' } },
   { chi: { hiragana: 'ち', katakana: 'チ' } },
@@ -343,7 +343,7 @@ console.log(hVowelsByRomajiHepburn.toString());
 // ha,hi,fu,he,ho
 `,
     sound: ['ha', 'hi', 'fu', 'he', 'ho'],
-    jpText: 'The consonant S + vowels spelt by hiragana and katakana.',
+    jpText: 'The consonant h + vowels spelt by hiragana and katakana.',
     letters: `const consonantSvowelLetters = [
   { ha: { hiragana: 'は', katakana: 'ハ' } },
   { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
