@@ -216,7 +216,7 @@ console.log(tVowelsByRomajiHepburn.toString());
     jpText: 'The consonant T + vowels spelt by hiragana and katakana.',
     letters: `const consonantTvowelLetters = [
   { ta: { hiragana: 'た', katakana: 'タ' } },
-  { chi: { hiragana: 'たて', katakana: 'チ' } },
+  { chi: { hiragana: 'ち', katakana: 'チ' } },
   { tsu: { hiragana: 'つ', katakana: 'ツ' } },
   { te: { hiragana: 'て', katakana: 'テ' } },
   { to: { hiragana: 'と', katakana: 'ト' } },
