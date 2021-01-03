@@ -577,3 +577,33 @@ console.log(flowerHiragana);
 // Flower is はな in Hiragana.
 console.log(flowerKanji);
 // はな is 花 in Kanji.
+
+// skin・ひふ・皮膚
+const skin = hVowels.hi + hVowels.fu;
+const skinHiragana = englishHiragana('Skin', skin);
+const skinKanji = hiraganaKanji(skin, '皮膚');
+
+console.log(skinHiragana);
+// Skin is ひふ in Hiragana.
+console.log(skinKanji);
+// ひふ is 皮膚 in Kanji.
+
+// equity・こうへい・公平
+const equity = kVowels.ko + vowels.u + hVowels.he + vowels.i;
+const equityHiragana = englishHiragana('Equity', equity);
+const equityKanji = hiraganaKanji(equity, '公平');
+
+console.log(equityHiragana);
+// Equity is こうへい in Hiragana.
+console.log(equityKanji);
+// こうへい is 公平 in Kanji.
+
+// star・ほし・星
+const star = hVowels.ho + sVowels.shi;
+const starHiragana = englishHiragana('Star', star);
+const starKanji = hiraganaKanji(star, '星');
+
+console.log(starHiragana);
+// Star is ほし in Hiragana.
+console.log(starKanji);
+// ほし is 星 in Kanji.
