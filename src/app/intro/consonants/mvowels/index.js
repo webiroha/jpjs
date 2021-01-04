@@ -7,9 +7,10 @@ import '@wav/mu.wav';
 import '@wav/me.wav';
 import '@wav/mo.wav';
 
-// CommonLayout(info.consonantMinfo);
+CommonLayout(info.consonantMinfo);
 
 const consonantM = 'm';
 const vowels = [...'aiueo'];
 const consonantMvowelsByRomaji = vowels.map((vowel) => consonantM + vowel);
 console.log(consonantMvowelsByRomaji.toString());
+// ma,mi,mu,me,mo

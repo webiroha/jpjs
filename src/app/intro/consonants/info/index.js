@@ -387,6 +387,68 @@ const hiraganaKanji = (
 `,
     navLink: ['nvowels', '', '', ''],
   },
+
+  consonantMinfo: {
+    explain: {
+      title: 'Consonant M',
+      text: "Let's try to learn consonant m + vowels!",
+    },
+    romaji: `const consonantM = 'm';
+const vowels = [...'aiueo'];
+
+const consonantMvowelsByRomaji = vowels.map(
+  (vowel) => consonantM + vowel
+);
+console.log(consonantMvowelsByRomaji.toString());
+// ma,mi,mu,me,mo`,
+    sound: ['ma', 'mi', 'mu', 'me', 'mo'],
+    jpText: 'The consonant m + vowels spelt by hiragana and katakana.',
+    letters: `const consonantMvowelLetters = [
+  { ma: { hiragana: 'ま', katakana: 'マ' } },
+  { mi: { hiragana: 'み', katakana: 'ミ' } },
+  { mu: { hiragana: 'む', katakana: 'ム' } },
+  { me: { hiragana: 'め', katakana: 'メ' } },
+  { mo: { hiragana: 'も', katakana: 'モ' } },
+];`,
+    exampleText: "Let's use consonant m + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['hvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -397,6 +459,7 @@ const sVowels = { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 const tVowels = { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
 const nVowels = { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
 const hVowels = { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+const mVowels = { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;

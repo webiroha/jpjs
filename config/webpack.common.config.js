@@ -63,6 +63,11 @@ const pageMetas = {
     title: commonMetaConsonantVowels.title('H'),
     description: commonMetaConsonantVowels.description('h'),
   },
+
+  mvowels: {
+    title: commonMetaConsonantVowels.title('M'),
+    description: commonMetaConsonantVowels.description('m'),
+  },
 };
 
 const webpackConfig = {
@@ -77,6 +82,7 @@ const webpackConfig = {
     tvowels: './src/app/intro/consonants/tvowels/index.js',
     nvowels: './src/app/intro/consonants/nvowels/index.js',
     hvowels: './src/app/intro/consonants/hvowels/index.js',
+    mvowels: './src/app/intro/consonants/mvowels/index.js',
   },
 
   module: {
