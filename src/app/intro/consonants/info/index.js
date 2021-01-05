@@ -400,7 +400,7 @@ const consonantMvowelsByRomaji = vowels.map(
   (vowel) => consonantM + vowel
 );
 console.log(consonantMvowelsByRomaji.toString());
-// ma,mi,mu,me,mo`,
+// ma, mi, mu, me, mo`,
     sound: ['ma', 'mi', 'mu', 'me', 'mo'],
     jpText: 'The consonant m + vowels spelt by hiragana and katakana.',
     letters: `const consonantMvowelLetters = [
@@ -670,3 +670,44 @@ console.log(starHiragana);
 // Star is ほし in Hiragana.
 console.log(starKanji);
 // ほし is 星 in Kanji.
+
+// m vowels ----------
+// bean・まめ・豆
+const bean = mVowels.ma + mVowels.me;
+const beanHiragana = englishHiragana('Bean', bean);
+const beanKanji = hiraganaKanji(bean, '豆');
+
+console.log(beanHiragana);
+// Bean is まめ in Hiragana.
+console.log(beanKanji);
+// まめ is 豆 in Kanji.
+
+// south・みなみ・南
+const south = mVowels.mi + nVowels.na + mVowels.mi;
+const southHiragana = englishHiragana('South', south);
+const southKanji = hiraganaKanji(south, '南');
+
+console.log(southHiragana);
+// South is みなみ in Hiragana.
+console.log(southKanji);
+// みなみ is 南 in Kanji.
+
+// bug(insect)・むし・虫
+const bug = mVowels.mu + sVowels.shi;
+const bugHiragana = englishHiragana('Bug', bug);
+const bugKanji = hiraganaKanji(bug, '虫');
+
+console.log(bugHiragana);
+// Bug is むし in Hiragana.
+console.log(bugKanji);
+// むし is 虫 in Kanji.
+
+// string・ひも・紐
+const string = hVowels.hi + mVowels.mo;
+const stringHiragana = englishHiragana('String', string);
+const stringKanji = hiraganaKanji(string, '紐');
+
+console.log(stringHiragana);
+// String is ひも in Hiragana.
+console.log(stringKanji);
+// ひも is 紐 in Kanji.

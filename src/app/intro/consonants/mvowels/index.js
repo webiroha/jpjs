@@ -13,4 +13,4 @@ const consonantM = 'm';
 const vowels = [...'aiueo'];
 const consonantMvowelsByRomaji = vowels.map((vowel) => consonantM + vowel);
 console.log(consonantMvowelsByRomaji.toString());
-// ma,mi,mu,me,mo
+// ma, mi, mu, me, mo
