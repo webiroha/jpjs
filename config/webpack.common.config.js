@@ -5,13 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 
-const commonMetaConsonantVowels = {
-  title: (consonant) => `Japanese JavaScript | Consonant ${consonant}`,
-  description: (consonant) =>
-    `Let's try to learn consonant ${consonant} + vowel sound!`,
-};
-
-const pageMetas = {
+const singleMetas = {
   top: {
     title: 'Japanese JavaScript',
     description:
@@ -38,37 +32,22 @@ const pageMetas = {
     title: 'Japanese JavaScript | Consonants',
     description: 'Around 14 - 17 consonant elements are used by Romaji.',
   },
-
-  kvowels: {
-    title: commonMetaConsonantVowels.title('K'),
-    description: commonMetaConsonantVowels.description('k'),
-  },
-
-  svowels: {
-    title: commonMetaConsonantVowels.title('S'),
-    description: commonMetaConsonantVowels.description('s'),
-  },
-
-  tvowels: {
-    title: commonMetaConsonantVowels.title('T'),
-    description: commonMetaConsonantVowels.description('t'),
-  },
-
-  nvowels: {
-    title: commonMetaConsonantVowels.title('N'),
-    description: commonMetaConsonantVowels.description('n'),
-  },
-
-  hvowels: {
-    title: commonMetaConsonantVowels.title('H'),
-    description: commonMetaConsonantVowels.description('h'),
-  },
-
-  mvowels: {
-    title: commonMetaConsonantVowels.title('M'),
-    description: commonMetaConsonantVowels.description('m'),
-  },
 };
+
+const consonants = ['k', 's', 't', 'n', 'h', 'm'];
+
+const [...consonantMetas] = consonants.map((consonant) => {
+  const key = `${consonant}vowels`;
+
+  return {
+    [key]: {
+      title: `Japanese JavaScript | Consonant ${consonant}`,
+      description: `Let's try to learn consonant ${consonant} + vowel sound!`,
+    },
+  };
+});
+
+const pageMetas = Object.assign(singleMetas, ...consonantMetas);
 
 const webpackConfig = {
   entry: {
