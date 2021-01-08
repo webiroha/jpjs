@@ -455,6 +455,9 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
 const englishHiragana = (
   english,
   hiragana
@@ -546,6 +549,7 @@ const tVowels = { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
 const nVowels = { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
 const hVowels = { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 const mVowels = { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+const yVowels = { ya: 'や', yu: 'ゆ', yo: 'よ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -797,3 +801,31 @@ console.log(stringHiragana);
 // String is ひも in Hiragana.
 console.log(stringKanji);
 // ひも is 紐 in Kanji.
+
+// y vowels ----------
+// vegetable・やさい・野菜
+const vegetable = yVowels.ya + sVowels.sa + vowels.i;
+const vegetableHiragana = englishHiragana('Vegetable', vegetable);
+const vegetableKanji = hiraganaKanji(vegetable, '野菜');
+
+console.log(vegetableHiragana);
+// Vegetable is やさい in Hiragana.
+console.log(vegetableKanji);
+// やさい is 野菜 in Kanji.
+
+// valid・ゆうこう・有効
+const valid = yVowels.yu + vowels.u + kVowels.ko + vowels.u;
+const validHiragana = englishHiragana('Valid', valid);
+const validKanji = hiraganaKanji(valid, '有効');
+
+console.log(validHiragana);
+// Valid is ゆうこう in Hiragana.
+console.log(validKanji);
+// ゆうこう is 有効 in Kanji.
+
+// good morning・おはよう
+const goodMorning = vowels.o + hVowels.ha + yVowels.yo + vowels.u;
+const goodMorningHiragana = englishHiragana('Good morning', goodMorning);
+
+console.log(goodMorningHiragana);
+// Good morning is おはよう in Hiragana.
