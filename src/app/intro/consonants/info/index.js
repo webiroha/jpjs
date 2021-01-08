@@ -11,7 +11,7 @@ const consonantKvowelsByRomaji = vowels.map(
   (vowel) => consonantK + vowel
 );
 console.log(consonantKvowelsByRomaji.toString());
-// ka,ki,ku,ke,ko`,
+// ka, ki, ku, ke, ko`,
     sound: ['ka', 'ki', 'ku', 'ke', 'ko'],
     jpText: 'The consonant k + vowels spelt by hiragana and katakana.',
     letters: `const consonantKvowelLetters = [
@@ -107,7 +107,7 @@ const sVowelsByRomaji = vowels.map(
   (vowel) => consonantS + vowel
 );
 console.log(sVowelsByRomaji.toString());
-// sa,si,su,se,so
+// sa, si, su, se, so
 
 // Hepburn-shiki Romaji(We will use this here.)
 const sVowelsByRomajiHepburn = vowels.map(
@@ -119,7 +119,7 @@ const sVowelsByRomajiHepburn = vowels.map(
     }
 });
 console.log(sVowelsByRomajiHepburn.toString());
-// sa,shi,su,se,so
+// sa, shi, su, se, so
 `,
     sound: ['sa', 'shi', 'su', 'se', 'so'],
     jpText: 'The consonant s + vowels spelt by hiragana and katakana.',
@@ -219,7 +219,7 @@ const tVowelsByRomaji = vowels.map(
   (vowel) => consonantT + vowel
 );
 console.log(tVowelsByRomaji.toString());
-// ta,ti,tu,te,to
+// ta, ti, tu, te, to
 
 // Hepburn-shiki Romaji(We will use this here.)
 const tVowelsByRomajiHepburn = vowels.map(
@@ -233,7 +233,7 @@ const tVowelsByRomajiHepburn = vowels.map(
     }
 });
 console.log(tVowelsByRomajiHepburn.toString());
-// ta,chi,tsu,te,to
+// ta, chi, tsu, te, to
 `,
     sound: ['ta', 'chi', 'tsu', 'te', 'to'],
     jpText: 'The consonant t + vowels spelt by hiragana and katakana.',
@@ -287,7 +287,7 @@ const consonantNvowelsByRomaji = vowels.map(
   (vowel) => consonantN + vowel
 );
 console.log(consonantNvowelsByRomaji.toString());
-// na,ni,nu,ne,no`,
+// na, ni, nu, ne, no`,
     sound: ['na', 'ni', 'nu', 'ne', 'no'],
     jpText: 'The consonant n + vowels spelt by hiragana and katakana.',
     letters: `const consonantNvowelLetters = [
@@ -350,7 +350,7 @@ const hVowelsByRomaji = vowels.map(
   (vowel) => consonantH + vowel
 );
 console.log(hVowelsByRomaji.toString());
-// ha,hi,hu,he,ho
+// ha, hi, hu, he, ho
 
 // Hepburn-shiki Romaji(We will use this here.)
 const hVowelsByRomajiHepburn = vowels.map(
@@ -362,7 +362,7 @@ const hVowelsByRomajiHepburn = vowels.map(
     }
 });
 console.log(hVowelsByRomajiHepburn.toString());
-// ha,hi,fu,he,ho
+// ha, hi, fu, he, ho
 `,
     sound: ['ha', 'hi', 'fu', 'he', 'ho'],
     jpText: 'The consonant h + vowels spelt by hiragana and katakana.',
