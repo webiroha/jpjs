@@ -899,3 +899,14 @@ const goodMorningHiragana = englishHiragana('Good morning', goodMorning);
 
 console.log(goodMorningHiragana);
 // Good morning is おはよう in Hiragana.
+
+// r vowels ----------
+// ease・らく・楽
+const ease = rVowels.ra + kVowels.ku;
+const easeHiragana = englishHiragana('Ease', ease);
+const easeKanji = hiraganaKanji(ease, '楽');
+
+console.log(easeHiragana);
+// Ease is らく in Hiragana.
+console.log(easeKanji);
+// らく is 楽 in Kanji.
