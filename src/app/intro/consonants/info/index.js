@@ -538,6 +538,75 @@ const hiraganaKanji = (
 `,
     navLink: ['mvowels', '', '', ''],
   },
+
+  consonantRinfo: {
+    explain: {
+      title: 'Consonant R',
+      text: "Let's try to learn consonant r + vowels!",
+    },
+    romaji: `const consonantR = 'r';
+const vowels = [...'aiueo'];
+
+const consonantRvowelsByRomaji = vowels.map(
+  (vowel) => consonantR + vowel
+);
+console.log(consonantRvowelsByRomaji.toString());
+// ra, ri, ru, re, ro
+`,
+    sound: ['ra', 'ri', 'ru', 're', 'ro'],
+    jpText: 'The consonant r + vowels spelt by hiragana and katakana.',
+    letters: `const consonantRvowelLetters = [
+  { ra: { hiragana: 'ら', katakana: 'ラ' } },
+  { ri: { hiragana: 'り', katakana: 'リ' } },
+  { ru: { hiragana: 'る', katakana: 'ル' } },
+  { re: { hiragana: 'れ', katakana: 'レ' } },
+  { ro: { hiragana: 'ろ', katakana: 'ロ' } },
+];`,
+    exampleText: "Let's use consonant r + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['yvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -550,6 +619,7 @@ const nVowels = { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
 const hVowels = { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 const mVowels = { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 const yVowels = { ya: 'や', yu: 'ゆ', yo: 'よ' };
+const rVowels = { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
