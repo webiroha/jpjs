@@ -910,3 +910,43 @@ console.log(easeHiragana);
 // Ease is らく in Hiragana.
 console.log(easeKanji);
 // らく is 楽 in Kanji.
+
+// reason・りゆう・理由
+const reason = rVowels.ri + yVowels.yu + vowels.u;
+const reasonHiragana = englishHiragana('Reason', reason);
+const reasonKanji = hiraganaKanji(reason, '理由');
+
+console.log(reasonHiragana);
+// Reason is りゆう in Hiragana.
+console.log(reasonKanji);
+// りゆう is 理由 in Kanji.
+
+// absence・るす・留守
+const absence = rVowels.ru + sVowels.su;
+const absenceHiragana = englishHiragana('Absence', absence);
+const absenceKanji = hiraganaKanji(absence, '留守');
+
+console.log(absenceHiragana);
+// Absence is るす in Hiragana.
+console.log(absenceKanji);
+// るす is 留守 in Kanji.
+
+// history・れきし・歴史
+const history = rVowels.re + kVowels.ki + sVowels.shi;
+const historyHiragana = englishHiragana('History', history);
+const historyKanji = hiraganaKanji(history, '歴史');
+
+console.log(historyHiragana);
+// History is れきし in Hiragana.
+console.log(historyKanji);
+// れきし is 歴史 in Kanji.
+
+// corridor・ろうか・廊下
+const corridor = rVowels.ro + vowels.u + kVowels.ka;
+const corridorHiragana = englishHiragana('Corridor', corridor);
+const corridorKanji = hiraganaKanji(corridor, '廊下');
+
+console.log(corridorHiragana);
+// Corridor is ろうか in Hiragana.
+console.log(corridorKanji);
+// ろうか is 廊下 in Kanji.
