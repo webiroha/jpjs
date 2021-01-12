@@ -491,7 +491,19 @@ const consonantYvowelsByRomaji = vowels
   .map((vowel) => consonantY + vowel)
   .filter((_, i) => i % 2 === 0);
 console.log(consonantMvowelsByRomaji.toString());
-// ya, yu, yo`,
+// ya, yu, yo
+
+// There might be a time you see such the way to write below.
+// The 'i' and 'e' is the same as vowels'
+// and most Japanese might not be sure when to use😅
+const consonantYvowelsSeldom = vowels.map((vowel) => {
+  if (vowel === 'i') return vowel;
+  else if (vowel === 'e') return vowel;
+  else return consonantY + vowel;
+});
+
+console.log(consonantYvowelsSeldom.toString());
+// ya, i, yu, e, yo`,
     sound: ['ya', 'yu', 'yo'],
     jpText: 'The consonant y + vowels spelt by hiragana and katakana.',
     letters: `const consonantYvowelLetters = [
