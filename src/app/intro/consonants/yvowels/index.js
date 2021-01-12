@@ -10,8 +10,8 @@ CommonLayout(info.consonantYinfo);
 const consonantY = 'y';
 const vowels = [...'aiueo'];
 const consonantYvowelsByRomaji = vowels
-  .map((vowel) => consonantY + vowel)
-  .filter((_, i) => i % 2 === 0);
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantY + vowel);
 console.log(consonantYvowelsByRomaji.toString());
 // ya, yu, yo
 
