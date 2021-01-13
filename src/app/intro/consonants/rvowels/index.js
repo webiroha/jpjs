@@ -11,6 +11,6 @@ CommonLayout(info.consonantRinfo);
 
 const consonantR = 'r';
 const vowels = [...'aiueo'];
-const consonantRvowelsByRomaji = vowels.map((vowel) => consonantR + vowel);
-console.log(consonantRvowelsByRomaji.toString());
+const rVowelsByRomaji = vowels.map((vowel) => consonantR + vowel);
+console.log(rVowelsByRomaji.toString());
 // ra, ri, ru, re, ro

@@ -7,14 +7,14 @@ const info = {
     romaji: `const consonantK = 'k';
 const vowels = [...'aiueo'];
 
-const consonantKvowelsByRomaji = vowels.map(
+const kVowelsByRomaji = vowels.map(
   (vowel) => consonantK + vowel
 );
-console.log(consonantKvowelsByRomaji.toString());
+console.log(kVowelsByRomaji.toString());
 // ka, ki, ku, ke, ko`,
     sound: ['ka', 'ki', 'ku', 'ke', 'ko'],
     jpText: 'The consonant k + vowels spelt by hiragana and katakana.',
-    letters: `const consonantKvowelLetters = [
+    letters: `const kVowelLetters = [
   { ka: { hiragana: 'か', katakana: 'カ' } },
   { ki: { hiragana: 'き', katakana: 'キ' } },
   { ku: { hiragana: 'く', katakana: 'ク' } },
@@ -123,7 +123,7 @@ console.log(sVowelsByRomajiHepburn.toString());
 `,
     sound: ['sa', 'shi', 'su', 'se', 'so'],
     jpText: 'The consonant s + vowels spelt by hiragana and katakana.',
-    letters: `const consonantSvowelLetters = [
+    letters: `const sVowelLetters = [
   { sa: { hiragana: 'さ', katakana: 'サ' } },
   { shi: { hiragana: 'し', katakana: 'シ' } },
   { su: { hiragana: 'す', katakana: 'ス' } },
@@ -237,7 +237,7 @@ console.log(tVowelsByRomajiHepburn.toString());
 `,
     sound: ['ta', 'chi', 'tsu', 'te', 'to'],
     jpText: 'The consonant t + vowels spelt by hiragana and katakana.',
-    letters: `const consonantTvowelLetters = [
+    letters: `const tVowelLetters = [
   { ta: { hiragana: 'た', katakana: 'タ' } },
   { chi: { hiragana: 'ち', katakana: 'チ' } },
   { tsu: { hiragana: 'つ', katakana: 'ツ' } },
@@ -283,14 +283,14 @@ const hiraganaKanji = (
     romaji: `const consonantK = 'n';
 const vowels = [...'aiueo'];
 
-const consonantNvowelsByRomaji = vowels.map(
+const nVowelsByRomaji = vowels.map(
   (vowel) => consonantN + vowel
 );
-console.log(consonantNvowelsByRomaji.toString());
+console.log(nVowelsByRomaji.toString());
 // na, ni, nu, ne, no`,
     sound: ['na', 'ni', 'nu', 'ne', 'no'],
     jpText: 'The consonant n + vowels spelt by hiragana and katakana.',
-    letters: `const consonantNvowelLetters = [
+    letters: `const nVowelLetters = [
   { na: { hiragana: 'な', katakana: 'ナ' } },
   { ni: { hiragana: 'に', katakana: 'ニ' } },
   { nu: { hiragana: 'ぬ', katakana: 'ヌ' } },
@@ -366,7 +366,7 @@ console.log(hVowelsByRomajiHepburn.toString());
 `,
     sound: ['ha', 'hi', 'fu', 'he', 'ho'],
     jpText: 'The consonant h + vowels spelt by hiragana and katakana.',
-    letters: `const consonantSvowelLetters = [
+    letters: `const hVowelLetters = [
   { ha: { hiragana: 'は', katakana: 'ハ' } },
   { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
   { fu: { hiragana: 'ふ', katakana: 'フ' } },
@@ -418,14 +418,14 @@ const hiraganaKanji = (
     romaji: `const consonantM = 'm';
 const vowels = [...'aiueo'];
 
-const consonantMvowelsByRomaji = vowels.map(
+const mVowelsByRomaji = vowels.map(
   (vowel) => consonantM + vowel
 );
-console.log(consonantMvowelsByRomaji.toString());
+console.log(mVowelsByRomaji.toString());
 // ma, mi, mu, me, mo`,
     sound: ['ma', 'mi', 'mu', 'me', 'mo'],
     jpText: 'The consonant m + vowels spelt by hiragana and katakana.',
-    letters: `const consonantMvowelLetters = [
+    letters: `const mVowelLetters = [
   { ma: { hiragana: 'ま', katakana: 'マ' } },
   { mi: { hiragana: 'み', katakana: 'ミ' } },
   { mu: { hiragana: 'む', katakana: 'ム' } },
@@ -487,26 +487,26 @@ const hiraganaKanji = (
     romaji: `const consonantY = 'y';
 const vowels = [...'aiueo'];
 
-const consonantYvowelsByRomaji = vowels
+const mVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
   .map((vowel) => consonantY + vowel);
-console.log(consonantMvowelsByRomaji.toString());
+console.log(mVowelsByRomaji.toString());
 // ya, yu, yo
 
 // There might be a time you see such the way to write below.
 // The 'i' and 'e' is the same as vowels'
 // and most Japanese might not be sure when to use😅
-const consonantYvowelsSeldom = vowels.map((vowel) => {
+const yVowelsByRomajiSeldom = vowels.map((vowel) => {
   if (vowel === 'i') return vowel;
   else if (vowel === 'e') return vowel;
   else return consonantY + vowel;
 });
 
-console.log(consonantYvowelsSeldom.toString());
+console.log(yVowelsByRomajiSeldom.toString());
 // ya, i, yu, e, yo`,
     sound: ['ya', 'yu', 'yo'],
     jpText: 'The consonant y + vowels spelt by hiragana and katakana.',
-    letters: `const consonantYvowelLetters = [
+    letters: `const yVowelLetters = [
   { ya: { hiragana: 'や', katakana: 'ヤ' } },
   { yu: { hiragana: 'ゆ', katakana: 'ユ' } },
   { yo: { hiragana: 'よ', katakana: 'ヨ' } },
@@ -559,15 +559,15 @@ const hiraganaKanji = (
     romaji: `const consonantR = 'r';
 const vowels = [...'aiueo'];
 
-const consonantRvowelsByRomaji = vowels.map(
+const rVowelsByRomaji = vowels.map(
   (vowel) => consonantR + vowel
 );
-console.log(consonantRvowelsByRomaji.toString());
+console.log(rVowelsByRomaji.toString());
 // ra, ri, ru, re, ro
 `,
     sound: ['ra', 'ri', 'ru', 're', 'ro'],
     jpText: 'The consonant r + vowels spelt by hiragana and katakana.',
-    letters: `const consonantRvowelLetters = [
+    letters: `const rVowelLetters = [
   { ra: { hiragana: 'ら', katakana: 'ラ' } },
   { ri: { hiragana: 'り', katakana: 'リ' } },
   { ru: { hiragana: 'る', katakana: 'ル' } },

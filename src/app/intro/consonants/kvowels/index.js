@@ -11,5 +11,5 @@ CommonLayout(info.consonantKinfo);
 
 const consonantK = 'k';
 const vowels = [...'aiueo'];
-const consonantKvowelsByRomaji = vowels.map((vowel) => consonantK + vowel);
-console.log(consonantKvowelsByRomaji.toString());
+const kVowelsByRomaji = vowels.map((vowel) => consonantK + vowel);
+console.log(kVowelsByRomaji.toString());

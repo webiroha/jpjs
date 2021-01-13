@@ -9,19 +9,19 @@ CommonLayout(info.consonantYinfo);
 
 const consonantY = 'y';
 const vowels = [...'aiueo'];
-const consonantYvowelsByRomaji = vowels
+const yVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
   .map((vowel) => consonantY + vowel);
-console.log(consonantYvowelsByRomaji.toString());
+console.log(yVowelsByRomaji.toString());
 // ya, yu, yo
 
 // There might be a time you see such the way to write below.
 // The 'i' and 'e' is the same as vowels' and most Japanese might not be sure when to use😅
-const consonantYvowelsSeldom = vowels.map((vowel) => {
+const yVowelsByRomajiSeldom = vowels.map((vowel) => {
   if (vowel === 'i') return vowel;
   else if (vowel === 'e') return vowel;
   else return consonantY + vowel;
 });
 
-console.log(consonantYvowelsSeldom.toString());
+console.log(yVowelsByRomajiSeldom.toString());
 // ya, i, yu, e, yo

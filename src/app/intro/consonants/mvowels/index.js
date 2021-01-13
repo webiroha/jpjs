@@ -11,6 +11,6 @@ CommonLayout(info.consonantMinfo);
 
 const consonantM = 'm';
 const vowels = [...'aiueo'];
-const consonantMvowelsByRomaji = vowels.map((vowel) => consonantM + vowel);
-console.log(consonantMvowelsByRomaji.toString());
+const mVowelsByRomaji = vowels.map((vowel) => consonantM + vowel);
+console.log(mVowelsByRomaji.toString());
 // ma, mi, mu, me, mo
