@@ -493,7 +493,7 @@ const mVowelsByRomaji = vowels
 console.log(mVowelsByRomaji.toString());
 // ya, yu, yo
 
-// There might be a time you see such the way to write below.
+// There might be a time you see such the ways to be written.
 // The 'i' and 'e' is the same as vowels'
 // and most Japanese might not be sure when to use😅
 const yVowelsByRomajiSeldom = vowels.map((vowel) => {
