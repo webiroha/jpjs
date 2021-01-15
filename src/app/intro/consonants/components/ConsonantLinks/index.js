@@ -15,7 +15,7 @@ const ConsonantLink = (consonant) => {
     class: 'consonant-link__link',
     text: consonant === 'N' ? shape : `${shape} + vowels`,
   });
-  if (consonant === 'k' || consonant === 's')
+  if (consonant === 'k' || consonant === 's' || consonant === 't')
     Link.tag.href = `./${consonant}vowels/`;
   // Link.tag.href = `consonalt${consonant}`;
   Block.tag.appendChild(Link.tag);
