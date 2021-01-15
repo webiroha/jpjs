@@ -24,12 +24,10 @@ console.log(wVowelsByRomajiHepburn.toString());
 // wa, o
 
 // There might be a time you see such the ways to be written.
-// The sounds of 'i'/'u'/'e'/'wi'/'we'/'wo' are the same as vowels'
-const wVowelsByRomajiNihonPast = vowels
-  .filter((vowel) => vowel !== 'u')
-  .map((vowel) => consonantW + vowel);
+// The sounds of 'i','u','e','o','wi','wu','we','wo' are the same as vowels'
+const wVowelsByRomajiNihonPast = vowels.map((vowel) => consonantW + vowel);
 console.log(wVowelsByRomajiNihonPast.toString());
-// wa, wi, we, wo
+// wa, wi, wu, we, wo
 
 const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
   if (vowel === 'a') return consonantW + vowel;

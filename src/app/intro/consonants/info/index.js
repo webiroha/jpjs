@@ -626,8 +626,11 @@ const hiraganaKanji = (
       text: [
         "Let's try to learn consonant w + vowels!",
         '',
+        'This combination is fewer than the others.',
         'There are two ways to write in consonant w + vowels.',
+        '',
         'We will use Kunrei-shiki and Hepburn-shiki Romaji here.',
+        '(Unless there is a need to make a distinction.)',
       ],
     },
     romaji: `const consonantW = 'w';
@@ -650,13 +653,12 @@ console.log(wVowelsByRomajiHepburn.toString());
 
 // There might be a time you see
 // such the ways to be written.
-// The sounds of 'i'/'u'/'e'/'wi'/'we'/'wo' are
+// The sounds of 'i','u','e','o','wi','wu','we','wo' are
 // the same as vowels'
 const wVowelsByRomajiNihonPast = vowels
-  .filter((vowel) => vowel !== 'u')
   .map((vowel) => consonantW + vowel);
 console.log(wVowelsByRomajiNihonPast.toString());
-// wa, wi, we, wo
+// wa, wi, wu, we, wo
 
 const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
   if (vowel === 'a') return consonantW + vowel;
@@ -667,12 +669,9 @@ console.log(wVowelsByRomajiKunreiPast.toString());
 `,
     sound: ['wa', 'wo'],
     jpText: 'The consonant w + vowels spelt by hiragana and katakana.',
-    letters: `const hVowelLetters = [
-  { ha: { hiragana: 'は', katakana: 'ハ' } },
-  { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
-  { fu: { hiragana: 'ふ', katakana: 'フ' } },
-  { he: { hiragana: 'へ', katakana: 'ヘ' } },
-  { ho: { hiragana: 'ほ', katakana: 'ホ' } },
+    letters: `const wVowelLetters = [
+  { wa: { hiragana: 'わ', katakana: 'ワ' } },
+  { o: { hiragana: 'を', katakana: 'ヲ' } },
 ];
 
 // The patterns of old letters of Hiragana/Katakana.
@@ -706,6 +705,18 @@ const nVowels =
 const hVowels =
   { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
 const englishHiragana = (
   english,
   hiragana
@@ -735,6 +746,7 @@ const hVowels = { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
 const mVowels = { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 const yVowels = { ya: 'や', yu: 'ゆ', yo: 'よ' };
 const rVowels = { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+const wVowels = { wa: 'わ', o: 'を' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
