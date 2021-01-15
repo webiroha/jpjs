@@ -4,7 +4,7 @@ import info from '@root/intro/consonants/info';
 import '@wav/wa.wav';
 import '@wav/wo.wav';
 
-CommonLayout(info.consonantYinfo);
+CommonLayout(info.consonantWinfo);
 
 const consonantW = 'w';
 const vowels = [...'aiueo'];
@@ -38,5 +38,13 @@ const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
 console.log(wVowelsByRomajiKunreiPast.toString());
 // wa, i, u, e, o
 
-// but those letters of Hiragana/Katakana are different.
-// these are old letters.
+// The old letters of Hiragana/Katakana.
+// *'u' is the same as vowels'.
+// Seldom use so just a note.
+const wVowelLetters = [
+  { wa: { hiragana: 'わ', katakana: 'ワ' } },
+  { i: { hiragana: 'ゐ', katakana: 'ヰ' } },
+  { u: { hiragana: 'う', katakana: 'ウ' } },
+  { e: { hiragana: 'ゑ', katakana: 'ヱ' } },
+  { o: { hiragana: 'を', katakana: 'ヲ' } },
+];

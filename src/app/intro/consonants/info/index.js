@@ -373,7 +373,7 @@ console.log(hVowelsByRomajiHepburn.toString());
   { he: { hiragana: 'へ', katakana: 'ヘ' } },
   { ho: { hiragana: 'ほ', katakana: 'ホ' } },
 ];`,
-    exampleText: "Let's use consonant s + vowels in practice!",
+    exampleText: "Let's use consonant h + vowels in practice!",
     examples: `// Base code
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
@@ -618,6 +618,109 @@ const hiraganaKanji = (
 
 `,
     navLink: ['yvowels', '', '', ''],
+  },
+
+  consonantWinfo: {
+    explain: {
+      title: 'Consonant W',
+      text: [
+        "Let's try to learn consonant w + vowels!",
+        '',
+        'There are two ways to write in consonant w + vowels.',
+        'We will use Kunrei-shiki and Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantW = 'w';
+const vowels = [...'aiueo'];
+
+// Nihon-shiki Romaji
+const wVowelsByRomajiNihon = vowels
+  .filter((vowel) => vowel === 'a' || vowel === 'o')
+  .map((vowel) => consonantW + vowel);
+
+console.log(wVowelsByRomajiNihon.toString());
+// wa, wo
+
+// Kunrei-shiki and Hepburn-shiki Romaji
+// (We will use this here.)
+const wVowelsByRomajiHepburn =
+  [consonantW + vowels[0], vowels[4]];
+console.log(wVowelsByRomajiHepburn.toString());
+// wa, o
+
+// There might be a time you see
+// such the ways to be written.
+// The sounds of 'i'/'u'/'e'/'wi'/'we'/'wo' are
+// the same as vowels'
+const wVowelsByRomajiNihonPast = vowels
+  .filter((vowel) => vowel !== 'u')
+  .map((vowel) => consonantW + vowel);
+console.log(wVowelsByRomajiNihonPast.toString());
+// wa, wi, we, wo
+
+const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
+  if (vowel === 'a') return consonantW + vowel;
+  else return vowel;
+});
+console.log(wVowelsByRomajiKunreiPast.toString());
+// wa, i, u, e, o
+`,
+    sound: ['wa', 'wo'],
+    jpText: 'The consonant w + vowels spelt by hiragana and katakana.',
+    letters: `const hVowelLetters = [
+  { ha: { hiragana: 'は', katakana: 'ハ' } },
+  { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
+  { fu: { hiragana: 'ふ', katakana: 'フ' } },
+  { he: { hiragana: 'へ', katakana: 'ヘ' } },
+  { ho: { hiragana: 'ほ', katakana: 'ホ' } },
+];
+
+// The patterns of old letters of Hiragana/Katakana.
+// *'u' is the same as vowels'.
+// Seldom use so just a note.
+const wVowelLetters = [
+  { wa: { hiragana: 'わ', katakana: 'ワ' } },
+  { i: { hiragana: 'ゐ', katakana: 'ヰ' } },
+  { u: { hiragana: 'う', katakana: 'ウ' } },
+  { e: { hiragana: 'ゑ', katakana: 'ヱ' } },
+  { o: { hiragana: 'を', katakana: 'ヲ' } },
+];
+`,
+    exampleText: "Let's use consonant w + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['nvowels', '', '', ''],
   },
 };
 
