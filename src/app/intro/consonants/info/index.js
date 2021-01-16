@@ -282,6 +282,16 @@ console.log(boredomHiragana);
 console.log(boredomKanji);
 // たいくつ is 退屈 in Kanji.
 
+
+// wisdom・ちえ・知恵
+const wisdom = tVowels.chi + vowels.e;
+const wisdomHiragana = englishHiragana('Wisdom', wisdom);
+const wisdomKanji = hiraganaKanji(wisdom, '知恵');
+
+console.log(wisdomHiragana);
+// Wisdom is ちえ in Hiragana.
+console.log(wisdomKanji);
+// ちえ is 知恵 in Kanji.
 `,
     navLink: ['svowels', '', '', ''],
   },
