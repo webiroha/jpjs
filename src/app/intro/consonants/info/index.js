@@ -857,15 +857,15 @@ console.log(boredomHiragana);
 console.log(boredomKanji);
 // たいくつ is 退屈 in Kanji.
 
-// blood・ち・血
-const blood = tVowels.chi;
-const bloodHiragana = englishHiragana('Blood', blood);
-const bloodKanji = hiraganaKanji(blood, '血');
+// wisdom・ちえ・知恵
+const wisdom = tVowels.chi + vowels.e;
+const wisdomHiragana = englishHiragana('Wisdom', wisdom);
+const wisdomKanji = hiraganaKanji(wisdom, '知恵');
 
-console.log(bloodHiragana);
-// Blood is ち in Hiragana.
-console.log(bloodKanji);
-// ち is 血 in Kanji.
+console.log(wisdomHiragana);
+// Wisdom is ちえ in Hiragana.
+console.log(wisdomKanji);
+// ちえ is 知恵 in Kanji.
 
 // vertical・たて・縦
 const vertical = tVowels.ta + tVowels.te;
