@@ -1088,3 +1088,33 @@ console.log(corridorHiragana);
 // Corridor is ろうか in Hiragana.
 console.log(corridorKanji);
 // ろうか is 廊下 in Kanji.
+
+// w vowels ----------
+// planet・わくせい・惑星
+const planet = wVowels.wa + kVowels.ku + sVowels.se + vowels.i;
+const planetHiragana = englishHiragana('Planet', planet);
+const planetKanji = hiraganaKanji(planet, '惑星');
+
+console.log(planetHiragana);
+// Planet is わくせい in Hiragana.
+console.log(planetKanji);
+// わくせい is 惑星 in Kanji.
+
+// buy desk・つくえをかう・机を買う
+const hiraganaWithKanji = (hiragana, kanji) => {
+  const withKanji = hiragana
+    .replace('つくえ', kanji[0])
+    .replace('か', kanji[1]);
+
+  return `${hiragana} is ${withKanji} in Kanji.`;
+};
+const buyDesk =
+  tVowels.tsu + kVowels.ku + vowels.e + wVowels.o + kVowels.ka + vowels.u;
+const buyDeskHiragana = englishHiragana('BuyDesk', buyDesk);
+const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
+
+console.log(buyDeskHiragana);
+// BuyDesk is わくせい in Hiragana.
+console.log(buyDeskKanji);
+// わくせい is 惑星 in Kanji.
+// o(を) is mainly used as a postpositional particle.
