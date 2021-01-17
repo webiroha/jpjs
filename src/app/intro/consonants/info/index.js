@@ -674,19 +674,22 @@ console.log(wVowelsByRomajiHepburn.toString());
 
 // There might be a time you see
 // such the ways to be written.
-// The sounds of 'i','u','e','o','wi','wu','we','wo' are
-// the same as vowels'
+// seldom way - 1
 const wVowelsByRomajiNihonPast = vowels
   .map((vowel) => consonantW + vowel);
 console.log(wVowelsByRomajiNihonPast.toString());
 // wa, wi, wu, we, wo
 
+// seldom way - 2
 const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
   if (vowel === 'a') return consonantW + vowel;
   else return vowel;
 });
 console.log(wVowelsByRomajiKunreiPast.toString());
 // wa, i, u, e, o
+
+// The sounds of 'i','u','e','o','wi','wu','we','wo' are
+// the same as vowels'
 `,
     sound: ['wa', 'wo'],
     jpText: 'The consonant w + vowels spelt by hiragana and katakana.',
@@ -1124,7 +1127,7 @@ const buyDeskHiragana = englishHiragana('BuyDesk', buyDesk);
 const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
 
 console.log(buyDeskHiragana);
-// BuyDesk is わくせい in Hiragana.
+// BuyDesk is つくえをかう in Hiragana.
 console.log(buyDeskKanji);
-// わくせい is 惑星 in Kanji.
+// つくえをかう is 机を買う in Kanji.
 // o(を) is mainly used as a postpositional particle.
