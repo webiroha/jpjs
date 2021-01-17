@@ -757,6 +757,85 @@ const hiraganaKanji = (
 `,
     navLink: ['nvowels', '', '', ''],
   },
+
+  consonantNNinfo: {
+    explain: {
+      title: 'Consonant N',
+      text: [
+        'The exceptional pattern, N',
+        '',
+        'This is a single sound unlike others.',
+        'This letter is included with the other letters',
+        'as basic Japanese letters.',
+      ],
+    },
+    romaji: `const nByRomaji = 'n';
+console.log(nByRomaji);`,
+    sound: ['n'],
+    jpText: 'The consonant N spelt by hiragana and katakana.',
+    letters: `const nLetter = [
+  { n: { hiragana: 'ん', katakana: 'ン' } },
+];
+
+// The patterns of old letters of Hiragana/Katakana.
+// *'u' is the same as vowels'.
+// Seldom use so just a note.
+const wVowelLetters = [
+  { wa: { hiragana: 'わ', katakana: 'ワ' } },
+  { i: { hiragana: 'ゐ', katakana: 'ヰ' } },
+  { u: { hiragana: 'う', katakana: 'ウ' } },
+  { e: { hiragana: 'ゑ', katakana: 'ヱ' } },
+  { o: { hiragana: 'を', katakana: 'ヲ' } },
+];
+`,
+    exampleText: "Let's use consonant w + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['nvowels', '', '', ''],
+  },
 };
 
 export default info;

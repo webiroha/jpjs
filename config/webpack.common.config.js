@@ -34,15 +34,24 @@ const singleMetas = {
   },
 };
 
-const consonants = ['k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w'];
+const consonants = ['k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'nn'];
 
 const [...consonantMetas] = consonants.map((consonant) => {
-  const key = `${consonant}vowels`;
+  const key = () => {
+    if (consonant === 'nn') return 'n';
+    else return `${consonant}vowels`;
+  };
 
   return {
-    [key]: {
-      title: `Japanese JavaScript | Consonant ${consonant}`,
-      description: `Let's try to learn consonant ${consonant} + vowel sound!`,
+    [key()]: {
+      title:
+        key() === 'n'
+          ? `Japanese JavaScript | Consonant N`
+          : `Japanese JavaScript | Consonant ${consonant}`,
+      description:
+        key() === 'n'
+          ? `Let's try to learn consonant N!`
+          : `Let's try to learn consonant ${consonant} + vowel!`,
     },
   };
 });
@@ -65,6 +74,7 @@ const webpackConfig = {
     yvowels: './src/app/intro/consonants/yvowels/index.js',
     rvowels: './src/app/intro/consonants/rvowels/index.js',
     wvowels: './src/app/intro/consonants/wvowels/index.js',
+    n: './src/app/intro/consonants/n/index.js',
   },
 
   module: {
@@ -140,7 +150,7 @@ const webpackConfig = {
 
 const filepath = (key) => {
   if (key === 'top') return 'index.html';
-  if (key !== 'vowels' && key.endsWith('vowels'))
+  if (key !== 'vowels' && (key.endsWith('vowels') || key === 'n'))
     return `intro/consonants/${key}/index.html`;
 
   return `intro/${key}/index.html`;
