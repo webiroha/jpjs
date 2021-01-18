@@ -787,19 +787,9 @@ console.log(nByRomaji);`,
     letters: `const nLetter = [
   { n: { hiragana: 'ん', katakana: 'ン' } },
 ];
-
-// The patterns of old letters of Hiragana/Katakana.
-// *'u' is the same as vowels'.
-// Seldom use so just a note.
-const wVowelLetters = [
-  { wa: { hiragana: 'わ', katakana: 'ワ' } },
-  { i: { hiragana: 'ゐ', katakana: 'ヰ' } },
-  { u: { hiragana: 'う', katakana: 'ウ' } },
-  { e: { hiragana: 'ゑ', katakana: 'ヱ' } },
-  { o: { hiragana: 'を', katakana: 'ヲ' } },
-];
+// We type 'ん/ン' with doubling n(nn).
 `,
-    exampleText: "Let's use consonant w + vowels in practice!",
+    exampleText: "Let's use consonant n in practice!",
     examples: `// Base code
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
@@ -831,6 +821,10 @@ const rVowels =
 const wVowels =
   { wa: 'わ', o: 'を' };
 
+const wVowelsParticle = { wa: 'は' };
+
+const n = 'ん';
+
 const englishHiragana = (
   english,
   hiragana
@@ -861,6 +855,8 @@ const mVowels = { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 const yVowels = { ya: 'や', yu: 'ゆ', yo: 'よ' };
 const rVowels = { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
 const wVowels = { wa: 'わ', o: 'を' };
+const wVowelsParticle = { wa: 'は' };
+const n = 'ん';
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -1221,3 +1217,11 @@ console.log(buyDeskHiragana);
 console.log(buyDeskKanji);
 // つくえをかう is 机を買う in Kanji.
 // o(を) is mainly used as a postpositional particle.
+
+// n ----------
+// hello・こんにちは
+const hello = kVowels.ko + n + nVowels.ni + tVowels.chi + wVowelsParticle.wa;
+const helloHiragana = englishHiragana('Hello', hello);
+
+console.log(helloHiragana);
+// Hello is こんにちは in Hiragana.

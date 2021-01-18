@@ -21,7 +21,7 @@ const SoundBlock = (sounds) => {
 
   const createSoundButtons = (item) => {
     const sound =
-      item.length === 1
+      item !== 'n' && item.length === 1
         ? new Audio(`../../assets/sounds/single/${item}.wav`)
         : new Audio(`../../../assets/sounds/single/${item}.wav`);
 
