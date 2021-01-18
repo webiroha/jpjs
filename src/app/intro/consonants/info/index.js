@@ -393,7 +393,17 @@ console.log(hVowelsByRomajiHepburn.toString());
   { fu: { hiragana: 'ふ', katakana: 'フ' } },
   { he: { hiragana: 'へ', katakana: 'ヘ' } },
   { ho: { hiragana: 'ほ', katakana: 'ホ' } },
-];`,
+];
+
+// In the case of the 'は/ハ'
+// used as a postpositional particle,
+// the sound is changed into 'wa'.
+// Please check the sound in wvowels page
+// after the page published.
+const waPattern = [
+  { wa: { hiragana: 'は', katakana: 'ハ' } },
+];
+`,
     exampleText: "Let's use consonant h + vowels in practice!",
     examples: `// Base code
 const vowels =
@@ -688,6 +698,7 @@ const wVowelsByRomajiKunreiPast = vowels.map((vowel) => {
 console.log(wVowelsByRomajiKunreiPast.toString());
 // wa, i, u, e, o
 
+// The sound of 'wa' is sometimes used as 'は/ハ' sound.
 // The sounds of 'i','u','e','o','wi','wu','we','wo' are
 // the same as vowels'
 `,
