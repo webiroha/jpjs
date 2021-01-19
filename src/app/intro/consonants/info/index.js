@@ -292,6 +292,16 @@ console.log(wisdomHiragana);
 // Wisdom is ちえ in Hiragana.
 console.log(wisdomKanji);
 // ちえ is 知恵 in Kanji.
+
+// vertical・たて・縦
+const vertical = tVowels.ta + tVowels.te;
+const verticalHiragana = englishHiragana('Vertical', vertical);
+const verticalKanji = hiraganaKanji(vertical, '縦');
+
+console.log(verticalHiragana);
+// Vertical is たて in Hiragana.
+console.log(verticalKanji);
+// たて is 縦 in Kanji.
 `,
     navLink: ['svowels', '', '', ''],
   },
@@ -836,7 +846,6 @@ const hiraganaKanji = (
   kanji
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
-
 
 `,
     navLink: ['nvowels', '', '', ''],
