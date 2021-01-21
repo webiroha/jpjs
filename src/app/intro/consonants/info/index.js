@@ -1254,20 +1254,23 @@ const gojuon = [
 const consonants = [...'kstnhmyrw'];
 const hepburn = [...'hcsf'];
 
-consonants
-  .map((consonant) =>
-    vowels.map((letter) => {
-      if (consonant === 's' && letter === 'i')
-        return consonant + hepburn[0] + letter;
-      if (consonant === 't') {
-        if (letter === 'i') return hepburn[1] + hepburn[0] + letter;
-        if (letter === 'u') return consonant + hepburn[2] + letter;
-      }
-      if (consonant === 'h' && letter === 'u') return hepburn[3] + letter;
-      if (consonant === 'y' && (letter === 'i' || letter === 'e')) return '  ';
-      if (consonant === 'w' && letter !== 'a' && letter !== 'o') return '  ';
+const gojuonHepburn = [vowels].concat(
+  consonants
+    .map((consonant) =>
+      vowels.map((letter) => {
+        if (consonant === 's' && letter === 'i')
+          return consonant + hepburn[0] + letter;
+        if (consonant === 't') {
+          if (letter === 'i') return hepburn[1] + hepburn[0] + letter;
+          if (letter === 'u') return consonant + hepburn[2] + letter;
+        }
+        if (consonant === 'h' && letter === 'u') return hepburn[3] + letter;
+        if (consonant === 'y' && (letter === 'i' || letter === 'e'))
+          return '  ';
+        if (consonant === 'w' && letter !== 'a' && letter !== 'o') return '  ';
 
-      return consonant + letter;
-    })
-  )
-  .concat([['n']]);
+        return consonant + letter;
+      })
+    )
+    .concat([['n']])
+);
