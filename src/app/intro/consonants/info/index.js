@@ -1256,8 +1256,18 @@ const hepburn = [...'hcsf'];
 
 const gojuonHepburn = [vowels].concat(
   consonants
-    .map((consonant) =>
-      vowels.map((letter) => {
+    .map((consonant) => {
+      if (consonant === 'y')
+        return vowels
+          .filter((_, i) => i % 2 === 0)
+          .map((letter) => consonant + letter);
+
+      if (consonant === 'w')
+        return vowels
+          .filter((_, i) => i === 0 || i === 4)
+          .map((letter) => consonant + letter);
+
+      return vowels.map((letter) => {
         if (consonant === 's' && letter === 'i')
           return consonant + hepburn[0] + letter;
         if (consonant === 't') {
@@ -1270,7 +1280,24 @@ const gojuonHepburn = [vowels].concat(
         if (consonant === 'w' && letter !== 'a' && letter !== 'o') return '  ';
 
         return consonant + letter;
-      })
-    )
+      });
+    })
     .concat([['n']])
 );
+
+const hiragana = [];
+for (let i = 12354; i < 12436; i++) {
+  if (
+    (i <= 12362 && i % 2 === 0) ||
+    (i > 12362 && i <= 12385 && i % 2 !== 0) ||
+    (i > 12386 && i <= 12392 && i % 2 === 0) ||
+    (i > 12393 && i <= 12398) ||
+    (i > 12397 && i <= 12412 && i % 3 === 0) ||
+    (i > 12413 && i <= 12418) ||
+    (i > 12418 && i <= 12424 && i % 2 === 0) ||
+    (i > 12424 && i <= 12429) ||
+    i === 12431 ||
+    (i > 12433 && i <= 12435)
+  )
+    hiragana.push(String.fromCharCode(i));
+}
