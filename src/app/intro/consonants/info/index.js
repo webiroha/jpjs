@@ -1251,23 +1251,26 @@ const gojuon = [
 ];
 
 // gojuon arrays in hepburn
+const vowelsArray = [...'aiueo'];
 const consonants = [...'kstnhmyrw'];
 const hepburn = [...'hcsf'];
 
 const gojuonHepburn = [vowels].concat(
   consonants
     .map((consonant) => {
-      if (consonant === 'y')
-        return vowels
+      if (consonant === 'y') {
+        return vowelsArray
           .filter((_, i) => i % 2 === 0)
           .map((letter) => consonant + letter);
+      }
 
-      if (consonant === 'w')
-        return vowels
+      if (consonant === 'w') {
+        vowelsArray
           .filter((_, i) => i === 0 || i === 4)
           .map((letter) => consonant + letter);
+      }
 
-      return vowels.map((letter) => {
+      return vowelsArray.map((letter) => {
         if (consonant === 's' && letter === 'i')
           return consonant + hepburn[0] + letter;
         if (consonant === 't') {
