@@ -1316,22 +1316,3 @@ for (let i = 12354; i < 12436; i++) {
   )
     hiragana.push(String.fromCharCode(i));
 }
-
-const combine = gojuonHepburn.map((row, i) => {
-  return Object.assign(
-    {},
-    ...row.map((letter, pos) => {
-      const count = () => {
-        const common = i * 5 - 5 + 3;
-        if (letter[0] === 'r') return common;
-        if (letter[0] === 'w') return common;
-        if (gojuonHepburn.length - 1 === i) return common - 5 + 2;
-
-        return i * 5;
-      };
-      const position = count() + pos;
-
-      return { [letter]: hiragana[position] };
-    })
-  );
-});
