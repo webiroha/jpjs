@@ -1236,19 +1236,19 @@ console.log(helloHiragana);
 // Hello is こんにちは in Hiragana.
 
 // Those are called as Gojuon/ごじゅうおん/五十音
-const gojuon = [
-  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' },
-  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' },
-  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' },
-  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' },
-  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' },
-  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' },
-  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' },
-  { ya: 'や', yu: 'ゆ', yo: 'よ' },
-  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' },
-  { wa: 'わ', o: 'を' },
-  { n: 'ん' },
-];
+// const gojuon = [
+//   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' },
+//   { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' },
+//   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' },
+//   { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' },
+//   { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' },
+//   { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' },
+//   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' },
+//   { ya: 'や', yu: 'ゆ', yo: 'よ' },
+//   { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' },
+//   { wa: 'わ', o: 'を' },
+//   { n: 'ん' },
+// ];
 
 // gojuon arrays in hepburn
 const vowelsArray = [...'aiueo'];
@@ -1304,3 +1304,22 @@ for (let i = 12354; i < 12436; i++) {
   )
     hiragana.push(String.fromCharCode(i));
 }
+
+const combine = gojuonHepburn.map((row, i) => {
+  return Object.assign(
+    {},
+    ...row.map((letter, pos) => {
+      const count = () => {
+        const common = i * 5 - 5 + 3;
+        if (letter[0] === 'r') return common;
+        if (letter[0] === 'w') return common;
+        if (gojuonHepburn.length - 1 === i) return common - 5 + 2;
+
+        return i * 5;
+      };
+      const position = count() + pos;
+
+      return { [letter]: hiragana[position] };
+    })
+  );
+});
