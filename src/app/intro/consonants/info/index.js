@@ -323,7 +323,7 @@ console.log(outsideKanji);
       title: 'Consonant N',
       text: "Let's try to learn consonant n + vowels!",
     },
-    romaji: `const consonantK = 'n';
+    romaji: `const consonantN = 'n';
 const vowels = [...'aiueo'];
 
 const nVowelsByRomaji = vowels.map(
