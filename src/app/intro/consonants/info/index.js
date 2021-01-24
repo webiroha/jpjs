@@ -293,6 +293,7 @@ console.log(wisdomHiragana);
 console.log(wisdomKanji);
 // ちえ is 知恵 in Kanji.
 
+
 // vertical・たて・縦
 const vertical = tVowels.ta + tVowels.te;
 const verticalHiragana = englishHiragana('Vertical', vertical);
@@ -302,6 +303,17 @@ console.log(verticalHiragana);
 // Vertical is たて in Hiragana.
 console.log(verticalKanji);
 // たて is 縦 in Kanji.
+
+
+// outside・そと・外
+const outside = sVowels.so + tVowels.to;
+const outsideHiragana = englishHiragana('Outside', outside);
+const outsideKanji = hiraganaKanji(outside, '外');
+
+console.log(outsideHiragana);
+// Outside is そと in Hiragana.
+console.log(outsideKanji);
+// そと is 外 in Kanji.
 `,
     navLink: ['svowels', '', '', ''],
   },
