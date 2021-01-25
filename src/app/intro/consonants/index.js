@@ -7,6 +7,11 @@ import ConsonantLinks from './components/ConsonantLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
+  const Section = Element({
+    elem: 'section',
+    class: 'section',
+  });
+
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
@@ -82,8 +87,9 @@ const Consonants = () => {
   ContentsFrag().appendChild(DetailsBlock.tag);
 
   ContentsFrag().appendChild(PageNavLink('vowels', ''));
+  Section.tag.appendChild(ContentsFrag());
 
-  return ContentsFrag();
+  return Section.tag;
 };
 
 HeaderFooter(Consonants);

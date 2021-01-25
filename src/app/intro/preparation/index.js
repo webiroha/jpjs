@@ -1,10 +1,16 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
 import Frag from '@root/components/atom/Frag';
+import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Preparation = () => {
+  const Section = Element({
+    elem: 'section',
+    class: 'section',
+  });
+
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
@@ -38,8 +44,9 @@ const Preparation = () => {
   ContentsFrag().appendChild(Code.tag);
 
   ContentsFrag().appendChild(PageNavLink('top', 'characters'));
+  Section.tag.appendChild(ContentsFrag());
 
-  return ContentsFrag();
+  return Section.tag;
 };
 
 HeaderFooter(Preparation);

@@ -13,6 +13,11 @@ import '@wav/e.wav';
 import '@wav/o.wav';
 
 const Vowels = () => {
+  const Section = Element({
+    elem: 'section',
+    class: 'section',
+  });
+
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
@@ -148,8 +153,9 @@ console.log(houseKanji);
   ContentsFrag().appendChild(ExamplesCode.tag);
 
   ContentsFrag().appendChild(PageNavLink('characters', 'consonants'));
+  Section.tag.appendChild(ContentsFrag());
 
-  return ContentsFrag();
+  return Section.tag;
 };
 
 HeaderFooter(Vowels);

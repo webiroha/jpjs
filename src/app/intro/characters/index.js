@@ -6,6 +6,11 @@ import CodeBlock from '@root/components/CodeBlock';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Characters = () => {
+  const Section = Element({
+    elem: 'section',
+    class: 'section',
+  });
+
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
@@ -41,8 +46,9 @@ const Characters = () => {
   ContentsFrag().appendChild(SoundCode.tag);
 
   ContentsFrag().appendChild(PageNavLink('preparation', 'vowels'));
+  Section.tag.appendChild(ContentsFrag());
 
-  return ContentsFrag();
+  return Section.tag;
 };
 
 HeaderFooter(Characters);

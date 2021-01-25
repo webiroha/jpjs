@@ -1299,7 +1299,6 @@ const gojuonHepburn = [vowelsArray].concat(
     })
     .concat([['n']])
 );
-console.log(gojuonHepburn);
 
 const hiragana = [];
 for (let i = 12354; i < 12436; i++) {
@@ -1317,7 +1316,6 @@ for (let i = 12354; i < 12436; i++) {
   )
     hiragana.push(String.fromCharCode(i));
 }
-console.log(hiragana);
 
 const combine = gojuonHepburn.map((row, i) => {
   return Object.assign(
@@ -1337,5 +1335,3 @@ const combine = gojuonHepburn.map((row, i) => {
     })
   );
 });
-
-console.log(combine);

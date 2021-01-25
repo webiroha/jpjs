@@ -7,6 +7,11 @@ import SoundBlock from '@root/components/SoundBlock';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const InsideCommon = (props) => {
+  const Section = Element({
+    elem: 'section',
+    class: 'section',
+  });
+
   const ContentsFrag = Frag();
 
   const ExplainInfo = {
@@ -45,8 +50,9 @@ const InsideCommon = (props) => {
   ContentsFrag().appendChild(ExamplesCode.tag);
 
   ContentsFrag().appendChild(PageNavLink(...props.navLink));
+  Section.tag.appendChild(ContentsFrag());
 
-  return ContentsFrag();
+  return Section.tag;
 };
 
 const CommonLayout = (info) => {
