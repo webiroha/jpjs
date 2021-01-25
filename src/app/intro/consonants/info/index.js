@@ -1267,7 +1267,7 @@ const vowelsArray = [...'aiueo'];
 const consonants = [...'kstnhmyrw'];
 const hepburn = [...'hcsf'];
 
-const gojuonHepburn = [vowels].concat(
+const gojuonHepburn = [vowelsArray].concat(
   consonants
     .map((consonant) => {
       if (consonant === 'y') {
@@ -1277,7 +1277,7 @@ const gojuonHepburn = [vowels].concat(
       }
 
       if (consonant === 'w') {
-        vowelsArray
+        return vowelsArray
           .filter((_, i) => i === 0 || i === 4)
           .map((letter) => consonant + letter);
       }
@@ -1299,6 +1299,7 @@ const gojuonHepburn = [vowels].concat(
     })
     .concat([['n']])
 );
+console.log(gojuonHepburn);
 
 const hiragana = [];
 for (let i = 12354; i < 12436; i++) {
@@ -1316,3 +1317,25 @@ for (let i = 12354; i < 12436; i++) {
   )
     hiragana.push(String.fromCharCode(i));
 }
+console.log(hiragana);
+
+const combine = gojuonHepburn.map((row, i) => {
+  return Object.assign(
+    {},
+    ...row.map((letter, pos) => {
+      const count = () => {
+        const common = i * 5 - 5 + 3;
+        if (letter[0] === 'r') return common;
+        if (letter[0] === 'w') return common;
+        if (gojuonHepburn.length - 1 === i) return common - 5 + 2;
+
+        return i * 5;
+      };
+      const position = count() + pos;
+
+      return { [letter]: hiragana[position] };
+    })
+  );
+});
+
+console.log(combine);
