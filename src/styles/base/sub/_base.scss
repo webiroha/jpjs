@@ -37,12 +37,7 @@
 }
 
 .section {
-  margin: 0 auto 4em;
-  width: 90%;
-
-  @include respond-to('medium') {
-    width: 600px;
-  }
+  @include main-content-width;
 }
 
 .explain__title {

@@ -1,7 +1,13 @@
-.consonants-details {
+.details {
   background: $color-lightGray;
-  margin-bottom: 4em;
-  padding: 3em;
+  width: 100%;
+}
+
+.consonants-details {
+  @include main-content-width;
+
+  padding: 3em 0;
+
 }
 
 .consonant-link {

@@ -33,6 +33,17 @@
   }
 }
 
+// main content width
+@mixin main-content-width() {
+  margin: 0 auto 4em;
+  width: 90%;
+
+  @include respond-to('medium') {
+    width: 600px;
+  }
+}
+
+
 // for responsive font
 @mixin fz_vw($font_size: 10) {
   font-size: $font_size * 1px;

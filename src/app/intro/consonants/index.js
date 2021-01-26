@@ -7,12 +7,14 @@ import ConsonantLinks from './components/ConsonantLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
+  const ContentsFrag = Frag();
+
   const Section = Element({
     elem: 'section',
     class: 'section',
   });
 
-  const ContentsFrag = Frag();
+  const ContentsFragMain = Frag();
 
   const ExplainInfo = {
     role: 'explain',
@@ -28,13 +30,13 @@ const Consonants = () => {
   });
 
   const ConsonantsExplain = TitleWithText(ExplainInfo);
-  ContentsFrag().appendChild(ConsonantsExplain());
-  ContentsFrag().appendChild(ConsonantsExplainSmall.tag);
+  ContentsFragMain().appendChild(ConsonantsExplain());
+  ContentsFragMain().appendChild(ConsonantsExplainSmall.tag);
 
   const consonantElements = `const consonantElements = [...'kstcnhfmyrwgzjdbp'];`;
 
   const { Code: ConsonantsCode } = CodeBlock(consonantElements);
-  ContentsFrag().appendChild(ConsonantsCode.tag);
+  ContentsFragMain().appendChild(ConsonantsCode.tag);
 
   const SystemExplainText = Element({
     elem: 'p',
@@ -44,7 +46,7 @@ const Consonants = () => {
       '*Let me show you the exact one later.',
     ],
   });
-  ContentsFrag().appendChild(SystemExplainText.tag);
+  ContentsFragMain().appendChild(SystemExplainText.tag);
 
   const combineSystem = `  const consonants = [...'kstcnhfmyrwgzjdbp'];
   const vowels = [...'aiueo'];
@@ -56,7 +58,17 @@ const Consonants = () => {
   // ...roughMainSystem !== Romaji`;
 
   const { Code: CombinedCode } = CodeBlock(combineSystem);
-  ContentsFrag().appendChild(CombinedCode.tag);
+  ContentsFragMain().appendChild(CombinedCode.tag);
+
+  Section.tag.appendChild(ContentsFragMain());
+  ContentsFrag().appendChild(Section.tag);
+
+  const DetailsSection = Element({
+    elem: 'section',
+    class: 'section details',
+  });
+
+  const ContentsFragDetails = Frag();
 
   const DetailsBlock = Element({
     elem: 'div',
@@ -84,12 +96,125 @@ const Consonants = () => {
   DetailsBlock.tag.appendChild(BasicTitleInfoBlock());
 
   DetailsBlock.tag.appendChild(ConsonantLinks());
-  ContentsFrag().appendChild(DetailsBlock.tag);
+  ContentsFragDetails().appendChild(DetailsBlock.tag);
 
-  ContentsFrag().appendChild(PageNavLink('vowels', ''));
-  Section.tag.appendChild(ContentsFrag());
+  // const GojuonExplain = Element({
+  //   elem: 'p',
+  //   class: 'gojuon',
+  //   text: [
+  //     'Fifty Sounds Table is called gojuon.',
+  //     'One of example code might be like below.',
+  //     'How do you code?',
+  //   ],
+  // });
+  // DetailsBlock.tag.appendChild(GojuonExplain.tag);
 
-  return Section.tag;
+  // const gojuonSystem = `  // Those are called as Gojuon/ごじゅうおん/五十音
+  // // gojuon arrays in Hepburn Romaji
+  // const vowelsArray = [...'aiueo'];
+  // const consonants = [...'kstnhmyrw'];
+  // const hepburn = [...'hcsf'];
+
+  // const gojuonHepburn = [vowelsArray].concat(
+  //   consonants
+  //     .map((consonant) => {
+  //       if (consonant === 'y') {
+  //         return vowelsArray
+  //           .filter((_, i) => i % 2 === 0)
+  //           .map((letter) => consonant + letter);
+  //       }
+
+  //       if (consonant === 'w') {
+  //         return vowelsArray
+  //           .filter((_, i) => i === 0 || i === 4)
+  //           .map((letter) => consonant + letter);
+  //       }
+
+  //       return vowelsArray.map((letter) => {
+  //         if (consonant === 's' && letter === 'i')
+  //           return consonant + hepburn[0] + letter;
+  //         if (consonant === 't') {
+  //           if (letter === 'i') return hepburn[1] + hepburn[0] + letter;
+  //           if (letter === 'u') return consonant + hepburn[2] + letter;
+  //         }
+  //         if (consonant === 'h' && letter === 'u') return hepburn[3] + letter;
+  //         if (consonant === 'y' && (letter === 'i' || letter === 'e'))
+  //           return '  ';
+  //         if (consonant === 'w' && letter !== 'a' && letter !== 'o') return '  ';
+
+  //         return consonant + letter;
+  //       });
+  //     })
+  //     .concat([['n']])
+  // );
+
+  // // Hiragana array
+  // const hiragana = [];
+  // for (let i = 12354; i < 12436; i++) {
+  //   if (
+  //     (i <= 12362 && i % 2 === 0) ||
+  //     (i > 12362 && i <= 12385 && i % 2 !== 0) ||
+  //     (i > 12386 && i <= 12392 && i % 2 === 0) ||
+  //     (i > 12393 && i <= 12398) ||
+  //     (i > 12397 && i <= 12412 && i % 3 === 0) ||
+  //     (i > 12413 && i <= 12418) ||
+  //     (i > 12418 && i <= 12424 && i % 2 === 0) ||
+  //     (i > 12424 && i <= 12429) ||
+  //     i === 12431 ||
+  //     (i > 12433 && i <= 12435)
+  //   )
+  //     hiragana.push(String.fromCharCode(i));
+  // }
+
+  // // The list by Hepburn Romaji and Hiragana
+  // const combine = gojuonHepburn.map((row, i) => {
+  //   return Object.assign(
+  //     {},
+  //     ...row.map((letter, pos) => {
+  //       const count = () => {
+  //         const common = i * 5 - 5 + 3;
+  //         if (letter[0] === 'r') return common;
+  //         if (letter[0] === 'w') return common;
+  //         if (gojuonHepburn.length - 1 === i) return common - 5 + 2;
+
+  //         return i * 5;
+  //       };
+  //       const position = count() + pos;
+
+  //       return { [letter]: hiragana[position] };
+  //     })
+  //   );
+  // });
+
+  // // The result
+  // // [
+  // //   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' },
+  // //   { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' },
+  // //   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' },
+  // //   { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' },
+  // //   { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' },
+  // //   { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' },
+  // //   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' },
+  // //   { ya: 'や', yu: 'ゆ', yo: 'よ' },
+  // //   { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' },
+  // //   { wa: 'わ', o: 'を' },
+  // //   { n: 'ん' },
+  // // ];`;
+
+  // const { Code: GojuonCode } = CodeBlock(gojuonSystem);
+  // DetailsBlock.tag.appendChild(GojuonCode.tag);
+
+  DetailsSection.tag.appendChild(ContentsFragDetails());
+  ContentsFrag().appendChild(DetailsSection.tag);
+
+  const NavSection = Element({
+    elem: 'section',
+    class: 'section',
+  });
+  NavSection.tag.appendChild(PageNavLink('vowels', ''));
+  ContentsFrag().appendChild(NavSection.tag);
+
+  return ContentsFrag();
 };
 
 HeaderFooter(Consonants);
