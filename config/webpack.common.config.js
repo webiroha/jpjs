@@ -32,6 +32,11 @@ const singleMetas = {
     title: 'Japanese JavaScript | Consonants',
     description: 'Around 14 - 17 consonant elements are used by Romaji.',
   },
+
+  fiftysoundstable: {
+    title: 'Japanese JavaScript | Fifty sound table',
+    description: 'This is the basic Japanese sound.',
+  },
 };
 
 const consonants = ['k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'nn'];
@@ -75,6 +80,7 @@ const webpackConfig = {
     rvowels: './src/app/intro/consonants/rvowels/index.js',
     wvowels: './src/app/intro/consonants/wvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
+    fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },
 
   module: {
@@ -150,7 +156,10 @@ const webpackConfig = {
 
 const filepath = (key) => {
   if (key === 'top') return 'index.html';
-  if (key !== 'vowels' && (key.endsWith('vowels') || key === 'n'))
+  if (
+    key !== 'vowels' &&
+    (key.endsWith('vowels') || key === 'n' || key === 'fiftysoundstable')
+  )
     return `intro/consonants/${key}/index.html`;
 
   return `intro/${key}/index.html`;
