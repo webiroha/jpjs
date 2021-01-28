@@ -315,7 +315,7 @@ console.log(outsideHiragana);
 console.log(outsideKanji);
 // そと is 外 in Kanji.
 `,
-    navLink: ['svowels', '', '', ''],
+    navLink: ['svowels', 'nvowels', '', ''],
   },
 
   consonantNinfo: {
@@ -370,6 +370,15 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// summer・なつ・夏
+const summer = nVowels.na + tVowels.tsu;
+const summerHiragana = englishHiragana('Summer', summer);
+const summerKanji = hiraganaKanji(summer, '夏');
+
+console.log(summerHiragana);
+// Summer is なつ in Hiragana.
+console.log(summerKanji);
+// なつ is 夏 in Kanji.
 `,
     navLink: ['tvowels', '', '', ''],
   },
