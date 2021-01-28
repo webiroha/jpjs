@@ -21,7 +21,12 @@ const ConsonantLink = (consonant) => {
     text: dealedText(),
   });
 
-  if (consonant === 'k' || consonant === 's' || consonant === 't')
+  if (
+    consonant === 'k' ||
+    consonant === 's' ||
+    consonant === 't' ||
+    consonant === 'n'
+  )
     Link.tag.href = `./${consonant}vowels/`;
   // Link.tag.href = `consonalt${consonant}`;
   Block.tag.appendChild(Link.tag);

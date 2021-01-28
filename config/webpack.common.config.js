@@ -50,11 +50,11 @@ const [...consonantMetas] = consonants.map((consonant) => {
   return {
     [key()]: {
       title:
-        key() === 'n'
+        consonant === 'n'
           ? `Japanese JavaScript | Consonant N`
           : `Japanese JavaScript | Consonant ${consonant}`,
       description:
-        key() === 'n'
+        consonant === 'n'
           ? `Let's try to learn consonant N!`
           : `Let's try to learn consonant ${consonant} + vowel!`,
     },
@@ -156,7 +156,10 @@ const webpackConfig = {
 
 const filepath = (key) => {
   if (key === 'top') return 'index.html';
-  if (key !== 'vowels' && (key.endsWith('vowels') || key === 'n'))
+  if (
+    key !== 'vowels' &&
+    (key.endsWith('vowels') || key === 'n' || key === 'fiftysoundstable')
+  )
     return `intro/consonants/${key}/index.html`;
 
   return `intro/${key}/index.html`;

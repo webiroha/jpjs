@@ -7,7 +7,7 @@ import '@wav/nu.wav';
 import '@wav/ne.wav';
 import '@wav/no.wav';
 
-CommonLayout(info.consonantNNinfo);
+CommonLayout(info.consonantNinfo);
 
 const consonantN = 'n';
 const vowels = [...'aiueo'];
