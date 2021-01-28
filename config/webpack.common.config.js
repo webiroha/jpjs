@@ -156,10 +156,7 @@ const webpackConfig = {
 
 const filepath = (key) => {
   if (key === 'top') return 'index.html';
-  if (
-    key !== 'vowels' &&
-    (key.endsWith('vowels') || key === 'n' || key === 'fiftysoundstable')
-  )
+  if (key !== 'vowels' && (key.endsWith('vowels') || key === 'n'))
     return `intro/consonants/${key}/index.html`;
 
   return `intro/${key}/index.html`;
