@@ -1,9 +1,9 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
-import Frag from '@root/components/atom/Frag';
-import Element from '@root/components/atom/Element';
+import Frag from './components/BasicLinks/node_modules/@root/components/atom/Frag';
+import Element from './components/BasicLinks/node_modules/@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
-import ConsonantLinks from './components/ConsonantLinks';
+import BasicLinks from './components/BasicLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
@@ -95,7 +95,7 @@ const Consonants = () => {
   const BasicTitleInfoBlock = TitleWithText(BasicTitleInfo);
   DetailsBlock.tag.appendChild(BasicTitleInfoBlock());
 
-  DetailsBlock.tag.appendChild(ConsonantLinks());
+  DetailsBlock.tag.appendChild(BasicLinks());
   ContentsFragDetails().appendChild(DetailsBlock.tag);
 
   DetailsSection.tag.appendChild(ContentsFragDetails());

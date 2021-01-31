@@ -3,7 +3,7 @@ import '../../../../../styles/main.scss';
 import Element from '@root/components/atom/Element';
 import Frag from '@root/components/atom/Frag';
 
-const ConsonantLink = (consonant) => {
+const BasicLink = (consonant) => {
   const Block = Element({
     elem: 'li',
     class: 'consonant-link__item',
@@ -34,7 +34,7 @@ const ConsonantLink = (consonant) => {
   return Block.tag;
 };
 
-const ConsonantLinks = () => {
+const BasicLinks = () => {
   const Wrapper = Element({
     elem: 'ul',
     class: 'consonant-link fade-in',
@@ -61,12 +61,10 @@ const ConsonantLinks = () => {
     // 'p',
   ];
 
-  consonants.map((consonant) =>
-    Fragment().appendChild(ConsonantLink(consonant))
-  );
+  consonants.map((consonant) => Fragment().appendChild(BasicLink(consonant)));
   Wrapper.tag.appendChild(Fragment());
 
   return Wrapper.tag;
 };
 
-export default ConsonantLinks;
+export default BasicLinks;
