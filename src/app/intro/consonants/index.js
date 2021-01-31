@@ -1,9 +1,10 @@
 import HeaderFooter from '@root/components/pages/HeaderFooter';
-import Frag from './components/BasicLinks/node_modules/@root/components/atom/Frag';
-import Element from './components/BasicLinks/node_modules/@root/components/atom/Element';
+import Frag from '@root/components/atom/Frag';
+import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import BasicLinks from './components/BasicLinks';
+import TheOthersLinks from './components/TheOthersLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
@@ -96,8 +97,20 @@ const Consonants = () => {
   DetailsBlock.tag.appendChild(BasicTitleInfoBlock());
 
   DetailsBlock.tag.appendChild(BasicLinks());
-  ContentsFragDetails().appendChild(DetailsBlock.tag);
 
+  // const TheOthersTitleInfo = {
+  //   role: 'sub-s',
+  //   element: 'h3',
+  //   title: 'The others',
+  //   text: ['- work in progress -'],
+  // };
+
+  // const TheOthersTitleInfoBlock = TitleWithText(TheOthersTitleInfo);
+  // DetailsBlock.tag.appendChild(TheOthersTitleInfoBlock());
+
+  // DetailsBlock.tag.appendChild(TheOthersLinks());
+
+  ContentsFragDetails().appendChild(DetailsBlock.tag);
   DetailsSection.tag.appendChild(ContentsFragDetails());
   ContentsFrag().appendChild(DetailsSection.tag);
 
