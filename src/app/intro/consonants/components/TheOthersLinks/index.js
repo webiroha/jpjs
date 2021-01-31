@@ -3,7 +3,7 @@ import '../../../../../styles/main.scss';
 import Element from '@root/components/atom/Element';
 import Frag from '@root/components/atom/Frag';
 
-const BasicLink = (consonant) => {
+const TheOthersLink = (consonant) => {
   const Block = Element({
     elem: 'li',
     class: 'consonant-link__item',
@@ -21,20 +21,20 @@ const BasicLink = (consonant) => {
     text: dealedText(),
   });
 
-  if (
-    consonant === 'k' ||
-    consonant === 's' ||
-    consonant === 't' ||
-    consonant === 'n'
-  )
-    Link.tag.href = `./${consonant}vowels/`;
+  // if (
+  //   consonant === 'k' ||
+  //   consonant === 's' ||
+  //   consonant === 't' ||
+  //   consonant === 'n'
+  // )
+  // Link.tag.href = `./${consonant}vowels/`;
   // Link.tag.href = `consonalt${consonant}`;
   Block.tag.appendChild(Link.tag);
 
   return Block.tag;
 };
 
-const BasicLinks = () => {
+const TheOthersLinks = () => {
   const Wrapper = Element({
     elem: 'ul',
     class: 'consonant-link fade-in',
@@ -42,24 +42,14 @@ const BasicLinks = () => {
 
   const Fragment = Frag();
 
-  const consonants = [
-    'k',
-    's',
-    't',
-    'n',
-    'h',
-    'm',
-    'y',
-    'r',
-    'w',
-    'N',
-    'Fifty Sounds Table',
-  ];
+  const consonants = ['g', 'z', 'd', 'b', 'p'];
 
-  consonants.map((consonant) => Fragment().appendChild(BasicLink(consonant)));
+  consonants.map((consonant) =>
+    Fragment().appendChild(TheOthersLink(consonant))
+  );
   Wrapper.tag.appendChild(Fragment());
 
   return Wrapper.tag;
 };
 
-export default BasicLinks;
+export default TheOthersLinks;
