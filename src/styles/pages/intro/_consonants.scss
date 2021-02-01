@@ -53,3 +53,11 @@
 .consonant-link + .sub-s {
   margin-top: 3em;
 }
+
+.the-others {
+  & > li {
+    &:last-of-type {
+      grid-column: 1;
+    }
+  }
+}

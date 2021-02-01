@@ -37,7 +37,7 @@ const TheOthersLink = (consonant) => {
 const TheOthersLinks = () => {
   const Wrapper = Element({
     elem: 'ul',
-    class: 'consonant-link fade-in',
+    class: 'consonant-link the-others fade-in',
   });
 
   const Fragment = Frag();

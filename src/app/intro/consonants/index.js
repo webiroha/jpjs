@@ -98,17 +98,17 @@ const Consonants = () => {
 
   DetailsBlock.tag.appendChild(BasicLinks());
 
-  // const TheOthersTitleInfo = {
-  //   role: 'sub-s',
-  //   element: 'h3',
-  //   title: 'The others',
-  //   text: ['- work in progress -'],
-  // };
+  const TheOthersTitleInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'The others(voiced and p sound)',
+    text: ['- work in progress -'],
+  };
 
-  // const TheOthersTitleInfoBlock = TitleWithText(TheOthersTitleInfo);
-  // DetailsBlock.tag.appendChild(TheOthersTitleInfoBlock());
+  const TheOthersTitleInfoBlock = TitleWithText(TheOthersTitleInfo);
+  DetailsBlock.tag.appendChild(TheOthersTitleInfoBlock());
 
-  // DetailsBlock.tag.appendChild(TheOthersLinks());
+  DetailsBlock.tag.appendChild(TheOthersLinks());
 
   ContentsFragDetails().appendChild(DetailsBlock.tag);
   DetailsSection.tag.appendChild(ContentsFragDetails());
