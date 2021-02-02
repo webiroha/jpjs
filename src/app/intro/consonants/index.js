@@ -114,6 +114,37 @@ const Consonants = () => {
   DetailsSection.tag.appendChild(ContentsFragDetails());
   ContentsFrag().appendChild(DetailsSection.tag);
 
+  // const ContractedSection = Element({
+  //   elem: 'section',
+  //   class: 'section contracted',
+  // });
+
+  // const ContentsFragContracted = Frag();
+
+  // const ContractedBlock = Element({
+  //   elem: 'div',
+  //   class: ' slide-in-upper__1',
+  // });
+
+  // const ContractedTitleInfo = {
+  //   role: 'sub',
+  //   element: 'h2',
+  //   title: 'Contracted sound',
+  //   text: 'These are advanced combinations.',
+  // };
+
+  // const ContractedInfoBlock = TitleWithText(ContractedTitleInfo);
+  // ContractedBlock.tag.appendChild(ContractedInfoBlock());
+  // ContentsFragContracted().appendChild(ContractedBlock.tag);
+
+  // const threeCombineSystem = ``;
+
+  // const { Code: ThreeCombinedCode } = CodeBlock(threeCombineSystem);
+  // ContentsFragContracted().appendChild(ThreeCombinedCode.tag);
+
+  // ContractedSection.tag.appendChild(ContentsFragContracted());
+  // ContentsFrag().appendChild(ContractedSection.tag);
+
   const NavSection = Element({
     elem: 'section',
     class: 'section',
