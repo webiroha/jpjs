@@ -101,7 +101,7 @@ const Consonants = () => {
   const TheOthersTitleInfo = {
     role: 'sub-s',
     element: 'h3',
-    title: 'The others(voiced and p sound)',
+    title: 'Voiced and p sounds',
     text: ['- work in progress -'],
   };
 
@@ -137,7 +137,11 @@ const Consonants = () => {
   // ContractedBlock.tag.appendChild(ContractedInfoBlock());
   // ContentsFragContracted().appendChild(ContractedBlock.tag);
 
-  // const threeCombineSystem = ``;
+  // const threeCombineSystem = `const contractedConsonants = [...'ksctnhmrgjzdbp'];
+  // const middle = 'y';
+  // const roughContractedSystem = contractedConsonants.map((consonant) =>
+  //   vowels.map((vowel) => consonant + middle + vowel)
+  // );`;
 
   // const { Code: ThreeCombinedCode } = CodeBlock(threeCombineSystem);
   // ContentsFragContracted().appendChild(ThreeCombinedCode.tag);
@@ -164,3 +168,10 @@ const roughMainSystem = consonants.map((consonant) =>
   vowels.map((vowel) => consonant + vowel)
 );
 console.log(...roughMainSystem);
+
+const contractedConsonants = [...'ksctnhmrgjzdbp'];
+const middle = 'y';
+const roughContractedSystem = contractedConsonants.map((consonant) =>
+  vowels.map((vowel) => consonant + middle + vowel)
+);
+console.log(...roughContractedSystem);
