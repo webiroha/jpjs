@@ -871,6 +871,51 @@ const hiraganaKanji = (
 `,
     navLink: ['nvowels', '', '', ''],
   },
+  consonantGinfo: {
+    explain: {
+      title: 'Consonant G',
+      text: "Let's try to learn consonant g + vowels!",
+    },
+    romaji: `const consonantG = 'g';
+const vowels = [...'aiueo'];
+
+const gVowelsByRomaji = vowels.map(
+  (vowel) => consonantG + vowel
+);
+console.log(gVowelsByRomaji.toString());
+// ga, gi, gu, ge, go`,
+    sound: ['ga', 'gi', 'gu', 'ge', 'go'],
+    jpText: 'The consonant g + vowels spelt by hiragana and katakana.',
+    letters: `const gVowelLetters = [
+  { ga: { hiragana: 'が', katakana: 'ガ' } },
+  { gi: { hiragana: 'ぎ', katakana: 'ギ' } },
+  { gu: { hiragana: 'ぐ', katakana: 'グ' } },
+  { ge: { hiragana: 'げ', katakana: 'ゲ' } },
+  { go: { hiragana: 'ご', katakana: 'ゴ' } },
+];`,
+    exampleText: "Let's use consonant g + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+`,
+    navLink: ['consonants', '', '', ''],
+  },
 };
 
 export default info;
