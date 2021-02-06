@@ -895,11 +895,8 @@ console.log(gVowelsByRomaji.toString());
 ];`,
     exampleText: "Let's use consonant g + vowels in practice!",
     examples: `// Base code
-const vowels =
-  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
-
-const kVowels =
-  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 
 const englishHiragana = (
   english,
@@ -932,6 +929,7 @@ const rVowels = { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
 const wVowels = { wa: 'わ', o: 'を' };
 const wVowelsParticle = { wa: 'は' };
 const n = 'ん';
+const gVowels = { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -1300,3 +1298,34 @@ const helloHiragana = englishHiragana('Hello', hello);
 
 console.log(helloHiragana);
 // Hello is こんにちは in Hiragana.
+
+// gvowels ----------
+// galaxy・ぎんが・銀河
+const galaxy = gVowels.gi + n + gVowels.ga;
+const galaxyHiragana = englishHiragana('Galaxy', galaxy);
+const galaxyKanji = hiraganaKanji(galaxy, '銀河');
+
+console.log(galaxyHiragana);
+// Galaxy is ぎんが in Hiragana.
+console.log(galaxyKanji);
+// ぎんが is 銀河 in Kanji.
+
+// even number・ぐうすう・偶数
+const evenNumber = gVowels.gu + vowels.u + sVowels.su + vowels.u;
+const evenNumberHiragana = englishHiragana('Even Number', evenNumber);
+const evenNumberKanji = hiraganaKanji(evenNumber, '偶数');
+
+console.log(evenNumberHiragana);
+// Even Number is ぐうすう in Hiragana.
+console.log(evenNumberKanji);
+// ぐうすう is 偶数 in Kanji.
+
+// language・げんご・言語
+const language = gVowels.ge + n + gVowels.go;
+const languageHiragana = englishHiragana('Language', language);
+const languageKanji = hiraganaKanji(language, '言語');
+
+console.log(languageHiragana);
+// Language is げんご in Hiragana.
+console.log(languageKanji);
+// げんご is 言語 in Kanji.
