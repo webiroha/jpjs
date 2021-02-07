@@ -379,6 +379,36 @@ console.log(summerHiragana);
 // Summer is なつ in Hiragana.
 console.log(summerKanji);
 // なつ is 夏 in Kanji.
+
+// meat・にく・肉
+const meat = nVowels.ni + kVowels.ku;
+const meatHiragana = englishHiragana('Meat', meat);
+const meatKanji = hiraganaKanji(meat, '肉');
+
+console.log(meatHiragana);
+// Meat is にく in Hiragana.
+console.log(meatKanji);
+// にく is 肉 in Kanji.
+
+// cloth・ぬの・布
+const cloth = nVowels.nu + nVowels.no;
+const clothHiragana = englishHiragana('Cloth', cloth);
+const clothKanji = hiraganaKanji(cloth, '布');
+
+console.log(clothHiragana);
+// Cloth is ぬの in Hiragana.
+console.log(clothKanji);
+// ぬの is 布 in Kanji.
+
+// cat・ねこ・猫
+const cat = nVowels.ne + kVowels.ko;
+const catHiragana = englishHiragana('Cat', cat);
+const catKanji = hiraganaKanji(cat, '猫');
+
+console.log(catHiragana);
+// Cat is ねこ in Hiragana.
+console.log(catKanji);
+// ねこ is 猫 in Kanji.
 `,
     navLink: ['tvowels', '', '', ''],
   },
