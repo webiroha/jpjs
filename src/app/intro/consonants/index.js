@@ -4,7 +4,7 @@ import Element from '@root/components/atom/Element';
 import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import BasicLinks from './components/BasicLinks';
-import TheOthersLinks from './components/TheOthersLinks';
+import VoicedPLinks from './components/VoicedPLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
@@ -108,7 +108,7 @@ const Consonants = () => {
   const TheOthersTitleInfoBlock = TitleWithText(TheOthersTitleInfo);
   DetailsBlock.tag.appendChild(TheOthersTitleInfoBlock());
 
-  DetailsBlock.tag.appendChild(TheOthersLinks());
+  DetailsBlock.tag.appendChild(VoicedPLinks());
 
   ContentsFragDetails().appendChild(DetailsBlock.tag);
   DetailsSection.tag.appendChild(ContentsFragDetails());

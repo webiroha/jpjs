@@ -3,7 +3,7 @@ import '../../../../../styles/main.scss';
 import Element from '@root/components/atom/Element';
 import Frag from '@root/components/atom/Frag';
 
-const TheOthersLink = (consonant) => {
+const VoicedPLink = (consonant) => {
   const Block = Element({
     elem: 'li',
     class: 'consonant-link__item',
@@ -34,7 +34,7 @@ const TheOthersLink = (consonant) => {
   return Block.tag;
 };
 
-const TheOthersLinks = () => {
+const VoicedPLinks = () => {
   const Wrapper = Element({
     elem: 'ul',
     class: 'consonant-link the-others fade-in',
@@ -44,12 +44,10 @@ const TheOthersLinks = () => {
 
   const consonants = ['g', 'z', 'd', 'b', 'p'];
 
-  consonants.map((consonant) =>
-    Fragment().appendChild(TheOthersLink(consonant))
-  );
+  consonants.map((consonant) => Fragment().appendChild(VoicedPLink(consonant)));
   Wrapper.tag.appendChild(Fragment());
 
   return Wrapper.tag;
 };
 
-export default TheOthersLinks;
+export default VoicedPLinks;
