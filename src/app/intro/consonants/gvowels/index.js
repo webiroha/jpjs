@@ -1,11 +1,11 @@
 import CommonLayout from '@root/intro/consonants/components/CommonLayout';
 import info from '@root/intro/consonants/info';
 
-import '@wav/ka.wav';
-import '@wav/ki.wav';
-import '@wav/ku.wav';
-import '@wav/ke.wav';
-import '@wav/ko.wav';
+import '@wav/ga.wav';
+import '@wav/gi.wav';
+import '@wav/gu.wav';
+import '@wav/ge.wav';
+import '@wav/go.wav';
 
 CommonLayout(info.consonantGinfo);
 
