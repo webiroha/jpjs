@@ -423,7 +423,7 @@ console.log(catKanji);
         'We will use Hepburn-shiki Romaji here.',
       ],
     },
-    romaji: `const consonantS = 'h';
+    romaji: `const consonantH = 'h';
 const vowels = [...'aiueo'];
 const hepburnElem = 'f';
 
