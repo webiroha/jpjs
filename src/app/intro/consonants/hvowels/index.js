@@ -11,7 +11,7 @@ CommonLayout(info.consonantHinfo);
 
 const [consonantH, vowels, hepburnElem] = ['h', [...'aiueo'], 'f'];
 
-// const consonantS = 'h';
+// const consonantH = 'h';
 // const vowels = [...'aiueo'];
 // const hepburnElem = 'f';
 
@@ -30,4 +30,4 @@ const hVowelsByRomajiHepburn = vowels.map((vowel) => {
   }
 });
 console.log(hVowelsByRomajiHepburn.toString());
-// ha,hi,fu,he,ho
+// ha, hi, fu, he, ho
