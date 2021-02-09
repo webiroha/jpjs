@@ -901,6 +901,7 @@ const hiraganaKanji = (
 `,
     navLink: ['nvowels', '', '', ''],
   },
+
   consonantGinfo: {
     explain: {
       title: 'Consonant G',
@@ -922,6 +923,60 @@ console.log(gVowelsByRomaji.toString());
   { gu: { hiragana: 'ぐ', katakana: 'グ' } },
   { ge: { hiragana: 'げ', katakana: 'ゲ' } },
   { go: { hiragana: 'ご', katakana: 'ゴ' } },
+];`,
+    exampleText: "Let's use consonant g + vowels in practice!",
+    examples: `// Base code
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+`,
+    navLink: ['n', '', '', ''],
+  },
+
+  consonantZinfo: {
+    explain: {
+      title: 'Consonant Z',
+      text: "Let's try to learn consonant z + vowels!",
+    },
+    romaji: `const consonantZ = 'z';
+const vowels = [...'aiueo'];
+const hepburnElem = 'j';
+
+// Kunrei-shiki and Nihon-shiki Romaji
+const zVowelsByRomaji = vowels.map((vowel) => consonantZ + vowel);
+console.log(zVowelsByRomaji.toString());
+// za, zi, zu, ze, zo
+
+// Hepburn-shiki Romaji(We will use this here.)
+const zVowelsByRomajiHepburn = vowels.map((vowel) => {
+  if (vowel === 'i') {
+    return hepburnElem + vowel;
+  } else {
+    return consonantZ + vowel;
+  }
+});
+console.log(zVowelsByRomajiHepburn.toString());
+// za, zi, zu, ze, zo`,
+    sound: ['za', 'ji', 'zu', 'ze', 'zo'],
+    jpText: 'The consonant z + vowels spelt by hiragana and katakana.',
+    letters: `const zVowelLetters = [
+  { za: { hiragana: 'が', katakana: 'ガ' } },
+  { zi: { hiragana: 'ぎ', katakana: 'ギ' } },
+  { zu: { hiragana: 'ぐ', katakana: 'グ' } },
+  { ze: { hiragana: 'げ', katakana: 'ゲ' } },
+  { zo: { hiragana: 'ご', katakana: 'ゴ' } },
 ];`,
     exampleText: "Let's use consonant g + vowels in practice!",
     examples: `// Base code

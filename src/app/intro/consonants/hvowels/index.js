@@ -20,8 +20,7 @@ const hVowelsByRomaji = vowels.map((vowel) => consonantH + vowel);
 console.log(hVowelsByRomaji.toString());
 // ha,hi,hu,he,ho
 
-// Hepburn-shiki Romaji
-// (We will use this here.)
+// Hepburn-shiki Romaji(We will use this here.)
 const hVowelsByRomajiHepburn = vowels.map((vowel) => {
   if (vowel === 'u') {
     return hepburnElem + vowel;

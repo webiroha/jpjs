@@ -20,8 +20,7 @@ const sVowelsByRomaji = vowels.map((vowel) => consonantS + vowel);
 console.log(sVowelsByRomaji.toString());
 // sa,si,su,se,so
 
-// Hepburn-shiki Romaji
-// (We will use this here.)
+// Hepburn-shiki Romaji(We will use this here.)
 const sVowelsByRomajiHepburn = vowels.map((vowel) => {
   if (vowel === 'i') {
     return consonantS + hepburnElem + vowel;

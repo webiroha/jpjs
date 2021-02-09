@@ -1,33 +1,32 @@
 import CommonLayout from '@root/intro/consonants/components/CommonLayout';
 import info from '@root/intro/consonants/info';
 
-import '@wav/sa.wav';
-import '@wav/shi.wav';
-import '@wav/su.wav';
-import '@wav/se.wav';
-import '@wav/so.wav';
+import '@wav/za.wav';
+import '@wav/ji.wav';
+import '@wav/zu.wav';
+import '@wav/ze.wav';
+import '@wav/zo.wav';
 
 CommonLayout(info.consonantSinfo);
 
 const [consonantZ, vowels, hepburnElem] = ['z', [...'aiueo'], 'j'];
 
-// const consonantS = 's';
+// const consonantZ = 'z';
 // const vowels = [...'aiueo'];
-// const hepburnElem = 'h';
+// const hepburnElem = 'j';
 
 // Kunrei-shiki and Nihon-shiki Romaji
-const sVowelsByRomaji = vowels.map((vowel) => consonantS + vowel);
-console.log(sVowelsByRomaji.toString());
-// sa,si,su,se,so
+const zVowelsByRomaji = vowels.map((vowel) => consonantZ + vowel);
+console.log(zVowelsByRomaji.toString());
+// za, zi, zu, ze, zo
 
-// Hepburn-shiki Romaji
-// (We will use this here.)
-const sVowelsByRomajiHepburn = vowels.map((vowel) => {
+// Hepburn-shiki Romaji(We will use this here.)
+const zVowelsByRomajiHepburn = vowels.map((vowel) => {
   if (vowel === 'i') {
-    return consonantS + hepburnElem + vowel;
+    return hepburnElem + vowel;
   } else {
-    return consonantS + vowel;
+    return consonantZ + vowel;
   }
 });
-console.log(sVowelsByRomajiHepburn.toString());
-// sa,shi,su,se,so
+console.log(zVowelsByRomajiHepburn.toString());
+// za, zi, zu, ze, zo
