@@ -972,11 +972,11 @@ console.log(zVowelsByRomajiHepburn.toString());
     sound: ['za', 'ji', 'zu', 'ze', 'zo'],
     jpText: 'The consonant z + vowels spelt by hiragana and katakana.',
     letters: `const zVowelLetters = [
-  { za: { hiragana: 'が', katakana: 'ガ' } },
-  { zi: { hiragana: 'ぎ', katakana: 'ギ' } },
-  { zu: { hiragana: 'ぐ', katakana: 'グ' } },
-  { ze: { hiragana: 'げ', katakana: 'ゲ' } },
-  { zo: { hiragana: 'ご', katakana: 'ゴ' } },
+  { za: { hiragana: 'ざ', katakana: 'ザ' } },
+  { zi: { hiragana: 'じ', katakana: 'ジ' } },
+  { zu: { hiragana: 'ず', katakana: 'ズ' } },
+  { ze: { hiragana: 'ぜ', katakana: 'ゼ' } },
+  { zo: { hiragana: 'ぞ', katakana: 'ゾ' } },
 ];`,
     exampleText: "Let's use consonant g + vowels in practice!",
     examples: `// Base code
@@ -1015,6 +1015,7 @@ const wVowels = { wa: 'わ', o: 'を' };
 const wVowelsParticle = { wa: 'は' };
 const n = 'ん';
 const gVowels = { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+const zVowels = { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;

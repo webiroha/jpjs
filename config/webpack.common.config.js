@@ -39,7 +39,20 @@ const singleMetas = {
   },
 };
 
-const consonants = ['k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'nn', 'g'];
+const consonants = [
+  'k',
+  's',
+  't',
+  'n',
+  'h',
+  'm',
+  'y',
+  'r',
+  'w',
+  'nn',
+  'g',
+  'z',
+];
 
 const [...consonantMetas] = consonants.map((consonant) => {
   const key = () => {
@@ -80,6 +93,7 @@ const webpackConfig = {
     rvowels: './src/app/intro/consonants/rvowels/index.js',
     wvowels: './src/app/intro/consonants/wvowels/index.js',
     gvowels: './src/app/intro/consonants/gvowels/index.js',
+    zvowels: './src/app/intro/consonants/zvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
     fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },
