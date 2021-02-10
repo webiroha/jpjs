@@ -1415,3 +1415,54 @@ console.log(languageHiragana);
 // Language is げんご in Hiragana.
 console.log(languageKanji);
 // げんご is 言語 in Kanji.
+
+// zvowels ----------
+// trivia・ざつがく・雑学
+const trivia = zVowels.za + tVowels.tsu + gVowels.ga + kVowels.ku;
+const triviaHiragana = englishHiragana('Trivia', trivia);
+const triviaKanji = hiraganaKanji(trivia, '雑学');
+
+console.log(triviaHiragana);
+// Trivia is ざつがく in Hiragana.
+console.log(triviaKanji);
+// ざつがく is 雑学 in Kanji.
+
+// life・じんせい・人生
+const life = zVowels.ji + n + sVowels.se + vowels.i;
+const lifeHiragana = englishHiragana('Life', life);
+const lifeKanji = hiraganaKanji(life, '人生');
+
+console.log(lifeHiragana);
+// Life is じんせい in Hiragana.
+console.log(lifeKanji);
+// じんせい is 人生 in Kanji.
+
+// brain・ずのう・頭脳
+const brain = zVowels.zu + nVowels.no + vowels.u;
+const brainHiragana = englishHiragana('Brain', brain);
+const brainKanji = hiraganaKanji(brain, '頭脳');
+
+console.log(brainHiragana);
+// Brain is ずのう in Hiragana.
+console.log(brainKanji);
+// ずのう is 頭脳 in Kanji.
+
+// extinction・ぜつめつ・絶滅
+const extinction = zVowels.ze + tVowels.tsu + mVowels.me + tVowels.tsu;
+const extinctionHiragana = englishHiragana('Extinction', extinction);
+const extinctionKanji = hiraganaKanji(extinction, '絶滅');
+
+console.log(extinctionHiragana);
+// Extinction is ぜつめつ in Hiragana.
+console.log(extinctionKanji);
+// ぜつめつ is 絶滅 in Kanji.
+
+// attribute・ぞくせい・属性
+const attribute = zVowels.zo + kVowels.ku + sVowels.se + vowels.i;
+const attributeHiragana = englishHiragana('Attribute', attribute);
+const attributeKanji = hiraganaKanji(attribute, '属性');
+
+console.log(attributeHiragana);
+// Attribute is ぞくせい in Hiragana.
+console.log(attributeKanji);
+// ぞくせい is 属性 in Kanji.
