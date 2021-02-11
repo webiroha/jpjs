@@ -1014,6 +1014,9 @@ const hiraganaKanji = (
         '',
         'There are three ways to write in consonant d + vowels.',
         'We will use Hepburn-shiki Romaji here.',
+        '',
+        'The sounds and Romaji of "ji" and "zu" are the same as z vowels.',
+        'The letters of "ji" and "zu" are the different from them.',
       ],
     },
     romaji: `const consonantD = 'd';
