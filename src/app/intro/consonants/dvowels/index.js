@@ -7,7 +7,7 @@ import '@wav/zu.wav';
 import '@wav/de.wav';
 import '@wav/do.wav';
 
-CommonLayout(info.consonantZinfo);
+CommonLayout(info.consonantDinfo);
 
 const [consonantD, vowels, hepburnElem] = ['d', [...'aiueo'], ['j', 'z']];
 

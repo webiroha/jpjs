@@ -52,6 +52,7 @@ const consonants = [
   'nn',
   'g',
   'z',
+  'd',
 ];
 
 const [...consonantMetas] = consonants.map((consonant) => {
@@ -94,6 +95,7 @@ const webpackConfig = {
     wvowels: './src/app/intro/consonants/wvowels/index.js',
     gvowels: './src/app/intro/consonants/gvowels/index.js',
     zvowels: './src/app/intro/consonants/zvowels/index.js',
+    dvowels: './src/app/intro/consonants/dvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
     fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },

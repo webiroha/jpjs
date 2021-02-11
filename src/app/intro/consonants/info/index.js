@@ -948,7 +948,12 @@ const hiraganaKanji = (
   consonantZinfo: {
     explain: {
       title: 'Consonant Z',
-      text: "Let's try to learn consonant z + vowels!",
+      text: [
+        "Let's try to learn consonant z + vowels!",
+        '',
+        'There are two ways to write in consonant z + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
     },
     romaji: `const consonantZ = 'z';
 const vowels = [...'aiueo'];
@@ -982,6 +987,86 @@ console.log(zVowelsByRomajiHepburn.toString());
     examples: `// Base code
 const gVowels =
   { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+`,
+    navLink: ['consonants', '', '', ''],
+  },
+
+  consonantDinfo: {
+    explain: {
+      title: 'Consonant D',
+      text: [
+        "Let's try to learn consonant d + vowels!",
+        '',
+        'There are three ways to write in consonant d + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantD = 'd';
+const vowels = [...'aiueo'];
+const hepburnElem = ['j', 'z'];
+
+// Nihon-shiki Romaji
+const dVowelsByRomaji = vowels.map((vowel) => consonantD + vowel);
+console.log(dVowelsByRomaji.toString());
+// da, di, du, de, do
+
+// Kunrei-shiki Romaji
+const dVowelsByRomajiKunrei = vowels.map((vowel) => {
+  if (vowel === 'i' || vowel === 'u') {
+    return hepburnElem[1] + vowel;
+  } else {
+    return consonantD + vowel;
+  }
+});
+console.log(dVowelsByRomajiKunrei.toString());
+// da, zi, zu, de, do
+
+// Hepburn-shiki Romaji(We will use this here.)
+const dVowelsByRomajiHepburn = vowels.map((vowel) => {
+  if (vowel === 'i') {
+    return hepburnElem[0] + vowel;
+  } else if (vowel === 'u') {
+    return hepburnElem[1] + vowel;
+  } else {
+    return consonantD + vowel;
+  }
+});
+console.log(dVowelsByRomajiHepburn.toString());
+// da, ji, zu, de, do`,
+    sound: ['da', 'ji', 'zu', 'de', 'do'],
+    jpText: 'The consonant d + vowels spelt by hiragana and katakana.',
+    letters: `const dVowelLetters = [
+  { da: { hiragana: 'だ', katakana: 'ダ' } },
+  { ji: { hiragana: 'ぢ', katakana: 'ヂ' } },
+  { zu: { hiragana: 'づ', katakana: 'ヅ' } },
+  { de: { hiragana: 'で', katakana: 'デ' } },
+  { do: { hiragana: 'ど', katakana: 'ド' } },
+];`,
+    exampleText: "Let's use consonant d + vowels in practice!",
+    examples: `// Base code
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
 
 const englishHiragana = (
   english,
@@ -1016,6 +1101,7 @@ const wVowelsParticle = { wa: 'は' };
 const n = 'ん';
 const gVowels = { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 const zVowels = { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+const dVowels = { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
