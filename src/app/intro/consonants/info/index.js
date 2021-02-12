@@ -1555,3 +1555,44 @@ console.log(attributeHiragana);
 // Attribute is ぞくせい in Hiragana.
 console.log(attributeKanji);
 // ぞくせい is 属性 in Kanji.
+
+// dvowels ----------
+// kitchen・だいどころ・台所
+const kitchen = dVowels.da + vowels.i + dVowels.do + kVowels.ko + rVowels.ro;
+const kitchenHiragana = englishHiragana('Kitchen', kitchen);
+const kitchenKanji = hiraganaKanji(kitchen, '台所');
+
+console.log(kitchenHiragana);
+// Kitchen is だいどころ in Hiragana.
+console.log(kitchenKanji);
+// だいどころ is 台所 in Kanji.
+
+// nosebleed・はなぢ・鼻血
+const nosebleed = hVowels.ha + nVowels.na + dVowels.ji;
+const nosebleedHiragana = englishHiragana('Nosebleed', nosebleed);
+const nosebleedKanji = hiraganaKanji(nosebleed, '鼻血');
+
+console.log(nosebleedHiragana);
+// Nosebleed is はなぢ in Hiragana.
+console.log(nosebleedKanji);
+// はなぢ is 鼻血 in Kanji.
+
+// crescent moon・みかづき・三日月
+const crescentMoon = mVowels.mi + kVowels.ka + dVowels.zu + kVowels.ki;
+const crescentMoonHiragana = englishHiragana('Crescent moon', crescentMoon);
+const crescentMoonKanji = hiraganaKanji(crescentMoon, '三日月');
+
+console.log(crescentMoonHiragana);
+// Crescent moon is みかづき in Hiragana.
+console.log(crescentMoonKanji);
+// みかづき is 三日月 in Kanji.
+
+// exit・でぐち・出口
+const exit = dVowels.de + gVowels.gu + tVowels.chi;
+const exitHiragana = englishHiragana('Exit', exit);
+const exitKanji = hiraganaKanji(exit, '出口');
+
+console.log(exitHiragana);
+// Exit is でぐち in Hiragana.
+console.log(exitKanji);
+// でぐち is 出口 in Kanji.
