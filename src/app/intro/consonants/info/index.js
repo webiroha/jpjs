@@ -448,7 +448,9 @@ console.log(hVowelsByRomajiHepburn.toString());
 `,
     sound: ['ha', 'hi', 'fu', 'he', 'ho'],
     jpText: 'The consonant h + vowels spelt by hiragana and katakana.',
-    letters: `const hVowelLetters = [
+    letters: `// Hiragana "へ" and Katakana "ヘ" are almost the same.
+// Most Japanese would not recognize the difference between them😅
+const hVowelLetters = [
   { ha: { hiragana: 'は', katakana: 'ハ' } },
   { hi: { hiragana: 'ひ', katakana: 'ヒ' } },
   { fu: { hiragana: 'ふ', katakana: 'フ' } },
