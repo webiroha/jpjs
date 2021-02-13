@@ -1103,6 +1103,34 @@ const hiraganaKanji = (
 `,
     navLink: ['consonants', '', '', ''],
   },
+
+  consonantBinfo: {
+    explain: {
+      title: 'Consonant B',
+      text: "Let's try to learn consonant b + vowels!",
+    },
+    romaji: `const consonantB = 'b';
+const vowels = [...'aiueo'];
+
+const bVowelsByRomaji = vowels.map(
+  (vowel) => consonantB + vowel
+);
+console.log(bVowelsByRomaji.toString());
+// ba, bi, bu, be, bo`,
+    sound: ['ba', 'bi', 'bu', 'be', 'bo'],
+    jpText: 'The consonant b + vowels spelt by hiragana and katakana.',
+    letters: `const bVowelLetters = [
+  { ba: { hiragana: 'ば', katakana: 'バ' } },
+  { bi: { hiragana: 'び', katakana: 'ビ' } },
+  { bu: { hiragana: 'ぶ', katakana: 'ブ' } },
+  { be: { hiragana: 'べ', katakana: 'ベ' } },
+  { bo: { hiragana: 'ぼ', katakana: 'ボ' } },
+];`,
+    exampleText: "Let's use consonant b + vowels in practice!",
+    examples: `// Base code
+`,
+    navLink: ['dvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -1122,6 +1150,7 @@ const n = 'ん';
 const gVowels = { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 const zVowels = { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
 const dVowels = { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+const bVowels = { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
