@@ -458,7 +458,15 @@ const hVowelLetters = [
   { ho: { hiragana: 'ほ', katakana: 'ホ' } },
 ];
 
-// In the case of the 'は/ハ'
+// In the case of the 'へ/ヘ'
+// used as a postpositional particle,
+// the sound is changed into 'e'.
+// Please check the sound in vowels page.
+const Pattern = [
+  { e: { hiragana: 'へ', katakana: 'ヘ' } },
+];
+
+// Also, in the case of the 'は/ハ'
 // used as a postpositional particle,
 // the sound is changed into 'wa'.
 // Please check the sound in wvowels page
