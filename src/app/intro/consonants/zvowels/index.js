@@ -29,4 +29,4 @@ const zVowelsByRomajiHepburn = vowels.map((vowel) => {
   }
 });
 console.log(zVowelsByRomajiHepburn.toString());
-// za, zi, zu, ze, zo
+// za, ji, zu, ze, zo

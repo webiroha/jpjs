@@ -990,12 +990,12 @@ const zVowelsByRomajiHepburn = vowels.map((vowel) => {
   }
 });
 console.log(zVowelsByRomajiHepburn.toString());
-// za, zi, zu, ze, zo`,
+// za, ji, zu, ze, zo`,
     sound: ['za', 'ji', 'zu', 'ze', 'zo'],
     jpText: 'The consonant z + vowels spelt by hiragana and katakana.',
     letters: `const zVowelLetters = [
   { za: { hiragana: 'ざ', katakana: 'ザ' } },
-  { zi: { hiragana: 'じ', katakana: 'ジ' } },
+  { ji: { hiragana: 'じ', katakana: 'ジ' } },
   { zu: { hiragana: 'ず', katakana: 'ズ' } },
   { ze: { hiragana: 'ぜ', katakana: 'ゼ' } },
   { zo: { hiragana: 'ぞ', katakana: 'ゾ' } },
@@ -1033,7 +1033,7 @@ const hiraganaKanji = (
         'We will use Hepburn-shiki Romaji here.',
         '',
         'The sounds and Romaji of "ji" and "zu" are the same as z vowels.',
-        'The letters of "ji" and "zu" are the different from them.',
+        'These letters are the different from them.',
       ],
     },
     romaji: `const consonantD = 'd';
