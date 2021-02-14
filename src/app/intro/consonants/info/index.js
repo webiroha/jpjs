@@ -508,6 +508,15 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// flower・はな・花
+const flower = hVowels.ha + nVowels.na;
+const flowerHiragana = englishHiragana('Flower', flower);
+const flowerKanji = hiraganaKanji(flower, '花');
+
+console.log(flowerHiragana);
+// Flower is はな in Hiragana.
+console.log(flowerKanji);
+// はな is 花 in Kanji.
 `,
     navLink: ['nvowels', '', '', ''],
   },
@@ -1322,7 +1331,7 @@ console.log(catKanji);
 // ねこ is 猫 in Kanji.
 
 // h vowels ----------
-// はな
+// flower・はな・花
 const flower = hVowels.ha + nVowels.na;
 const flowerHiragana = englishHiragana('Flower', flower);
 const flowerKanji = hiraganaKanji(flower, '花');
