@@ -1642,3 +1642,9 @@ console.log(exitHiragana);
 // Exit is でぐち in Hiragana.
 console.log(exitKanji);
 // でぐち is 出口 in Kanji.
+
+// bvowels ----------
+// double・ばい・倍
+// travel・たび・旅
+// stationery・ぶんぼうぐ・文房具
+// lawyer・べんごし・弁護士
