@@ -3,6 +3,6 @@ export const pagelist = {
     'preparation',
     'characters',
     'vowels',
-    { consonants: ['kvowels', 'svowels', 'tvowels', 'nvowels'] },
+    { consonants: ['kvowels', 'svowels', 'tvowels', 'nvowels', 'hvowels'] },
   ],
 };
