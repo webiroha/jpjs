@@ -1654,6 +1654,41 @@ console.log(exitKanji);
 
 // bvowels ----------
 // double・ばい・倍
+const double = bVowels.ba + vowels.i;
+const doubleHiragana = englishHiragana('Double', double);
+const doubleKanji = hiraganaKanji(double, '倍');
+
+console.log(doubleHiragana);
+// Double is ばい in Hiragana.
+console.log(doubleKanji);
+// ばい is 倍 in Kanji.
+
 // travel・たび・旅
+const travel = tVowels.ta + bVowels.bi;
+const travelHiragana = englishHiragana('Travel', travel);
+const travelKanji = hiraganaKanji(travel, '旅');
+
+console.log(travelHiragana);
+// Travel is たび in Hiragana.
+console.log(travelKanji);
+// たび is 旅 in Kanji.
+
 // stationery・ぶんぼうぐ・文房具
+const stationery = bVowels.bu + n + bVowels.bo + vowels.u + gVowels.gu;
+const stationeryHiragana = englishHiragana('Stationery', stationery);
+const stationeryKanji = hiraganaKanji(stationery, '文房具');
+
+console.log(stationeryHiragana);
+// Stationery is ぶんぼうぐ in Hiragana.
+console.log(stationeryKanji);
+// ぶんぼうぐ is 文房具 in Kanji.
+
 // lawyer・べんごし・弁護士
+const lawyer = bVowels.be + n + gVowels.go + sVowels.shi;
+const lawyerHiragana = englishHiragana('Lawyer', lawyer);
+const lawyerKanji = hiraganaKanji(lawyer, '弁護士');
+
+console.log(lawyerHiragana);
+// Lawyer is べんごし in Hiragana.
+console.log(lawyerKanji);
+// べんごし is 弁護士 in Kanji.
