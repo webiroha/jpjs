@@ -1141,6 +1141,34 @@ console.log(bVowelsByRomaji.toString());
 `,
     navLink: ['dvowels', '', '', ''],
   },
+
+  consonantPinfo: {
+    explain: {
+      title: 'Consonant P',
+      text: "Let's try to learn consonant p + vowels!",
+    },
+    romaji: `const consonantP = 'p';
+const vowels = [...'aiueo'];
+
+const pVowelsByRomaji = vowels.map(
+  (vowel) => consonantP + vowel
+);
+console.log(pVowelsByRomaji.toString());
+// pa, pi, pu, pe, po`,
+    sound: ['pa', 'pi', 'pu', 'pe', 'po'],
+    jpText: 'The consonant p + vowels spelt by hiragana and katakana.',
+    letters: `const pVowelLetters = [
+  { pa: { hiragana: 'ぱ', katakana: 'パ' } },
+  { pi: { hiragana: 'ぴ', katakana: 'ピ' } },
+  { pu: { hiragana: 'ぷ', katakana: 'プ' } },
+  { pe: { hiragana: 'ぺ', katakana: 'ペ' } },
+  { po: { hiragana: 'ぽ', katakana: 'ポ' } },
+];`,
+    exampleText: "Let's use consonant p + vowels in practice!",
+    examples: `// Base code
+`,
+    navLink: ['bvowels', '', '', ''],
+  },
 };
 
 export default info;

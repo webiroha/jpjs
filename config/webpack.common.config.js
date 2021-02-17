@@ -54,6 +54,7 @@ const consonants = [
   'z',
   'd',
   'b',
+  'p',
 ];
 
 const [...consonantMetas] = consonants.map((consonant) => {
@@ -98,6 +99,7 @@ const webpackConfig = {
     zvowels: './src/app/intro/consonants/zvowels/index.js',
     dvowels: './src/app/intro/consonants/dvowels/index.js',
     bvowels: './src/app/intro/consonants/bvowels/index.js',
+    pvowels: './src/app/intro/consonants/pvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
     fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },
