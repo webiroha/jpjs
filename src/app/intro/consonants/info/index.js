@@ -1189,6 +1189,7 @@ const gVowels = { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 const zVowels = { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
 const dVowels = { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
 const bVowels = { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+const pVowels = { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -1721,3 +1722,54 @@ console.log(lawyerHiragana);
 // Lawyer is べんごし in Hiragana.
 console.log(lawyerKanji);
 // べんごし is 弁護士 in Kanji.
+
+// pvowels ----------
+// signal/reception・でんぱ・電波
+const signal = dVowels.de + n + pVowels.pa;
+const signalHiragana = englishHiragana('Signal', signal);
+const signalKanji = hiraganaKanji(signal, '電波');
+
+console.log(signalHiragana);
+// Signal is でんぱ in Hiragana.
+console.log(signalKanji);
+// でんぱ is 電波 in Kanji.
+
+// for and against・さんぴ・賛否
+const forAndAgainst = sVowels.sa + n + pVowels.pi;
+const forAndAgainstHiragana = englishHiragana('For and against', forAndAgainst);
+const forAndAgainstKanji = hiraganaKanji(forAndAgainst, '賛否');
+
+console.log(forAndAgainstHiragana);
+// For and against is さんぴ in Hiragana.
+console.log(forAndAgainstKanji);
+// さんぴ is 賛否 in Kanji.
+
+// music note・おんぷ・音符
+const musicNote = vowels.o + n + pVowels.pu;
+const musicNoteHiragana = englishHiragana('Music note', musicNote);
+const musicNoteKanji = hiraganaKanji(musicNote, '音符');
+
+console.log(musicNoteHiragana);
+// Music note is おんぷ in Hiragana.
+console.log(musicNoteKanji);
+// おんぷ is 音符 in Kanji.
+
+// perfect・かんぺき・完璧
+const perfect = kVowels.ka + n + pVowels.pe + kVowels.ki;
+const perfectHiragana = englishHiragana('Perfect', perfect);
+const perfectKanji = hiraganaKanji(perfect, '完璧');
+
+console.log(perfectHiragana);
+// Perfect is かんぺき in Hiragana.
+console.log(perfectKanji);
+// かんぺき is 完璧 in Kanji.
+
+// progress・しんぽ・進歩
+const progress = sVowels.shi + n + pVowels.po;
+const progressHiragana = englishHiragana('Progress', progress);
+const progressKanji = hiraganaKanji(progress, '進歩');
+
+console.log(progressHiragana);
+// Progress is しんぽ in Hiragana.
+console.log(progressKanji);
+// しんぽ is 進歩 in Kanji.
