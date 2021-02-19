@@ -932,7 +932,10 @@ const hiraganaKanji = (
   consonantGinfo: {
     explain: {
       title: 'Consonant G',
-      text: "Let's try to learn consonant g + vowels!",
+      text: [
+        "Let's try to learn consonant g + vowels!",
+        'These words are voiced version of consonant k + vowels.',
+      ],
     },
     romaji: `const consonantG = 'g';
 const vowels = [...'aiueo'];
@@ -944,7 +947,8 @@ console.log(gVowelsByRomaji.toString());
 // ga, gi, gu, ge, go`,
     sound: ['ga', 'gi', 'gu', 'ge', 'go'],
     jpText: 'The consonant g + vowels spelt by hiragana and katakana.',
-    letters: `const gVowelLetters = [
+    letters: `// The mark of "゛" is added at the right top hand corner
+const gVowelLetters = [
   { ga: { hiragana: 'が', katakana: 'ガ' } },
   { gi: { hiragana: 'ぎ', katakana: 'ギ' } },
   { gu: { hiragana: 'ぐ', katakana: 'グ' } },
@@ -977,6 +981,7 @@ const hiraganaKanji = (
       title: 'Consonant Z',
       text: [
         "Let's try to learn consonant z + vowels!",
+        'These words are voiced version of consonant s + vowels.',
         '',
         'There are two ways to write in consonant z + vowels.',
         'We will use Hepburn-shiki Romaji here.',
@@ -1003,7 +1008,8 @@ console.log(zVowelsByRomajiHepburn.toString());
 // za, ji, zu, ze, zo`,
     sound: ['za', 'ji', 'zu', 'ze', 'zo'],
     jpText: 'The consonant z + vowels spelt by hiragana and katakana.',
-    letters: `const zVowelLetters = [
+    letters: `// The mark of "゛" is added at the right top hand corner
+const zVowelLetters = [
   { za: { hiragana: 'ざ', katakana: 'ザ' } },
   { ji: { hiragana: 'じ', katakana: 'ジ' } },
   { zu: { hiragana: 'ず', katakana: 'ズ' } },
@@ -1038,6 +1044,7 @@ const hiraganaKanji = (
       title: 'Consonant D',
       text: [
         "Let's try to learn consonant d + vowels!",
+        'These words are voiced version of consonant t + vowels.',
         '',
         'There are three ways to write in consonant d + vowels.',
         'We will use Hepburn-shiki Romaji here.',
@@ -1080,7 +1087,8 @@ console.log(dVowelsByRomajiHepburn.toString());
 // da, ji, zu, de, do`,
     sound: ['da', 'ji', 'zu', 'de', 'do'],
     jpText: 'The consonant d + vowels spelt by hiragana and katakana.',
-    letters: `const dVowelLetters = [
+    letters: `// The mark of "゛" is added at the right top hand corner
+const dVowelLetters = [
   { da: { hiragana: 'だ', katakana: 'ダ' } },
   { ji: { hiragana: 'ぢ', katakana: 'ヂ' } },
   { zu: { hiragana: 'づ', katakana: 'ヅ' } },
@@ -1117,7 +1125,10 @@ const hiraganaKanji = (
   consonantBinfo: {
     explain: {
       title: 'Consonant B',
-      text: "Let's try to learn consonant b + vowels!",
+      text: [
+        "Let's try to learn consonant b + vowels!",
+        'These words are voiced version of consonant h + vowels.',
+      ],
     },
     romaji: `const consonantB = 'b';
 const vowels = [...'aiueo'];
@@ -1129,7 +1140,8 @@ console.log(bVowelsByRomaji.toString());
 // ba, bi, bu, be, bo`,
     sound: ['ba', 'bi', 'bu', 'be', 'bo'],
     jpText: 'The consonant b + vowels spelt by hiragana and katakana.',
-    letters: `const bVowelLetters = [
+    letters: `// The mark of "゛" is added at the right top hand corner
+const bVowelLetters = [
   { ba: { hiragana: 'ば', katakana: 'バ' } },
   { bi: { hiragana: 'び', katakana: 'ビ' } },
   { bu: { hiragana: 'ぶ', katakana: 'ブ' } },
@@ -1157,7 +1169,8 @@ console.log(pVowelsByRomaji.toString());
 // pa, pi, pu, pe, po`,
     sound: ['pa', 'pi', 'pu', 'pe', 'po'],
     jpText: 'The consonant p + vowels spelt by hiragana and katakana.',
-    letters: `const pVowelLetters = [
+    letters: `// The mark of "゜" is added at the right top hand corner
+const pVowelLetters = [
   { pa: { hiragana: 'ぱ', katakana: 'パ' } },
   { pi: { hiragana: 'ぴ', katakana: 'ピ' } },
   { pu: { hiragana: 'ぷ', katakana: 'プ' } },
