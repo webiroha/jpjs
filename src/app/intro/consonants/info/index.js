@@ -518,6 +518,31 @@ console.log(flowerHiragana);
 // Flower is はな in Hiragana.
 console.log(flowerKanji);
 // はな is 花 in Kanji.
+
+
+// skin・ひふ・皮膚
+const skin = hVowels.hi + hVowels.fu;
+const skinHiragana = englishHiragana('Skin', skin);
+const skinKanji = hiraganaKanji(skin, '皮膚');
+
+console.log(skinHiragana);
+// Skin is ひふ in Hiragana.
+console.log(skinKanji);
+// ひふ is 皮膚 in Kanji.
+
+
+// equity・こうへい・公平
+const equity = kVowels.ko + vowels.u + hVowels.he + vowels.i;
+const equityHiragana = englishHiragana('Equity', equity);
+const equityKanji = hiraganaKanji(equity, '公平');
+
+console.log(equityHiragana);
+// Equity is こうへい in Hiragana.
+console.log(equityKanji);
+// こうへい is 公平 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Kohei" and omit 'u'.
+// It will be explained later.
 `,
     navLink: ['nvowels', '', '', ''],
   },
