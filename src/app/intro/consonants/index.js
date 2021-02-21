@@ -98,15 +98,15 @@ const Consonants = () => {
 
   DetailsBlock.tag.appendChild(BasicLinks());
 
-  const TheOthersTitleInfo = {
+  const VoicedPTitleInfo = {
     role: 'sub-s',
     element: 'h3',
     title: 'Voiced and p sounds',
     text: ['- work in progress -'],
   };
 
-  const TheOthersTitleInfoBlock = TitleWithText(TheOthersTitleInfo);
-  DetailsBlock.tag.appendChild(TheOthersTitleInfoBlock());
+  const VoicedPTitleInfoBlock = TitleWithText(VoicedPTitleInfo);
+  DetailsBlock.tag.appendChild(VoicedPTitleInfoBlock());
 
   DetailsBlock.tag.appendChild(VoicedPLinks());
 
