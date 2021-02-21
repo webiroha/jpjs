@@ -5,6 +5,7 @@ import TitleWithText from '@root/components/TitleWithText';
 import CodeBlock from '@root/components/CodeBlock';
 import BasicLinks from './components/BasicLinks';
 import VoicedPLinks from './components/VoicedPLinks';
+import ContractedLinks from './components/ContractedLinks';
 import PageNavLink from '@root/components/links/PageNavLink';
 
 const Consonants = () => {
@@ -109,6 +110,18 @@ const Consonants = () => {
   DetailsBlock.tag.appendChild(VoicedPTitleInfoBlock());
 
   DetailsBlock.tag.appendChild(VoicedPLinks());
+
+  const ContractedTitleInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'Contracted sounds',
+    text: ['- work in progress -'],
+  };
+
+  const ContractedTitleInfoBlock = TitleWithText(ContractedTitleInfo);
+  DetailsBlock.tag.appendChild(ContractedTitleInfoBlock());
+
+  DetailsBlock.tag.appendChild(ContractedLinks());
 
   ContentsFragDetails().appendChild(DetailsBlock.tag);
   DetailsSection.tag.appendChild(ContentsFragDetails());
