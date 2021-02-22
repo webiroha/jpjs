@@ -185,6 +185,8 @@ console.log(...roughMainSystem);
 const contractedConsonants = [...'ksctnhmrgjzdbp'];
 const middle = 'y';
 const roughContractedSystem = contractedConsonants.map((consonant) =>
-  vowels.map((vowel) => consonant + middle + vowel)
+  vowels
+    .filter((_, i) => i % 2 === 0)
+    .map((vowel) => consonant + middle + vowel)
 );
 console.log(...roughContractedSystem);
