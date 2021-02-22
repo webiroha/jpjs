@@ -1,15 +1,15 @@
 import CommonLayout from '@root/intro/consonants/components/CommonLayout';
 import info from '@root/intro/consonants/info';
 
-import '@wav/ka.wav';
-import '@wav/ki.wav';
-import '@wav/ku.wav';
-import '@wav/ke.wav';
-import '@wav/ko.wav';
+import '@wav/kya.wav';
+import '@wav/kyu.wav';
+import '@wav/kyo.wav';
 
 CommonLayout(info.consonantKYinfo);
 
 const consonantKY = 'ky';
 const vowels = [...'aiueo'];
-const kyVowelsByRomaji = vowels.map((vowel) => consonantKY + vowel);
+const kyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantKY + vowel);
 console.log(kyVowelsByRomaji.toString());
