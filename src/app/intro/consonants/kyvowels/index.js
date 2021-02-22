@@ -5,7 +5,7 @@ import '@wav/kya.wav';
 import '@wav/kyu.wav';
 import '@wav/kyo.wav';
 
-CommonLayout(info.consonantKYinfo);
+CommonLayout(info.consonantKinfo);
 
 const consonantKY = 'ky';
 const vowels = [...'aiueo'];
