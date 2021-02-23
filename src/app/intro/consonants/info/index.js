@@ -1211,40 +1211,24 @@ const pVowelLetters = [
   consonantKYinfo: {
     explain: {
       title: 'Consonant KY',
-      text: [
-        "Let's try to learn consonant k + vowels!",
-        '',
-        'This combination is fewer than the others.',
-      ],
+      text: "Let's try to learn consonant ky + vowels!",
     },
-    romaji: `const consonantY = 'y';
+    romaji: `const consonantKY = 'ky';
 const vowels = [...'aiueo'];
 
-const mVowelsByRomaji = vowels
+const kyVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
-  .map((vowel) => consonantY + vowel);
-console.log(mVowelsByRomaji.toString());
-// ya, yu, yo
-
-// There might be a time you see such the ways to be written.
-// The 'i' and 'e' are the same as vowels'
-// and most Japanese might not be sure when to use😅
-const yVowelsByRomajiSeldom = vowels.map((vowel) => {
-  if (vowel === 'i') return vowel;
-  else if (vowel === 'e') return vowel;
-  else return consonantY + vowel;
-});
-
-console.log(yVowelsByRomajiSeldom.toString());
-// ya, i, yu, e, yo`,
-    sound: ['ya', 'yu', 'yo'],
-    jpText: 'The consonant y + vowels spelt by hiragana and katakana.',
-    letters: `const yVowelLetters = [
-  { ya: { hiragana: 'や', katakana: 'ヤ' } },
-  { yu: { hiragana: 'ゆ', katakana: 'ユ' } },
-  { yo: { hiragana: 'よ', katakana: 'ヨ' } },
+  .map((vowel) => consonantKY + vowel);
+console.log(kyVowelsByRomaji.toString());
+// kya, kyu, kyo`,
+    sound: ['kya', 'kyu', 'kyo'],
+    jpText: 'The consonant ky + vowels spelt by hiragana and katakana.',
+    letters: `const kyVowelLetters = [
+  { kya: { hiragana: 'きゃ', katakana: 'キャ' } },
+  { kyu: { hiragana: 'きゅ', katakana: 'キュ' } },
+  { kyo: { hiragana: 'きょ', katakana: 'キョ' } },
 ];`,
-    exampleText: "Let's use consonant y + vowels in practice!",
+    exampleText: "Let's use consonant ky + vowels in practice!",
     examples: `// Base code
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
