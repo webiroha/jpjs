@@ -115,7 +115,10 @@ const Consonants = () => {
     role: 'sub-s',
     element: 'h3',
     title: 'Contracted sounds',
-    text: ['- work in progress -'],
+    text: [
+      'This combination rule is similar to consonant y + vowels.',
+      '- work in progress -',
+    ],
   };
 
   const ContractedTitleInfoBlock = TitleWithText(ContractedTitleInfo);
