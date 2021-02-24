@@ -1288,6 +1288,7 @@ const zVowels = { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
 const dVowels = { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
 const bVowels = { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
 const pVowels = { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+const kyVowels = { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -1871,3 +1872,37 @@ console.log(progressHiragana);
 // Progress is しんぽ in Hiragana.
 console.log(progressKanji);
 // しんぽ is 進歩 in Kanji.
+
+// kyvowels ----------
+// scriptwriter・きゃくほんか・脚本家
+const scriptwriter = kyVowels.kya + kVowels.ku + hVowels.ho + n + kVowels.ka;
+const scriptwriterHiragana = englishHiragana('Scriptwriter', scriptwriter);
+const scriptwriterKanji = hiraganaKanji(scriptwriter, '脚本家');
+
+console.log(scriptwriterHiragana);
+// Scriptwriter is きゃくほんか in Hiragana.
+console.log(scriptwriterKanji);
+// きゃくほんか is 脚本家 in Kanji.
+
+// nine・きゅう・九
+const nine = kyVowels.kyu + vowels.u;
+const nineHiragana = englishHiragana('Nine', nine);
+const nineKanji = hiraganaKanji(nine, '九');
+
+console.log(nineHiragana);
+// Nine is きゅう in Hiragana.
+console.log(nineKanji);
+// きゅう is 九 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Kyu" and omit 'u'.
+// It will be explained later.
+
+// election・せんきょ・選挙
+const election = sVowels.se + n + kyVowels.kyo;
+const electionHiragana = englishHiragana('Election', election);
+const electionKanji = hiraganaKanji(election, '選挙');
+
+console.log(electionHiragana);
+// Election is せんきょ in Hiragana.
+console.log(electionKanji);
+// せんきょ is 選挙 in Kanji.
