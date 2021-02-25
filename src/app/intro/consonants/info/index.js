@@ -1213,7 +1213,8 @@ const pVowelLetters = [
       title: 'Consonant KY',
       text: "Let's try to learn consonant ky + vowels!",
     },
-    romaji: `const consonantKY = 'ky';
+    romaji: `const consonantK = 'k';
+const hepburnElem = 'y';
 const vowels = [...'aiueo'];
 
 const kyVowelsByRomaji = vowels
