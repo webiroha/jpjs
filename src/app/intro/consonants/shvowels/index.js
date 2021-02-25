@@ -7,10 +7,17 @@ import '@wav/sho.wav';
 
 CommonLayout(info.consonantKYinfo);
 
-const consonantS = 's';
-const kunreiNihonElem = 'y';
-const hepburnElem = 'h';
-const vowels = [...'aiueo'];
+const [consonantS, kunreiNihonElem, hepburnElem, vowels] = [
+  'k',
+  'y',
+  'h',
+  [...'aiueo'],
+];
+
+// const consonantS = 's';
+// const kunreiNihonElem = 'y';
+// const hepburnElem = 'h';
+// const vowels = [...'aiueo'];
 
 // Kunrei-shiki and Nihon-shiki Romaji
 const shVowelsByRomaji = vowels
