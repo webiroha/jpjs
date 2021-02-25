@@ -1219,7 +1219,7 @@ const vowels = [...'aiueo'];
 
 const kyVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
-  .map((vowel) => consonantKY + vowel);
+  .map((vowel) => consonantK + hepburnElem + vowel);
 console.log(kyVowelsByRomaji.toString());
 // kya, kyu, kyo`,
     sound: ['kya', 'kyu', 'kyo'],

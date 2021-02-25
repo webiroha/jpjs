@@ -7,9 +7,12 @@ import '@wav/kyo.wav';
 
 CommonLayout(info.consonantKYinfo);
 
-const consonantK = 'k';
-const hepburnElem = 'y';
-const vowels = [...'aiueo'];
+const [consonantK, hepburnElem, vowels] = ['k', 'y', [...'aiueo']];
+
+// const consonantK = 'k';
+// const hepburnElem = 'y';
+// const vowels = [...'aiueo'];
+
 const kyVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
   .map((vowel) => consonantK + hepburnElem + vowel);
