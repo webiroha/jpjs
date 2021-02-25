@@ -8,7 +8,7 @@ import '@wav/sho.wav';
 CommonLayout(info.consonantKYinfo);
 
 const [consonantS, kunreiNihonElem, hepburnElem, vowels] = [
-  'k',
+  's',
   'y',
   'h',
   [...'aiueo'],
