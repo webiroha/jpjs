@@ -1211,7 +1211,7 @@ const pVowelLetters = [
   consonantKYinfo: {
     explain: {
       title: 'Consonant KY',
-      text: "Let's try to learn consonant ky + vowels!",
+      text: "Let's try to learn consonant k + y + vowels!",
     },
     romaji: `const consonantK = 'k';
 const hepburnElem = 'y';
@@ -1223,13 +1223,13 @@ const kyVowelsByRomaji = vowels
 console.log(kyVowelsByRomaji.toString());
 // kya, kyu, kyo`,
     sound: ['kya', 'kyu', 'kyo'],
-    jpText: 'The consonant ky + vowels spelt by hiragana and katakana.',
+    jpText: 'The consonant k + y + vowels spelt by hiragana and katakana.',
     letters: `const kyVowelLetters = [
   { kya: { hiragana: 'きゃ', katakana: 'キャ' } },
   { kyu: { hiragana: 'きゅ', katakana: 'キュ' } },
   { kyo: { hiragana: 'きょ', katakana: 'キョ' } },
 ];`,
-    exampleText: "Let's use consonant ky + vowels in practice!",
+    exampleText: "Let's use consonant k + y + vowels in practice!",
     examples: `// Base code
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
