@@ -5,7 +5,7 @@ import '@wav/sha.wav';
 import '@wav/shu.wav';
 import '@wav/sho.wav';
 
-CommonLayout(info.consonantKYinfo);
+CommonLayout(info.consonantSHinfo);
 
 const [consonantS, kunreiNihonElem, hepburnElem, vowels] = [
   's',

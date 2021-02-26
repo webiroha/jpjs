@@ -1268,6 +1268,69 @@ const hiraganaKanji = (
 `,
     navLink: ['mvowels', '', '', ''],
   },
+
+  consonantSHinfo: {
+    explain: {
+      title: 'Consonant SH',
+      text: [
+        "Let's try to learn consonant s + h + vowels!",
+        '',
+        'There are two ways to write in consonant s + h + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantS = 's';
+const kunreiNihonElem = 'y';
+const hepburnElem = 'h';
+const vowels = [...'aiueo'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
+const shVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantS + kunreiNihonElem + vowel);
+console.log(shVowelsByRomaji.toString());
+// sya, syu, syo
+
+// Hepburn-shiki Romaji(We will use this here.)
+const shVowelsByRomajiHepburn = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantS + hepburnElem + vowel);
+console.log(shVowelsByRomajiHepburn.toString());
+// sha, shu, sho
+`,
+    sound: ['sha', 'shu', 'sho'],
+    jpText: 'The consonant s + h + vowels spelt by hiragana and katakana.',
+    letters: `const shVowelLetters = [
+  { sha: { hiragana: 'しゃ', katakana: 'シャ' } },
+  { shu: { hiragana: 'しゅ', katakana: 'シュ' } },
+  { sho: { hiragana: 'しょ', katakana: 'ショ' } },
+];`,
+    exampleText: "Let's use consonant s + h + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+`,
+    navLink: ['kyvowels', '', '', ''],
+  },
 };
 
 export default info;
