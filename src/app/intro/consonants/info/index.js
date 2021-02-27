@@ -1353,6 +1353,7 @@ const dVowels = { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
 const bVowels = { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
 const pVowels = { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
 const kyVowels = { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+const shVowels = { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -1970,3 +1971,34 @@ console.log(electionHiragana);
 // Election is せんきょ in Hiragana.
 console.log(electionKanji);
 // せんきょ is 選挙 in Kanji.
+
+// shvowels ----------
+// photo・しゃしん・写真
+const photo = shVowels.sha + sVowels.shi + n;
+const photoHiragana = englishHiragana('Photo', photo);
+const photoKanji = hiraganaKanji(photo, '写真');
+
+console.log(photoHiragana);
+// Photo is しゃしん in Hiragana.
+console.log(photoKanji);
+// しゃしん is 写真 in Kanji.
+
+// hobby・しゅみ・趣味
+const hobby = shVowels.shu + mVowels.mi;
+const hobbyHiragana = englishHiragana('Hobby', hobby);
+const hobbyKanji = hiraganaKanji(hobby, '趣味');
+
+console.log(hobbyHiragana);
+// Hobby is しゅみ in Hiragana.
+console.log(hobbyKanji);
+// しゅみ is 趣味 in Kanji.
+
+// meal・しょくじ・食事
+const meal = shVowels.sho + kVowels.ku + zVowels.ji;
+const mealHiragana = englishHiragana('Meal', meal);
+const mealKanji = hiraganaKanji(meal, '食事');
+
+console.log(mealHiragana);
+// Meal is しょくじ in Hiragana.
+console.log(mealKanji);
+// しょくじ is 食事 in Kanji.
