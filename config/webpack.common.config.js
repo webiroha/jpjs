@@ -57,6 +57,7 @@ const consonants = [
   'p',
   'ky',
   'sh',
+  'ch',
 ];
 
 const [...consonantMetas] = consonants.map((consonant) => {
@@ -104,6 +105,7 @@ const webpackConfig = {
     pvowels: './src/app/intro/consonants/pvowels/index.js',
     kyvowels: './src/app/intro/consonants/kyvowels/index.js',
     shvowels: './src/app/intro/consonants/shvowels/index.js',
+    chvowels: './src/app/intro/consonants/chvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
     fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },

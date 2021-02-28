@@ -1331,6 +1331,69 @@ const hiraganaKanji = (
 `,
     navLink: ['kyvowels', '', '', ''],
   },
+
+  consonantCHinfo: {
+    explain: {
+      title: 'Consonant CH',
+      text: [
+        "Let's try to learn consonant c + h + vowels!",
+        '',
+        'There are two ways to write in consonant c + h + vowels.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantC = 'c';
+const kunreiNihonElem = 'ty';
+const hepburnElem = 'h';
+const vowels = [...'aiueo'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
+const chVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => kunreiNihonElem + vowel);
+console.log(chVowelsByRomaji.toString());
+// tya, tyu, tyo
+
+// Hepburn-shiki Romaji(We will use this here.)
+const chVowelsByRomajiHepburn = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantC + hepburnElem + vowel);
+console.log(chVowelsByRomajiHepburn.toString());
+// cha, chu, cho
+`,
+    sound: ['cha', 'chu', 'cho'],
+    jpText: 'The consonant c + h + vowels spelt by hiragana and katakana.',
+    letters: `const chVowelLetters = [
+  { cha: { hiragana: 'ちゃ', katakana: 'チャ' } },
+  { chu: { hiragana: 'ちゅ', katakana: 'チュ' } },
+  { cho: { hiragana: 'ちょ', katakana: 'チョ' } },
+];`,
+    exampleText: "Let's use consonant c + h + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+`,
+    navLink: ['kyvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -1354,6 +1417,7 @@ const bVowels = { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
 const pVowels = { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
 const kyVowels = { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
 const shVowels = { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+const chVowels = { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2002,3 +2066,40 @@ console.log(mealHiragana);
 // Meal is しょくじ in Hiragana.
 console.log(mealKanji);
 // しょくじ is 食事 in Kanji.
+
+// chvowels ----------
+// tea・ちゃ・写真
+const tea = chVowels.cha;
+const teaHiragana = englishHiragana('Tea', tea);
+const teaKanji = hiraganaKanji(tea, '茶');
+
+console.log(teaHiragana);
+// Tea is ちゃ in Hiragana.
+console.log(teaKanji);
+// ちゃ is 茶 in Kanji.
+
+// lunch・ちゅうしょく・昼食
+const lunch = chVowels.chu + vowels.u + shVowels.sho + kVowels.ku;
+const lunchHiragana = englishHiragana('Lunch', lunch);
+const lunchKanji = hiraganaKanji(lunch, '昼食');
+
+console.log(lunchHiragana);
+// Lunch is ちゅうしょく in Hiragana.
+console.log(lunchKanji);
+// ちゅうしょく is 昼食 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Chushoku" and omit 'u'.
+// It will be explained later.
+
+// breakfast・ちょうしょく・昼食
+const breakfast = chVowels.cho + vowels.u + shVowels.sho + kVowels.ku;
+const breakfastHiragana = englishHiragana('Breakfast', breakfast);
+const breakfastKanji = hiraganaKanji(breakfast, '朝食');
+
+console.log(breakfastHiragana);
+// Breakfast is ちょうしょく in Hiragana.
+console.log(breakfastKanji);
+// ちょうしょく is 朝食 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Choshoku" and omit 'u'.
+// It will be explained later.
