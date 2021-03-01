@@ -1394,6 +1394,67 @@ const hiraganaKanji = (
 `,
     navLink: ['kyvowels', '', '', ''],
   },
+
+  consonantNYinfo: {
+    explain: {
+      title: 'Consonant NY',
+      text: "Let's try to learn consonant n + y + vowels!",
+    },
+    romaji: `const consonantN = 'n';
+const hepburnElem = 'y';
+const vowels = [...'aiueo'];
+
+const nyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantN + hepburnElem + vowel);
+console.log(nyVowelsByRomaji.toString());
+// nya, nyu, nyo`,
+    sound: ['nya', 'nyu', 'nyo'],
+    jpText: 'The consonant n + y + vowels spelt by hiragana and katakana.',
+    letters: `const nyVowelLetters = [
+  { nya: { hiragana: 'にゃ', katakana: 'ニャ' } },
+  { nyu: { hiragana: 'にゅ', katakana: 'ニュ' } },
+  { nyo: { hiragana: 'にょ', katakana: 'ニョ' } },
+];`,
+    exampleText: "Let's use consonant n + y + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['chvowels', '', '', ''],
+  },
 };
 
 export default info;
