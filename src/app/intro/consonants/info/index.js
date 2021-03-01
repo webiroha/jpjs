@@ -543,8 +543,19 @@ console.log(equityKanji);
 // *The Romaji of this word is expressed
 // as a "Kohei" and omit 'u'.
 // It will be explained later.
+
+
+// star・ほし・星
+const star = hVowels.ho + sVowels.shi;
+const starHiragana = englishHiragana('Star', star);
+const starKanji = hiraganaKanji(star, '星');
+
+console.log(starHiragana);
+// Star is ほし in Hiragana.
+console.log(starKanji);
+// ほし is 星 in Kanji.
 `,
-    navLink: ['nvowels', '', '', ''],
+    navLink: ['nvowels', 'mvowels', '', ''],
   },
 
   consonantMinfo: {
@@ -592,9 +603,6 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
-const yVowels =
-  { ya: 'や', yu: 'ゆ', yo: 'よ' };
-
 const englishHiragana = (
   english,
   hiragana
@@ -608,6 +616,15 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// bean・まめ・豆
+const bean = mVowels.ma + mVowels.me;
+const beanHiragana = englishHiragana('Bean', bean);
+const beanKanji = hiraganaKanji(bean, '豆');
+
+console.log(beanHiragana);
+// Bean is まめ in Hiragana.
+console.log(beanKanji);
+// まめ is 豆 in Kanji.
 `,
     navLink: ['hvowels', '', '', ''],
   },
