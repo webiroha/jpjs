@@ -26,7 +26,8 @@ const BasicLink = (consonant) => {
     consonant === 's' ||
     consonant === 't' ||
     consonant === 'n' ||
-    consonant === 'h'
+    consonant === 'h' ||
+    consonant === 'm'
   )
     Link.tag.href = `./${consonant}vowels/`;
   // Link.tag.href = `consonalt${consonant}`;
