@@ -1496,6 +1496,7 @@ const pVowels = { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
 const kyVowels = { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
 const shVowels = { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
 const chVowels = { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+const nyVowels = { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2180,4 +2181,44 @@ console.log(breakfastKanji);
 // ちょうしょく is 朝食 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Choshoku" and omit 'u'.
+// It will be explained later.
+
+// nyvowels ----------
+// men and women of all ages・ろうにゃくなんにょ・老若男女
+const menAndWomenOfAllAges =
+  rVowels.ro +
+  vowels.u +
+  nyVowels.nya +
+  kVowels.ku +
+  nVowels.na +
+  n +
+  nyVowels.nyo;
+const menAndWomenOfAllAgesHiragana = englishHiragana(
+  'Men and women of all ages',
+  menAndWomenOfAllAges
+);
+const menAndWomenOfAllAgesKanji = hiraganaKanji(
+  menAndWomenOfAllAges,
+  '老若男女'
+);
+
+console.log(menAndWomenOfAllAgesHiragana);
+// Men and women of all ages is ろうにゃくなんにょ in Hiragana.
+console.log(menAndWomenOfAllAgesKanji);
+// ろうにゃくなんにょ is 老若男女 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Ronyakunannyo" and omit 'u'.
+// It will be explained later.
+
+// move-in・にゅうきょ・入居
+const moveIn = nyVowels.nyu + vowels.u + kyVowels.kyo;
+const moveInHiragana = englishHiragana('Move in', moveIn);
+const moveInKanji = hiraganaKanji(moveIn, '入居');
+
+console.log(moveInHiragana);
+// Move in is にゅうきょ in Hiragana.
+console.log(moveInKanji);
+// にゅうきょ is 入居 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Nyukyo" and omit 'u'.
 // It will be explained later.
