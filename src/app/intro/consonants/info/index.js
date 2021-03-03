@@ -1472,6 +1472,67 @@ const hiraganaKanji = (
 `,
     navLink: ['chvowels', '', '', ''],
   },
+
+  consonantHYinfo: {
+    explain: {
+      title: 'Consonant HY',
+      text: "Let's try to learn consonant h + y + vowels!",
+    },
+    romaji: `const consonantH = 'h';
+const hepburnElem = 'y';
+const vowels = [...'aiueo'];
+
+const hyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantH + hepburnElem + vowel);
+console.log(hyVowelsByRomaji.toString());
+// hya, hyu, hyo`,
+    sound: ['hya', 'hyu', 'hyo'],
+    jpText: 'The consonant h + y + vowels spelt by hiragana and katakana.',
+    letters: `const hyVowelLetters = [
+  { hya: { hiragana: 'ひゃ', katakana: 'ヒャ' } },
+  { hyu: { hiragana: 'ひゅ', katakana: 'ヒュ' } },
+  { hyo: { hiragana: 'ひょ', katakana: 'ヒョ' } },
+];`,
+    exampleText: "Let's use consonant h + y + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['nyvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -1497,6 +1558,7 @@ const kyVowels = { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
 const shVowels = { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
 const chVowels = { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
 const nyVowels = { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
