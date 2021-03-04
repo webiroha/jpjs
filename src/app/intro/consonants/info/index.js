@@ -2284,3 +2284,27 @@ console.log(moveInKanji);
 // *The Romaji of this word is expressed
 // as a "Nyukyo" and omit 'u'.
 // It will be explained later.
+
+// hyvowels ----------
+// hundred・ひゃく・百
+const hundred = hyVowels.hya + kVowels.ku;
+const hundredHiragana = englishHiragana('Hundred', hundred);
+const hundredKanji = hiraganaKanji(hundred, '百');
+
+console.log(hundredHiragana);
+// Hundred is ひゃく in Hiragana.
+console.log(hundredKanji);
+// ひゃく is 百 in Kanji.
+
+// wind sounds・ひゅうひゅう
+const windSounds = hyVowels.hyu + vowels.u + hyVowels.hyu + vowels.u;
+const windSoundsHiragana = englishHiragana('WindSounds', windSounds);
+
+console.log(windSoundsHiragana);
+// WindSounds is ひゅうひゅう in Hiragana.
+// This is an imitative word(onomatopoeia).
+
+// *The Romaji of this word is expressed
+// as a "hyu-hyu" and omit 'u'.
+// Also, it is expressed as 'ひゅーひゅー'.
+// It will be explained later.
