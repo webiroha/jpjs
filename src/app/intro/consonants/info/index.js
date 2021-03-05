@@ -625,6 +625,29 @@ console.log(beanHiragana);
 // Bean is まめ in Hiragana.
 console.log(beanKanji);
 // まめ is 豆 in Kanji.
+
+
+// south・みなみ・南
+const south = mVowels.mi + nVowels.na + mVowels.mi;
+const southHiragana = englishHiragana('South', south);
+const southKanji = hiraganaKanji(south, '南');
+
+console.log(southHiragana);
+// South is みなみ in Hiragana.
+console.log(southKanji);
+// みなみ is 南 in Kanji.
+
+
+// bug(insect)・むし・虫
+const bug = mVowels.mu + sVowels.shi;
+const bugHiragana = englishHiragana('Bug', bug);
+const bugKanji = hiraganaKanji(bug, '虫');
+
+console.log(bugHiragana);
+// Bug is むし in Hiragana.
+console.log(bugKanji);
+// むし is 虫 in Kanji.
+// The meaning "bug" in IT, is expressed as "バグ".
 `,
     navLink: ['hvowels', '', '', ''],
   },
@@ -1800,6 +1823,7 @@ console.log(bugHiragana);
 // Bug is むし in Hiragana.
 console.log(bugKanji);
 // むし is 虫 in Kanji.
+// The meaning "bug" in IT, is expressed as "バグ".
 
 // string・ひも・紐
 const string = hVowels.hi + mVowels.mo;
@@ -2321,4 +2345,3 @@ console.log(evaluationKanji);
 // *The Romaji of this word is expressed
 // as a "hyoka" and omit 'u'.
 // It will be explained later.
-
