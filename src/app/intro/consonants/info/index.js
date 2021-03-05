@@ -2308,3 +2308,17 @@ console.log(windSoundsHiragana);
 // as a "hyu-hyu" and omit 'u'.
 // Also, it is expressed as 'ひゅーひゅー'.
 // It will be explained later.
+
+// evaluation・ひょうか・評価
+const evaluation = hyVowels.hyo + vowels.u + kVowels.ka;
+const evaluationHiragana = englishHiragana('Evaluation', evaluation);
+const evaluationKanji = hiraganaKanji(evaluation, '評価');
+
+console.log(evaluationHiragana);
+// Evaluation is ひょうか in Hiragana.
+console.log(evaluationKanji);
+// ひょうか is 評価 in Kanji.
+// *The Romaji of this word is expressed
+// as a "hyoka" and omit 'u'.
+// It will be explained later.
+
