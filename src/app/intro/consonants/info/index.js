@@ -1643,6 +1643,7 @@ const shVowels = { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
 const chVowels = { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
 const nyVowels = { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
 const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+const myVowels = { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2405,4 +2406,29 @@ console.log(evaluationKanji);
 // ひょうか is 評価 in Kanji.
 // *The Romaji of this word is expressed
 // as a "hyoka" and omit 'u'.
+// It will be explained later.
+
+// myvowels ----------
+// pulse・みゃく・脈
+const pulse = myVowels.mya + kVowels.ku;
+const pulseHiragana = englishHiragana('Pulse', pulse);
+const pulseKanji = hiraganaKanji(pulse, '脈');
+
+console.log(pulseHiragana);
+// Pulse is みゃく in Hiragana.
+console.log(pulseKanji);
+// みゃく is 脈 in Kanji.
+
+// lastName・みょうじ・脈
+const lastName = myVowels.myo + vowels.u + zVowels.ji;
+const lastNameHiragana = englishHiragana('Last name', lastName);
+const lastNameKanji = hiraganaKanji(lastName, '名字');
+
+console.log(lastNameHiragana);
+// Last name is みょうじ in Hiragana.
+console.log(lastNameKanji);
+// みょうじ is 名字 in Kanji.
+// 名字 can be also written as 苗字.
+// *The Romaji of this word is expressed
+// as a "myoji" and omit 'u'.
 // It will be explained later.
