@@ -1617,6 +1617,67 @@ const hiraganaKanji = (
 `,
     navLink: ['nyvowels', '', '', ''],
   },
+
+  consonantRYinfo: {
+    explain: {
+      title: 'Consonant RY',
+      text: "Let's try to learn consonant r + y + vowels!",
+    },
+    romaji: `const consonantR = 'r';
+const hepburnElem = 'y';
+const vowels = [...'aiueo'];
+
+const ryVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantR + hepburnElem + vowel);
+console.log(ryVowelsByRomaji.toString());
+// rya, ryu, ryo`,
+    sound: ['rya', 'ryu', 'ryo'],
+    jpText: 'The consonant r + y + vowels spelt by hiragana and katakana.',
+    letters: `const hyVowelLetters = [
+  { rya: { hiragana: 'りゃ', katakana: 'リャ' } },
+  { ryu: { hiragana: 'りゅ', katakana: 'リュ' } },
+  { ryo: { hiragana: 'りょ', katakana: 'リョ' } },
+];`,
+    exampleText: "Let's use consonant r + y + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['myvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -1644,6 +1705,7 @@ const chVowels = { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
 const nyVowels = { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
 const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
 const myVowels = { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+const ryVowels = { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2432,3 +2494,5 @@ console.log(lastNameKanji);
 // *The Romaji of this word is expressed
 // as a "myoji" and omit 'u'.
 // It will be explained later.
+
+// ryvowels ----------
