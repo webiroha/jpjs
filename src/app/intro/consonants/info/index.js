@@ -2496,3 +2496,38 @@ console.log(lastNameKanji);
 // It will be explained later.
 
 // ryvowels ----------
+// abbreviation・りゃく・略
+const abbreviation = ryVowels.rya + kVowels.ku;
+const abbreviationHiragana = englishHiragana('Abbreviation', abbreviation);
+const abbreviationKanji = hiraganaKanji(abbreviation, '略');
+
+console.log(abbreviationHiragana);
+// Abbreviation is りゃく in Hiragana.
+console.log(abbreviationKanji);
+// りゃく is 略 in Kanji.
+
+// meteor・りゅうせい・流星
+const meteor = ryVowels.ryu + vowels.u + sVowels.se + vowels.i;
+const meteorHiragana = englishHiragana('Meteor', meteor);
+const meteorKanji = hiraganaKanji(meteor, '流星');
+
+console.log(meteorHiragana);
+// Meteor is りゅうせい in Hiragana.
+console.log(meteorKanji);
+// りゅうせい is 流星 in Kanji.
+// *The Romaji of this word is expressed
+// as a "ryusei" and omit 'u'.
+// It will be explained later.
+
+// consideration・こうりょ・考慮
+const consideration = kVowels.ko + vowels.u + ryVowels.ryo;
+const considerationHiragana = englishHiragana('Consideration', consideration);
+const considerationKanji = hiraganaKanji(consideration, '考慮');
+
+console.log(considerationHiragana);
+// Consideration is こうりょ in Hiragana.
+console.log(considerationKanji);
+// こうりょ is 考慮 in Kanji.
+// *The Romaji of this word is expressed
+// as a "koryo" and omit 'u'.
+// It will be explained later.
