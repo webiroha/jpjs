@@ -1678,6 +1678,67 @@ const hiraganaKanji = (
 `,
     navLink: ['myvowels', '', '', ''],
   },
+
+  consonantGYinfo: {
+    explain: {
+      title: 'Consonant GY',
+      text: "Let's try to learn consonant g + y + vowels!",
+    },
+    romaji: `const consonantG = 'g';
+const hepburnElem = 'y';
+const vowels = [...'aiueo'];
+
+const gyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantG + hepburnElem + vowel);
+console.log(gyVowelsByRomaji.toString());
+// gya, gyu, gyo`,
+    sound: ['gya', 'gyu', 'gyo'],
+    jpText: 'The consonant g + y + vowels spelt by hiragana and katakana.',
+    letters: `const hyVowelLetters = [
+  { gya: { hiragana: 'ぎゃ', katakana: 'ギャ' } },
+  { gyu: { hiragana: 'ぎゅ', katakana: 'ギュ' } },
+  { gyo: { hiragana: 'ぎょ', katakana: 'ギョ' } },
+];`,
+    exampleText: "Let's use consonant g + y + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['myvowels', '', '', ''],
+  },
 };
 
 export default info;
