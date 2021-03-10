@@ -648,6 +648,17 @@ console.log(bugHiragana);
 console.log(bugKanji);
 // むし is 虫 in Kanji.
 // The meaning "bug" in IT, is expressed as "バグ".
+
+
+// string・ひも・紐
+const string = hVowels.hi + mVowels.mo;
+const stringHiragana = englishHiragana('String', string);
+const stringKanji = hiraganaKanji(string, '紐');
+
+console.log(stringHiragana);
+// String is ひも in Hiragana.
+console.log(stringKanji);
+// ひも is 紐 in Kanji.
 `,
     navLink: ['hvowels', '', '', ''],
   },
