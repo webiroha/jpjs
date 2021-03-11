@@ -1778,6 +1778,7 @@ const nyVowels = { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
 const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
 const myVowels = { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
 const ryVowels = { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+const gyVowels = { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2603,3 +2604,38 @@ console.log(considerationKanji);
 // *The Romaji of this word is expressed
 // as a "koryo" and omit 'u'.
 // It will be explained later.
+
+// gyvowels ----------
+// opposite・ぎゃく・逆
+const opposite = gyVowels.gya + kVowels.ku;
+const oppositeHiragana = englishHiragana('Opposite', opposite);
+const oppositeKanji = hiraganaKanji(opposite, '逆');
+
+console.log(oppositeHiragana);
+// Opposite is ぎゃく in Hiragana.
+console.log(oppositeKanji);
+// ぎゃく is 逆 in Kanji.
+
+// beef・ぎゅうにく・牛肉
+const beef = gyVowels.gyu + vowels.u + nVowels.ni + kVowels.ku;
+const beefHiragana = englishHiragana('Beef', beef);
+const beefKanji = hiraganaKanji(beef, '牛肉');
+
+console.log(beefHiragana);
+// Beef is ぎゅうにく in Hiragana.
+console.log(beefKanji);
+// ぎゅうにく is 牛肉 in Kanji.
+// *The Romaji of this word is expressed
+// as a "gyuniku" and omit 'u'.
+// It will be explained later.
+
+// control・せいぎょ・制御
+const control = sVowels.se + vowels.i + gyVowels.gyo;
+const controlHiragana = englishHiragana('Control', control);
+const controlKanji = hiraganaKanji(control, '制御');
+
+console.log(controlHiragana);
+// Control is せいぎょ in Hiragana.
+console.log(controlKanji);
+// せいぎょ is 制御 in Kanji.
+// This word is also written as "コントロール" in Katakana.
