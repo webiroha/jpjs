@@ -1750,6 +1750,93 @@ const hiraganaKanji = (
 `,
     navLink: ['myvowels', '', '', ''],
   },
+
+  consonantJinfo: {
+    explain: {
+      title: 'Consonant J',
+      text: [
+        "Let's try to learn consonant j + vowels!",
+        '',
+        'This combination is a bit complicated.',
+        'We will use Hepburn-shiki Romaji here.',
+      ],
+    },
+    romaji: `const consonantJ = 'j';
+const kunreiNihonElem = 'zy';
+const vowels = [...'aiueo'];
+
+// Kunrei-shiki and Nihon-shiki Romaji
+// for "じゃ じゅ じょ" and "ぢゃ ぢゅ ぢょ".
+const zyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => kunreiNihonElem + vowel);
+console.log(zyVowelsByRomaji.toString());
+// zya, zyu, zyo
+
+// Nihon-shiki Romaji for "ぢゃ ぢゅ ぢょ".
+const dyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => kunreiNihonElem + vowel);
+console.log(dyVowelsByRomaji.toString());
+// dya, dyu, dyo
+
+// Hepburn-shiki Romaji
+// for "じゃ じゅ じょ" and "ぢゃ ぢゅ ぢょ".
+// (We will use this here.)
+const jVowelsByRomajiHepburn = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantJ + vowel);
+console.log(jVowelsByRomajiHepburn.toString());
+// ja, ju, jo`,
+    sound: ['ja', 'ju', 'jo'],
+    jpText: 'The consonant j + vowels spelt by hiragana and katakana.',
+    letters: `// Each sound of s + y + vowels and t + y + vowels are
+// combined into one sound
+// when the sounds are spoken as voiced sound.
+const jVowelLetters = [
+  { ja: { hiragana: 'じゃ/ぢゃ', katakana: 'ジャ/ヂャ' } },
+  { ju: { hiragana: 'じゅ/ぢゅ', katakana: 'ジュ/ヂュ' } },
+  { jo: { hiragana: 'じょ/ぢょ', katakana: 'ジョ/ヂョ' } },
+];`,
+    exampleText: "Let's use consonant j + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['myvowels', '', '', ''],
+  },
 };
 
 export default info;
