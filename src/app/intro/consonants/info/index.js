@@ -1866,6 +1866,8 @@ const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
 const myVowels = { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
 const ryVowels = { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
 const gyVowels = { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
+const jVowelsS = { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
+const jVowelsT = { ja: 'ぢゃ', ju: 'ぢゅ', jo: 'ぢょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2726,3 +2728,37 @@ console.log(controlHiragana);
 console.log(controlKanji);
 // せいぎょ is 制御 in Kanji.
 // This word is also written as "コントロール" in Katakana.
+
+// jvowels ----------
+// faucet・じゃぐち・蛇口
+const faucet = jVowelsS.ja + gVowels.gu + tVowels.chi;
+const faucetHiragana = englishHiragana('Faucet', faucet);
+const faucetKanji = hiraganaKanji(faucet, '蛇口');
+
+console.log(faucetHiragana);
+// Faucet is じゃぐち in Hiragana.
+console.log(faucetKanji);
+// じゃぐち is 蛇口 in Kanji.
+
+// importance・じゅうよう・重要
+const importance = jVowelsS.ju + vowels.u + yVowels.yo + vowels.u;
+const importanceHiragana = englishHiragana('Importance', importance);
+const importanceKanji = hiraganaKanji(importance, '重要');
+
+console.log(importanceHiragana);
+// Importance is じゅうよう in Hiragana.
+console.log(importanceKanji);
+// じゅうよう is 重要 in Kanji.
+// *The Romaji of this word is expressed
+// as a "juyo" and omit 'u'.
+// It will be explained later.
+
+// deletion・さくじょ・削除
+const deletion = sVowels.sa + kVowels.ku + jVowelsS.jo;
+const deletionHiragana = englishHiragana('Deletion', deletion);
+const deletionKanji = hiraganaKanji(deletion, '削除');
+
+console.log(deletionHiragana);
+// Deletion is さくじょ in Hiragana.
+console.log(deletionKanji);
+// さくじょ is 削除 in Kanji.
