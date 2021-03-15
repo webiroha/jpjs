@@ -1797,7 +1797,10 @@ const jVowelLetters = [
   { ja: { hiragana: 'じゃ/ぢゃ', katakana: 'ジャ/ヂャ' } },
   { ju: { hiragana: 'じゅ/ぢゅ', katakana: 'ジュ/ヂュ' } },
   { jo: { hiragana: 'じょ/ぢょ', katakana: 'ジョ/ヂョ' } },
-];`,
+];
+// Most words using
+// 'ぢゃ/ぢゅ/ぢょ' and 'ヂャ/ヂュ/ヂョ' were replaced by
+// 'じゃ/じゅ/じょ' and 'ジャ/ジュ/ジョ' nowadays.`,
     exampleText: "Let's use consonant j + vowels in practice!",
     examples: `// Base code
 const vowels =
