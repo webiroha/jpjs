@@ -64,6 +64,7 @@ const consonants = [
   'ry',
   'gy',
   'j',
+  'by',
 ];
 
 const [...consonantMetas] = consonants.map((consonant) => {
@@ -118,6 +119,7 @@ const webpackConfig = {
     ryvowels: './src/app/intro/consonants/ryvowels/index.js',
     gyvowels: './src/app/intro/consonants/gyvowels/index.js',
     jvowels: './src/app/intro/consonants/jvowels/index.js',
+    byvowels: './src/app/intro/consonants/byvowels/index.js',
     n: './src/app/intro/consonants/n/index.js',
     fiftysoundstable: './src/app/intro/consonants/fiftysoundstable/index.js',
   },
