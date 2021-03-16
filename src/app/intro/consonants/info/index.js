@@ -1584,7 +1584,7 @@ console.log(myVowelsByRomaji.toString());
 // mya, myu, myo`,
     sound: ['mya', 'myu', 'myo'],
     jpText: 'The consonant m + y + vowels spelt by hiragana and katakana.',
-    letters: `const hyVowelLetters = [
+    letters: `const myVowelLetters = [
   { mya: { hiragana: 'みゃ', katakana: 'ミャ' } },
   { myu: { hiragana: 'みゅ', katakana: 'ミュ' } },
   { myo: { hiragana: 'みょ', katakana: 'ミョ' } },
@@ -1645,7 +1645,7 @@ console.log(ryVowelsByRomaji.toString());
 // rya, ryu, ryo`,
     sound: ['rya', 'ryu', 'ryo'],
     jpText: 'The consonant r + y + vowels spelt by hiragana and katakana.',
-    letters: `const hyVowelLetters = [
+    letters: `const ryVowelLetters = [
   { rya: { hiragana: 'りゃ', katakana: 'リャ' } },
   { ryu: { hiragana: 'りゅ', katakana: 'リュ' } },
   { ryo: { hiragana: 'りょ', katakana: 'リョ' } },
@@ -1706,7 +1706,7 @@ console.log(gyVowelsByRomaji.toString());
 // gya, gyu, gyo`,
     sound: ['gya', 'gyu', 'gyo'],
     jpText: 'The consonant g + y + vowels spelt by hiragana and katakana.',
-    letters: `const hyVowelLetters = [
+    letters: `const gyVowelLetters = [
   { gya: { hiragana: 'ぎゃ', katakana: 'ギャ' } },
   { gyu: { hiragana: 'ぎゅ', katakana: 'ギュ' } },
   { gyo: { hiragana: 'ぎょ', katakana: 'ギョ' } },
