@@ -1930,8 +1930,8 @@ const hyVowels = { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
 const myVowels = { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
 const ryVowels = { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
 const gyVowels = { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
-const jVowelsS = { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
-const jVowelsT = { ja: 'ぢゃ', ju: 'ぢゅ', jo: 'ぢょ' };
+const jVowels = { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
+const byVowels = { bya: 'びゃ', byu: 'びゅ', byo: 'びょ' };
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2795,7 +2795,7 @@ console.log(controlKanji);
 
 // jvowels ----------
 // faucet・じゃぐち・蛇口
-const faucet = jVowelsS.ja + gVowels.gu + tVowels.chi;
+const faucet = jVowels.ja + gVowels.gu + tVowels.chi;
 const faucetHiragana = englishHiragana('Faucet', faucet);
 const faucetKanji = hiraganaKanji(faucet, '蛇口');
 
@@ -2805,7 +2805,7 @@ console.log(faucetKanji);
 // じゃぐち is 蛇口 in Kanji.
 
 // importance・じゅうよう・重要
-const importance = jVowelsS.ju + vowels.u + yVowels.yo + vowels.u;
+const importance = jVowels.ju + vowels.u + yVowels.yo + vowels.u;
 const importanceHiragana = englishHiragana('Importance', importance);
 const importanceKanji = hiraganaKanji(importance, '重要');
 
@@ -2818,7 +2818,7 @@ console.log(importanceKanji);
 // It will be explained later.
 
 // deletion・さくじょ・削除
-const deletion = sVowels.sa + kVowels.ku + jVowelsS.jo;
+const deletion = sVowels.sa + kVowels.ku + jVowels.jo;
 const deletionHiragana = englishHiragana('Deletion', deletion);
 const deletionKanji = hiraganaKanji(deletion, '削除');
 
@@ -2826,3 +2826,34 @@ console.log(deletionHiragana);
 // Deletion is さくじょ in Hiragana.
 console.log(deletionKanji);
 // さくじょ is 削除 in Kanji.
+
+// byvowels ----------
+// midnight sun・びゃくや・白夜
+const midnightSun = byVowels.bya + kVowels.ku + yVowels.ya;
+const midnightSunHiragana = englishHiragana('Midnight sun', midnightSun);
+const midnightSunKanji = hiraganaKanji(midnightSun, '白夜');
+
+console.log(midnightSunHiragana);
+// Midnight sun is びゃくや in Hiragana.
+console.log(midnightSunKanji);
+// びゃくや is 白夜 in Kanji.
+
+// fallacy・ごびゅう・誤謬
+const fallacy = gVowels.go + byVowels.byu + vowels.u;
+const fallacyHiragana = englishHiragana('Fallacy', fallacy);
+const fallacyKanji = hiraganaKanji(fallacy, '誤謬');
+
+console.log(fallacyHiragana);
+// Fallacy is ごびゅう in Hiragana.
+console.log(fallacyKanji);
+// ごびゅう is 誤謬 in Kanji.
+
+// hospital・びょういん・病院
+const hospital = byVowels.byo + vowels.u + vowels.i + n;
+const hospitalHiragana = englishHiragana('Hospital', hospital);
+const hospitalKanji = hiraganaKanji(hospital, '病院');
+
+console.log(hospitalHiragana);
+// Hospital is びょういん in Hiragana.
+console.log(hospitalKanji);
+// びょういん is 病院 in Kanji.
