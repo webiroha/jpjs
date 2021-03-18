@@ -739,9 +739,12 @@ const hiraganaKanji = (
 
 
 // vegetable・やさい・野菜
-const vegetable = yVowels.ya + sVowels.sa + vowels.i;
-const vegetableHiragana = englishHiragana('Vegetable', vegetable);
-const vegetableKanji = hiraganaKanji(vegetable, '野菜');
+const vegetable =
+  yVowels.ya + sVowels.sa + vowels.i;
+const vegetableHiragana =
+  englishHiragana('Vegetable', vegetable);
+const vegetableKanji =
+  hiraganaKanji(vegetable, '野菜');
 
 console.log(vegetableHiragana);
 // Vegetable is やさい in Hiragana.
@@ -750,9 +753,12 @@ console.log(vegetableKanji);
 
 
 // uniqueness・ゆいいつ・唯一
-const uniqueness = yVowels.yu + vowels.i + vowels.i + tVowels.tu;
-const uniquenessHiragana = englishHiragana('Uniqueness', uniqueness);
-const uniquenessKanji = hiraganaKanji(uniqueness, '唯一');
+const uniqueness =
+  yVowels.yu + vowels.i + vowels.i + tVowels.tu;
+const uniquenessHiragana =
+  englishHiragana('Uniqueness', uniqueness);
+const uniquenessKanji =
+  hiraganaKanji(uniqueness, '唯一');
 
 console.log(uniquenessHiragana);
 // Uniqueness is ゆいいつ in Hiragana.
