@@ -722,6 +722,9 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
 const englishHiragana = (
   english,
   hiragana
@@ -735,6 +738,26 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// vegetable・やさい・野菜
+const vegetable = yVowels.ya + sVowels.sa + vowels.i;
+const vegetableHiragana = englishHiragana('Vegetable', vegetable);
+const vegetableKanji = hiraganaKanji(vegetable, '野菜');
+
+console.log(vegetableHiragana);
+// Vegetable is やさい in Hiragana.
+console.log(vegetableKanji);
+// やさい is 野菜 in Kanji.
+
+
+// uniqueness・ゆいいつ・唯一
+const uniqueness = yVowels.yu + vowels.i + vowels.i + tVowels.tu;
+const uniquenessHiragana = englishHiragana('Uniqueness', uniqueness);
+const uniquenessKanji = hiraganaKanji(uniqueness, '唯一');
+
+console.log(uniquenessHiragana);
+// Uniqueness is ゆいいつ in Hiragana.
+console.log(uniquenessKanji);
+// ゆいいつ is 唯一 in Kanji.
 `,
     navLink: ['mvowels', '', '', ''],
   },
@@ -2257,15 +2280,15 @@ console.log(vegetableHiragana);
 console.log(vegetableKanji);
 // やさい is 野菜 in Kanji.
 
-// valid・ゆうこう・有効
-const valid = yVowels.yu + vowels.u + kVowels.ko + vowels.u;
-const validHiragana = englishHiragana('Valid', valid);
-const validKanji = hiraganaKanji(valid, '有効');
+// uniqueness・ゆいいつ・唯一
+const uniqueness = yVowels.yu + vowels.i + vowels.i + tVowels.tu;
+const uniquenessHiragana = englishHiragana('Uniqueness', uniqueness);
+const uniquenessKanji = hiraganaKanji(uniqueness, '唯一');
 
-console.log(validHiragana);
-// Valid is ゆうこう in Hiragana.
-console.log(validKanji);
-// ゆうこう is 有効 in Kanji.
+console.log(uniquenessHiragana);
+// Uniqueness is ゆいいつ in Hiragana.
+console.log(uniquenessKanji);
+// ゆいいつ is 唯一 in Kanji.
 
 // good morning・おはよう
 const goodMorning = vowels.o + hVowels.ha + yVowels.yo + vowels.u;
