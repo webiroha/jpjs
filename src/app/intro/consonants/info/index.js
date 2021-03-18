@@ -754,7 +754,7 @@ console.log(vegetableKanji);
 
 // uniqueness・ゆいいつ・唯一
 const uniqueness =
-  yVowels.yu + vowels.i + vowels.i + tVowels.tu;
+  yVowels.yu + vowels.i + vowels.i + tVowels.tsu;
 const uniquenessHiragana =
   englishHiragana('Uniqueness', uniqueness);
 const uniquenessKanji =
@@ -2287,7 +2287,7 @@ console.log(vegetableKanji);
 // やさい is 野菜 in Kanji.
 
 // uniqueness・ゆいいつ・唯一
-const uniqueness = yVowels.yu + vowels.i + vowels.i + tVowels.tu;
+const uniqueness = yVowels.yu + vowels.i + vowels.i + tVowels.tsu;
 const uniquenessHiragana = englishHiragana('Uniqueness', uniqueness);
 const uniquenessKanji = hiraganaKanji(uniqueness, '唯一');
 
