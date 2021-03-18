@@ -660,7 +660,7 @@ console.log(stringHiragana);
 console.log(stringKanji);
 // ひも is 紐 in Kanji.
 `,
-    navLink: ['hvowels', '', '', ''],
+    navLink: ['hvowels', 'yvowels', '', ''],
   },
 
   consonantYinfo: {
@@ -675,10 +675,10 @@ console.log(stringKanji);
     romaji: `const consonantY = 'y';
 const vowels = [...'aiueo'];
 
-const mVowelsByRomaji = vowels
+const yVowelsByRomaji = vowels
   .filter((_, i) => i % 2 === 0)
   .map((vowel) => consonantY + vowel);
-console.log(mVowelsByRomaji.toString());
+console.log(yVowelsByRomaji.toString());
 // ya, yu, yo
 
 // There might be a time you see such the ways to be written.
