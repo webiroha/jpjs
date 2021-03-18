@@ -1901,6 +1901,67 @@ const hiraganaKanji = (
 `,
     navLink: ['myvowels', '', '', ''],
   },
+
+  consonantPYinfo: {
+    explain: {
+      title: 'Consonant PY',
+      text: "Let's try to learn consonant p + y + vowels!",
+    },
+    romaji: `const consonantP = 'p';
+const hepburnElem = 'y';
+const vowels = [...'aiueo'];
+
+const pyVowelsByRomaji = vowels
+  .filter((_, i) => i % 2 === 0)
+  .map((vowel) => consonantP + hepburnElem + vowel);
+console.log(pyVowelsByRomaji.toString());
+// pya, pyu, pyo`,
+    sound: ['pya', 'pyu', 'pyo'],
+    jpText: 'The consonant p + y + vowels spelt by hiragana and katakana.',
+    letters: `const pyVowelLetters = [
+  { pya: { hiragana: 'ぴゃ', katakana: 'ピャ' } },
+  { pyu: { hiragana: 'ぴゅ', katakana: 'ピュ' } },
+  { pyo: { hiragana: 'ぴょ', katakana: 'ピョ' } },
+];`,
+    exampleText: "Let's use consonant p + y + vowels in practice!",
+    examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+`,
+    navLink: ['byvowels', '', '', ''],
+  },
 };
 
 export default info;
@@ -2847,6 +2908,9 @@ console.log(fallacyHiragana);
 // Fallacy is ごびゅう in Hiragana.
 console.log(fallacyKanji);
 // ごびゅう is 誤謬 in Kanji.
+// *The Romaji of this word is expressed
+// as a "gobyu" and omit 'u'.
+// It will be explained later.
 
 // hospital・びょういん・病院
 const hospital = byVowels.byo + vowels.u + vowels.i + n;
@@ -2857,3 +2921,6 @@ console.log(hospitalHiragana);
 // Hospital is びょういん in Hiragana.
 console.log(hospitalKanji);
 // びょういん is 病院 in Kanji.
+// *The Romaji of this word is expressed
+// as a "byoin" and omit 'u'.
+// It will be explained later.
