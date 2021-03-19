@@ -2022,6 +2022,8 @@ const ryVowels = { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
 const gyVowels = { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
 const jVowels = { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
 const byVowels = { bya: 'びゃ', byu: 'びゅ', byo: 'びょ' };
+const pyVowels = { pya: 'ぴゃ', pyu: 'ぴゅ', pyo: 'ぴょ' };
+const doubleConsonant = 'っ';
 
 const englishHiragana = (english, hiragana) =>
   `${english} is ${hiragana} in Hiragana.`;
@@ -2953,3 +2955,18 @@ console.log(hospitalKanji);
 // *The Romaji of this word is expressed
 // as a "byoin" and omit 'u'.
 // It will be explained later.
+
+// pyvowels ----------
+// six hundred・ろっぴゃく・六百
+const sixHundred = rVowels.ro + doubleConsonant + pyVowels.pya + kVowels.ku;
+const sixHundredHiragana = englishHiragana('Six hundred', sixHundred);
+const sixHundredKanji = hiraganaKanji(sixHundred, '六百');
+
+console.log(sixHundredHiragana);
+// Six hundred is ろっぴゃく in Hiragana.
+console.log(sixHundredKanji);
+// ろっぴゃく is 六百 in Kanji.
+// A double consonant is a sound that appeared between letters.
+// It will be explained later.
+
+
