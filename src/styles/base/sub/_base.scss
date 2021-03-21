@@ -95,6 +95,15 @@
   }
 }
 
+.aside {
+  background: #fff;
+  padding: 1.5em;
+
+  & > .sub-s {
+    margin-bottom: 0;
+  }
+}
+
 .page-nav {
   display: flex;
   justify-content: space-between;

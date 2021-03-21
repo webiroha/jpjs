@@ -87,6 +87,7 @@ const Consonants = () => {
   const SubTitleInfoBlock = TitleWithText(SubTitleInfo);
   DetailsBlock.tag.appendChild(SubTitleInfoBlock());
 
+  // Basic
   const BasicTitleInfo = {
     role: 'sub-s',
     element: 'h3',
@@ -99,6 +100,29 @@ const Consonants = () => {
 
   DetailsBlock.tag.appendChild(BasicLinks());
 
+  // One rule for Romaji
+  const Aside = Element({
+    elem: 'aside',
+    class: 'aside',
+  });
+
+  const OmitUInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'Supplement 1',
+    text: [
+      "The 'u'/'o' is omitted when the part is a long sound.",
+      "For example, 'さいこう/saikou' gets to 'saiko' and",
+      "'おはよう/ohayou' gets to 'ohayo'.",
+    ],
+  };
+
+  const OmitUInfoBlock = TitleWithText(OmitUInfo);
+  Aside.tag.appendChild(OmitUInfoBlock());
+
+  DetailsBlock.tag.appendChild(Aside.tag);
+
+  // Voiced and p sounds
   const VoicedPTitleInfo = {
     role: 'sub-s',
     element: 'h3',
@@ -111,6 +135,7 @@ const Consonants = () => {
 
   DetailsBlock.tag.appendChild(VoicedPLinks());
 
+  // Contracted sounds
   const ContractedTitleInfo = {
     role: 'sub-s',
     element: 'h3',

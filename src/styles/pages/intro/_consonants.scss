@@ -50,7 +50,9 @@
   }
 }
 
-.consonant-link + .sub-s {
+.consonant-link + .sub-s,
+.consonant-link + .aside,
+.aside + .sub-s {
   margin-top: 3em;
 }
 
