@@ -111,7 +111,8 @@ const Consonants = () => {
     element: 'h3',
     title: 'Supplement 1',
     text: [
-      "The 'u'/'o' is omitted when the part is a long sound.",
+      "The 'u'/'o' is omitted when the part is a long sound ",
+      'in Hepburn-shiki Romaji.',
       "For example, 'さいこう/saikou' gets to 'saiko' and",
       "'おはよう/ohayou' gets to 'ohayo'.",
     ],

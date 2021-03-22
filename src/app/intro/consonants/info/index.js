@@ -163,6 +163,9 @@ console.log(awesomeHiragana);
 // Awesome is さいこう in Hiragana.
 console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Saiko" and omit 'u'.
+// It will be explained later.
 
 
 // match(game)・しあい・試合
@@ -2081,6 +2084,9 @@ console.log(awesomeHiragana);
 // Awesome is さいこう in Hiragana.
 console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Saiko" and omit 'u'.
+// It will be explained later.
 
 // match・しあい・試合
 const match = sVowels.shi + vowels.a + vowels.i;
@@ -2224,6 +2230,9 @@ console.log(equityHiragana);
 // Equity is こうへい in Hiragana.
 console.log(equityKanji);
 // こうへい is 公平 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Kohei" and omit 'u'.
+// It will be explained later.
 
 // star・ほし・星
 const star = hVowels.ho + sVowels.shi;
@@ -2304,6 +2313,9 @@ const goodMorningHiragana = englishHiragana('Good morning', goodMorning);
 
 console.log(goodMorningHiragana);
 // Good morning is おはよう in Hiragana.
+// *The Romaji of this word is expressed
+// as a "Ohayo" and omit 'u'.
+// It will be explained later.
 
 // r vowels ----------
 // ease・らく・楽
@@ -2325,6 +2337,9 @@ console.log(reasonHiragana);
 // Reason is りゆう in Hiragana.
 console.log(reasonKanji);
 // りゆう is 理由 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Riyu" and omit 'u'.
+// It will be explained later.
 
 // absence・るす・留守
 const absence = rVowels.ru + sVowels.su;
@@ -2355,6 +2370,9 @@ console.log(corridorHiragana);
 // Corridor is ろうか in Hiragana.
 console.log(corridorKanji);
 // ろうか is 廊下 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Roka" and omit 'u'.
+// It will be explained later.
 
 // w vowels ----------
 // planet・わくせい・惑星
@@ -2414,6 +2432,8 @@ console.log(evenNumberHiragana);
 // Even Number is ぐうすう in Hiragana.
 console.log(evenNumberKanji);
 // ぐうすう is 偶数 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Gusu" and omit 'u'.
 
 // language・げんご・言語
 const language = gVowels.ge + n + gVowels.go;
@@ -2455,6 +2475,8 @@ console.log(brainHiragana);
 // Brain is ずのう in Hiragana.
 console.log(brainKanji);
 // ずのう is 頭脳 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Zuno" and omit 'u'.
 
 // extinction・ぜつめつ・絶滅
 const extinction = zVowels.ze + tVowels.tsu + mVowels.me + tVowels.tsu;
@@ -2578,6 +2600,8 @@ console.log(forAndAgainstHiragana);
 // For and against is さんぴ in Hiragana.
 console.log(forAndAgainstKanji);
 // さんぴ is 賛否 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Sampi".
 
 // music note・おんぷ・音符
 const musicNote = vowels.o + n + pVowels.pu;
@@ -2588,6 +2612,8 @@ console.log(musicNoteHiragana);
 // Music note is おんぷ in Hiragana.
 console.log(musicNoteKanji);
 // おんぷ is 音符 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Ompu".
 
 // perfect・かんぺき・完璧
 const perfect = kVowels.ka + n + pVowels.pe + kVowels.ki;
@@ -2598,6 +2624,8 @@ console.log(perfectHiragana);
 // Perfect is かんぺき in Hiragana.
 console.log(perfectKanji);
 // かんぺき is 完璧 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Kampeki".
 
 // progress・しんぽ・進歩
 const progress = sVowels.shi + n + pVowels.po;
@@ -2608,6 +2636,8 @@ console.log(progressHiragana);
 // Progress is しんぽ in Hiragana.
 console.log(progressKanji);
 // しんぽ is 進歩 in Kanji.
+// *The Romaji of this word is expressed
+// as a "Shimpo".
 
 // kyvowels ----------
 // scriptwriter・きゃくほんか・脚本家
@@ -2631,7 +2661,6 @@ console.log(nineKanji);
 // きゅう is 九 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Kyu" and omit 'u'.
-// It will be explained later.
 
 // election・せんきょ・選挙
 const election = sVowels.se + n + kyVowels.kyo;
@@ -2696,9 +2725,8 @@ console.log(lunchKanji);
 // ちゅうしょく is 昼食 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Chushoku" and omit 'u'.
-// It will be explained later.
 
-// breakfast・ちょうしょく・昼食
+// breakfast・ちょうしょく・朝食
 const breakfast = chVowels.cho + vowels.u + shVowels.sho + kVowels.ku;
 const breakfastHiragana = englishHiragana('Breakfast', breakfast);
 const breakfastKanji = hiraganaKanji(breakfast, '朝食');
@@ -2709,7 +2737,6 @@ console.log(breakfastKanji);
 // ちょうしょく is 朝食 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Choshoku" and omit 'u'.
-// It will be explained later.
 
 // nyvowels ----------
 // men and women of all ages・ろうにゃくなんにょ・老若男女
@@ -2736,7 +2763,6 @@ console.log(menAndWomenOfAllAgesKanji);
 // ろうにゃくなんにょ is 老若男女 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Ronyakunannyo" and omit 'u'.
-// It will be explained later.
 
 // move-in・にゅうきょ・入居
 const moveIn = nyVowels.nyu + vowels.u + kyVowels.kyo;
@@ -2749,7 +2775,6 @@ console.log(moveInKanji);
 // にゅうきょ is 入居 in Kanji.
 // *The Romaji of this word is expressed
 // as a "Nyukyo" and omit 'u'.
-// It will be explained later.
 
 // hyvowels ----------
 // hundred・ひゃく・百
@@ -2773,7 +2798,6 @@ console.log(windSoundsHiragana);
 // *The Romaji of this word is expressed
 // as a "hyu-hyu" and omit 'u'.
 // Also, it is expressed as 'ひゅーひゅー'.
-// It will be explained later.
 
 // evaluation・ひょうか・評価
 const evaluation = hyVowels.hyo + vowels.u + kVowels.ka;
@@ -2786,7 +2810,6 @@ console.log(evaluationKanji);
 // ひょうか is 評価 in Kanji.
 // *The Romaji of this word is expressed
 // as a "hyoka" and omit 'u'.
-// It will be explained later.
 
 // myvowels ----------
 // pulse・みゃく・脈
@@ -2811,7 +2834,6 @@ console.log(lastNameKanji);
 // 名字 can be also written as 苗字.
 // *The Romaji of this word is expressed
 // as a "myoji" and omit 'u'.
-// It will be explained later.
 
 // ryvowels ----------
 // abbreviation・りゃく・略
@@ -2835,7 +2857,6 @@ console.log(meteorKanji);
 // りゅうせい is 流星 in Kanji.
 // *The Romaji of this word is expressed
 // as a "ryusei" and omit 'u'.
-// It will be explained later.
 
 // consideration・こうりょ・考慮
 const consideration = kVowels.ko + vowels.u + ryVowels.ryo;
@@ -2848,7 +2869,6 @@ console.log(considerationKanji);
 // こうりょ is 考慮 in Kanji.
 // *The Romaji of this word is expressed
 // as a "koryo" and omit 'u'.
-// It will be explained later.
 
 // gyvowels ----------
 // opposite・ぎゃく・逆
@@ -2872,7 +2892,6 @@ console.log(beefKanji);
 // ぎゅうにく is 牛肉 in Kanji.
 // *The Romaji of this word is expressed
 // as a "gyuniku" and omit 'u'.
-// It will be explained later.
 
 // control・せいぎょ・制御
 const control = sVowels.se + vowels.i + gyVowels.gyo;
@@ -2907,7 +2926,6 @@ console.log(importanceKanji);
 // じゅうよう is 重要 in Kanji.
 // *The Romaji of this word is expressed
 // as a "juyo" and omit 'u'.
-// It will be explained later.
 
 // deletion・さくじょ・削除
 const deletion = sVowels.sa + kVowels.ku + jVowels.jo;
@@ -2941,7 +2959,6 @@ console.log(fallacyKanji);
 // ごびゅう is 誤謬 in Kanji.
 // *The Romaji of this word is expressed
 // as a "gobyu" and omit 'u'.
-// It will be explained later.
 
 // hospital・びょういん・病院
 const hospital = byVowels.byo + vowels.u + vowels.i + n;
@@ -2954,7 +2971,6 @@ console.log(hospitalKanji);
 // びょういん is 病院 in Kanji.
 // *The Romaji of this word is expressed
 // as a "byoin" and omit 'u'.
-// It will be explained later.
 
 // pyvowels ----------
 // six hundred・ろっぴゃく・六百
@@ -2969,7 +2985,6 @@ console.log(sixHundredKanji);
 // A double consonant is a sound that appeared between letters.
 // *The Romaji of this word is expressed
 // as a "roppyaku" and omit 'u'.
-// It will be explained later.
 
 // fair/show・ひんぴょうかい・品評会
 const fair = hVowels.hi + n + pyVowels.pyo + vowels.u + kVowels.ka + vowels.i;
@@ -2982,4 +2997,3 @@ console.log(fairKanji);
 // ひんぴょうかい is 品評会 in Kanji.
 // *The Romaji of this word is expressed
 // as a "himpyokai". 'n' is changed into 'm' and omit 'u'.
-// It will be explained later.
