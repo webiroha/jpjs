@@ -767,7 +767,17 @@ console.log(uniquenessHiragana);
 // Uniqueness is ゆいいつ in Hiragana.
 console.log(uniquenessKanji);
 // ゆいいつ is 唯一 in Kanji.
-`,
+
+
+// good morning・おはよう
+const goodMorning = vowels.o + hVowels.ha + yVowels.yo + vowels.u;
+const goodMorningHiragana = englishHiragana('Good morning', goodMorning);
+
+console.log(goodMorningHiragana);
+// Good morning is おはよう in Hiragana.
+// *The Romaji of this word is expressed
+// as a "Ohayo" and omit 'u'.
+// It will be explained later.`,
     navLink: ['mvowels', '', '', ''],
   },
 
