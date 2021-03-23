@@ -993,7 +993,9 @@ console.log(nByRomaji);`,
     letters: `const nLetter = [
   { n: { hiragana: 'ん', katakana: 'ン' } },
 ];
-// We type 'ん/ン' with doubling n(nn).
+// *This Romaji "n" is expressed as "m" depending on
+// the combination of the sound or rules.
+// *We type 'ん/ン' with doubling n(nn).
 `,
     exampleText: "Let's use consonant n in practice!",
     examples: `// Base code
