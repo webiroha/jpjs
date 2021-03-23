@@ -2610,8 +2610,6 @@ console.log(forAndAgainstHiragana);
 // For and against is さんぴ in Hiragana.
 console.log(forAndAgainstKanji);
 // さんぴ is 賛否 in Kanji.
-// *The Romaji of this word is expressed
-// as "Sampi".
 
 // music note・おんぷ・音符
 const musicNote = vowels.o + n + pVowels.pu;
@@ -2622,8 +2620,6 @@ console.log(musicNoteHiragana);
 // Music note is おんぷ in Hiragana.
 console.log(musicNoteKanji);
 // おんぷ is 音符 in Kanji.
-// *The Romaji of this word is expressed
-// as "Ompu".
 
 // perfect・かんぺき・完璧
 const perfect = kVowels.ka + n + pVowels.pe + kVowels.ki;
@@ -2634,8 +2630,6 @@ console.log(perfectHiragana);
 // Perfect is かんぺき in Hiragana.
 console.log(perfectKanji);
 // かんぺき is 完璧 in Kanji.
-// *The Romaji of this word is expressed
-// as "Kampeki".
 
 // progress・しんぽ・進歩
 const progress = sVowels.shi + n + pVowels.po;
@@ -2646,8 +2640,6 @@ console.log(progressHiragana);
 // Progress is しんぽ in Hiragana.
 console.log(progressKanji);
 // しんぽ is 進歩 in Kanji.
-// *The Romaji of this word is expressed
-// as "Shimpo".
 
 // kyvowels ----------
 // scriptwriter・きゃくほんか・脚本家
@@ -3006,4 +2998,4 @@ console.log(fairHiragana);
 console.log(fairKanji);
 // ひんぴょうかい is 品評会 in Kanji.
 // *The Romaji of this word is expressed
-// as "himpyokai". 'n' is changed into 'm' and omit 'u'.
+// as "hinpyokai" and omit 'u'.
