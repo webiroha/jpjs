@@ -65,6 +65,7 @@ const Consonants = () => {
   Section.tag.appendChild(ContentsFragMain());
   ContentsFrag().appendChild(Section.tag);
 
+  // details(gray area)
   const DetailsSection = Element({
     elem: 'section',
     class: 'section details',
@@ -136,10 +137,27 @@ const Consonants = () => {
 
   DetailsBlock.tag.appendChild(VoicedPLinks());
 
-  // Contracted sounds
+  ContentsFragDetails().appendChild(DetailsBlock.tag);
+  DetailsSection.tag.appendChild(ContentsFragDetails());
+  ContentsFrag().appendChild(DetailsSection.tag);
+
+  // Contracted area
+
+  const ContractedSection = Element({
+    elem: 'section',
+    class: 'section contracted',
+  });
+
+  const ContentsFragContracted = Frag();
+
+  const ContractedBlock = Element({
+    elem: 'div',
+    class: ' slide-in-upper__1',
+  });
+
   const ContractedTitleInfo = {
-    role: 'sub-s',
-    element: 'h3',
+    role: 'sub',
+    element: 'h2',
     title: 'Contracted sounds',
     text: [
       'This combination rule is similar to consonant y + vowels.',
@@ -147,50 +165,54 @@ const Consonants = () => {
     ],
   };
 
-  const ContractedTitleInfoBlock = TitleWithText(ContractedTitleInfo);
-  DetailsBlock.tag.appendChild(ContractedTitleInfoBlock());
+  const ContractedInfoBlock = TitleWithText(ContractedTitleInfo);
+  ContractedBlock.tag.appendChild(ContractedInfoBlock());
+  ContentsFragContracted().appendChild(ContractedBlock.tag);
 
-  DetailsBlock.tag.appendChild(ContractedLinks());
+  const threeCombineSystem = `const vowels = [...'aiueo'];
+const contractedConsonants = [...'ksctnhmrgjzdbp'];
+const middle = 'y';
+const roughContractedSystem = contractedConsonants.map((consonant) =>
+  vowels
+    .filter((_, i) => i % 2 === 0)
+    .map((vowel) => consonant + middle + vowel)
+);`;
 
-  ContentsFragDetails().appendChild(DetailsBlock.tag);
-  DetailsSection.tag.appendChild(ContentsFragDetails());
-  ContentsFrag().appendChild(DetailsSection.tag);
+  const { Code: ThreeCombinedCode } = CodeBlock(threeCombineSystem);
+  ContentsFragContracted().appendChild(ThreeCombinedCode.tag);
 
-  // const ContractedSection = Element({
-  //   elem: 'section',
-  //   class: 'section contracted',
-  // });
+  ContractedSection.tag.appendChild(ContentsFragContracted());
+  ContentsFrag().appendChild(ContractedSection.tag);
 
-  // const ContentsFragContracted = Frag();
+  // Contracted sounds details
+  const DetailsSection2 = Element({
+    elem: 'section',
+    class: 'section details',
+  });
+  const ContentsFragDetails2 = Frag();
+  const ContractedDetailsBlock = Element({
+    elem: 'div',
+    class: 'consonants-details slide-in-upper__1',
+  });
+  const ContractedDetailsTitleInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'Contracted sounds details',
+    text: ['- work in progress -'],
+  };
 
-  // const ContractedBlock = Element({
-  //   elem: 'div',
-  //   class: ' slide-in-upper__1',
-  // });
+  const ContractedDetailsTitleInfoBlock = TitleWithText(
+    ContractedDetailsTitleInfo
+  );
+  ContractedDetailsBlock.tag.appendChild(ContractedDetailsTitleInfoBlock());
 
-  // const ContractedTitleInfo = {
-  //   role: 'sub',
-  //   element: 'h2',
-  //   title: 'Contracted sound',
-  //   text: 'These are advanced combinations.',
-  // };
+  ContractedDetailsBlock.tag.appendChild(ContractedLinks());
 
-  // const ContractedInfoBlock = TitleWithText(ContractedTitleInfo);
-  // ContractedBlock.tag.appendChild(ContractedInfoBlock());
-  // ContentsFragContracted().appendChild(ContractedBlock.tag);
+  ContentsFragDetails2().appendChild(ContractedDetailsBlock.tag);
+  DetailsSection2.tag.appendChild(ContentsFragDetails2());
+  ContentsFrag().appendChild(DetailsSection2.tag);
 
-  // const threeCombineSystem = `const contractedConsonants = [...'ksctnhmrgjzdbp'];
-  // const middle = 'y';
-  // const roughContractedSystem = contractedConsonants.map((consonant) =>
-  //   vowels.map((vowel) => consonant + middle + vowel)
-  // );`;
-
-  // const { Code: ThreeCombinedCode } = CodeBlock(threeCombineSystem);
-  // ContentsFragContracted().appendChild(ThreeCombinedCode.tag);
-
-  // ContractedSection.tag.appendChild(ContentsFragContracted());
-  // ContentsFrag().appendChild(ContractedSection.tag);
-
+  // nav
   const NavSection = Element({
     elem: 'section',
     class: 'section',

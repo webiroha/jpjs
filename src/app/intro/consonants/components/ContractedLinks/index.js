@@ -11,6 +11,8 @@ const ContractedLink = (consonant) => {
   // const separate = (w) => w.split('').join('/');
   // const shape = consonant.length > 1 ? separate(consonant) : consonant;
   const dealedText = () => {
+    if (consonant === 's' || consonant === 'c')
+      return `${consonant} + h + vowels`;
     if (consonant === 'j') return `${consonant} + vowels`;
     else return `${consonant} + y + vowels`;
   };
