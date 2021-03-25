@@ -141,8 +141,33 @@ const Consonants = () => {
   DetailsSection.tag.appendChild(ContentsFragDetails());
   ContentsFrag().appendChild(DetailsSection.tag);
 
-  // Contracted area
+  // One rule for Romaji
+  const Aside2 = Element({
+    elem: 'aside',
+    class: 'aside',
+  });
 
+  const DoubleInfo = {
+    role: 'sub-s',
+    element: 'h3',
+    title: 'Supplement 2',
+    text: [
+      'A double consonant is a sound that appeared',
+      'between letters and the letter is small',
+      "Hiragana 'っ' or Katakana 'ッ'.",
+      '',
+      "For example, 'さっか/作家/writer' is written",
+      'as Sakka in Romaji.',
+      'The consonant will be double.',
+    ],
+  };
+
+  const DoubleInfoBlock = TitleWithText(DoubleInfo);
+  Aside2.tag.appendChild(DoubleInfoBlock());
+
+  DetailsBlock.tag.appendChild(Aside2.tag);
+
+  // Contracted area
   const ContractedSection = Element({
     elem: 'section',
     class: 'section contracted',
