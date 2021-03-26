@@ -116,6 +116,11 @@ const Consonants = () => {
       'in Hepburn-shiki Romaji.',
       "For example, 'さいこう/saikou' gets to 'saiko' and",
       "'おはよう/ohayou' gets to 'ohayo'.",
+      '',
+      'Seldom, but there is a time the long sound is expressed',
+      "as 'ー' letter in Hiragana. The word looks to be more casual.",
+      "On the other hand, it is normal to use 'ー' letter when written",
+      'in Katakana, especially, when the word is a loan word.',
     ],
   };
 
