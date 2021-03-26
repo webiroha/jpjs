@@ -2986,6 +2986,8 @@ console.log(sixHundredHiragana);
 // Six hundred is ろっぴゃく in Hiragana.
 console.log(sixHundredKanji);
 // ろっぴゃく is 六百 in Kanji.
+// *The Romaji of this word is expressed as "roppyaku".
+// The consonant p will be double.
 
 // fair/show・ひんぴょうかい・品評会
 const fair = hVowels.hi + n + pyVowels.pyo + vowels.u + kVowels.ka + vowels.i;
