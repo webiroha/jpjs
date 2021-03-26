@@ -197,10 +197,11 @@ const Consonants = () => {
   const threeCombineSystem = `const vowels = [...'aiueo'];
 const contractedConsonants = [...'ksctnhmrgjzdbp'];
 const middle = 'y';
-const roughContractedSystem = contractedConsonants.map((consonant) =>
-  vowels
-    .filter((_, i) => i % 2 === 0)
-    .map((vowel) => consonant + middle + vowel)
+const roughContractedSystem = contractedConsonants.map(
+  (consonant) =>
+    vowels
+      .filter((_, i) => i % 2 === 0)
+      .map((vowel) => consonant + middle + vowel)
 );`;
 
   const { Code: ThreeCombinedCode } = CodeBlock(threeCombineSystem);

@@ -2986,9 +2986,6 @@ console.log(sixHundredHiragana);
 // Six hundred is ろっぴゃく in Hiragana.
 console.log(sixHundredKanji);
 // ろっぴゃく is 六百 in Kanji.
-// A double consonant is a sound that appeared between letters.
-// *The Romaji of this word is expressed
-// as "roppyaku" and omit 'u'.
 
 // fair/show・ひんぴょうかい・品評会
 const fair = hVowels.hi + n + pyVowels.pyo + vowels.u + kVowels.ka + vowels.i;
