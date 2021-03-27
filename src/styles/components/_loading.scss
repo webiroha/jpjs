@@ -1,0 +1,19 @@
+#loading {
+  background-color: $color-main;
+  display: flex;
+  height: 100vh;
+  position:absolute;
+  transition: all 1s;
+  width: 100vw;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sk-pulse {
+  background: $color-white !important;
+  margin: auto;
+}
+

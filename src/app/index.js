@@ -7,7 +7,7 @@ import NihongoMotion from '@root/components/NihongoMotion';
 import Center from '@root/components/layout/Center';
 import Link from '@root/components/links/Link';
 
-const { root, WholeFrag, Wrapper, CenterFrag } = Center();
+const { root, WholeFrag, Spinner, Wrapper, CenterFrag } = Center();
 
 // root.className = 'root_layout_top';
 Wrapper.tag.className = 'wrapper wrapper_layout_top';
@@ -108,4 +108,5 @@ WholeFrag().appendChild(UpperWrapper.tag);
 WholeFrag().appendChild(BottomWrapper.tag);
 Wrapper.tag.appendChild(WholeFrag());
 
+root.appendChild(Spinner.tag);
 root.appendChild(Wrapper.tag);
