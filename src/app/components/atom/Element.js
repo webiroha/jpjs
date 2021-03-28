@@ -1,7 +1,7 @@
 const Element = (props) => {
   const tag = document.createElement(props.elem);
-  tag.className = props.class;
-  tag.id = props.id;
+  if (props.class) tag.className = props.class;
+  if (props.id) tag.id = props.id;
 
   if (Array.isArray(props.text)) {
     props.text.forEach((t, i) => {

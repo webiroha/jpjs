@@ -36,5 +36,5 @@ export default Center;
 
 window.onload = () => {
   const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
+  spinner.remove('loading');
 };
