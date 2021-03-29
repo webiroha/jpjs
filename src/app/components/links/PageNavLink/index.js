@@ -8,7 +8,18 @@ const Link = (direct, link, except) => {
     class: `page-nav__item fade-in`,
   });
   const status = link !== '' ? link : 'sometime later!';
-
+  // let status;
+  // switch (link) {
+  //   case link === 'END':
+  //     status = null;
+  //     break;
+  //   case link !== '':
+  //     status = link;
+  //     break;
+  //   default:
+  //     status = 'sometime later!';
+  //     break;
+  // }
   const Link = Element({
     elem: 'a',
     class: `${direct}-link page-nav__link`,
@@ -30,7 +41,7 @@ const PageNavLink = (pre, next, exceptPre, exceptNext) => {
   });
 
   Block.tag.appendChild(Link('pre', pre, exceptPre));
-  Block.tag.appendChild(Link('next', next, exceptNext));
+  if (next !== 'END') Block.tag.appendChild(Link('next', next, exceptNext));
 
   return Block.tag;
 };

@@ -248,7 +248,7 @@ const roughContractedSystem = contractedConsonants.map(
     elem: 'section',
     class: 'section',
   });
-  NavSection.tag.appendChild(PageNavLink('vowels', ''));
+  NavSection.tag.appendChild(PageNavLink('vowels', 'END'));
   ContentsFrag().appendChild(NavSection.tag);
 
   return ContentsFrag();
