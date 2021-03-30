@@ -12,6 +12,7 @@ export const pagelist = {
         'hvowels',
         'mvowels',
         'yvowels',
+        'rvowels',
       ],
     },
   ],

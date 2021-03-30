@@ -165,7 +165,6 @@ console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
 // *The Romaji of this word is expressed
 // as "Saiko" and omit 'u'.
-// It will be explained later.
 
 
 // match(game)・しあい・試合
@@ -545,7 +544,6 @@ console.log(equityKanji);
 // こうへい is 公平 in Kanji.
 // *The Romaji of this word is expressed
 // as "Kohei" and omit 'u'.
-// It will be explained later.
 
 
 // star・ほし・星
@@ -770,15 +768,16 @@ console.log(uniquenessKanji);
 
 
 // good morning・おはよう
-const goodMorning = vowels.o + hVowels.ha + yVowels.yo + vowels.u;
-const goodMorningHiragana = englishHiragana('Good morning', goodMorning);
+const goodMorning =
+  vowels.o + hVowels.ha + yVowels.yo + vowels.u;
+const goodMorningHiragana =
+  englishHiragana('Good morning', goodMorning);
 
 console.log(goodMorningHiragana);
 // Good morning is おはよう in Hiragana.
 // *The Romaji of this word is expressed
-// as "Ohayo" and omit 'u'.
-// It will be explained later.`,
-    navLink: ['mvowels', '', '', ''],
+// as "Ohayo" and omit 'u'.`,
+    navLink: ['mvowels', 'rvowels', '', ''],
   },
 
   consonantRinfo: {
@@ -846,6 +845,59 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// ease・らく・楽
+const ease = rVowels.ra + kVowels.ku;
+const easeHiragana = englishHiragana('Ease', ease);
+const easeKanji = hiraganaKanji(ease, '楽');
+
+console.log(easeHiragana);
+// Ease is らく in Hiragana.
+console.log(easeKanji);
+// らく is 楽 in Kanji.
+
+// reason・りゆう・理由
+const reason = rVowels.ri + yVowels.yu + vowels.u;
+const reasonHiragana = englishHiragana('Reason', reason);
+const reasonKanji = hiraganaKanji(reason, '理由');
+
+console.log(reasonHiragana);
+// Reason is りゆう in Hiragana.
+console.log(reasonKanji);
+// りゆう is 理由 in Kanji.
+// *The Romaji of this word is expressed
+// as "Riyu" and omit 'u'.
+
+// absence・るす・留守
+const absence = rVowels.ru + sVowels.su;
+const absenceHiragana = englishHiragana('Absence', absence);
+const absenceKanji = hiraganaKanji(absence, '留守');
+
+console.log(absenceHiragana);
+// Absence is るす in Hiragana.
+console.log(absenceKanji);
+// るす is 留守 in Kanji.
+
+// history・れきし・歴史
+const history = rVowels.re + kVowels.ki + sVowels.shi;
+const historyHiragana = englishHiragana('History', history);
+const historyKanji = hiraganaKanji(history, '歴史');
+
+console.log(historyHiragana);
+// History is れきし in Hiragana.
+console.log(historyKanji);
+// れきし is 歴史 in Kanji.
+
+// corridor・ろうか・廊下
+const corridor = rVowels.ro + vowels.u + kVowels.ka;
+const corridorHiragana = englishHiragana('Corridor', corridor);
+const corridorKanji = hiraganaKanji(corridor, '廊下');
+
+console.log(corridorHiragana);
+// Corridor is ろうか in Hiragana.
+console.log(corridorKanji);
+// ろうか is 廊下 in Kanji.
+// *The Romaji of this word is expressed
+// as "Roka" and omit 'u'.
 `,
     navLink: ['yvowels', '', '', ''],
   },
@@ -1237,7 +1289,6 @@ const hiraganaKanji = (
   kanji
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
-
 `,
     navLink: ['consonants', '', '', ''],
   },
@@ -2098,7 +2149,6 @@ console.log(awesomeKanji);
 // さいこう is 最高 in Kanji.
 // *The Romaji of this word is expressed
 // as "Saiko" and omit 'u'.
-// It will be explained later.
 
 // match・しあい・試合
 const match = sVowels.shi + vowels.a + vowels.i;
@@ -2244,7 +2294,6 @@ console.log(equityKanji);
 // こうへい is 公平 in Kanji.
 // *The Romaji of this word is expressed
 // as "Kohei" and omit 'u'.
-// It will be explained later.
 
 // star・ほし・星
 const star = hVowels.ho + sVowels.shi;
@@ -2327,7 +2376,6 @@ console.log(goodMorningHiragana);
 // Good morning is おはよう in Hiragana.
 // *The Romaji of this word is expressed
 // as "Ohayo" and omit 'u'.
-// It will be explained later.
 
 // r vowels ----------
 // ease・らく・楽
@@ -2351,7 +2399,6 @@ console.log(reasonKanji);
 // りゆう is 理由 in Kanji.
 // *The Romaji of this word is expressed
 // as "Riyu" and omit 'u'.
-// It will be explained later.
 
 // absence・るす・留守
 const absence = rVowels.ru + sVowels.su;
@@ -2384,7 +2431,6 @@ console.log(corridorKanji);
 // ろうか is 廊下 in Kanji.
 // *The Romaji of this word is expressed
 // as "Roka" and omit 'u'.
-// It will be explained later.
 
 // w vowels ----------
 // planet・わくせい・惑星
