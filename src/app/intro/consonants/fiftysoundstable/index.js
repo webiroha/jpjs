@@ -151,7 +151,7 @@ console.log(combine);
     elem: 'section',
     class: 'section',
   });
-  NavSection.tag.appendChild(PageNavLink('n', ''));
+  NavSection.tag.appendChild(PageNavLink('n', 'gvowels'));
   ContentsFrag().appendChild(NavSection.tag);
 
   return ContentsFrag();

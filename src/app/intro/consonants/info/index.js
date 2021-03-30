@@ -1024,7 +1024,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['nvowels', '', '', ''],
+    navLink: ['rvowels', 'n', '', ''],
   },
 
   consonantNNinfo: {
@@ -1098,7 +1098,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 `,
-    navLink: ['nvowels', '', '', ''],
+    navLink: ['n', 'fiftysoundstable', '', ''],
   },
 
   consonantGinfo: {
@@ -1145,7 +1145,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 `,
-    navLink: ['n', '', '', ''],
+    navLink: ['fiftysoundstable', 'zvowels', '', ''],
   },
 
   consonantZinfo: {
@@ -1208,7 +1208,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 `,
-    navLink: ['consonants', '', '', ''],
+    navLink: ['gvowels', 'dvowels', '', ''],
   },
 
   consonantDinfo: {
@@ -1290,7 +1290,7 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 `,
-    navLink: ['consonants', '', '', ''],
+    navLink: ['zvowels', 'bvowels', '', ''],
   },
 
   consonantBinfo: {
@@ -1322,7 +1322,7 @@ const bVowelLetters = [
     exampleText: "Let's use consonant b + vowels in practice!",
     examples: `// Base code
 `,
-    navLink: ['dvowels', '', '', ''],
+    navLink: ['dvowels', 'pvowels', '', ''],
   },
 
   consonantPinfo: {
@@ -1351,7 +1351,7 @@ const pVowelLetters = [
     exampleText: "Let's use consonant p + vowels in practice!",
     examples: `// Base code
 `,
-    navLink: ['bvowels', '', '', ''],
+    navLink: ['bvowels', 'kyvowels', '', ''],
   },
 
   consonantKYinfo: {
@@ -1412,7 +1412,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['mvowels', '', '', ''],
+    navLink: ['pvowels', 'shvowels', '', ''],
   },
 
   consonantSHinfo: {
@@ -1475,7 +1475,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 `,
-    navLink: ['kyvowels', '', '', ''],
+    navLink: ['kyvowels', 'chvowels', '', ''],
   },
 
   consonantCHinfo: {
@@ -1538,7 +1538,7 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 `,
-    navLink: ['kyvowels', '', '', ''],
+    navLink: ['shvowels', 'nyvowels', '', ''],
   },
 
   consonantNYinfo: {
@@ -1599,7 +1599,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['chvowels', '', '', ''],
+    navLink: ['chvowels', 'hyvowels', '', ''],
   },
 
   consonantHYinfo: {
@@ -1660,7 +1660,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['nyvowels', '', '', ''],
+    navLink: ['nyvowels', 'myvowels', '', ''],
   },
 
   consonantMYinfo: {
@@ -1721,7 +1721,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['nyvowels', '', '', ''],
+    navLink: ['hyvowels', 'ryvowels', '', ''],
   },
 
   consonantRYinfo: {
@@ -1782,7 +1782,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['myvowels', '', '', ''],
+    navLink: ['myvowels', 'gyvowels', '', ''],
   },
 
   consonantGYinfo: {
@@ -1843,7 +1843,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['myvowels', '', '', ''],
+    navLink: ['ryvowels', 'jvowels', '', ''],
   },
 
   consonantJinfo: {
@@ -1933,7 +1933,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['myvowels', '', '', ''],
+    navLink: ['gyvowels', 'byvowels', '', ''],
   },
 
   consonantBYinfo: {
@@ -1994,7 +1994,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['myvowels', '', '', ''],
+    navLink: ['jvowels', 'pyvowels', '', ''],
   },
 
   consonantPYinfo: {
@@ -2055,7 +2055,7 @@ const hiraganaKanji = (
 
 
 `,
-    navLink: ['byvowels', '', '', ''],
+    navLink: ['byvowels', 'consonants', '', 'one'],
   },
 };
 
