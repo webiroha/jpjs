@@ -1028,9 +1028,12 @@ const hiraganaKanji = (
 
 
 // planet・わくせい・惑星
-const planet = wVowels.wa + kVowels.ku + sVowels.se + vowels.i;
-const planetHiragana = englishHiragana('Planet', planet);
-const planetKanji = hiraganaKanji(planet, '惑星');
+const planet =
+  wVowels.wa + kVowels.ku + sVowels.se + vowels.i;
+const planetHiragana =
+  englishHiragana('Planet', planet);
+const planetKanji =
+  hiraganaKanji(planet, '惑星');
 
 console.log(planetHiragana);
 // Planet is わくせい in Hiragana.
@@ -1047,9 +1050,12 @@ const hiraganaWithKanji = (hiragana, kanji) => {
   return \`\${hiragana} is \${withKanji} in Kanji.\`;
 };
 const buyDesk =
-  tVowels.tsu + kVowels.ku + vowels.e + wVowels.o + kVowels.ka + vowels.u;
-const buyDeskHiragana = englishHiragana('BuyDesk', buyDesk);
-const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
+  tVowels.tsu + kVowels.ku + vowels.e +
+  wVowels.o + kVowels.ka + vowels.u;
+const buyDeskHiragana =
+  englishHiragana('BuyDesk', buyDesk);
+const buyDeskKanji =
+  hiraganaWithKanji(buyDesk, ['机', '買']);
 
 console.log(buyDeskHiragana);
 // BuyDesk is つくえをかう in Hiragana.
@@ -1132,7 +1138,9 @@ const hiraganaKanji = (
 
 
 // hello・こんにちは
-const hello = kVowels.ko + n + nVowels.ni + tVowels.chi + wVowelsParticle.wa;
+const hello =
+  kVowels.ko + n + nVowels.ni + tVowels.chi +
+  wVowelsParticle.wa;
 const helloHiragana = englishHiragana('Hello', hello);
 
 console.log(helloHiragana);
@@ -1232,9 +1240,12 @@ console.log(galaxyKanji);
 
 
 // even number・ぐうすう・偶数
-const evenNumber = gVowels.gu + vowels.u + sVowels.su + vowels.u;
-const evenNumberHiragana = englishHiragana('Even Number', evenNumber);
-const evenNumberKanji = hiraganaKanji(evenNumber, '偶数');
+const evenNumber =
+  gVowels.gu + vowels.u + sVowels.su + vowels.u;
+const evenNumberHiragana =
+  englishHiragana('Even Number', evenNumber);
+const evenNumberKanji =
+  hiraganaKanji(evenNumber, '偶数');
 
 console.log(evenNumberHiragana);
 // Even Number is ぐうすう in Hiragana.
@@ -1246,8 +1257,10 @@ console.log(evenNumberKanji);
 
 // language・げんご・言語
 const language = gVowels.ge + n + gVowels.go;
-const languageHiragana = englishHiragana('Language', language);
-const languageKanji = hiraganaKanji(language, '言語');
+const languageHiragana =
+  englishHiragana('Language', language);
+const languageKanji =
+  hiraganaKanji(language, '言語');
 
 console.log(languageHiragana);
 // Language is げんご in Hiragana.
@@ -1272,17 +1285,20 @@ const vowels = [...'aiueo'];
 const hepburnElem = 'j';
 
 // Kunrei-shiki and Nihon-shiki Romaji
-const zVowelsByRomaji = vowels.map((vowel) => consonantZ + vowel);
+const zVowelsByRomaji = vowels.map(
+  (vowel) => consonantZ + vowel
+);
 console.log(zVowelsByRomaji.toString());
 // za, zi, zu, ze, zo
 
 // Hepburn-shiki Romaji(We will use this here.)
-const zVowelsByRomajiHepburn = vowels.map((vowel) => {
-  if (vowel === 'i') {
-    return hepburnElem + vowel;
-  } else {
-    return consonantZ + vowel;
-  }
+const zVowelsByRomajiHepburn = vowels.map(
+  (vowel) => {
+    if (vowel === 'i') {
+      return hepburnElem + vowel;
+    } else {
+      return consonantZ + vowel;
+    }
 });
 console.log(zVowelsByRomajiHepburn.toString());
 // za, ji, zu, ze, zo`,
@@ -1354,7 +1370,8 @@ const hiraganaKanji = (
 
 
 // trivia・ざつがく・雑学
-const trivia = zVowels.za + tVowels.tsu + gVowels.ga + kVowels.ku;
+const trivia =
+  zVowels.za + tVowels.tsu + gVowels.ga + kVowels.ku;
 const triviaHiragana = englishHiragana('Trivia', trivia);
 const triviaKanji = hiraganaKanji(trivia, '雑学');
 
@@ -1389,9 +1406,12 @@ console.log(brainKanji);
 
 
 // extinction・ぜつめつ・絶滅
-const extinction = zVowels.ze + tVowels.tsu + mVowels.me + tVowels.tsu;
-const extinctionHiragana = englishHiragana('Extinction', extinction);
-const extinctionKanji = hiraganaKanji(extinction, '絶滅');
+const extinction =
+  zVowels.ze + tVowels.tsu + mVowels.me + tVowels.tsu;
+const extinctionHiragana =
+  englishHiragana('Extinction', extinction);
+const extinctionKanji =
+  hiraganaKanji(extinction, '絶滅');
 
 console.log(extinctionHiragana);
 // Extinction is ぜつめつ in Hiragana.
@@ -1400,9 +1420,12 @@ console.log(extinctionKanji);
 
 
 // attribute・ぞくせい・属性
-const attribute = zVowels.zo + kVowels.ku + sVowels.se + vowels.i;
-const attributeHiragana = englishHiragana('Attribute', attribute);
-const attributeKanji = hiraganaKanji(attribute, '属性');
+const attribute =
+  zVowels.zo + kVowels.ku + sVowels.se + vowels.i;
+const attributeHiragana =
+  englishHiragana('Attribute', attribute);
+const attributeKanji =
+  hiraganaKanji(attribute, '属性');
 
 console.log(attributeHiragana);
 // Attribute is ぞくせい in Hiragana.
@@ -1430,7 +1453,9 @@ const vowels = [...'aiueo'];
 const hepburnElem = ['j', 'z'];
 
 // Nihon-shiki Romaji
-const dVowelsByRomaji = vowels.map((vowel) => consonantD + vowel);
+const dVowelsByRomaji = vowels.map(
+  (vowel) => consonantD + vowel
+);
 console.log(dVowelsByRomaji.toString());
 // da, di, du, de, do
 
@@ -1528,9 +1553,13 @@ const hiraganaKanji = (
 
 
 // kitchen・だいどころ・台所
-const kitchen = dVowels.da + vowels.i + dVowels.do + kVowels.ko + rVowels.ro;
-const kitchenHiragana = englishHiragana('Kitchen', kitchen);
-const kitchenKanji = hiraganaKanji(kitchen, '台所');
+const kitchen =
+  dVowels.da + vowels.i +
+  dVowels.do + kVowels.ko + rVowels.ro;
+const kitchenHiragana =
+  englishHiragana('Kitchen', kitchen);
+const kitchenKanji =
+  hiraganaKanji(kitchen, '台所');
 
 console.log(kitchenHiragana);
 // Kitchen is だいどころ in Hiragana.
@@ -1540,8 +1569,10 @@ console.log(kitchenKanji);
 
 // nosebleed・はなぢ・鼻血
 const nosebleed = hVowels.ha + nVowels.na + dVowels.ji;
-const nosebleedHiragana = englishHiragana('Nosebleed', nosebleed);
-const nosebleedKanji = hiraganaKanji(nosebleed, '鼻血');
+const nosebleedHiragana =
+  englishHiragana('Nosebleed', nosebleed);
+const nosebleedKanji =
+  hiraganaKanji(nosebleed, '鼻血');
 
 console.log(nosebleedHiragana);
 // Nosebleed is はなぢ in Hiragana.
@@ -1550,9 +1581,12 @@ console.log(nosebleedKanji);
 
 
 // crescent moon・みかづき・三日月
-const crescentMoon = mVowels.mi + kVowels.ka + dVowels.zu + kVowels.ki;
-const crescentMoonHiragana = englishHiragana('Crescent moon', crescentMoon);
-const crescentMoonKanji = hiraganaKanji(crescentMoon, '三日月');
+const crescentMoon =
+  mVowels.mi + kVowels.ka + dVowels.zu + kVowels.ki;
+const crescentMoonHiragana =
+  englishHiragana('Crescent moon', crescentMoon);
+const crescentMoonKanji =
+  hiraganaKanji(crescentMoon, '三日月');
 
 console.log(crescentMoonHiragana);
 // Crescent moon is みかづき in Hiragana.
@@ -1683,9 +1717,12 @@ console.log(travelKanji);
 
 
 // stationery・ぶんぼうぐ・文房具
-const stationery = bVowels.bu + n + bVowels.bo + vowels.u + gVowels.gu;
-const stationeryHiragana = englishHiragana('Stationery', stationery);
-const stationeryKanji = hiraganaKanji(stationery, '文房具');
+const stationery =
+  bVowels.bu + n + bVowels.bo + vowels.u + gVowels.gu;
+const stationeryHiragana =
+  englishHiragana('Stationery', stationery);
+const stationeryKanji =
+  hiraganaKanji(stationery, '文房具');
 
 console.log(stationeryHiragana);
 // Stationery is ぶんぼうぐ in Hiragana.
@@ -1806,8 +1843,10 @@ console.log(signalKanji);
 
 // for and against・さんぴ・賛否
 const forAndAgainst = sVowels.sa + n + pVowels.pi;
-const forAndAgainstHiragana = englishHiragana('For and against', forAndAgainst);
-const forAndAgainstKanji = hiraganaKanji(forAndAgainst, '賛否');
+const forAndAgainstHiragana =
+  englishHiragana('For and against', forAndAgainst);
+const forAndAgainstKanji =
+  hiraganaKanji(forAndAgainst, '賛否');
 
 console.log(forAndAgainstHiragana);
 // For and against is さんぴ in Hiragana.
@@ -1817,8 +1856,10 @@ console.log(forAndAgainstKanji);
 
 // music note・おんぷ・音符
 const musicNote = vowels.o + n + pVowels.pu;
-const musicNoteHiragana = englishHiragana('Music note', musicNote);
-const musicNoteKanji = hiraganaKanji(musicNote, '音符');
+const musicNoteHiragana =
+  englishHiragana('Music note', musicNote);
+const musicNoteKanji =
+  hiraganaKanji(musicNote, '音符');
 
 console.log(musicNoteHiragana);
 // Music note is おんぷ in Hiragana.
@@ -1827,9 +1868,12 @@ console.log(musicNoteKanji);
 
 
 // perfect・かんぺき・完璧
-const perfect = kVowels.ka + n + pVowels.pe + kVowels.ki;
-const perfectHiragana = englishHiragana('Perfect', perfect);
-const perfectKanji = hiraganaKanji(perfect, '完璧');
+const perfect =
+  kVowels.ka + n + pVowels.pe + kVowels.ki;
+const perfectHiragana =
+  englishHiragana('Perfect', perfect);
+const perfectKanji =
+  hiraganaKanji(perfect, '完璧');
 
 console.log(perfectHiragana);
 // Perfect is かんぺき in Hiragana.
@@ -1839,8 +1883,10 @@ console.log(perfectKanji);
 
 // progress・しんぽ・進歩
 const progress = sVowels.shi + n + pVowels.po;
-const progressHiragana = englishHiragana('Progress', progress);
-const progressKanji = hiraganaKanji(progress, '進歩');
+const progressHiragana =
+  englishHiragana('Progress', progress);
+const progressKanji =
+  hiraganaKanji(progress, '進歩');
 
 console.log(progressHiragana);
 // Progress is しんぽ in Hiragana.
@@ -1940,9 +1986,12 @@ const hiraganaKanji = (
 
 
 // scriptwriter・きゃくほんか・脚本家
-const scriptwriter = kyVowels.kya + kVowels.ku + hVowels.ho + n + kVowels.ka;
-const scriptwriterHiragana = englishHiragana('Scriptwriter', scriptwriter);
-const scriptwriterKanji = hiraganaKanji(scriptwriter, '脚本家');
+const scriptwriter =
+  kyVowels.kya + kVowels.ku + hVowels.ho + n + kVowels.ka;
+const scriptwriterHiragana =
+  englishHiragana('Scriptwriter', scriptwriter);
+const scriptwriterKanji =
+  hiraganaKanji(scriptwriter, '脚本家');
 
 console.log(scriptwriterHiragana);
 // Scriptwriter is きゃくほんか in Hiragana.
@@ -1965,8 +2014,10 @@ console.log(nineKanji);
 
 // election・せんきょ・選挙
 const election = sVowels.se + n + kyVowels.kyo;
-const electionHiragana = englishHiragana('Election', election);
-const electionKanji = hiraganaKanji(election, '選挙');
+const electionHiragana =
+  englishHiragana('Election', election);
+const electionKanji =
+  hiraganaKanji(election, '選挙');
 
 console.log(electionHiragana);
 // Election is せんきょ in Hiragana.
@@ -2240,9 +2291,12 @@ console.log(teaKanji);
 
 
 // lunch・ちゅうしょく・昼食
-const lunch = chVowels.chu + vowels.u + shVowels.sho + kVowels.ku;
-const lunchHiragana = englishHiragana('Lunch', lunch);
-const lunchKanji = hiraganaKanji(lunch, '昼食');
+const lunch =
+  chVowels.chu + vowels.u + shVowels.sho + kVowels.ku;
+const lunchHiragana =
+  englishHiragana('Lunch', lunch);
+const lunchKanji =
+  hiraganaKanji(lunch, '昼食');
 
 console.log(lunchHiragana);
 // Lunch is ちゅうしょく in Hiragana.
@@ -2253,9 +2307,12 @@ console.log(lunchKanji);
 
 
 // breakfast・ちょうしょく・朝食
-const breakfast = chVowels.cho + vowels.u + shVowels.sho + kVowels.ku;
-const breakfastHiragana = englishHiragana('Breakfast', breakfast);
-const breakfastKanji = hiraganaKanji(breakfast, '朝食');
+const breakfast =
+  chVowels.cho + vowels.u + shVowels.sho + kVowels.ku;
+const breakfastHiragana =
+  englishHiragana('Breakfast', breakfast);
+const breakfastKanji =
+  hiraganaKanji(breakfast, '朝食');
 
 console.log(breakfastHiragana);
 // Breakfast is ちょうしょく in Hiragana.
@@ -2509,8 +2566,10 @@ const hiraganaKanji = (
 
 // hundred・ひゃく・百
 const hundred = hyVowels.hya + kVowels.ku;
-const hundredHiragana = englishHiragana('Hundred', hundred);
-const hundredKanji = hiraganaKanji(hundred, '百');
+const hundredHiragana =
+  englishHiragana('Hundred', hundred);
+const hundredKanji =
+  hiraganaKanji(hundred, '百');
 
 console.log(hundredHiragana);
 // Hundred is ひゃく in Hiragana.
@@ -2519,8 +2578,10 @@ console.log(hundredKanji);
 
 
 // wind sounds・ひゅうひゅう
-const windSounds = hyVowels.hyu + vowels.u + hyVowels.hyu + vowels.u;
-const windSoundsHiragana = englishHiragana('WindSounds', windSounds);
+const windSounds =
+  hyVowels.hyu + vowels.u + hyVowels.hyu + vowels.u;
+const windSoundsHiragana =
+  englishHiragana('WindSounds', windSounds);
 
 console.log(windSoundsHiragana);
 // WindSounds is ひゅうひゅう in Hiragana.
@@ -2533,8 +2594,10 @@ console.log(windSoundsHiragana);
 
 // evaluation・ひょうか・評価
 const evaluation = hyVowels.hyo + vowels.u + kVowels.ka;
-const evaluationHiragana = englishHiragana('Evaluation', evaluation);
-const evaluationKanji = hiraganaKanji(evaluation, '評価');
+const evaluationHiragana =
+  englishHiragana('Evaluation', evaluation);
+const evaluationKanji =
+  hiraganaKanji(evaluation, '評価');
 
 console.log(evaluationHiragana);
 // Evaluation is ひょうか in Hiragana.
@@ -2661,10 +2724,12 @@ console.log(pulseKanji);
 // みゃく is 脈 in Kanji.
 
 
-// lastName・みょうじ・脈
+// lastName・みょうじ・名字
 const lastName = myVowels.myo + vowels.u + zVowels.ji;
-const lastNameHiragana = englishHiragana('Last name', lastName);
-const lastNameKanji = hiraganaKanji(lastName, '名字');
+const lastNameHiragana =
+  englishHiragana('Last name', lastName);
+const lastNameKanji =
+  hiraganaKanji(lastName, '名字');
 
 console.log(lastNameHiragana);
 // Last name is みょうじ in Hiragana.
@@ -2786,8 +2851,10 @@ const hiraganaKanji = (
 
 // abbreviation・りゃく・略
 const abbreviation = ryVowels.rya + kVowels.ku;
-const abbreviationHiragana = englishHiragana('Abbreviation', abbreviation);
-const abbreviationKanji = hiraganaKanji(abbreviation, '略');
+const abbreviationHiragana =
+  englishHiragana('Abbreviation', abbreviation);
+const abbreviationKanji =
+  hiraganaKanji(abbreviation, '略');
 
 console.log(abbreviationHiragana);
 // Abbreviation is りゃく in Hiragana.
@@ -2796,9 +2863,12 @@ console.log(abbreviationKanji);
 
 
 // meteor・りゅうせい・流星
-const meteor = ryVowels.ryu + vowels.u + sVowels.se + vowels.i;
-const meteorHiragana = englishHiragana('Meteor', meteor);
-const meteorKanji = hiraganaKanji(meteor, '流星');
+const meteor =
+  ryVowels.ryu + vowels.u + sVowels.se + vowels.i;
+const meteorHiragana =
+  englishHiragana('Meteor', meteor);
+const meteorKanji =
+  hiraganaKanji(meteor, '流星');
 
 console.log(meteorHiragana);
 // Meteor is りゅうせい in Hiragana.
@@ -2809,9 +2879,12 @@ console.log(meteorKanji);
 
 
 // consideration・こうりょ・考慮
-const consideration = kVowels.ko + vowels.u + ryVowels.ryo;
-const considerationHiragana = englishHiragana('Consideration', consideration);
-const considerationKanji = hiraganaKanji(consideration, '考慮');
+const consideration =
+  kVowels.ko + vowels.u + ryVowels.ryo;
+const considerationHiragana =
+  englishHiragana('Consideration', consideration);
+const considerationKanji =
+  hiraganaKanji(consideration, '考慮');
 
 console.log(considerationHiragana);
 // Consideration is こうりょ in Hiragana.
@@ -2935,8 +3008,10 @@ const hiraganaKanji = (
 
 // opposite・ぎゃく・逆
 const opposite = gyVowels.gya + kVowels.ku;
-const oppositeHiragana = englishHiragana('Opposite', opposite);
-const oppositeKanji = hiraganaKanji(opposite, '逆');
+const oppositeHiragana =
+  englishHiragana('Opposite', opposite);
+const oppositeKanji =
+  hiraganaKanji(opposite, '逆');
 
 console.log(oppositeHiragana);
 // Opposite is ぎゃく in Hiragana.
@@ -2945,9 +3020,12 @@ console.log(oppositeKanji);
 
 
 // beef・ぎゅうにく・牛肉
-const beef = gyVowels.gyu + vowels.u + nVowels.ni + kVowels.ku;
-const beefHiragana = englishHiragana('Beef', beef);
-const beefKanji = hiraganaKanji(beef, '牛肉');
+const beef =
+  gyVowels.gyu + vowels.u + nVowels.ni + kVowels.ku;
+const beefHiragana =
+  englishHiragana('Beef', beef);
+const beefKanji =
+  hiraganaKanji(beef, '牛肉');
 
 console.log(beefHiragana);
 // Beef is ぎゅうにく in Hiragana.
@@ -3125,9 +3203,12 @@ console.log(faucetKanji);
 
 
 // importance・じゅうよう・重要
-const importance = jVowels.ju + vowels.u + yVowels.yo + vowels.u;
-const importanceHiragana = englishHiragana('Importance', importance);
-const importanceKanji = hiraganaKanji(importance, '重要');
+const importance =
+  jVowels.ju + vowels.u + yVowels.yo + vowels.u;
+const importanceHiragana =
+  englishHiragana('Importance', importance);
+const importanceKanji =
+  hiraganaKanji(importance, '重要');
 
 console.log(importanceHiragana);
 // Importance is じゅうよう in Hiragana.
@@ -3138,9 +3219,12 @@ console.log(importanceKanji);
 
 
 // deletion・さくじょ・削除
-const deletion = sVowels.sa + kVowels.ku + jVowels.jo;
-const deletionHiragana = englishHiragana('Deletion', deletion);
-const deletionKanji = hiraganaKanji(deletion, '削除');
+const deletion =
+  sVowels.sa + kVowels.ku + jVowels.jo;
+const deletionHiragana =
+  englishHiragana('Deletion', deletion);
+const deletionKanji =
+  hiraganaKanji(deletion, '削除');
 
 console.log(deletionHiragana);
 // Deletion is さくじょ in Hiragana.
@@ -3267,9 +3351,12 @@ const hiraganaKanji = (
 
 
 // midnight sun・びゃくや・白夜
-const midnightSun = byVowels.bya + kVowels.ku + yVowels.ya;
-const midnightSunHiragana = englishHiragana('Midnight sun', midnightSun);
-const midnightSunKanji = hiraganaKanji(midnightSun, '白夜');
+const midnightSun =
+  byVowels.bya + kVowels.ku + yVowels.ya;
+const midnightSunHiragana =
+  englishHiragana('Midnight sun', midnightSun);
+const midnightSunKanji =
+  hiraganaKanji(midnightSun, '白夜');
 
 console.log(midnightSunHiragana);
 // Midnight sun is びゃくや in Hiragana.
@@ -3291,9 +3378,12 @@ console.log(fallacyKanji);
 
 
 // hospital・びょういん・病院
-const hospital = byVowels.byo + vowels.u + vowels.i + n;
-const hospitalHiragana = englishHiragana('Hospital', hospital);
-const hospitalKanji = hiraganaKanji(hospital, '病院');
+const hospital =
+  byVowels.byo + vowels.u + vowels.i + n;
+const hospitalHiragana =
+  englishHiragana('Hospital', hospital);
+const hospitalKanji =
+  hiraganaKanji(hospital, '病院');
 
 console.log(hospitalHiragana);
 // Hospital is びょういん in Hiragana.
@@ -3427,9 +3517,12 @@ const hiraganaKanji = (
 
 
 // six hundred・ろっぴゃく・六百
-const sixHundred = rVowels.ro + doubleConsonant + pyVowels.pya + kVowels.ku;
-const sixHundredHiragana = englishHiragana('Six hundred', sixHundred);
-const sixHundredKanji = hiraganaKanji(sixHundred, '六百');
+const sixHundred =
+  rVowels.ro + doubleConsonant + pyVowels.pya + kVowels.ku;
+const sixHundredHiragana =
+  englishHiragana('Six hundred', sixHundred);
+const sixHundredKanji =
+  hiraganaKanji(sixHundred, '六百');
 
 console.log(sixHundredHiragana);
 // Six hundred is ろっぴゃく in Hiragana.
@@ -3440,9 +3533,13 @@ console.log(sixHundredKanji);
 
 
 // fair/show・ひんぴょうかい・品評会
-const fair = hVowels.hi + n + pyVowels.pyo + vowels.u + kVowels.ka + vowels.i;
-const fairHiragana = englishHiragana('Fair', fair);
-const fairKanji = hiraganaKanji(fair, '品評会');
+const fair =
+  hVowels.hi + n + pyVowels.pyo + vowels.u +
+  kVowels.ka + vowels.i;
+const fairHiragana =
+  englishHiragana('Fair', fair);
+const fairKanji =
+  hiraganaKanji(fair, '品評会');
 
 console.log(fairHiragana);
 // Fair is ひんぴょうかい in Hiragana.
@@ -4268,7 +4365,7 @@ console.log(pulseHiragana);
 console.log(pulseKanji);
 // みゃく is 脈 in Kanji.
 
-// lastName・みょうじ・脈
+// lastName・みょうじ・名字
 const lastName = myVowels.myo + vowels.u + zVowels.ji;
 const lastNameHiragana = englishHiragana('Last name', lastName);
 const lastNameKanji = hiraganaKanji(lastName, '名字');
