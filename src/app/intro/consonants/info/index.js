@@ -855,6 +855,7 @@ console.log(easeHiragana);
 console.log(easeKanji);
 // らく is 楽 in Kanji.
 
+
 // reason・りゆう・理由
 const reason = rVowels.ri + yVowels.yu + vowels.u;
 const reasonHiragana = englishHiragana('Reason', reason);
@@ -867,6 +868,7 @@ console.log(reasonKanji);
 // *The Romaji of this word is expressed
 // as "Riyu" and omit 'u'.
 
+
 // absence・るす・留守
 const absence = rVowels.ru + sVowels.su;
 const absenceHiragana = englishHiragana('Absence', absence);
@@ -877,6 +879,7 @@ console.log(absenceHiragana);
 console.log(absenceKanji);
 // るす is 留守 in Kanji.
 
+
 // history・れきし・歴史
 const history = rVowels.re + kVowels.ki + sVowels.shi;
 const historyHiragana = englishHiragana('History', history);
@@ -886,6 +889,7 @@ console.log(historyHiragana);
 // History is れきし in Hiragana.
 console.log(historyKanji);
 // れきし is 歴史 in Kanji.
+
 
 // corridor・ろうか・廊下
 const corridor = rVowels.ro + vowels.u + kVowels.ka;
@@ -1023,7 +1027,35 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// planet・わくせい・惑星
+const planet = wVowels.wa + kVowels.ku + sVowels.se + vowels.i;
+const planetHiragana = englishHiragana('Planet', planet);
+const planetKanji = hiraganaKanji(planet, '惑星');
+
+console.log(planetHiragana);
+// Planet is わくせい in Hiragana.
+console.log(planetKanji);
+// わくせい is 惑星 in Kanji.
+
+
+// buy desk・つくえをかう・机を買う
+const hiraganaWithKanji = (hiragana, kanji) => {
+  const withKanji = hiragana
+    .replace('つくえ', kanji[0])
+    .replace('か', kanji[1]);
+
+  return \`\${hiragana} is \${withKanji} in Kanji.\`;
+};
+const buyDesk =
+  tVowels.tsu + kVowels.ku + vowels.e + wVowels.o + kVowels.ka + vowels.u;
+const buyDeskHiragana = englishHiragana('BuyDesk', buyDesk);
+const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
+
+console.log(buyDeskHiragana);
+// BuyDesk is つくえをかう in Hiragana.
+console.log(buyDeskKanji);
+// つくえをかう is 机を買う in Kanji.
+// o(を) is mainly used as a postpositional particle.`,
     navLink: ['rvowels', 'n', '', ''],
   },
 
@@ -1081,7 +1113,8 @@ const rVowels =
 const wVowels =
   { wa: 'わ', o: 'を' };
 
-const wVowelsParticle = { wa: 'は' };
+const wVowelsParticle =
+  { wa: 'は' };
 
 const n = 'ん';
 
@@ -1097,7 +1130,13 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
-`,
+
+// hello・こんにちは
+const hello = kVowels.ko + n + nVowels.ni + tVowels.chi + wVowelsParticle.wa;
+const helloHiragana = englishHiragana('Hello', hello);
+
+console.log(helloHiragana);
+// Hello is こんにちは in Hiragana.`,
     navLink: ['n', 'fiftysoundstable', '', ''],
   },
 
@@ -1129,8 +1168,44 @@ const gVowelLetters = [
 ];`,
     exampleText: "Let's use consonant g + vowels in practice!",
     examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
 const gVowels =
   { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
 
 const englishHiragana = (
   english,
@@ -1144,7 +1219,40 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
-`,
+
+// galaxy・ぎんが・銀河
+const galaxy = gVowels.gi + n + gVowels.ga;
+const galaxyHiragana = englishHiragana('Galaxy', galaxy);
+const galaxyKanji = hiraganaKanji(galaxy, '銀河');
+
+console.log(galaxyHiragana);
+// Galaxy is ぎんが in Hiragana.
+console.log(galaxyKanji);
+// ぎんが is 銀河 in Kanji.
+
+
+// even number・ぐうすう・偶数
+const evenNumber = gVowels.gu + vowels.u + sVowels.su + vowels.u;
+const evenNumberHiragana = englishHiragana('Even Number', evenNumber);
+const evenNumberKanji = hiraganaKanji(evenNumber, '偶数');
+
+console.log(evenNumberHiragana);
+// Even Number is ぐうすう in Hiragana.
+console.log(evenNumberKanji);
+// ぐうすう is 偶数 in Kanji.
+// *The Romaji of this word is expressed
+// as "Gusu" and omit 'u'.
+
+
+// language・げんご・言語
+const language = gVowels.ge + n + gVowels.go;
+const languageHiragana = englishHiragana('Language', language);
+const languageKanji = hiraganaKanji(language, '言語');
+
+console.log(languageHiragana);
+// Language is げんご in Hiragana.
+console.log(languageKanji);
+// げんご is 言語 in Kanji.`,
     navLink: ['fiftysoundstable', 'zvowels', '', ''],
   },
 
@@ -1190,10 +1298,47 @@ const zVowelLetters = [
 ];`,
     exampleText: "Let's use consonant g + vowels in practice!",
     examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
 const gVowels =
   { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
 const zVowels =
   { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
 
 const englishHiragana = (
   english,
@@ -1207,7 +1352,62 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
-`,
+
+// trivia・ざつがく・雑学
+const trivia = zVowels.za + tVowels.tsu + gVowels.ga + kVowels.ku;
+const triviaHiragana = englishHiragana('Trivia', trivia);
+const triviaKanji = hiraganaKanji(trivia, '雑学');
+
+console.log(triviaHiragana);
+// Trivia is ざつがく in Hiragana.
+console.log(triviaKanji);
+// ざつがく is 雑学 in Kanji.
+
+
+// life・じんせい・人生
+const life = zVowels.ji + n + sVowels.se + vowels.i;
+const lifeHiragana = englishHiragana('Life', life);
+const lifeKanji = hiraganaKanji(life, '人生');
+
+console.log(lifeHiragana);
+// Life is じんせい in Hiragana.
+console.log(lifeKanji);
+// じんせい is 人生 in Kanji.
+
+
+// brain・ずのう・頭脳
+const brain = zVowels.zu + nVowels.no + vowels.u;
+const brainHiragana = englishHiragana('Brain', brain);
+const brainKanji = hiraganaKanji(brain, '頭脳');
+
+console.log(brainHiragana);
+// Brain is ずのう in Hiragana.
+console.log(brainKanji);
+// ずのう is 頭脳 in Kanji.
+// *The Romaji of this word is expressed
+// as "Zuno" and omit 'u'.
+
+
+// extinction・ぜつめつ・絶滅
+const extinction = zVowels.ze + tVowels.tsu + mVowels.me + tVowels.tsu;
+const extinctionHiragana = englishHiragana('Extinction', extinction);
+const extinctionKanji = hiraganaKanji(extinction, '絶滅');
+
+console.log(extinctionHiragana);
+// Extinction is ぜつめつ in Hiragana.
+console.log(extinctionKanji);
+// ぜつめつ is 絶滅 in Kanji.
+
+
+// attribute・ぞくせい・属性
+const attribute = zVowels.zo + kVowels.ku + sVowels.se + vowels.i;
+const attributeHiragana = englishHiragana('Attribute', attribute);
+const attributeKanji = hiraganaKanji(attribute, '属性');
+
+console.log(attributeHiragana);
+// Attribute is ぞくせい in Hiragana.
+console.log(attributeKanji);
+// ぞくせい is 属性 in Kanji.`,
     navLink: ['gvowels', 'dvowels', '', ''],
   },
 
@@ -1269,6 +1469,41 @@ const dVowelLetters = [
 ];`,
     exampleText: "Let's use consonant d + vowels in practice!",
     examples: `// Base code
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
 const gVowels =
   { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
 
@@ -1277,6 +1512,7 @@ const zVowels =
 
 const dVowels =
   { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
 
 const englishHiragana = (
   english,
@@ -1289,7 +1525,50 @@ const hiraganaKanji = (
   kanji
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
-`,
+
+
+// kitchen・だいどころ・台所
+const kitchen = dVowels.da + vowels.i + dVowels.do + kVowels.ko + rVowels.ro;
+const kitchenHiragana = englishHiragana('Kitchen', kitchen);
+const kitchenKanji = hiraganaKanji(kitchen, '台所');
+
+console.log(kitchenHiragana);
+// Kitchen is だいどころ in Hiragana.
+console.log(kitchenKanji);
+// だいどころ is 台所 in Kanji.
+
+
+// nosebleed・はなぢ・鼻血
+const nosebleed = hVowels.ha + nVowels.na + dVowels.ji;
+const nosebleedHiragana = englishHiragana('Nosebleed', nosebleed);
+const nosebleedKanji = hiraganaKanji(nosebleed, '鼻血');
+
+console.log(nosebleedHiragana);
+// Nosebleed is はなぢ in Hiragana.
+console.log(nosebleedKanji);
+// はなぢ is 鼻血 in Kanji.
+
+
+// crescent moon・みかづき・三日月
+const crescentMoon = mVowels.mi + kVowels.ka + dVowels.zu + kVowels.ki;
+const crescentMoonHiragana = englishHiragana('Crescent moon', crescentMoon);
+const crescentMoonKanji = hiraganaKanji(crescentMoon, '三日月');
+
+console.log(crescentMoonHiragana);
+// Crescent moon is みかづき in Hiragana.
+console.log(crescentMoonKanji);
+// みかづき is 三日月 in Kanji.
+
+
+// exit・でぐち・出口
+const exit = dVowels.de + gVowels.gu + tVowels.chi;
+const exitHiragana = englishHiragana('Exit', exit);
+const exitKanji = hiraganaKanji(exit, '出口');
+
+console.log(exitHiragana);
+// Exit is でぐち in Hiragana.
+console.log(exitKanji);
+// でぐち is 出口 in Kanji.`,
     navLink: ['zvowels', 'bvowels', '', ''],
   },
 
@@ -1321,7 +1600,108 @@ const bVowelLetters = [
 ];`,
     exampleText: "Let's use consonant b + vowels in practice!",
     examples: `// Base code
-`,
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+// double・ばい・倍
+const double = bVowels.ba + vowels.i;
+const doubleHiragana = englishHiragana('Double', double);
+const doubleKanji = hiraganaKanji(double, '倍');
+
+console.log(doubleHiragana);
+// Double is ばい in Hiragana.
+console.log(doubleKanji);
+// ばい is 倍 in Kanji.
+
+
+// travel・たび・旅
+const travel = tVowels.ta + bVowels.bi;
+const travelHiragana = englishHiragana('Travel', travel);
+const travelKanji = hiraganaKanji(travel, '旅');
+
+console.log(travelHiragana);
+// Travel is たび in Hiragana.
+console.log(travelKanji);
+// たび is 旅 in Kanji.
+
+
+// stationery・ぶんぼうぐ・文房具
+const stationery = bVowels.bu + n + bVowels.bo + vowels.u + gVowels.gu;
+const stationeryHiragana = englishHiragana('Stationery', stationery);
+const stationeryKanji = hiraganaKanji(stationery, '文房具');
+
+console.log(stationeryHiragana);
+// Stationery is ぶんぼうぐ in Hiragana.
+console.log(stationeryKanji);
+// ぶんぼうぐ is 文房具 in Kanji.
+
+
+// lawyer・べんごし・弁護士
+const lawyer = bVowels.be + n + gVowels.go + sVowels.shi;
+const lawyerHiragana = englishHiragana('Lawyer', lawyer);
+const lawyerKanji = hiraganaKanji(lawyer, '弁護士');
+
+console.log(lawyerHiragana);
+// Lawyer is べんごし in Hiragana.
+console.log(lawyerKanji);
+// べんごし is 弁護士 in Kanji.`,
     navLink: ['dvowels', 'pvowels', '', ''],
   },
 
@@ -1350,7 +1730,122 @@ const pVowelLetters = [
 ];`,
     exampleText: "Let's use consonant p + vowels in practice!",
     examples: `// Base code
-`,
+const vowels =
+  { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
+
+const kVowels =
+  { ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ' };
+
+const sVowels =
+  { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
+
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const englishHiragana = (
+  english,
+  hiragana
+) =>
+  \`\${english} is \${hiragana} in Hiragana.\`;
+
+const hiraganaKanji = (
+  hiragana,
+  kanji
+) =>
+  \`\${hiragana} is \${kanji} in Kanji.\`;
+
+
+// signal/reception・でんぱ・電波
+const signal = dVowels.de + n + pVowels.pa;
+const signalHiragana = englishHiragana('Signal', signal);
+const signalKanji = hiraganaKanji(signal, '電波');
+
+console.log(signalHiragana);
+// Signal is でんぱ in Hiragana.
+console.log(signalKanji);
+// でんぱ is 電波 in Kanji.
+
+
+// for and against・さんぴ・賛否
+const forAndAgainst = sVowels.sa + n + pVowels.pi;
+const forAndAgainstHiragana = englishHiragana('For and against', forAndAgainst);
+const forAndAgainstKanji = hiraganaKanji(forAndAgainst, '賛否');
+
+console.log(forAndAgainstHiragana);
+// For and against is さんぴ in Hiragana.
+console.log(forAndAgainstKanji);
+// さんぴ is 賛否 in Kanji.
+
+
+// music note・おんぷ・音符
+const musicNote = vowels.o + n + pVowels.pu;
+const musicNoteHiragana = englishHiragana('Music note', musicNote);
+const musicNoteKanji = hiraganaKanji(musicNote, '音符');
+
+console.log(musicNoteHiragana);
+// Music note is おんぷ in Hiragana.
+console.log(musicNoteKanji);
+// おんぷ is 音符 in Kanji.
+
+
+// perfect・かんぺき・完璧
+const perfect = kVowels.ka + n + pVowels.pe + kVowels.ki;
+const perfectHiragana = englishHiragana('Perfect', perfect);
+const perfectKanji = hiraganaKanji(perfect, '完璧');
+
+console.log(perfectHiragana);
+// Perfect is かんぺき in Hiragana.
+console.log(perfectKanji);
+// かんぺき is 完璧 in Kanji.
+
+
+// progress・しんぽ・進歩
+const progress = sVowels.shi + n + pVowels.po;
+const progressHiragana = englishHiragana('Progress', progress);
+const progressKanji = hiraganaKanji(progress, '進歩');
+
+console.log(progressHiragana);
+// Progress is しんぽ in Hiragana.
+console.log(progressKanji);
+// しんぽ is 進歩 in Kanji.`,
     navLink: ['bvowels', 'kyvowels', '', ''],
   },
 
@@ -1398,6 +1893,39 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1411,7 +1939,39 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// scriptwriter・きゃくほんか・脚本家
+const scriptwriter = kyVowels.kya + kVowels.ku + hVowels.ho + n + kVowels.ka;
+const scriptwriterHiragana = englishHiragana('Scriptwriter', scriptwriter);
+const scriptwriterKanji = hiraganaKanji(scriptwriter, '脚本家');
+
+console.log(scriptwriterHiragana);
+// Scriptwriter is きゃくほんか in Hiragana.
+console.log(scriptwriterKanji);
+// きゃくほんか is 脚本家 in Kanji.
+
+
+// nine・きゅう・九
+const nine = kyVowels.kyu + vowels.u;
+const nineHiragana = englishHiragana('Nine', nine);
+const nineKanji = hiraganaKanji(nine, '九');
+
+console.log(nineHiragana);
+// Nine is きゅう in Hiragana.
+console.log(nineKanji);
+// きゅう is 九 in Kanji.
+// *The Romaji of this word is expressed
+// as "Kyu" and omit 'u'.
+
+
+// election・せんきょ・選挙
+const election = sVowels.se + n + kyVowels.kyo;
+const electionHiragana = englishHiragana('Election', election);
+const electionKanji = hiraganaKanji(election, '選挙');
+
+console.log(electionHiragana);
+// Election is せんきょ in Hiragana.
+console.log(electionKanji);
+// せんきょ is 選挙 in Kanji.`,
     navLink: ['pvowels', 'shvowels', '', ''],
   },
 
@@ -1462,6 +2022,54 @@ const kVowels =
 const sVowels =
   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1474,7 +2082,38 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
-`,
+
+// photo・しゃしん・写真
+const photo = shVowels.sha + sVowels.shi + n;
+const photoHiragana = englishHiragana('Photo', photo);
+const photoKanji = hiraganaKanji(photo, '写真');
+
+console.log(photoHiragana);
+// Photo is しゃしん in Hiragana.
+console.log(photoKanji);
+// しゃしん is 写真 in Kanji.
+
+
+// hobby・しゅみ・趣味
+const hobby = shVowels.shu + mVowels.mi;
+const hobbyHiragana = englishHiragana('Hobby', hobby);
+const hobbyKanji = hiraganaKanji(hobby, '趣味');
+
+console.log(hobbyHiragana);
+// Hobby is しゅみ in Hiragana.
+console.log(hobbyKanji);
+// しゅみ is 趣味 in Kanji.
+
+
+// meal・しょくじ・食事
+const meal = shVowels.sho + kVowels.ku + zVowels.ji;
+const mealHiragana = englishHiragana('Meal', meal);
+const mealKanji = hiraganaKanji(meal, '食事');
+
+console.log(mealHiragana);
+// Meal is しょくじ in Hiragana.
+console.log(mealKanji);
+// しょくじ is 食事 in Kanji.`,
     navLink: ['kyvowels', 'chvowels', '', ''],
   },
 
@@ -1525,6 +2164,57 @@ const kVowels =
 const sVowels =
   { sa: 'さ', shi: 'し', su: 'す', se: 'せ', so: 'そ' };
 
+const tVowels =
+  { ta: 'た', chi: 'ち', tsu: 'つ', te: 'て', to: 'と' };
+
+const nVowels =
+  { na: 'な', ni: 'に', nu: 'ぬ', ne: 'ね', no: 'の' };
+
+const hVowels =
+  { ha: 'は', hi: 'ひ', fu: 'ふ', he: 'へ', ho: 'ほ' };
+
+const mVowels =
+  { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
+
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1537,7 +2227,42 @@ const hiraganaKanji = (
 ) =>
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
-`,
+
+// tea・ちゃ・写真
+const tea = chVowels.cha;
+const teaHiragana = englishHiragana('Tea', tea);
+const teaKanji = hiraganaKanji(tea, '茶');
+
+console.log(teaHiragana);
+// Tea is ちゃ in Hiragana.
+console.log(teaKanji);
+// ちゃ is 茶 in Kanji.
+
+
+// lunch・ちゅうしょく・昼食
+const lunch = chVowels.chu + vowels.u + shVowels.sho + kVowels.ku;
+const lunchHiragana = englishHiragana('Lunch', lunch);
+const lunchKanji = hiraganaKanji(lunch, '昼食');
+
+console.log(lunchHiragana);
+// Lunch is ちゅうしょく in Hiragana.
+console.log(lunchKanji);
+// ちゅうしょく is 昼食 in Kanji.
+// *The Romaji of this word is expressed
+// as "Chushoku" and omit 'u'.
+
+
+// breakfast・ちょうしょく・朝食
+const breakfast = chVowels.cho + vowels.u + shVowels.sho + kVowels.ku;
+const breakfastHiragana = englishHiragana('Breakfast', breakfast);
+const breakfastKanji = hiraganaKanji(breakfast, '朝食');
+
+console.log(breakfastHiragana);
+// Breakfast is ちょうしょく in Hiragana.
+console.log(breakfastKanji);
+// ちょうしょく is 朝食 in Kanji.
+// *The Romaji of this word is expressed
+// as "Choshoku" and omit 'u'.`,
     navLink: ['shvowels', 'nyvowels', '', ''],
   },
 
@@ -1585,6 +2310,48 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1598,7 +2365,43 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// men and women of all ages・ろうにゃくなんにょ・老若男女
+const menAndWomenOfAllAges =
+  rVowels.ro +
+  vowels.u +
+  nyVowels.nya +
+  kVowels.ku +
+  nVowels.na +
+  n +
+  nyVowels.nyo;
+const menAndWomenOfAllAgesHiragana = englishHiragana(
+  'Men and women of all ages',
+  menAndWomenOfAllAges
+);
+const menAndWomenOfAllAgesKanji = hiraganaKanji(
+  menAndWomenOfAllAges,
+  '老若男女'
+);
+
+console.log(menAndWomenOfAllAgesHiragana);
+// Men and women of all ages is ろうにゃくなんにょ in Hiragana.
+console.log(menAndWomenOfAllAgesKanji);
+// ろうにゃくなんにょ is 老若男女 in Kanji.
+// *The Romaji of this word is expressed
+// as "Ronyakunannyo" and omit 'u'.
+
+
+// move-in・にゅうきょ・入居
+const moveIn = nyVowels.nyu + vowels.u + kyVowels.kyo;
+const moveInHiragana = englishHiragana('Move in', moveIn);
+const moveInKanji = hiraganaKanji(moveIn, '入居');
+
+console.log(moveInHiragana);
+// Move in is にゅうきょ in Hiragana.
+console.log(moveInKanji);
+// にゅうきょ is 入居 in Kanji.
+// *The Romaji of this word is expressed
+// as "Nyukyo" and omit 'u'.`,
     navLink: ['chvowels', 'hyvowels', '', ''],
   },
 
@@ -1646,6 +2449,51 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1659,7 +2507,41 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// hundred・ひゃく・百
+const hundred = hyVowels.hya + kVowels.ku;
+const hundredHiragana = englishHiragana('Hundred', hundred);
+const hundredKanji = hiraganaKanji(hundred, '百');
+
+console.log(hundredHiragana);
+// Hundred is ひゃく in Hiragana.
+console.log(hundredKanji);
+// ひゃく is 百 in Kanji.
+
+
+// wind sounds・ひゅうひゅう
+const windSounds = hyVowels.hyu + vowels.u + hyVowels.hyu + vowels.u;
+const windSoundsHiragana = englishHiragana('WindSounds', windSounds);
+
+console.log(windSoundsHiragana);
+// WindSounds is ひゅうひゅう in Hiragana.
+// This is an imitative word(onomatopoeia).
+
+// *The Romaji of this word is expressed
+// as "hyu-hyu" and omit 'u'.
+// Also, it is expressed as 'ひゅーひゅー'.
+
+
+// evaluation・ひょうか・評価
+const evaluation = hyVowels.hyo + vowels.u + kVowels.ka;
+const evaluationHiragana = englishHiragana('Evaluation', evaluation);
+const evaluationKanji = hiraganaKanji(evaluation, '評価');
+
+console.log(evaluationHiragana);
+// Evaluation is ひょうか in Hiragana.
+console.log(evaluationKanji);
+// ひょうか is 評価 in Kanji.
+// *The Romaji of this word is expressed
+// as "hyoka" and omit 'u'.`,
     navLink: ['nyvowels', 'myvowels', '', ''],
   },
 
@@ -1707,6 +2589,54 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1720,7 +2650,29 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// pulse・みゃく・脈
+const pulse = myVowels.mya + kVowels.ku;
+const pulseHiragana = englishHiragana('Pulse', pulse);
+const pulseKanji = hiraganaKanji(pulse, '脈');
+
+console.log(pulseHiragana);
+// Pulse is みゃく in Hiragana.
+console.log(pulseKanji);
+// みゃく is 脈 in Kanji.
+
+
+// lastName・みょうじ・脈
+const lastName = myVowels.myo + vowels.u + zVowels.ji;
+const lastNameHiragana = englishHiragana('Last name', lastName);
+const lastNameKanji = hiraganaKanji(lastName, '名字');
+
+console.log(lastNameHiragana);
+// Last name is みょうじ in Hiragana.
+console.log(lastNameKanji);
+// みょうじ is 名字 in Kanji.
+// 名字 can be also written as 苗字.
+// *The Romaji of this word is expressed
+// as "myoji" and omit 'u'.`,
     navLink: ['hyvowels', 'ryvowels', '', ''],
   },
 
@@ -1768,6 +2720,57 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+const ryVowels =
+  { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1781,7 +2784,41 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// abbreviation・りゃく・略
+const abbreviation = ryVowels.rya + kVowels.ku;
+const abbreviationHiragana = englishHiragana('Abbreviation', abbreviation);
+const abbreviationKanji = hiraganaKanji(abbreviation, '略');
+
+console.log(abbreviationHiragana);
+// Abbreviation is りゃく in Hiragana.
+console.log(abbreviationKanji);
+// りゃく is 略 in Kanji.
+
+
+// meteor・りゅうせい・流星
+const meteor = ryVowels.ryu + vowels.u + sVowels.se + vowels.i;
+const meteorHiragana = englishHiragana('Meteor', meteor);
+const meteorKanji = hiraganaKanji(meteor, '流星');
+
+console.log(meteorHiragana);
+// Meteor is りゅうせい in Hiragana.
+console.log(meteorKanji);
+// りゅうせい is 流星 in Kanji.
+// *The Romaji of this word is expressed
+// as "ryusei" and omit 'u'.
+
+
+// consideration・こうりょ・考慮
+const consideration = kVowels.ko + vowels.u + ryVowels.ryo;
+const considerationHiragana = englishHiragana('Consideration', consideration);
+const considerationKanji = hiraganaKanji(consideration, '考慮');
+
+console.log(considerationHiragana);
+// Consideration is こうりょ in Hiragana.
+console.log(considerationKanji);
+// こうりょ is 考慮 in Kanji.
+// *The Romaji of this word is expressed
+// as "koryo" and omit 'u'.`,
     navLink: ['myvowels', 'gyvowels', '', ''],
   },
 
@@ -1829,6 +2866,60 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+const ryVowels =
+  { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+
+const gyVowels =
+  { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1842,7 +2933,40 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// opposite・ぎゃく・逆
+const opposite = gyVowels.gya + kVowels.ku;
+const oppositeHiragana = englishHiragana('Opposite', opposite);
+const oppositeKanji = hiraganaKanji(opposite, '逆');
+
+console.log(oppositeHiragana);
+// Opposite is ぎゃく in Hiragana.
+console.log(oppositeKanji);
+// ぎゃく is 逆 in Kanji.
+
+
+// beef・ぎゅうにく・牛肉
+const beef = gyVowels.gyu + vowels.u + nVowels.ni + kVowels.ku;
+const beefHiragana = englishHiragana('Beef', beef);
+const beefKanji = hiraganaKanji(beef, '牛肉');
+
+console.log(beefHiragana);
+// Beef is ぎゅうにく in Hiragana.
+console.log(beefKanji);
+// ぎゅうにく is 牛肉 in Kanji.
+// *The Romaji of this word is expressed
+// as "gyuniku" and omit 'u'.
+
+
+// control・せいぎょ・制御
+const control = sVowels.se + vowels.i + gyVowels.gyo;
+const controlHiragana = englishHiragana('Control', control);
+const controlKanji = hiraganaKanji(control, '制御');
+
+console.log(controlHiragana);
+// Control is せいぎょ in Hiragana.
+console.log(controlKanji);
+// せいぎょ is 制御 in Kanji.
+// This word is also written as "コントロール" in Katakana.`,
     navLink: ['ryvowels', 'jvowels', '', ''],
   },
 
@@ -1919,6 +3043,63 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+const ryVowels =
+  { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+
+const gyVowels =
+  { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
+
+const jVowels =
+  { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1932,7 +3113,39 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// faucet・じゃぐち・蛇口
+const faucet = jVowels.ja + gVowels.gu + tVowels.chi;
+const faucetHiragana = englishHiragana('Faucet', faucet);
+const faucetKanji = hiraganaKanji(faucet, '蛇口');
+
+console.log(faucetHiragana);
+// Faucet is じゃぐち in Hiragana.
+console.log(faucetKanji);
+// じゃぐち is 蛇口 in Kanji.
+
+
+// importance・じゅうよう・重要
+const importance = jVowels.ju + vowels.u + yVowels.yo + vowels.u;
+const importanceHiragana = englishHiragana('Importance', importance);
+const importanceKanji = hiraganaKanji(importance, '重要');
+
+console.log(importanceHiragana);
+// Importance is じゅうよう in Hiragana.
+console.log(importanceKanji);
+// じゅうよう is 重要 in Kanji.
+// *The Romaji of this word is expressed
+// as "juyo" and omit 'u'.
+
+
+// deletion・さくじょ・削除
+const deletion = sVowels.sa + kVowels.ku + jVowels.jo;
+const deletionHiragana = englishHiragana('Deletion', deletion);
+const deletionKanji = hiraganaKanji(deletion, '削除');
+
+console.log(deletionHiragana);
+// Deletion is さくじょ in Hiragana.
+console.log(deletionKanji);
+// さくじょ is 削除 in Kanji.`,
     navLink: ['gyvowels', 'byvowels', '', ''],
   },
 
@@ -1980,6 +3193,66 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+const ryVowels =
+  { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+
+const gyVowels =
+  { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
+
+const jVowels =
+  { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
+
+const byVowels =
+  { bya: 'びゃ', byu: 'びゅ', byo: 'びょ' };
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -1993,7 +3266,41 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
-`,
+// midnight sun・びゃくや・白夜
+const midnightSun = byVowels.bya + kVowels.ku + yVowels.ya;
+const midnightSunHiragana = englishHiragana('Midnight sun', midnightSun);
+const midnightSunKanji = hiraganaKanji(midnightSun, '白夜');
+
+console.log(midnightSunHiragana);
+// Midnight sun is びゃくや in Hiragana.
+console.log(midnightSunKanji);
+// びゃくや is 白夜 in Kanji.
+
+
+// fallacy・ごびゅう・誤謬
+const fallacy = gVowels.go + byVowels.byu + vowels.u;
+const fallacyHiragana = englishHiragana('Fallacy', fallacy);
+const fallacyKanji = hiraganaKanji(fallacy, '誤謬');
+
+console.log(fallacyHiragana);
+// Fallacy is ごびゅう in Hiragana.
+console.log(fallacyKanji);
+// ごびゅう is 誤謬 in Kanji.
+// *The Romaji of this word is expressed
+// as "gobyu" and omit 'u'.
+
+
+// hospital・びょういん・病院
+const hospital = byVowels.byo + vowels.u + vowels.i + n;
+const hospitalHiragana = englishHiragana('Hospital', hospital);
+const hospitalKanji = hiraganaKanji(hospital, '病院');
+
+console.log(hospitalHiragana);
+// Hospital is びょういん in Hiragana.
+console.log(hospitalKanji);
+// びょういん is 病院 in Kanji.
+// *The Romaji of this word is expressed
+// as "byoin" and omit 'u'.`,
     navLink: ['jvowels', 'pyvowels', '', ''],
   },
 
@@ -2041,6 +3348,71 @@ const hVowels =
 const mVowels =
   { ma: 'ま', mi: 'み', mu: 'む', me: 'め', mo: 'も' };
 
+const yVowels =
+  { ya: 'や', yu: 'ゆ', yo: 'よ' };
+
+const rVowels =
+  { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' };
+
+const wVowels =
+  { wa: 'わ', o: 'を' };
+
+const wVowelsParticle =
+  { wa: 'は' };
+
+const n = 'ん';
+
+const gVowels =
+  { ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご' };
+
+const zVowels =
+  { za: 'ざ', ji: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ' };
+
+const dVowels =
+  { da: 'だ', ji: 'ぢ', zu: 'づ', de: 'で', do: 'ど' };
+
+const bVowels =
+  { ba: 'ば', bi: 'び', bu: 'ぶ', be: 'べ', bo: 'ぼ' };
+
+const pVowels =
+  { pa: 'ぱ', pi: 'ぴ', pu: 'ぷ', pe: 'ぺ', po: 'ぽ' };
+
+const kyVowels =
+  { kya: 'きゃ', kyu: 'きゅ', kyo: 'きょ' };
+
+const shVowels =
+  { sha: 'しゃ', shu: 'しゅ', sho: 'しょ' };
+
+const chVowels =
+  { cha: 'ちゃ', chu: 'ちゅ', cho: 'ちょ' };
+
+const nyVowels =
+  { nya: 'にゃ', nyu: 'にゅ', nyo: 'にょ' };
+
+const hyVowels =
+  { hya: 'ひゃ', hyu: 'ひゅ', hyo: 'ひょ' };
+
+const myVowels =
+  { mya: 'みゃ', myu: 'みゅ', myo: 'みょ' };
+
+const ryVowels =
+  { rya: 'りゃ', ryu: 'りゅ', ryo: 'りょ' };
+
+const gyVowels =
+  { gya: 'ぎゃ', gyu: 'ぎゅ', gyo: 'ぎょ' };
+
+const jVowels =
+  { ja: 'じゃ', ju: 'じゅ', jo: 'じょ' };
+
+const byVowels =
+  { bya: 'びゃ', byu: 'びゅ', byo: 'びょ' };
+
+const pyVowels =
+  { pya: 'ぴゃ', pyu: 'ぴゅ', pyo: 'ぴょ' };
+
+const doubleConsonant = 'っ';
+
+
 const englishHiragana = (
   english,
   hiragana
@@ -2054,6 +3426,30 @@ const hiraganaKanji = (
   \`\${hiragana} is \${kanji} in Kanji.\`;
 
 
+// six hundred・ろっぴゃく・六百
+const sixHundred = rVowels.ro + doubleConsonant + pyVowels.pya + kVowels.ku;
+const sixHundredHiragana = englishHiragana('Six hundred', sixHundred);
+const sixHundredKanji = hiraganaKanji(sixHundred, '六百');
+
+console.log(sixHundredHiragana);
+// Six hundred is ろっぴゃく in Hiragana.
+console.log(sixHundredKanji);
+// ろっぴゃく is 六百 in Kanji.
+// *The Romaji of this word is expressed as "roppyaku".
+// The consonant p will be double.
+
+
+// fair/show・ひんぴょうかい・品評会
+const fair = hVowels.hi + n + pyVowels.pyo + vowels.u + kVowels.ka + vowels.i;
+const fairHiragana = englishHiragana('Fair', fair);
+const fairKanji = hiraganaKanji(fair, '品評会');
+
+console.log(fairHiragana);
+// Fair is ひんぴょうかい in Hiragana.
+console.log(fairKanji);
+// ひんぴょうかい is 品評会 in Kanji.
+// *The Romaji of this word is expressed
+// as "hinpyokai" and omit 'u'.
 `,
     navLink: ['byvowels', 'consonants', '', 'one'],
   },
