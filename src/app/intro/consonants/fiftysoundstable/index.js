@@ -25,7 +25,7 @@ const FiftySoundsTable = () => {
       'Correctly, the number of letters are not fifty.',
       'It comes from the traditional one.',
       '',
-      'One of example code might be like below.',
+      'One example code might be like below.',
       'How do you code?',
     ],
   };
@@ -83,6 +83,22 @@ const gojuonHepburn = [vowels].concat(
 );
 console.log(gojuonHepburn);
 
+// gojuonHepburn result
+// [
+//   [ 'a', 'i', 'u', 'e', 'o' ],
+//   [ 'ka', 'ki', 'ku', 'ke', 'ko' ],
+//   [ 'sa', 'shi', 'su', 'se', 'so' ],
+//   [ 'ta', 'chi', 'tsu', 'te', 'to' ],
+//   [ 'na', 'ni', 'nu', 'ne', 'no' ],
+//   [ 'ha', 'hi', 'fu', 'he', 'ho' ],
+//   [ 'ma', 'mi', 'mu', 'me', 'mo' ],
+//   [ 'ya', 'yu', 'yo' ],
+//   [ 'ra', 'ri', 'ru', 're', 'ro' ],
+//   [ 'wa', 'wo' ],
+//   [ 'n' ]
+// ]
+
+
 // Hiragana array
 const hiragana = [];
 for (let i = 12354; i < 12436; i++) {
@@ -101,6 +117,19 @@ for (let i = 12354; i < 12436; i++) {
     hiragana.push(String.fromCharCode(i));
 }
 console.log(hiragana);
+
+// hiragana result
+// [
+//   'あ', 'い', 'う', 'え', 'お', 'か',
+//   'き', 'く', 'け', 'こ', 'さ', 'し',
+//   'す', 'せ', 'そ', 'た', 'ち', 'つ',
+//   'て', 'と', 'な', 'に', 'ぬ', 'ね',
+//   'の', 'は', 'ひ', 'ふ', 'へ', 'ほ',
+//   'ま', 'み', 'む', 'め', 'も', 'や',
+//   'ゆ', 'よ', 'ら', 'り', 'る', 'れ',
+//   'ろ', 'わ', 'を', 'ん'
+// ]
+
 
 // The list by Hepburn Romaji and Hiragana
 const combine = gojuonHepburn.map((row, i) => {
@@ -123,7 +152,6 @@ const combine = gojuonHepburn.map((row, i) => {
     })
   );
 });
-
 console.log(combine);
 
 // The result

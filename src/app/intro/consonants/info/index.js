@@ -461,21 +461,20 @@ const hVowelLetters = [
   { ho: { hiragana: 'ほ', katakana: 'ホ' } },
 ];
 
+// Also, in the case of the 'は/ハ'
+// used as a postpositional particle,
+// the sound is changed into 'wa'.
+// Please check the sound in wvowels page.
+const waPattern = [
+  { wa: { hiragana: 'は', katakana: 'ハ' } },
+];
+
 // In the case of the 'へ/ヘ'
 // used as a postpositional particle,
 // the sound is changed into 'e'.
 // Please check the sound in vowels page.
 const Pattern = [
   { e: { hiragana: 'へ', katakana: 'ヘ' } },
-];
-
-// Also, in the case of the 'は/ハ'
-// used as a postpositional particle,
-// the sound is changed into 'wa'.
-// Please check the sound in wvowels page
-// after the page was published.
-const waPattern = [
-  { wa: { hiragana: 'は', katakana: 'ハ' } },
 ];
 `,
     exampleText: "Let's use consonant h + vowels in practice!",
@@ -954,8 +953,8 @@ console.log(wVowelsByRomajiKunreiPast.toString());
 // wa, i, u, e, o
 
 // The sound of 'wa' is sometimes used as 'は/ハ' sound.
-// The sounds of 'i','u','e','o','wi','wu','we','wo' are
-// the same as vowels'
+// The each sound of 'wi', 'wu', 'we', 'wo' are
+// the same as vowels' of  'i', 'u', 'e', 'o', respectively.
 `,
     sound: ['wa', 'wo'],
     jpText: 'The consonant w + vowels spelt by hiragana and katakana.',
@@ -963,6 +962,7 @@ console.log(wVowelsByRomajiKunreiPast.toString());
   { wa: { hiragana: 'わ', katakana: 'ワ' } },
   { o: { hiragana: 'を', katakana: 'ヲ' } },
 ];
+// o(を) is mainly used as a postpositional particle.
 
 // The patterns of old letters of Hiragana/Katakana.
 // *'u' is the same as vowels'.
@@ -980,8 +980,7 @@ const wVowelLetters = [
 // the sound is changed into 'wa'.
 const waPattern = [
   { wa: { hiragana: 'は', katakana: 'ハ' } },
-];
-`,
+];`,
     exampleText: "Let's use consonant w + vowels in practice!",
     examples: `// Base code
 const vowels =
@@ -1053,12 +1052,12 @@ const buyDesk =
   tVowels.tsu + kVowels.ku + vowels.e +
   wVowels.o + kVowels.ka + vowels.u;
 const buyDeskHiragana =
-  englishHiragana('BuyDesk', buyDesk);
+  englishHiragana('Buy desk', buyDesk);
 const buyDeskKanji =
   hiraganaWithKanji(buyDesk, ['机', '買']);
 
 console.log(buyDeskHiragana);
-// BuyDesk is つくえをかう in Hiragana.
+// Buy desk is つくえをかう in Hiragana.
 console.log(buyDeskKanji);
 // つくえをかう is 机を買う in Kanji.
 // o(を) is mainly used as a postpositional particle.`,
@@ -1070,10 +1069,7 @@ console.log(buyDeskKanji);
       title: 'Consonant N',
       text: [
         'The exceptional pattern, N',
-        '',
-        'This is a single sound unlike others.',
-        'This letter is included with the other letters',
-        'as basic Japanese letters.',
+        'This is a single sound, unlike others.',
       ],
     },
     romaji: `const nByRomaji = 'n';
@@ -1087,7 +1083,7 @@ console.log(nByRomaji);`,
 // the combination of the sound or rules.
 // *We type 'ん/ン' with doubling n(nn).
 `,
-    exampleText: "Let's use consonant n in practice!",
+    exampleText: "Let's use consonant N in practice!",
     examples: `// Base code
 const vowels =
   { a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' };
@@ -3946,11 +3942,11 @@ const hiraganaWithKanji = (hiragana, kanji) => {
 };
 const buyDesk =
   tVowels.tsu + kVowels.ku + vowels.e + wVowels.o + kVowels.ka + vowels.u;
-const buyDeskHiragana = englishHiragana('BuyDesk', buyDesk);
+const buyDeskHiragana = englishHiragana('Buy desk', buyDesk);
 const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
 
 console.log(buyDeskHiragana);
-// BuyDesk is つくえをかう in Hiragana.
+// Buy desk is つくえをかう in Hiragana.
 console.log(buyDeskKanji);
 // つくえをかう is 机を買う in Kanji.
 // o(を) is mainly used as a postpositional particle.
