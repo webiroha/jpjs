@@ -45,7 +45,7 @@ const Consonants = () => {
     class: 'text opacity_0 slide-in-upper__1',
     text: [
       'Roughly, the main system is "consonant + vowel".',
-      '*Let me show you the exact one later.',
+      '*The exact one is on the "Fifty Sounds Table" page.',
     ],
   });
   ContentsFragMain().appendChild(SystemExplainText.tag);
@@ -93,7 +93,7 @@ const Consonants = () => {
     role: 'sub-s',
     element: 'h3',
     title: 'Basic',
-    text: ['The part of "Fifty Sounds Table".', '- work in progress -'],
+    text: 'This is the "Fifty Sounds Table".',
   };
 
   const BasicTitleInfoBlock = TitleWithText(BasicTitleInfo);
@@ -134,7 +134,7 @@ const Consonants = () => {
     role: 'sub-s',
     element: 'h3',
     title: 'Voiced and p sounds',
-    text: ['- work in progress -'],
+    text: 'These are the sounds extended from the Fifty sounds table.',
   };
 
   const VoicedPTitleInfoBlock = TitleWithText(VoicedPTitleInfo);
@@ -189,10 +189,7 @@ const Consonants = () => {
     role: 'sub',
     element: 'h2',
     title: 'Contracted sounds',
-    text: [
-      'This combination rule is similar to consonant y + vowels.',
-      '- work in progress -',
-    ],
+    text: 'This combination rule is similar to consonant y + vowels.',
   };
 
   const ContractedInfoBlock = TitleWithText(ContractedTitleInfo);
@@ -228,8 +225,7 @@ const roughContractedSystem = contractedConsonants.map(
   const ContractedDetailsTitleInfo = {
     role: 'sub-s',
     element: 'h3',
-    title: 'Contracted sounds details',
-    text: ['- work in progress -'],
+    title: 'Each Contracted sounds',
   };
 
   const ContractedDetailsTitleInfoBlock = TitleWithText(

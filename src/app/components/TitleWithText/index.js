@@ -22,7 +22,7 @@ const TitleWithText = (props) => {
   });
 
   TitleWithTextFrag().appendChild(Title.tag);
-  TitleWithTextFrag().appendChild(Text.tag);
+  if (props.text) TitleWithTextFrag().appendChild(Text.tag);
   Wrapper.tag.appendChild(TitleWithTextFrag());
 
   return () => Wrapper.tag;

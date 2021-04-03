@@ -7,19 +7,9 @@ const Link = (direct, link, except) => {
     elem: 'div',
     class: `page-nav__item fade-in`,
   });
-  const status = link !== '' ? link : 'sometime later!';
-  // let status;
-  // switch (link) {
-  //   case link === 'END':
-  //     status = null;
-  //     break;
-  //   case link !== '':
-  //     status = link;
-  //     break;
-  //   default:
-  //     status = 'sometime later!';
-  //     break;
-  // }
+  const status = link;
+  // const status = link !== '' ? link : 'sometime later!';
+
   const Link = Element({
     elem: 'a',
     class: `${direct}-link page-nav__link`,

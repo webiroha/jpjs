@@ -21,14 +21,8 @@ const VoicedPLink = (consonant) => {
     text: dealedText(),
   });
 
-  // if (
-  //   consonant === 'k' ||
-  //   consonant === 's' ||
-  //   consonant === 't' ||
-  //   consonant === 'n'
-  // )
-  // Link.tag.href = `./${consonant}vowels/`;
-  // Link.tag.href = `consonalt${consonant}`;
+  Link.tag.href = `./${consonant}vowels/`;
+
   Block.tag.appendChild(Link.tag);
 
   return Block.tag;

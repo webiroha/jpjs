@@ -11,7 +11,11 @@ const PageLink = (page, hierarchy) => {
   });
 
   const pageName =
-    page !== 'vowels' && page.endsWith('vowels') ? `ー ${page}` : page;
+    (page !== 'vowels' && page.endsWith('vowels')) ||
+    page === 'n' ||
+    page === 'fiftysoundstable'
+      ? `ー ${page}`
+      : page;
 
   const Link = Element({
     elem: 'a',
@@ -20,13 +24,21 @@ const PageLink = (page, hierarchy) => {
   });
 
   if (hierarchy === 'consonant') {
-    if (page !== 'vowels' && page.endsWith('vowels')) {
+    if (
+      (page !== 'vowels' && page.endsWith('vowels')) ||
+      page === 'n' ||
+      page === 'fiftysoundstable'
+    ) {
       Link.tag.href = `../../consonants/${page}`;
     } else {
       Link.tag.href = `../../${page}`;
     }
   } else {
-    if (page !== 'vowels' && page.endsWith('vowels')) {
+    if (
+      (page !== 'vowels' && page.endsWith('vowels')) ||
+      page === 'n' ||
+      page === 'fiftysoundstable'
+    ) {
       Link.tag.href = `../consonants/${page}`;
     } else Link.tag.href = `../${page}`;
   }

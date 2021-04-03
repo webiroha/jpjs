@@ -21,18 +21,9 @@ const BasicLink = (consonant) => {
     text: dealedText(),
   });
 
-  if (
-    consonant === 'k' ||
-    consonant === 's' ||
-    consonant === 't' ||
-    consonant === 'n' ||
-    consonant === 'h' ||
-    consonant === 'm' ||
-    consonant === 'y' ||
-    consonant === 'r'
-  )
-    Link.tag.href = `./${consonant}vowels/`;
-  // Link.tag.href = `consonalt${consonant}`;
+  Link.tag.href = !dealedText().endsWith('vowels')
+    ? `./${consonant.replace(/\s/g, '').toLowerCase()}/`
+    : `./${consonant}vowels/`;
   Block.tag.appendChild(Link.tag);
 
   return Block.tag;

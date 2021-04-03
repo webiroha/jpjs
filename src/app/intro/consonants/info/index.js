@@ -910,7 +910,7 @@ console.log(corridorKanji);
 // *The Romaji of this word is expressed
 // as "roka" and omit 'u'.
 `,
-    navLink: ['yvowels', '', '', ''],
+    navLink: ['yvowels', 'wvowels', '', ''],
   },
 
   consonantWinfo: {
