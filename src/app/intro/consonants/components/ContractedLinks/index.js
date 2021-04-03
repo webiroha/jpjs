@@ -8,8 +8,7 @@ const ContractedLink = (consonant) => {
     elem: 'li',
     class: 'consonant-link__item',
   });
-  // const separate = (w) => w.split('').join('/');
-  // const shape = consonant.length > 1 ? separate(consonant) : consonant;
+
   const dealedText = () => {
     if (consonant === 's' || consonant === 'c')
       return `${consonant} + h + vowels`;
@@ -23,7 +22,7 @@ const ContractedLink = (consonant) => {
     text: dealedText(),
   });
 
-  Link.tag.href = `./${consonant}vowels/`;
+  Link.tag.href = `./${dealedText().replace(/\s\+\s/g, '')}/`;
 
   Block.tag.appendChild(Link.tag);
 
