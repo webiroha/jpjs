@@ -6,8 +6,10 @@ import '@wav/wo.wav';
 
 CommonLayout(info.consonantWinfo);
 
-const consonantW = 'w';
-const vowels = [...'aiueo'];
+const [consonantW, vowels] = ['w', [...'aiueo']];
+
+// const consonantW = 'w';
+// const vowels = [...'aiueo'];
 
 // Nihon-shiki Romaji
 const wVowelsByRomajiNihon = vowels
