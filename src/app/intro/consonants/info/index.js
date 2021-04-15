@@ -469,7 +469,7 @@ const hVowelLetters = [
 // used as a postpositional particle,
 // the sound is changed into 'wa'.
 // Please check the sound in wvowels page.
-const waPattern = [
+const waPostpositional = [
   { wa: { hiragana: 'は', katakana: 'ハ' } },
 ];
 
@@ -477,7 +477,7 @@ const waPattern = [
 // used as a postpositional particle,
 // the sound is changed into 'e'.
 // Please check the sound in vowels page.
-const Pattern = [
+const ePostpositional = [
   { e: { hiragana: 'へ', katakana: 'ヘ' } },
 ];
 `,
@@ -986,7 +986,7 @@ const wVowelLetters = [
 // In the case of the 'は/ハ'
 // used as a postpositional particle,
 // the sound is changed into 'wa'.
-const waPattern = [
+const waPostpositional = [
   { wa: { hiragana: 'は', katakana: 'ハ' } },
 ];`,
     exampleText: "Let's use consonant w + vowels in practice!",
