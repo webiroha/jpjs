@@ -1055,7 +1055,7 @@ const hiraganaWithKanji = (hiragana, kanji) => {
     .replace('つくえ', kanji[0])
     .replace('か', kanji[1]);
 
-  return \`\${hiragana} is \${withKanji} in Kanji.\`;
+  return \`\${hiragana} is \${withKanji} in Hiragana and Kanji..\`;
 };
 const buyDesk =
   tVowels.tsu + kVowels.ku + vowels.e +
@@ -1068,7 +1068,7 @@ const buyDeskKanji =
 console.log(buyDeskHiragana);
 // Buy desk is つくえをかう in Hiragana.
 console.log(buyDeskKanji);
-// つくえをかう is 机を買う in Kanji.
+// つくえをかう is 机を買う in Hiragana and Kanji.
 // o(を) is mainly used as a postpositional particle.`,
     navLink: ['rvowels', 'n', '', ''],
   },
@@ -3953,7 +3953,7 @@ const hiraganaWithKanji = (hiragana, kanji) => {
     .replace('つくえ', kanji[0])
     .replace('か', kanji[1]);
 
-  return `${hiragana} is ${withKanji} in Kanji.`;
+  return `${hiragana} is ${withKanji} in Hiragana and Kanji..`;
 };
 const buyDesk =
   tVowels.tsu + kVowels.ku + vowels.e + wVowels.o + kVowels.ka + vowels.u;
@@ -3963,7 +3963,7 @@ const buyDeskKanji = hiraganaWithKanji(buyDesk, ['机', '買']);
 console.log(buyDeskHiragana);
 // Buy desk is つくえをかう in Hiragana.
 console.log(buyDeskKanji);
-// つくえをかう is 机を買う in Kanji.
+// つくえをかう is 机を買う in Hiragana and Kanji.
 // o(を) is mainly used as a postpositional particle.
 
 // n ----------
