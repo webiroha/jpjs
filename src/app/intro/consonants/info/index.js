@@ -1082,7 +1082,8 @@ console.log(buyDeskKanji);
       ],
     },
     romaji: `const nByRomaji = 'n';
-console.log(nByRomaji);`,
+console.log(nByRomaji);
+// n`,
     sound: ['n'],
     jpText: 'The consonant N spelt by hiragana and katakana.',
     letters: `const nLetter = [
