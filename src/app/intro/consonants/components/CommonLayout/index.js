@@ -56,7 +56,7 @@ const InsideCommon = (props) => {
 };
 
 const CommonLayout = (info) => {
-  HeaderFooter(InsideCommon, info, 'consonant');
+  HeaderFooter(InsideCommon, 'consonant', info);
 };
 
 export default CommonLayout;

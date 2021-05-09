@@ -186,7 +186,7 @@ console.log(combine);
   return ContentsFrag();
 };
 
-HeaderFooter(FiftySoundsTable);
+HeaderFooter(FiftySoundsTable, 'consonant');
 
 // Fifty Sounds Table arrays
 // Hepburn Romaji

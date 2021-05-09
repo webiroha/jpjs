@@ -6,7 +6,7 @@ import Header from '../../Header';
 import Element from '../../atom/Element';
 import Footer from '../../Footer';
 
-const HeaderFooter = (inside, each, hierarchy) => {
+const HeaderFooter = (inside, hierarchy, each) => {
   const { root, WholeFrag, Wrapper } = Center();
   Wrapper.tag.className = 'wrapper wrapper_layout_sub';
 
