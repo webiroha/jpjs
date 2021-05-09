@@ -140,6 +140,7 @@ const combine = gojuonHepburn.map((row, i) => {
         const common = i * 5 - 5 + 3;
         if (letter[0] === 'r') return common;
         if (letter[0] === 'w') return common;
+        if (letter[0] === 'o' && common > 0) return common;
         if (gojuonHepburn.length - 1 === i) {
           return common - 5 + 2;
         }
@@ -166,7 +167,7 @@ console.log(combine);
 //   { ya: 'や', yu: 'ゆ', yo: 'よ' },
 //   { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' },
 //   { wa: 'わ', o: 'を' },
-//   { n: 'ん' },
+//   { n: 'ん' }
 // ];`;
 
   const { Code: GojuonCode } = CodeBlock(gojuonSystem);
@@ -205,7 +206,11 @@ const gojuonHepburn = [vowels].concat(
       if (consonant === 'w') {
         return vowels
           .filter((_, i) => i === 0 || i === 4)
-          .map((letter) => consonant + letter);
+          .map((letter) => {
+            if (letter === 'a') return consonant + letter;
+
+            return letter;
+          });
       }
 
       return vowels.map((letter) => {
@@ -221,6 +226,9 @@ const gojuonHepburn = [vowels].concat(
         }
         if (consonant === 'h' && letter === 'u') {
           return hepburn[3] + letter;
+        }
+        if (consonant === 'w' && letter === 'o') {
+          return letter;
         }
 
         return consonant + letter;
@@ -258,6 +266,7 @@ const combine = gojuonHepburn.map((row, i) => {
         const common = i * 5 - 5 + 3;
         if (letter[0] === 'r') return common;
         if (letter[0] === 'w') return common;
+        if (letter[0] === 'o' && common > 0) return common;
         if (gojuonHepburn.length - 1 === i) {
           return common - 5 + 2;
         }
@@ -285,5 +294,5 @@ console.log(combine);
 //   { ya: 'や', yu: 'ゆ', yo: 'よ' },
 //   { ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ' },
 //   { wa: 'わ', o: 'を' },
-//   { n: 'ん' },
+//   { n: 'ん' }
 // ];
